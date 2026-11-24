@@ -22,10 +22,10 @@ I'm [Robin's full name], and I'm building WorthIt ([project URL]), a New Zealand
 
 We'd like your written permission to show **one main product image per item**. If you agree, we will:
 
-- show only the image you already publish as the main product image, unchanged except for resizing;
+- show only the image you already publish as the main product image, displayed from the image address on your own site; we would not download, edit or keep copies of your image files;
 - link every image and card to the product page on [ascent.co.nz / babyfactory.co.nz];
-- load images from our own copy (no hotlinking), and refresh or remove them when the product changes or leaves your site;
-- remove all of your images within [7] days of a request, for any reason;
+- store only that image's address, and drop it when the product changes or leaves your site;
+- stop showing all of your images within [7] days of a request, for any reason;
 - not use your images in advertising, social media or anywhere outside the product listing.
 
 If you have a product feed or an affiliate programme that already licenses images, we'd be happy to use that instead. Please point us to the right contact.
@@ -51,10 +51,10 @@ Ngā mihi,
 
 我们希望获得书面许可，**每件商品展示一张主图**。如果您同意，我们承诺：
 
-- 只使用贵店已发布的商品主图，除缩放外不做修改；
+- 只展示贵店已发布的商品主图，直接使用贵店网站上的图片地址显示；我们不下载、不修改、不保存图片文件；
 - 每张图片和卡片都链接到 [ascent.co.nz / babyfactory.co.nz] 的商品页；
-- 图片由我们自己的服务器提供，不盗链；商品变化或下架时同步更新或删除；
-- 收到要求后 [7] 天内删除贵店全部图片，不需要理由；
+- 只保存图片地址，商品变化或下架时随之删除；
+- 收到要求后 [7] 天内停止展示贵店全部图片，不需要理由；
 - 不把图片用于广告、社交媒体或商品列表以外的任何地方。
 
 如果贵店已有包含图片授权的商品 feed 或联盟计划，我们更愿意使用那条渠道，麻烦告诉我们联系人。

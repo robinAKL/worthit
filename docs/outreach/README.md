@@ -12,7 +12,7 @@ These eight English drafts ask for permission to use data in WorthIt, a New Zeal
 | [Harvey Norman NZ](harvey-norman-nz.md) | Verified Harvey Norman NZ partnerships contact | NZ feed or written commercial use exception |
 | [Ascent](ascent.md) | Verified Ascent contact | Notice of proposed use and request for express consent |
 | [Baby Factory NZ](baby-factory-nz.md) | Verified Baby Factory NZ contact | Notice of proposed use and request for express consent |
-| [Image permission](image-permission.md) | Ascent and Baby Factory NZ | One main product image per item, linked back, removable on request (English to send, Chinese for reference) |
+| [Image permission](image-permission.md) | Ascent and Baby Factory NZ | One main product image per item, shown from the retailer's own image address (no copies kept), linked back, removable on request (English to send, Chinese for reference) |
 
 ## Before Robin sends a draft
 
