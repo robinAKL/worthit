@@ -97,7 +97,11 @@ export async function runAdapter({
       if (rows.length >= cap) break;
     }
   }
-  return result(rows, { capped: rows.length >= cap, ...(rejected.length ? { rejected: rejected.slice(0, 20) } : {}) });
+  // A run is complete only if it revisited every URL already in the feed. A resume run skips them on purpose,
+  // so it must not count them as gone: that is what `capped` tells the feed merge.
+  const visited = new Set(urls);
+  const revisitedAll = known.every((url) => visited.has(url));
+  return result(rows, { capped: rows.length >= cap || !revisitedAll, ...(rejected.length ? { rejected: rejected.slice(0, 20) } : {}) });
 }
 
 function defaultExtract(kind) {

@@ -277,3 +277,19 @@ describe('collector core: spread sampling (T-37)', () => {
     expect(requested.filter((u) => /\/vehicle\//.test(u))).toHaveLength(3);
   });
 });
+
+describe('collector core: a resume run never marks skipped items as gone (T-37)', () => {
+  it('reports the run as partial when it did not revisit every known URL', async () => {
+    const { fetchImpl } = fakeSite({
+      '/robots.txt': [200, ROBOTS],
+      '/sitemap.xml': [200, sitemap(['/vehicle/1', '/vehicle/2', '/vehicle/3', '/vehicle/4'])],
+      '/vehicle/3': [200, page(car(3))],
+      // /vehicle/4 fails, so the run saves 1 row against a cap of 2: under the cap, yet it never looked at 1 or 2.
+    });
+    const c = clock();
+    const known = [`${ORIGIN}/vehicle/1`, `${ORIGIN}/vehicle/2`];
+    const out = await runAdapter({ adapter: carAdapter, limit: 2, userAgent: 'u', fetchImpl, now: c.now, sleep: c.sleep, capturedAt: 'T', known });
+    expect(out.rows).toHaveLength(1);
+    expect(out.capped).toBe(true);
+  });
+});
