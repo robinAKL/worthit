@@ -1,11 +1,18 @@
-/** Consecutive User-agent lines share one rule group (RFC 9309). */
+/**
+ * Consecutive User-agent lines share one rule group (RFC 9309).
+ * A leading byte-order mark is removed (several NZ dealer sites serve one), and any
+ * Allow/Disallow that appears before the first User-agent line is applied to `*`.
+ * Both choices read the file more strictly, never less.
+ */
 export function parseRobots(text) {
-  const lines = String(text ?? '').split(/\r?\n/);
+  const lines = String(text ?? '')
+    .replace(/^﻿/, '')
+    .split(/\r?\n|\r/);
   const groups = [];
   let current = null;
   const sitemaps = [];
   for (const raw of lines) {
-    const line = raw.replace(/#.*$/, '').trim();
+    const line = raw.replace(/﻿/g, '').replace(/#.*$/, '').trim();
     if (!line) continue;
     const split = line.indexOf(':');
     if (split < 0) continue;
@@ -24,7 +31,11 @@ export function parseRobots(text) {
       }
       continue;
     }
-    if (!current) continue;
+    if (!current) {
+      if (key !== 'allow' && key !== 'disallow') continue;
+      current = { agents: ['*'], rules: [], orphan: true };
+      groups.push(current);
+    }
     if (key === 'allow' || key === 'disallow') {
       current.rules.push({ allow: key === 'allow', path: value });
     }

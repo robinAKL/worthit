@@ -193,6 +193,23 @@ describe('collector core: an adapter cannot get around the rules', () => {
   });
 });
 
+describe('robots.txt quirks seen on NZ dealer sites', () => {
+  it('reads a file that starts with a byte-order mark and uses CRLF', async () => {
+    const { parseRobots, isAllowed } = await import('../../scripts/collect/core/robots.mjs');
+    const robots = parseRobots('﻿User-agent: *\r\nDisallow: /Motorcentral/\r\nDisallow: /BuyNow\r\n');
+    expect(robots.rules).toHaveLength(2);
+    expect(isAllowed('https://dealer.example/Motorcentral/x', robots)).toBe(false);
+    expect(isAllowed('https://dealer.example/BuyNow.aspx', robots)).toBe(false);
+    expect(isAllowed('https://dealer.example/used-cars/toyota/1', robots)).toBe(true);
+  });
+
+  it('applies rules written before any User-agent line to everyone', async () => {
+    const { parseRobots, isAllowed } = await import('../../scripts/collect/core/robots.mjs');
+    const robots = parseRobots('Disallow: /stock/\n\nUser-agent: Googlebot\nAllow: /\n');
+    expect(isAllowed('https://dealer.example/stock/1', robots)).toBe(false);
+  });
+});
+
 describe('adapters', () => {
   it('rejects an adapter that tries to set network behaviour or omits required fields', () => {
     expect(() => checkAdapter({ ...carAdapter, userAgent: 'Mozilla/5.0' })).toThrow(/set by the core/);
