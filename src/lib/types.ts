@@ -17,8 +17,21 @@ export type Condition = 'new' | 'refurbished' | 'used';
 /** Where a price band sits relative to comparable items in the same category. */
 export type Band = 'low' | 'mid' | 'high';
 
+/**
+ * Supported UI / content locales. `en` is the default.
+ * Add a locale here, then add its UI strings and fixture titles; nothing else changes.
+ */
+export type Locale = 'en' | 'zh-Hans';
+export const LOCALES: readonly Locale[] = ['en', 'zh-Hans'] as const;
+export const DEFAULT_LOCALE: Locale = 'en';
+
+/** Text with a required default-locale value and optional translations. */
+export type LocalizedText = { en: string } & Partial<Record<Exclude<Locale, 'en'>, string>>;
+
 export interface Product {
   id: string;
+  /** Optional translations of `title`. UI shows `titles[locale] ?? title`. */
+  titles?: Partial<Record<Locale, string>>;
   title: string;
   /** Stable category slug, e.g. `laptop`, `phone`, `furniture`. */
   category: string;
@@ -76,4 +89,8 @@ export interface SearchResult {
   fixture: boolean;
 }
 
-export type SearchFn = (query: string, lane: Lane) => SearchResult;
+/**
+ * `locale` controls the language of `Recommendation.reason` and query parsing hints.
+ * Defaults to `DEFAULT_LOCALE` so existing callers keep working.
+ */
+export type SearchFn = (query: string, lane: Lane, locale?: Locale) => SearchResult;
