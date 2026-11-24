@@ -1,0 +1,607 @@
+{
+  "sourceUrl": "https://www.tenancy.govt.nz/assets/Uploads/Tenancy/Rental-bond-data/detailed-monthly-tla-tenancy-november-2026.csv?m=b5db18eecf28e4ad8201e5a54005c172a6ca1c9f",
+  "pageUrl": "https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/",
+  "licence": "CC BY 3.0 NZ",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/nz/",
+  "attribution": "MBIE",
+  "downloadedAt": "2026-11-24",
+  "month": "2026-09",
+  "bedroomSplit": false,
+  "note": "The territorial-authority monthly file published on this date has no bedroom column. Every row is all bedroom counts.",
+  "areas": [
+    {
+      "name": "New Zealand",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 495,
+      "median": 599,
+      "upper": 700,
+      "count": 12828
+    },
+    {
+      "name": "Ashburton District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 465,
+      "median": 510,
+      "upper": 568,
+      "count": 54
+    },
+    {
+      "name": "Auckland",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 530,
+      "median": 640,
+      "upper": 750,
+      "count": 4653
+    },
+    {
+      "name": "Buller District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 258,
+      "median": 300,
+      "upper": 390,
+      "count": 12
+    },
+    {
+      "name": "Carterton District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 484,
+      "median": 520,
+      "upper": 530,
+      "count": 18
+    },
+    {
+      "name": "Central Hawke's Bay District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 495,
+      "median": 540,
+      "upper": 590,
+      "count": 18
+    },
+    {
+      "name": "Central Otago District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 595,
+      "median": 700,
+      "upper": 750,
+      "count": 48
+    },
+    {
+      "name": "Christchurch City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 485,
+      "median": 550,
+      "upper": 650,
+      "count": 1053
+    },
+    {
+      "name": "Clutha District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 360,
+      "median": 425,
+      "upper": 490,
+      "count": 24
+    },
+    {
+      "name": "Dunedin City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 421,
+      "median": 540,
+      "upper": 614,
+      "count": 225
+    },
+    {
+      "name": "Far North District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 465,
+      "median": 550,
+      "upper": 645,
+      "count": 87
+    },
+    {
+      "name": "Gisborne District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 600,
+      "upper": 680,
+      "count": 78
+    },
+    {
+      "name": "Gore District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 400,
+      "median": 475,
+      "upper": 500,
+      "count": 21
+    },
+    {
+      "name": "Grey District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 550,
+      "median": 550,
+      "upper": 565,
+      "count": 6
+    },
+    {
+      "name": "Hamilton City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 450,
+      "median": 570,
+      "upper": 650,
+      "count": 573
+    },
+    {
+      "name": "Hastings District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 535,
+      "median": 595,
+      "upper": 680,
+      "count": 135
+    },
+    {
+      "name": "Hauraki District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 565,
+      "median": 595,
+      "upper": 655,
+      "count": 24
+    },
+    {
+      "name": "Horowhenua District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 475,
+      "median": 530,
+      "upper": 590,
+      "count": 96
+    },
+    {
+      "name": "Hurunui District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 405,
+      "median": 475,
+      "upper": 589,
+      "count": 15
+    },
+    {
+      "name": "Invercargill City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 450,
+      "median": 520,
+      "upper": 580,
+      "count": 114
+    },
+    {
+      "name": "Kaikoura District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 460,
+      "median": 505,
+      "upper": 528,
+      "count": 6
+    },
+    {
+      "name": "Kaipara District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 550,
+      "median": 600,
+      "upper": 670,
+      "count": 45
+    },
+    {
+      "name": "Kapiti Coast District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 520,
+      "median": 600,
+      "upper": 710,
+      "count": 117
+    },
+    {
+      "name": "Kawerau District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 520,
+      "median": 550,
+      "upper": 605,
+      "count": 18
+    },
+    {
+      "name": "Lower Hutt City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 600,
+      "upper": 680,
+      "count": 234
+    },
+    {
+      "name": "Mackenzie District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 230,
+      "median": 295,
+      "upper": 468,
+      "count": 18
+    },
+    {
+      "name": "Manawatu District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 550,
+      "upper": 610,
+      "count": 48
+    },
+    {
+      "name": "Marlborough District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 530,
+      "median": 595,
+      "upper": 650,
+      "count": 72
+    },
+    {
+      "name": "Masterton District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 498,
+      "median": 550,
+      "upper": 590,
+      "count": 36
+    },
+    {
+      "name": "Matamata-Piako District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 510,
+      "median": 580,
+      "upper": 683,
+      "count": 42
+    },
+    {
+      "name": "Napier City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 573,
+      "median": 650,
+      "upper": 710,
+      "count": 102
+    },
+    {
+      "name": "Nelson City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 450,
+      "median": 550,
+      "upper": 640,
+      "count": 147
+    },
+    {
+      "name": "New Plymouth District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 580,
+      "upper": 650,
+      "count": 168
+    },
+    {
+      "name": "Opotiki District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 414,
+      "median": 473,
+      "upper": 515,
+      "count": 9
+    },
+    {
+      "name": "Otorohanga District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 374,
+      "median": 485,
+      "upper": 585,
+      "count": 12
+    },
+    {
+      "name": "Palmerston North City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 420,
+      "median": 550,
+      "upper": 600,
+      "count": 243
+    },
+    {
+      "name": "Porirua City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 525,
+      "median": 645,
+      "upper": 750,
+      "count": 90
+    },
+    {
+      "name": "Queenstown-Lakes District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 573,
+      "median": 780,
+      "upper": 1050,
+      "count": 156
+    },
+    {
+      "name": "Rangitikei District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 375,
+      "median": 480,
+      "upper": 555,
+      "count": 18
+    },
+    {
+      "name": "Rotorua District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 575,
+      "upper": 640,
+      "count": 162
+    },
+    {
+      "name": "Ruapehu District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 390,
+      "median": 415,
+      "upper": 450,
+      "count": 21
+    },
+    {
+      "name": "Selwyn District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 578,
+      "median": 620,
+      "upper": 660,
+      "count": 159
+    },
+    {
+      "name": "South Taranaki District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 471,
+      "median": 530,
+      "upper": 575,
+      "count": 39
+    },
+    {
+      "name": "South Waikato District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 428,
+      "median": 500,
+      "upper": 575,
+      "count": 72
+    },
+    {
+      "name": "South Wairarapa District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 540,
+      "upper": 554,
+      "count": 21
+    },
+    {
+      "name": "Southland District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 410,
+      "median": 450,
+      "upper": 530,
+      "count": 30
+    },
+    {
+      "name": "Stratford District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 475,
+      "median": 535,
+      "upper": 593,
+      "count": 21
+    },
+    {
+      "name": "Tararua District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 435,
+      "median": 480,
+      "upper": 500,
+      "count": 27
+    },
+    {
+      "name": "Tasman District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 500,
+      "median": 580,
+      "upper": 640,
+      "count": 75
+    },
+    {
+      "name": "Taupo District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 540,
+      "median": 640,
+      "upper": 696,
+      "count": 81
+    },
+    {
+      "name": "Tauranga City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 620,
+      "median": 700,
+      "upper": 778,
+      "count": 342
+    },
+    {
+      "name": "Thames-Coromandel District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 464,
+      "median": 600,
+      "upper": 600,
+      "count": 51
+    },
+    {
+      "name": "Timaru District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 440,
+      "median": 498,
+      "upper": 550,
+      "count": 63
+    },
+    {
+      "name": "Upper Hutt City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 520,
+      "median": 590,
+      "upper": 675,
+      "count": 78
+    },
+    {
+      "name": "Waikato District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 550,
+      "median": 620,
+      "upper": 686,
+      "count": 105
+    },
+    {
+      "name": "Waimakariri District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 565,
+      "median": 618,
+      "upper": 650,
+      "count": 57
+    },
+    {
+      "name": "Waipa District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 550,
+      "median": 600,
+      "upper": 708,
+      "count": 99
+    },
+    {
+      "name": "Wairoa District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 380,
+      "median": 400,
+      "upper": 420,
+      "count": 12
+    },
+    {
+      "name": "Waitaki District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 470,
+      "median": 510,
+      "upper": 550,
+      "count": 18
+    },
+    {
+      "name": "Waitomo District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 400,
+      "median": 470,
+      "upper": 535,
+      "count": 18
+    },
+    {
+      "name": "Wellington City",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 420,
+      "median": 550,
+      "upper": 680,
+      "count": 663
+    },
+    {
+      "name": "Western Bay of Plenty District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 570,
+      "median": 650,
+      "upper": 730,
+      "count": 72
+    },
+    {
+      "name": "Westland District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 200,
+      "median": 430,
+      "upper": 550,
+      "count": 9
+    },
+    {
+      "name": "Whakatane District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 520,
+      "median": 575,
+      "upper": 630,
+      "count": 27
+    },
+    {
+      "name": "Whanganui District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 450,
+      "median": 520,
+      "upper": 550,
+      "count": 102
+    },
+    {
+      "name": "Whangarei District",
+      "month": "2026-09",
+      "bedrooms": "all",
+      "lower": 483,
+      "median": 585,
+      "upper": 650,
+      "count": 171
+    }
+  ]
+}

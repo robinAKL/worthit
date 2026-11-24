@@ -62,10 +62,41 @@ export const en = {
   },
   rent: {
     title: 'Is your rent in range?',
-    lede: 'Coming next: enter an area, bedroom count and weekly rent to compare with public rental bond records.',
-    note: 'Source: MBIE rental bond data, licensed under CC BY 3.0 NZ. Records reflect rent when a tenancy starts, rather than current advertised rent. Publication is about two months behind.',
+    lede: 'Enter an area and a weekly rent. We place it against new bonds lodged in that territorial authority.',
+    note: 'These are rents from lodged bonds, not current advertised rents. Publication lags by about two months. Source: MBIE, licensed under CC BY 3.0 NZ.',
     link: 'View the rental bond data',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
+    licence: 'CC BY 3.0 NZ',
+    licenceHref: 'https://creativecommons.org/licenses/by/3.0/nz/',
+    newWindow: ' (opens in a new tab)',
+    areaLabel: 'Area',
+    areaPlaceholder: 'Search areas',
+    bedroomsLabel: 'Bedrooms',
+    bedrooms: {
+      all: 'All',
+      1: '1',
+      2: '2',
+      3: '3',
+      4: '4',
+      '5+': '5 or more',
+    },
+    rentLabel: 'Weekly rent (NZD)',
+    rentPlaceholder: '650',
+    prompt: 'Enter a weekly rent to see where it sits.',
+    insufficient: 'Not enough bonds were recorded to show a range.',
+    unsplit: 'This monthly file is not split by bedroom. Choose all bedrooms to see the range for the area.',
+    unknownArea: 'Choose an area from the list.',
+    oneBedroom: 'Tenancy Services says one-bedroom figures can be inaccurate, because some bonds are recorded as one bedroom when the home has more.',
+    bands: {
+      below: (area: string, month: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
+        `$${rent} a week is under the lower quartile of $${lower} for ${count.toLocaleString('en-NZ')} new bonds in ${area} (${month}).`,
+      'lower-to-median': (area: string, month: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
+        `$${rent} a week sits from the lower quartile ($${lower}) to the median ($${median}) of ${count.toLocaleString('en-NZ')} new bonds in ${area} (${month}).`,
+      'median-to-upper': (area: string, month: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
+        `$${rent} a week sits from the median ($${median}) to the upper quartile ($${upper}) of ${count.toLocaleString('en-NZ')} new bonds in ${area} (${month}).`,
+      above: (area: string, month: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
+        `$${rent} a week is above the upper quartile of $${upper} for ${count.toLocaleString('en-NZ')} new bonds in ${area} (${month}).`,
+    },
   },
   data: {
     title: 'Our sources',
@@ -74,7 +105,7 @@ export const en = {
     rows: [
       ['Sample products', 'In use', 'Products, merchants and prices on this page are fictional examples of how ranking works.'],
       ['Merchant product data', 'Planned', 'Merchants provide product data. We show its date and link to their website.'],
-      ['Public rental data', 'Coming next', 'MBIE rental bond records, CC BY 3.0 NZ, with attribution to MBIE.'],
+      ['Public rental data', 'In use', 'MBIE rental bond records for September 2026, CC BY 3.0 NZ, with attribution to MBIE.'],
       ['Sites that restrict collection', 'Excluded', 'We do not collect data where site terms or robots.txt prohibit it.'],
     ],
   },

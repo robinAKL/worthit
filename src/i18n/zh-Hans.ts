@@ -62,10 +62,41 @@ export const zhHans: Copy = {
   },
   rent: {
     title: '房租贵不贵？',
-    lede: '下一版上线：输入地区、卧室数和每周租金，对照政府公开的押金登记数据，告诉你这笔租金落在哪一档。',
-    note: '数据来自 MBIE 的租房押金登记，按 CC BY 3.0 NZ 许可使用。押金登记的是签约时的租金，不是当前广告价，发布大约滞后两个月。',
+    lede: '输入地区和每周租金，对照该地区新登记押金的租金区间。',
+    note: '这是押金登记的租金，不是当前广告价，发布有滞后。数据来自 MBIE，按 CC BY 3.0 NZ 许可使用。',
     link: '查看数据原始页面',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
+    licence: 'CC BY 3.0 NZ',
+    licenceHref: 'https://creativecommons.org/licenses/by/3.0/nz/',
+    newWindow: '（在新标签页打开）',
+    areaLabel: '地区',
+    areaPlaceholder: '搜索地区',
+    bedroomsLabel: '卧室数',
+    bedrooms: {
+      all: '全部',
+      1: '1',
+      2: '2',
+      3: '3',
+      4: '4',
+      '5+': '5 间或更多',
+    },
+    rentLabel: '每周租金（纽币）',
+    rentPlaceholder: '650',
+    prompt: '输入每周租金，查看它落在哪一档。',
+    insufficient: '数据不足，登记的押金太少，无法给出区间。',
+    unsplit: '这份按月公布的地区文件没有按卧室数拆开。选择全部卧室，才能看到该地区的区间。',
+    unknownArea: '请从列表中选择地区。',
+    oneBedroom: 'Tenancy Services 说明，一居室数据可能不准确，因为有些押金被记成一居室，实际卧室更多。',
+    bands: {
+      below: (area: string, month: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
+        `每周 ${rent} 纽币，低于 ${area} 在 ${month} 新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币。`,
+      'lower-to-median': (area: string, month: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
+        `每周 ${rent} 纽币，落在 ${area} ${month} 新登记 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币到中位 ${median} 纽币之间。`,
+      'median-to-upper': (area: string, month: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
+        `每周 ${rent} 纽币，落在 ${area} ${month} 新登记 ${count.toLocaleString('zh-Hans')} 笔押金的中位 ${median} 纽币到上四分位 ${upper} 纽币之间。`,
+      above: (area: string, month: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
+        `每周 ${rent} 纽币，高于 ${area} 在 ${month} 新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的上四分位 ${upper} 纽币。`,
+    },
   },
   data: {
     title: '数据从哪来',
@@ -74,7 +105,7 @@ export const zhHans: Copy = {
     rows: [
       ['示例数据', '正在使用', '当前页面上的商品、商家和价格都是示例，用来演示排序方式。'],
       ['商家主动提供的商品数据', '计划接入', '商家提交商品数据，我们标明采集时间，点击跳转到商家页面。'],
-      ['政府公开租金数据', '下一版', 'MBIE 押金登记数据，CC BY 3.0 NZ，署名 MBIE。'],
+      ['政府公开租金数据', '正在使用', 'MBIE 2026 年 9 月押金登记，CC BY 3.0 NZ，署名 MBIE。'],
       ['明确禁止抓取的网站', '不收录', '对方条款或 robots.txt 禁止的，我们不抓取。'],
     ],
   },

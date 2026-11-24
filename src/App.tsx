@@ -5,6 +5,7 @@ import { DICTIONARIES, useLocale, type Locale } from './i18n';
 import { LanguageSelect } from './components/LanguageSelect';
 import { LaneTabs } from './components/LaneTabs';
 import { ProductCard } from './components/ProductCard';
+import { RentCheck } from './components/RentCheck';
 
 const PANEL_ID = 'results-panel';
 const PAGE_SIZE = 8;
@@ -219,21 +220,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="rent" className="rent" aria-labelledby="rent-title">
-          <div className="wrap">
-            <div className="rent-well">
-              <h2 id="rent-title" className="section-title">
-                {copy.rent.title}
-              </h2>
-              <p className="section-lede">{copy.rent.lede}</p>
-              <p className="rent-note">{copy.rent.note}</p>
-              <a className="rent-link" href={copy.rent.href} target="_blank" rel="noopener noreferrer">
-                {copy.rent.link}
-                <span className="visually-hidden">{copy.a11y.newWindow}</span>
-              </a>
-            </div>
-          </div>
-        </section>
+        <RentCheck copy={copy.rent} locale={locale} />
 
         <section id="data" className="data" aria-labelledby="data-title">
           <div className="wrap split">

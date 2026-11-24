@@ -529,10 +529,55 @@
   max-width: 64ch;
   color: var(--color-ink-2);
 }
+.rent-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.7fr) minmax(0, 0.8fr);
+  gap: var(--space-md);
+  align-items: end;
+}
+.rent-field {
+  display: grid;
+  gap: var(--space-2xs);
+  min-width: 0;
+}
+.rent-field span {
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
+.rent-field input,
+.rent-field select {
+  width: 100%;
+  min-width: 0;
+  height: var(--control-h);
+  padding-inline: var(--space-md);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  border: var(--rule-hair) solid var(--color-rule-2);
+  border-radius: var(--radius-inner);
+  font: inherit;
+  font-size: var(--text-base);
+}
+.rent-result {
+  display: grid;
+  gap: var(--space-xs);
+  max-width: 68ch;
+}
+.rent-caution {
+  color: var(--color-ink-2);
+}
+.rent-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
 .rent-link {
-  justify-self: start;
   color: var(--color-accent);
   font-weight: 700;
+}
+@media (max-width: 720px) {
+  .rent-form {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer: colophon line */
