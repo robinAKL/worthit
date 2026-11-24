@@ -382,6 +382,58 @@ for (const product of catalog) {
   product.title = englishTitles[product.id] ?? product.title;
 }
 
+const specEn: Record<string, string> = {
+  '14 寸': '14 in',
+  '15 寸': '15 in',
+  '16 寸': '16 in',
+  '很好': 'Good',
+  '实木': 'Solid wood',
+  '板材': 'Particle board',
+  '布艺': 'Fabric',
+  '办公椅': 'Office chair',
+  '外壳有划痕，电池健康 90%，含充电器。': 'Case has scratches, battery health 90%, charger included.',
+  '键盘无缺损，循环 40 次，原装充电器。': 'Keyboard is intact, 40 cycles, original charger.',
+  '边角轻微磨损，屏幕无亮点，含包。': 'Light wear on the corners, no bright spots, bag included.',
+  '使用一年，电池健康 86%，含发票复印件。': 'Used for one year, battery health 86%, receipt copy included.',
+  '几乎无使用痕迹，保修还剩 4 个月。': 'Almost no signs of use, 4 months of warranty left.',
+  '办公使用，风扇已清灰，含原箱。': 'Used for office work, fan cleaned, original box included.',
+  '成色接近全新，配件齐全，店保 90 天。': 'Nearly new, accessories included, 90-day shop warranty.',
+  '屏幕色准已写明，含触控笔和充电器。': 'Colour accuracy is written down, stylus and charger included.',
+  '屏幕有裂纹，功能正常，含充电线。': 'Cracked screen, it works, charging cable included.',
+  '边框磨损，电池健康 87%，无维修记录。': 'Worn frame, battery health 87%, no repair record.',
+  '后盖细微划痕，含原装壳。': 'Fine scratches on the back, original case included.',
+  '电池健康 90%，无进水，含发票。': 'Battery health 90%, no water damage, receipt included.',
+  '使用半年，配件含壳和线，店保 30 天。': 'Used for six months, case and cable included, 30-day shop warranty.',
+  '屏幕无划痕，电池健康 96%，含原盒。': 'No scratches on the screen, battery health 96%, original box included.',
+  '激活不满一个月，配件齐全，保修在。': 'Activated less than a month ago, accessories included, warranty still running.',
+  '仅开箱试用，含未拆封耳机。': 'Unboxed and tried only, sealed earphones included.',
+  '桌面有水印，桌腿稳，需自提。': 'Watermarks on the top, legs are steady, pickup only.',
+  '桌面轻微磕碰，结构牢固，不含椅。': 'Light knocks on the top, the frame is solid, chair not included.',
+  '气压杆正常，轮子齐全，布面干净。': 'The gas lift works, all wheels are present, the fabric is clean.',
+  '布套可拆，无破洞，无宠物味。': 'The cover comes off, no holes, no pet smell.',
+  '坐垫饱满，支架无异响，使用两年。': 'Cushions are firm, the frame is quiet, used for two years.',
+  '实木桌面，抽屉滑轨顺畅，含走线孔。': 'Solid-wood top, smooth drawer slides, cable hole included.',
+  '购买四个月，防污罩还在，无污渍。': 'Bought four months ago, the cover is still on, no stains.',
+  '桌面无烫痕，四椅齐全，可拆装。': 'No heat marks on the top, all four chairs present, it comes apart.',
+};
+
+for (const product of catalog) {
+  const zhSpecs: Record<string, string | number> = {};
+  const enSpecs: Record<string, string | number> = {};
+  for (const [key, value] of Object.entries(product.specs)) {
+    if (typeof value === 'string' && /[\u4e00-\u9fff]/.test(value)) {
+      const translated = specEn[value];
+      if (!translated) throw new Error(`missing English spec: ${value}`);
+      zhSpecs[key] = value;
+      enSpecs[key] = translated;
+    } else {
+      enSpecs[key] = value;
+    }
+  }
+  product.specs = enSpecs;
+  if (Object.keys(zhSpecs).length > 0) product.localizedSpecs = { 'zh-Hans': zhSpecs };
+}
+
 export function productsIn(category: string): Product[] {
   return catalog.filter((product) => product.category === category);
 }

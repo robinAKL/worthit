@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
-import { excludedFrom, quartile } from './score';
+import { excludedFrom, quartile, reasonFor } from './score';
 import { search } from './search';
 
 describe('parseQuery', () => {
@@ -31,6 +31,9 @@ describe('catalog', () => {
         expect(product.merchant.startsWith('Sample Store')).toBe(true);
         expect(product.titles?.['zh-Hans']).toBeTruthy();
         expect(product.title).not.toMatch(/[\u4e00-\u9fff]/);
+        for (const value of Object.values(product.specs)) {
+          expect(String(value)).not.toMatch(/[\u4e00-\u9fff]/);
+        }
         expect(product.url.startsWith('https://example.com/')).toBe(true);
         expect(product.title).not.toMatch(/Trade Me|Warehouse|Noel Leeming|PB Tech|Mighty Ape/i);
       }
@@ -45,6 +48,16 @@ describe('search', () => {
     expect(parseQuery('Laptop under $1,500').budgetMax).toBe(1500);
     expect(parseQuery('phone for my mum').category).toBe('phone');
     expect(parseQuery('desk for a small flat').category).toBe('furniture');
+  });
+
+  it('describes a cheap-lane price at the quartile as at or below', () => {
+    const product = productsIn('phone').find((item) => item.id === 'phone-02');
+    expect(product).toBeTruthy();
+    if (!product) return;
+    const reason = reasonFor(product, 'cheap', product.price, product.price, 'en');
+    expect(reason).toContain('at or below');
+    expect(reason).not.toMatch(/under the sample/);
+    expect(product.localizedSpecs?.['zh-Hans']?.note).toMatch(/[\u4e00-\u9fff]/);
   });
 
   it('writes Chinese reasons when asked', () => {

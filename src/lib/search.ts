@@ -12,7 +12,17 @@ import type { Lane, Locale, Product, SearchResult } from './types';
 import { DEFAULT_LOCALE } from './types';
 
 function haystack(product: Product): string {
-  return [product.title, product.category, ...Object.values(product.specs).map(String)].join(' ').toLowerCase();
+  const localized = Object.values(product.localizedSpecs ?? {}).flatMap((specs) => Object.values(specs).map(String));
+  return [
+    product.title,
+    product.titles?.['zh-Hans'],
+    product.category,
+    ...Object.values(product.specs).map(String),
+    ...localized,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
 }
 
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE): SearchResult {

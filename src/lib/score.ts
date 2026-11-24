@@ -74,16 +74,16 @@ export function reasonFor(
   const specCount = Object.keys(product.specs).filter((key) => key !== 'note').length;
   if (locale === 'zh-Hans') {
     if (lane === 'cheap') {
-      return `标价 ${price} 纽币，低于同组示例价的下四分位 ${q1}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+      return `标价 ${price} 纽币，不高于同组示例价的下四分位 ${q1}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。这是示例价，不是在售价。`;
     }
     if (lane === 'value') {
       return `标价 ${price} 纽币，同组示例中位是 ${mid}。规格写了 ${specCount} 项，反馈 ${reviews} 条。这是示例价，不是在售价。`;
     }
-    const note = String(product.specs.note ?? '');
+    const note = String(product.localizedSpecs?.['zh-Hans']?.note ?? product.specs.note ?? '');
     return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。这是示例价，不是在售价。`;
   }
   if (lane === 'cheap') {
-    return `Listed at ${price} NZD, under the sample lower quartile of ${q1}. ${product.imageCount} photos, ${reviews} reviews. Sample price, not a live price.`;
+    return `Listed at ${price} NZD, at or below the sample lower quartile of ${q1}. ${product.imageCount} photos, ${reviews} reviews. Sample price, not a live price.`;
   }
   if (lane === 'value') {
     return `Listed at ${price} NZD. The sample median is ${mid}. ${specCount} specs filled in, ${reviews} reviews. Sample price, not a live price.`;
