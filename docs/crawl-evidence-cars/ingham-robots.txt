@@ -1,0 +1,43 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# START WPFORMS BLOCK
+# ---------------------------
+User-agent: *
+Disallow: /wp-content/uploads/wpforms/
+# ---------------------------
+# END WPFORMS BLOCK
+
+Sitemap: https://www.inghamdriven.nz/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/mitsubishi/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/mercedes-benz-hawkes-bay/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/suzuki/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/isuzu/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/kia/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/hyundai/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/mercedes-benz/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/mercedes-benz-auckland/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/ingham-prestige/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/ingham-sears/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/te-awamutu/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/nissan/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/renault/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/north-harbour/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/honda/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/taupo/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/west-auckland/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/omoda/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/great-lake-taupo/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/jaecoo/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/cambridge/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/hamilton/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/gwm/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/chery/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/tauranga/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/north-shore/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/ford/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/rotorua/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/taupo-central/wp-sitemap.xml
+Sitemap: https://www.inghamdriven.nz/wairau/wp-sitemap.xml
+Crawl-delay: 1

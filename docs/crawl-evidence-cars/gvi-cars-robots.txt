@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow:
+
+
+
+Sitemap: https://www.gvi.kiwi/sitemap.xml

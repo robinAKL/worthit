@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /index.php?*
+Disallow: /ajax/*
+Disallow: /motor/view/*
+Disallow: /mobil/view/*
+Disallow: /rumah/view/*
+Disallow: /lowongan-kerja/view/*
+Disallow: /shopping/view/*
+Disallow: /index.php?keyword=*
+Disallow: /index.php?make=*
+Disallow: /CAR_FOLDER/*
+Disallow: /MOTOR_FOLDER/*
+Disallow: /HOMES_FOLDER/*
+Disallow: /JOBS_FOLDER/*
+Disallow: /SHOPPING_FOLDER/*

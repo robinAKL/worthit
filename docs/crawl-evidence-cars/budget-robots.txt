@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /email/*
+Disallow: /feedds/*
+Disallow: /appreciation_email/*

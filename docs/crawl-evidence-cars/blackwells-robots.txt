@@ -1,0 +1,5 @@
+Disallow: /i/files
+
+Disallow: /i/images
+
+Disallow: /i/pumedia

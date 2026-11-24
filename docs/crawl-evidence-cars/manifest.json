@@ -1,0 +1,2031 @@
+{
+  "checkedDate": "2026-11-24",
+  "timezone": "Pacific/Auckland",
+  "counts": {
+    "不确定": 27,
+    "禁止": 15,
+    "可采集": 1
+  },
+  "sites": [
+    {
+      "key": "apexhub",
+      "name": "Apex Hub",
+      "type": "聚合平台",
+      "base": "https://www.apexhub.co.nz",
+      "requests": [
+        {
+          "url": "https://www.apexhub.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.055946+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "b51e0b0f97aa83a61626005c51eb5faf795f2f7239c5b60c7c579a7b079fe86c"
+        },
+        {
+          "url": "https://www.apexhub.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:55.468490+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "e5fdc56e2b860d552a414b4b89a252353d4a619b6a1b3183d0c9ef5950c3ee73"
+        },
+        {
+          "url": "https://www.apexhub.co.nz/terms-of-use",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:56.716803+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "12bdc06715a9ffdb1f14bd8a58e36100dab4b77ba30258dd1c442fcd1642eced"
+        },
+        {
+          "url": "https://www.apexhub.co.nz/privacy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:57.843474+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "f5ecc0fba2ba20462689c3477e25f5868098396fbb31654ff28373862cfa444b"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.apexhub.co.nz/ollie/for-ai",
+          "result": "有限MCP/API已核实；公开匹配不等于批量导出许可"
+        }
+      ],
+      "openedUrls": [
+        "https://www.apexhub.co.nz/robots.txt",
+        "https://www.apexhub.co.nz/",
+        "https://www.apexhub.co.nz/terms-of-use",
+        "https://www.apexhub.co.nz/privacy",
+        "https://www.apexhub.co.nz/ollie/for-ai"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.apexhub.co.nz/terms-of-use",
+      "quote": "raw full-stock exports",
+      "fullPolicyPublished": false,
+      "robotsFile": "apexhub-robots.txt",
+      "publishedRobotsSha256": "b51e0b0f97aa83a61626005c51eb5faf795f2f7239c5b60c7c579a7b079fe86c"
+    },
+    {
+      "key": "autostock",
+      "name": "Autostock",
+      "type": "聚合平台",
+      "base": "https://www.autostock.co.nz",
+      "requests": [
+        {
+          "url": "https://www.autostock.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.054410+00:00",
+          "status": 200,
+          "contentType": "text/plain;charset=UTF-8",
+          "sha256": "e0809bb986c8fd617e9e47608f6243aff37d592c4462f7eeca99a6e2c8c1ea16"
+        },
+        {
+          "url": "https://www.autostock.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:54.763507+00:00",
+          "status": 200,
+          "contentType": "text/html;charset=UTF-8",
+          "sha256": "a51512819076b601803aa017f7948cfa6ccbeb99f2b4019803d727f9a8a61680"
+        },
+        {
+          "url": "https://www.autostock.co.nz/terms",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:19.123369+00:00",
+          "status": 200,
+          "contentType": "text/html",
+          "sha256": "ed9f965fee8c903f1ae41f8b026872eb63579e61bb0e2f2f95e3dd69071b0820"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.autostock.co.nz/terms",
+          "result": "官方索引正文可读，普通GET为JS壳"
+        }
+      ],
+      "openedUrls": [
+        "https://www.autostock.co.nz/robots.txt",
+        "https://www.autostock.co.nz/",
+        "https://www.autostock.co.nz/terms"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.autostock.co.nz/terms",
+      "quote": "personal, non-commercial use",
+      "fullPolicyPublished": false,
+      "robotsFile": "autostock-robots.txt",
+      "publishedRobotsSha256": "e0809bb986c8fd617e9e47608f6243aff37d592c4462f7eeca99a6e2c8c1ea16"
+    },
+    {
+      "key": "autotrader",
+      "name": "AutoTrader NZ",
+      "type": "聚合平台",
+      "base": "https://autotrader.co.nz",
+      "requests": [
+        {
+          "url": "https://autotrader.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.051246+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "0775fe86b9ab47b31545cddc49e55afb5d10c4685b2835d66743a20a4b425484"
+        },
+        {
+          "url": "https://autotrader.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:54.678062+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "8d324a975efcd266ee53937a5261c5ff379137ccdcf200e9eb9fb9911d9ddfec"
+        },
+        {
+          "url": "https://autotrader.co.nz/terms-and-conditions/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:55.369685+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=iso-8859-1",
+          "sha256": "4714eda96fb9786c7f190591479b7b158e24df864834adb14e3a80ab8b087bb5",
+          "redirectTo": "https://autotrader.co.nz/terms-and-conditions"
+        },
+        {
+          "url": "https://autotrader.co.nz/terms-and-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:55.456140+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "706f4e033c201934ab3562d7fe9753001ceb050303a53ea1fe815ecbc682906a"
+        },
+        {
+          "url": "https://autotrader.co.nz/privacy-policy/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:56.104226+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=iso-8859-1",
+          "sha256": "17f83d0dd79f74daffba5cdd0716915eb4d1e2db6e8e38831b92f217f5f2cc2a",
+          "redirectTo": "https://autotrader.co.nz/privacy-policy"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://autotrader.co.nz/robots.txt",
+        "https://autotrader.co.nz/",
+        "https://autotrader.co.nz/terms-and-conditions/",
+        "https://autotrader.co.nz/terms-and-conditions",
+        "https://autotrader.co.nz/privacy-policy/"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "禁止",
+      "policyUrl": "https://autotrader.co.nz/terms-and-conditions",
+      "quote": "you must not modify, copy, reproduce, republish",
+      "fullPolicyPublished": false,
+      "robotsFile": "autotrader-robots.txt",
+      "publishedRobotsSha256": "0775fe86b9ab47b31545cddc49e55afb5d10c4685b2835d66743a20a4b425484"
+    },
+    {
+      "key": "cari",
+      "name": "Cari Cars",
+      "type": "聚合平台",
+      "base": "https://cars.cari.co.nz",
+      "requests": [
+        {
+          "url": "https://cars.cari.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.055483+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "5f0d27c9046b876d7a58296931ef2fa2cb2bad04fff071806d29cfdb8e44329e"
+        },
+        {
+          "url": "https://cars.cari.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:55.531822+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "cb51aaa85aff39acf3e41ce376f2ce88ce7172cc36ff6d57d99f93f5013f5167"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://cars.cari.co.nz/robots.txt",
+        "https://cars.cari.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "cari-robots.txt",
+      "publishedRobotsSha256": "06d9657778d37be89d9c5500509b5c3dc17e4c97ba44b37b765b67da2a537d09"
+    },
+    {
+      "key": "carjam",
+      "name": "CarJam（车辆历史/数据，不是车源市场）",
+      "type": "聚合平台",
+      "base": "https://www.carjam.co.nz",
+      "requests": [
+        {
+          "url": "https://www.carjam.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.054954+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "257e385c8adbb5ed165d096ddc05c98350dc00bb50c750ae295e8e9c9f6fc754"
+        },
+        {
+          "url": "https://www.carjam.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:54.685052+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "2ddc0fd9bd3971e1b60d1c6413e7ab551960f80734e188b55dfb6c69162259b6"
+        },
+        {
+          "url": "https://www.carjam.co.nz/cms:page?t=terms-and-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:55.332146+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "b925b97a929e824d124e69f86ae72dd03c96505603f30de74be2232ef82b2c4b"
+        },
+        {
+          "url": "https://www.carjam.co.nz/cms/privacy-policy/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:55.896315+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "bf54ab2f1da61fffa899a17d3f416d21a48a9393338c20e51518791b9101a4f0"
+        },
+        {
+          "url": "https://www.carjam.co.nz/cms%3Apage?s=wof&t=api-terms-and-conditions",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:21.877412+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "1d69dd6b33992b570e99a75c72598cbc073fed44055ddbaa3c5e56700f2be808"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.carjam.co.nz/robots.txt",
+        "https://www.carjam.co.nz/",
+        "https://www.carjam.co.nz/cms:page?t=terms-and-conditions",
+        "https://www.carjam.co.nz/cms/privacy-policy/",
+        "https://www.carjam.co.nz/cms%3Apage?s=wof&t=api-terms-and-conditions"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.carjam.co.nz/cms:page?t=terms-and-conditions",
+      "quote": "store, retain, cache, persist, archive, log or index",
+      "fullPolicyPublished": false,
+      "robotsFile": "carjam-robots.txt",
+      "publishedRobotsSha256": "e935ebf10e8f04a1a323c5068b8404d86c55f58b7a2d89946676a91b9cd32ab9"
+    },
+    {
+      "key": "driven",
+      "name": "DRIVEN Car Guide",
+      "type": "聚合平台",
+      "base": "https://www.drivencarguide.co.nz",
+      "requests": [
+        {
+          "url": "https://www.drivencarguide.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.053293+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "c45e226f5c8a9f64c34323d0db2ab2d1930d32c8f145907551a1760435680831"
+        },
+        {
+          "url": "https://www.drivencarguide.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:55.069893+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "8bb7b59fb93db0cbb3cfb6d5386a0dc1e264db310d52d8fb5867f953dab6fa28"
+        },
+        {
+          "url": "https://www.drivencarguide.co.nz/terms-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:56.233663+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "6f8086fcd69876416250fcbb012b7dd03cb80ea82ab8142e7afed40abc82da12"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.drivencarguide.co.nz/robots.txt",
+        "https://www.drivencarguide.co.nz/",
+        "https://www.drivencarguide.co.nz/terms-conditions"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.drivencarguide.co.nz/terms-conditions",
+      "quote": "no content may be reproduced, published or transmitted",
+      "fullPolicyPublished": false,
+      "robotsFile": "driven-robots.txt",
+      "publishedRobotsSha256": "a33c96ef7570c2f12534df5646e7311aba0a811cdc7ab328a904d236595a2e0c"
+    },
+    {
+      "key": "facebook",
+      "name": "Facebook Marketplace NZ",
+      "type": "聚合平台",
+      "base": "https://www.facebook.com",
+      "requests": [
+        {
+          "url": "https://www.facebook.com/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T08:00:51.296500+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "077f48005abaa8752ba8b70cd4053df4eadab4e23d5f3489c75ba7e70ad615d7"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.facebook.com/legal/automated_data_collection_terms",
+          "result": "Redirect to login and temporarily blocked notice; no login performed. Actual policy not read."
+        }
+      ],
+      "openedUrls": [
+        "https://www.facebook.com/robots.txt",
+        "https://www.facebook.com/legal/automated_data_collection_terms"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.facebook.com/legal/automated_data_collection_terms",
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "facebook-robots.txt",
+      "publishedRobotsSha256": "865e5ca9e077a1d66692041b4ca9fa2bfd3041bbf552b378eb377627afc4913e"
+    },
+    {
+      "key": "needacar",
+      "name": "Need A Car",
+      "type": "聚合平台",
+      "base": "https://www.needacar.co.nz",
+      "requests": [
+        {
+          "url": "https://www.needacar.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.053942+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "818f8d1aa0bc1308c48db4c0d20dcacae5106a6339b60ca01f1444d64647d446"
+        },
+        {
+          "url": "https://www.needacar.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:54.704436+00:00",
+          "status": 502,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "0642331c93a5f367e93a572ec47a6cdbb72255fb4d38c4b5cd0dbd30777b9c72"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.needacar.co.nz/robots.txt",
+        "https://www.needacar.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "needacar-robots.txt",
+      "publishedRobotsSha256": "a217c26c831c2feedc6759cab18b72a2fcd1d30a2d13869e5f9db57c510ad7cf"
+    },
+    {
+      "key": "trademe",
+      "name": "Trade Me Motors",
+      "type": "聚合平台",
+      "base": "https://www.trademe.co.nz",
+      "requests": [
+        {
+          "url": "https://www.trademe.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.050381+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "d2ba0e3af048cfda339833c84c9ff1a065adb758fef5d9f9149dbe56b5d70b1c"
+        },
+        {
+          "url": "https://www.trademe.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:54.992848+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "6801ea7df7fe2a42e98b60777ab3eaa5258177781b7e18429ee5244642a1f97d"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://developer.trademe.co.nz/terms-and-conditions",
+          "result": "沿用本项目已核实API条款，不重复打开"
+        },
+        {
+          "url": "https://developer.trademe.co.nz/",
+          "result": "沿用已核实Motors API适用对象说明"
+        }
+      ],
+      "openedUrls": [
+        "https://www.trademe.co.nz/robots.txt",
+        "https://www.trademe.co.nz/",
+        "https://developer.trademe.co.nz/terms-and-conditions",
+        "https://developer.trademe.co.nz/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://developer.trademe.co.nz/terms-and-conditions",
+      "quote": "must not reuse or resupply any Data",
+      "fullPolicyPublished": false,
+      "robotsFile": "trademe-robots.txt",
+      "publishedRobotsSha256": "d2ba0e3af048cfda339833c84c9ff1a065adb758fef5d9f9149dbe56b5d70b1c"
+    },
+    {
+      "key": "2cheap",
+      "name": "2 Cheap Cars",
+      "type": "经销商集团",
+      "base": "https://www.2cheapcars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.2cheapcars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:59.075456+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "1202863f1fd167eed26553390b62858897f3cd4f0f12a0dd5829b51003fb6116"
+        },
+        {
+          "url": "https://www.2cheapcars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:59.843504+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "0aaed970c0fbdbb6a8903d881c8f4a386d29999c8401d4fda155a35b1f303385"
+        },
+        {
+          "url": "https://www.2cheapcars.co.nz/other/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:00.774885+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "1775bfe97b44d9e2843a3f28e20ab67acb673375eb8b23d80390a2fb22675623"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.2cheapcars.co.nz/robots.txt",
+        "https://www.2cheapcars.co.nz/",
+        "https://www.2cheapcars.co.nz/other/privacy-policy"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "2cheap-robots.txt",
+      "publishedRobotsSha256": "88cd482270a049bd6dbb8732ccbac59b6c91d25050ba8bff9b9824df7d49dc3b"
+    },
+    {
+      "key": "ajmotors",
+      "name": "AJ Motors",
+      "type": "经销商集团",
+      "base": "https://www.ajmotors.co.nz",
+      "requests": [
+        {
+          "url": "https://www.ajmotors.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:59.526542+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "9a86309467813284e92ed7d46f0f8ad6a442e5c65d1428311006267c3fa7303a"
+        },
+        {
+          "url": "https://www.ajmotors.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.182367+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "cd5a79169afdad0ca717e0d8ad3178ace5a09b59cb5a4eab8b484c700f497b62"
+        },
+        {
+          "url": "https://www.ajmotors.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:01.063883+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "359b242b1af28fe7ce042202e91ba65143e469cfb0449fecb516360182cff739"
+        },
+        {
+          "url": "https://www.ajmotors.co.nz/terms",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:19.797405+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "9542921bd2609e81fdbbc24c29076e0d90902d5f19daa6d9ac9dc75dacbe8c62"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.ajmotors.co.nz/robots.txt",
+        "https://www.ajmotors.co.nz/",
+        "https://www.ajmotors.co.nz/privacy-policy",
+        "https://www.ajmotors.co.nz/terms"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "ajmotors-robots.txt",
+      "publishedRobotsSha256": "5967f5549ed4b153722f6bbc121749b5557482d5f26d751c2ca749c26f8a863f"
+    },
+    {
+      "key": "andrewsimms",
+      "name": "Andrew Simms",
+      "type": "经销商集团",
+      "base": "https://www.andrewsimms.co.nz",
+      "requests": [
+        {
+          "url": "https://www.andrewsimms.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:55.424950+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "130c5880367eff17041f7b4d3e4f71171adc95bcb94773c13fe0dc9e85c38b8e"
+        },
+        {
+          "url": "https://www.andrewsimms.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:56.220022+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "1dd8fb7bfeda1488720226b6c237e50b1c98e57b879dc5e7d8325850e618616e"
+        },
+        {
+          "url": "https://www.andrewsimms.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:57.126346+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "e17d6bb6db6106137c933827faf459f25515058059793364b7568fce2c043ec8"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.andrewsimms.co.nz/robots.txt",
+        "https://www.andrewsimms.co.nz/",
+        "https://www.andrewsimms.co.nz/privacy-policy"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "andrewsimms-robots.txt",
+      "publishedRobotsSha256": "c2e5a303f7e6c70e4c597f91134b6e5b5946213921fc454e6360d51cebe2e894"
+    },
+    {
+      "key": "armstrongs",
+      "name": "Armstrong's",
+      "type": "经销商集团",
+      "base": "https://www.armstrongs.co.nz",
+      "requests": [
+        {
+          "url": "https://www.armstrongs.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.789555+00:00",
+          "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        },
+        {
+          "url": "https://www.armstrongs.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:55.384626+00:00",
+          "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.armstrongs.co.nz/robots.txt",
+        "https://www.armstrongs.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "bayswater",
+      "name": "Bayswater Vehicles",
+      "type": "经销商集团",
+      "base": "https://www.bayswatervehicles.co.nz",
+      "requests": [
+        {
+          "url": "https://www.bayswatervehicles.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:56.406827+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        },
+        {
+          "url": "https://www.bayswatervehicles.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:57.082428+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.bayswatervehicles.co.nz/robots.txt",
+        "https://www.bayswatervehicles.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "blackwells",
+      "name": "Blackwells",
+      "type": "经销商集团",
+      "base": "https://www.blackwells.co.nz",
+      "requests": [
+        {
+          "url": "https://www.blackwells.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:57.227720+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "830365ce4ecac6935e322f81eb1faba9ce021a01a40661a0979700cbbb59a69b"
+        },
+        {
+          "url": "https://www.blackwells.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:57.906668+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "0ba98ebe2e4ae35008d44e3d7ff78c7df216546cf5e1b0c3168534fcc13d6a8a"
+        },
+        {
+          "url": "https://www.blackwells.co.nz/privacy-policy/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:58.794756+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "6831d0e5f4e97da732e39da4a60ffe0d78182fe2bc443b12b47dac80b57087e9"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.blackwells.co.nz/robots.txt",
+        "https://www.blackwells.co.nz/",
+        "https://www.blackwells.co.nz/privacy-policy/"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "blackwells-robots.txt",
+      "publishedRobotsSha256": "fbc147650d48784ea1d67b8a030f627d4ab9ae88e7d9a464ca2276a43ff0e1f1"
+    },
+    {
+      "key": "bowater",
+      "name": "Bowater Motor Group",
+      "type": "经销商集团",
+      "base": "https://www.bowaters.co.nz",
+      "requests": [
+        {
+          "url": "https://www.bowaters.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:57.504201+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "f1a6b5e3f6e69a71c53516c4bce70e2414429d23dab6814239500999eb80907e"
+        },
+        {
+          "url": "https://www.bowaters.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:58.203325+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "d178a18896d0960c33823fb2e75d979cf98eab14566a8dae2405b19dc6cf77f7"
+        },
+        {
+          "url": "https://www.bowaters.co.nz/terms-and-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:58.879135+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "f33346a9e73c299d722562dd19dcaccc33a7637691b87f69194c7e1219126827"
+        },
+        {
+          "url": "https://www.bowaters.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:59.483652+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "251adf5064986cccdec5bf09aea000da6a9aba475eb99917c0203d64f788a08a"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.bowaters.co.nz/robots.txt",
+        "https://www.bowaters.co.nz/",
+        "https://www.bowaters.co.nz/terms-and-conditions",
+        "https://www.bowaters.co.nz/privacy-policy"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.bowaters.co.nz/terms-and-conditions",
+      "quote": "adapt, reproduce, copy, store, distribute",
+      "fullPolicyPublished": false,
+      "robotsFile": "bowater-robots.txt",
+      "publishedRobotsSha256": "f1a6b5e3f6e69a71c53516c4bce70e2414429d23dab6814239500999eb80907e"
+    },
+    {
+      "key": "brendanfoot",
+      "name": "Brendan Foot Supersite",
+      "type": "经销商集团",
+      "base": "https://www.brendanfoot.co.nz",
+      "requests": [
+        {
+          "url": "https://www.brendanfoot.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:57.757225+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redirectTo": "https://brendanfoot.co.nz/robots.txt"
+        },
+        {
+          "url": "https://brendanfoot.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:58.615400+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "6934ef2084bf8dc00091a808414c72957e9a23e21c3aee41edf6b63a9c4b5890"
+        },
+        {
+          "url": "https://www.brendanfoot.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.338802+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "redirectTo": "https://brendanfoot.co.nz/"
+        },
+        {
+          "url": "https://brendanfoot.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.933602+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "f83abc8b8f0afe2765ca870bdd0a926c398c2e60f5e34b4144a782b42e3c5b0a"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://brendanfoot.co.nz/information-policy/",
+          "result": "浏览工具可读客户信息政策，网站复制范围未核清"
+        }
+      ],
+      "openedUrls": [
+        "https://www.brendanfoot.co.nz/robots.txt",
+        "https://brendanfoot.co.nz/robots.txt",
+        "https://www.brendanfoot.co.nz/",
+        "https://brendanfoot.co.nz/",
+        "https://brendanfoot.co.nz/information-policy/"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "brendanfoot-robots.txt",
+      "publishedRobotsSha256": "438fe9427db5ff29348b1fccaf8830076f0719744c7f011e119293b9124866d3"
+    },
+    {
+      "key": "continental",
+      "name": "Continental Cars",
+      "type": "经销商集团",
+      "base": "https://www.continentalcars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.continentalcars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:56.196254+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "f117dcdcdecb6c8758157f3735a18a902f9628c061ca1e1725c779c4d100b09c"
+        },
+        {
+          "url": "https://www.continentalcars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:57.013029+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "5535cad7269a706735e62088126d6ba55cfbfc738fdbd878c11bd407c88acb73"
+        },
+        {
+          "url": "https://www.continentalcars.co.nz/legal/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:57.636551+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "61720db2bced499de899ce0e3de2e666f96d045e183bbfd5ad308830b064b204"
+        },
+        {
+          "url": "https://www.continentalcars.co.nz/legal/",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:23.227625+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "61720db2bced499de899ce0e3de2e666f96d045e183bbfd5ad308830b064b204"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.continentalcars.co.nz/legal/website-terms-and-conditions/",
+          "result": "浏览工具读到§3.2与§4.1(e)正文"
+        }
+      ],
+      "openedUrls": [
+        "https://www.continentalcars.co.nz/robots.txt",
+        "https://www.continentalcars.co.nz/",
+        "https://www.continentalcars.co.nz/legal/",
+        "https://www.continentalcars.co.nz/legal/website-terms-and-conditions/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.continentalcars.co.nz/legal/website-terms-and-conditions/",
+      "quote": "use automated scripts to collect information",
+      "fullPolicyPublished": false,
+      "robotsFile": "continental-robots.txt",
+      "publishedRobotsSha256": "f117dcdcdecb6c8758157f3735a18a902f9628c061ca1e1725c779c4d100b09c"
+    },
+    {
+      "key": "cookehowlison",
+      "name": "Cooke Howlison",
+      "type": "经销商集团",
+      "base": "https://www.cookehowlison.co.nz",
+      "requests": [
+        {
+          "url": "https://www.cookehowlison.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:56.932553+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "47e92cca61e6813bf6b29132f7da6368fb5e21ccb6e20018c62f935dd6c8eb18"
+        },
+        {
+          "url": "https://www.cookehowlison.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:58.517295+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "4fe9eca3fd13d585c87bb5686d0d1089ab073a719905b5019a671e6a3ed13e1c"
+        },
+        {
+          "url": "https://www.cookehowlison.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:59.263711+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "edd6e500f990aef1fbaee288e6f9b12539c2530b291f05327e1f468a53511c4c"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.cookehowlison.co.nz/robots.txt",
+        "https://www.cookehowlison.co.nz/",
+        "https://www.cookehowlison.co.nz/privacy-policy"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "cookehowlison-robots.txt",
+      "publishedRobotsSha256": "47e92cca61e6813bf6b29132f7da6368fb5e21ccb6e20018c62f935dd6c8eb18"
+    },
+    {
+      "key": "ebbett",
+      "name": "Ebbett",
+      "type": "经销商集团",
+      "base": "https://www.ebbett.co.nz",
+      "requests": [
+        {
+          "url": "https://www.ebbett.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:54.961002+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "0e637c77c62e2dcf1d96ffee82c4a84cb0e60b42fff56e34be177286a19689e8"
+        },
+        {
+          "url": "https://www.ebbett.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:55.597770+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "2a166c4d37034089c9930349cfd3eed4e9855b06cef47d9080d912f924629d7e"
+        },
+        {
+          "url": "https://www.ebbett.co.nz/terms-and-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:56.219472+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "29b0e2a4c69732ac998c5c7fa4130f155adf57917394fae6b9c9ee7198b2b78b"
+        },
+        {
+          "url": "https://www.ebbett.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:56.813185+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "aaeedc7838e799cc780601e0b791b91130db43172db28a27c00330ff273a39c8"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.ebbett.co.nz/robots.txt",
+        "https://www.ebbett.co.nz/",
+        "https://www.ebbett.co.nz/terms-and-conditions",
+        "https://www.ebbett.co.nz/privacy-policy"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.ebbett.co.nz/terms-and-conditions",
+      "quote": "should not be changed, copied, reproduced, sold, rented, used",
+      "fullPolicyPublished": false,
+      "robotsFile": "ebbett-robots.txt",
+      "publishedRobotsSha256": "75ac7856e937ef76880f75b72d532763cbadf19f4b69aecfc1ffb103fb48889b"
+    },
+    {
+      "key": "enterprisecars",
+      "name": "Enterprise Motor Group",
+      "type": "经销商集团",
+      "base": "https://www.enterprisecars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.enterprisecars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:59:33.583966+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "3073d1e371afb3271c7666148766fedc5145f7d8440f7114062db79b7bd58add"
+        },
+        {
+          "url": "https://www.enterprisecars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:59:34.205602+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.enterprisecars.co.nz/robots.txt",
+        "https://www.enterprisecars.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "enterprisecars-robots.txt",
+      "publishedRobotsSha256": "fc54f3182272d9d90be2c70fab2982f70bbf72877c97ac2e90bb101853cad934"
+    },
+    {
+      "key": "gazley",
+      "name": "Gazley",
+      "type": "经销商集团",
+      "base": "https://www.gazley.com",
+      "requests": [
+        {
+          "url": "https://www.gazley.com/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:58.459542+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=iso-8859-1",
+          "sha256": "cb0e64c263dcbe6ad3143304d03a2a18dadc5e13c19c0d606db67e459ac19579",
+          "redirectTo": "https://gazley.com/robots.txt"
+        },
+        {
+          "url": "https://gazley.com/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:59.048787+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "1abddf5777ba5b065ee1150571a602a89a5684f278be92ada29b7f3cea05146f"
+        },
+        {
+          "url": "https://www.gazley.com/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:59.963783+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=iso-8859-1",
+          "sha256": "a1697269a699d1e14c002e34e3bcca8cbfc3f4d8f2f51a8bc26ee72b99f05a0b",
+          "redirectTo": "https://gazley.com/"
+        },
+        {
+          "url": "https://gazley.com/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.074659+00:00",
+          "status": 200,
+          "contentType": "text/html",
+          "sha256": "f0655f0105dd3e01e4976a5f047d109fcce9e18d08710930b3f4301a3b1a9e06"
+        },
+        {
+          "url": "https://gazley.com/terms-of-use",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:00.790765+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=iso-8859-1",
+          "sha256": "41029c8fb3a1bff4c6f218ff2080171bc2696e3f02bc3e71b34daa1cdc82cd80",
+          "redirectTo": "https://gazley.com/terms-of-use/"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.gazley.com/robots.txt",
+        "https://gazley.com/robots.txt",
+        "https://www.gazley.com/",
+        "https://gazley.com/",
+        "https://gazley.com/terms-of-use"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "gazley-robots.txt",
+      "publishedRobotsSha256": "51f92e10f6fcf3f4a6ebeb8ecbb7f0da2843aa8028421a3403a0b25c6b3ce262"
+    },
+    {
+      "key": "giltrap",
+      "name": "Giltrap Group",
+      "type": "经销商集团",
+      "base": "https://www.giltrap.com",
+      "requests": [
+        {
+          "url": "https://www.giltrap.com/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:55.973214+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "b7a548986eb6773bf53dba292a55b9812972ab71836fec5531f07661537f5785"
+        },
+        {
+          "url": "https://www.giltrap.com/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:56.732053+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "6b1a56a65cacae7449de30ffc9a689af96422d017c0982739e513079eb635d86"
+        },
+        {
+          "url": "https://www.giltrap.com/terms-of-use",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:58.171367+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "73981fa4cb7098b43e6940ed1dab645be6f985933cc6673193d07cda81cd2d1b"
+        },
+        {
+          "url": "https://www.giltrap.com/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:59.296901+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "36877953773c3643ea41f79246a8d07e79d0adfb9884726797a5bae835b007af"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.giltrap.com/robots.txt",
+        "https://www.giltrap.com/",
+        "https://www.giltrap.com/terms-of-use",
+        "https://www.giltrap.com/privacy-policy"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.giltrap.com/terms-of-use",
+      "quote": "use any data gathering and extraction tools or software",
+      "fullPolicyPublished": false,
+      "robotsFile": "giltrap-robots.txt",
+      "publishedRobotsSha256": "b7a548986eb6773bf53dba292a55b9812972ab71836fec5531f07661537f5785"
+    },
+    {
+      "key": "ingham",
+      "name": "Ingham",
+      "type": "经销商集团",
+      "base": "https://www.inghamdriven.nz",
+      "requests": [
+        {
+          "url": "https://www.inghamdriven.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:56.403126+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "d5f2b02daf6bf082028cb432166eb52e1081e9a10791cc7fd2990426925f0bce"
+        },
+        {
+          "url": "https://www.inghamdriven.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:57.079927+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "634454e19ab00aa26e2080734a56420c198c5bd412cd8cd8f2d0ba8a952bf084"
+        },
+        {
+          "url": "https://www.inghamdriven.nz/terms-and-conditions/1/551/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:57.784347+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "9ae256b3e736d14bd9781fed30c72292a1b9cb1c3993700953573a49ebb041fa"
+        },
+        {
+          "url": "https://www.inghamdriven.nz/terms-and-conditions/1/549/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:58.418884+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "45b754104b8b598870ec11b1b83f5fbbcb7b064734ec1bcdb978b038103e7ed8"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.inghamdriven.nz/robots.txt",
+        "https://www.inghamdriven.nz/",
+        "https://www.inghamdriven.nz/terms-and-conditions/1/551/",
+        "https://www.inghamdriven.nz/terms-and-conditions/1/549/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.inghamdriven.nz/terms-and-conditions/1/549/",
+      "quote": "No other use, including reproducing, adapting, distributing, storing, broadcasting or copying",
+      "fullPolicyPublished": false,
+      "robotsFile": "ingham-robots.txt",
+      "publishedRobotsSha256": "d5f2b02daf6bf082028cb432166eb52e1081e9a10791cc7fd2990426925f0bce"
+    },
+    {
+      "key": "miles",
+      "name": "Miles Group",
+      "type": "经销商集团",
+      "base": "https://www.milesgroup.co.nz",
+      "requests": [
+        {
+          "url": "https://www.milesgroup.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:56.404959+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "9a11ea54149cc302de152be1e38c2ee84e2ea5847bf29c4c5a62d24a50364be8"
+        },
+        {
+          "url": "https://www.milesgroup.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:57.500767+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "81e1a8db5e5ce41f5ba556b437d71d8604c717cb459e19027b5fd4764e0ae563"
+        },
+        {
+          "url": "https://www.milesgroup.co.nz/terms/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:59.217834+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3"
+        },
+        {
+          "url": "https://www.milesgroup.co.nz/privacy/",
+          "kind": "policy",
+          "at": "2026-11-24T07:54:59.893320+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.milesgroup.co.nz/robots.txt",
+        "https://www.milesgroup.co.nz/",
+        "https://www.milesgroup.co.nz/terms/",
+        "https://www.milesgroup.co.nz/privacy/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "miles-robots.txt",
+      "publishedRobotsSha256": "16443edb483b0d0643f65fb531707a1b16c088527d0a5716d62620c86712865c"
+    },
+    {
+      "key": "rutherford",
+      "name": "Rutherford and Bond Toyota",
+      "type": "经销商集团",
+      "base": "https://www.rutherfordandbond.co.nz",
+      "requests": [
+        {
+          "url": "https://www.rutherfordandbond.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:58.563977+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "ed7caff83f2e07145f658f526c484045b59573c8e15e33dc991e4e4233fd5ad2",
+          "redirectTo": "https://www.toyota.co.nz/rutherford-bond-toyota-king-toyota/?addealer=rutherford-bond-toyota"
+        },
+        {
+          "url": "https://www.toyota.co.nz/rutherford-bond-toyota-king-toyota/?addealer=rutherford-bond-toyota",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:58.877577+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "0e80ee19b4edfdedf5d56e84971fd22c093f6c40c9f8c73ddaaa5cbe8c0da882"
+        },
+        {
+          "url": "https://www.rutherfordandbond.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:54:59.733290+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "ed7caff83f2e07145f658f526c484045b59573c8e15e33dc991e4e4233fd5ad2",
+          "redirectTo": "https://www.toyota.co.nz/rutherford-bond-toyota-king-toyota/?addealer=rutherford-bond-toyota"
+        },
+        {
+          "url": "https://www.toyota.co.nz/rutherford-bond-toyota-king-toyota/?addealer=rutherford-bond-toyota",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.011745+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "4ad4c5df13fc9e52f85e6da2b0680ebd13fe7c49d06fbd15c3ceec1a3080962a"
+        },
+        {
+          "url": "https://www.toyota.co.nz/legal-and-privacy-policy/",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:01.150165+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "7dcc2c3290ae80d3299b359c61ee1791175f7495499b13506a21b60641c7a596"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.rutherfordandbond.co.nz/robots.txt",
+        "https://www.toyota.co.nz/rutherford-bond-toyota-king-toyota/?addealer=rutherford-bond-toyota",
+        "https://www.rutherfordandbond.co.nz/",
+        "https://www.toyota.co.nz/legal-and-privacy-policy/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.toyota.co.nz/legal-and-privacy-policy/",
+      "quote": "adapt, reproduce, copy, store, distribute",
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "4guys",
+      "name": "4 Guys Autobarn",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.4guys.co.nz",
+      "requests": [
+        {
+          "url": "https://www.4guys.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:01.304713+00:00",
+          "status": 200,
+          "contentType": "text/plain;charset=utf-8",
+          "sha256": "b19149311117ca79f1f6657cec609029d4e9db8e48bc6457a9fc8ed7064d48d7"
+        },
+        {
+          "url": "https://www.4guys.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:02.348520+00:00",
+          "status": 200,
+          "contentType": "text/html;charset=utf-8",
+          "sha256": "64e46d0f879bc75bfa164f733e8de4e9259de72aeef93d9b574dd2bcc1363590"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.4guys.co.nz/robots.txt",
+        "https://www.4guys.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "4guys-robots.txt",
+      "publishedRobotsSha256": "b19149311117ca79f1f6657cec609029d4e9db8e48bc6457a9fc8ed7064d48d7"
+    },
+    {
+      "key": "autocourt",
+      "name": "Auto Court Dunedin",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.autocourt.net.nz",
+      "requests": [
+        {
+          "url": "https://www.autocourt.net.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:02.230607+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "2bc83474f28eb16f3cdad846c6c11b1ffc27af57162557fad7017b3e265518cb"
+        },
+        {
+          "url": "https://www.autocourt.net.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:02.943197+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "bbaacd52ce1fcba5b048d307780eac408857a3cc4b658d26849e3d23ee0e9100"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.autocourt.net.nz/robots.txt",
+        "https://www.autocourt.net.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "autocourt-robots.txt",
+      "publishedRobotsSha256": "ad2bdba8c1780f59b4b19c3aa22996985433bb8edf9ea8ff43eec7b810ac3e54"
+    },
+    {
+      "key": "autoluxe",
+      "name": "Auto Luxe / Premium Wholesale Cars",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.premiumwholesalecars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.premiumwholesalecars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:57:30.613083+00:00",
+          "error": "HTTPSConnectionPool(host='www.premiumwholesalecars.co.nz', port=443): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError(\"HTTPSConnection(host='www.premiumwholesalecars.co.nz', port=443): Failed to resolve 'www.premiumwholesalecars.co.nz' ([Errno 11002] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://www.premiumwholesalecars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:57:41.195855+00:00",
+          "error": "HTTPSConnectionPool(host='www.premiumwholesalecars.co.nz', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.premiumwholesalecars.co.nz', port=443): Failed to resolve 'www.premiumwholesalecars.co.nz' ([Errno 11002] getaddrinfo failed)\"))"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.premiumwholesalecars.co.nz/robots.txt",
+        "https://www.premiumwholesalecars.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "autoport",
+      "name": "Autoport NZ",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.autoport.nz",
+      "requests": [
+        {
+          "url": "https://www.autoport.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:00.174250+00:00",
+          "status": 404,
+          "contentType": "text/html; charset=us-ascii",
+          "sha256": "ce7127c38e30e92a021ed2bd09287713c6a923db9ffdb43f126e8965d777fbf0"
+        },
+        {
+          "url": "https://www.autoport.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:01.280307+00:00",
+          "status": 404,
+          "contentType": "text/html; charset=us-ascii",
+          "sha256": "ce7127c38e30e92a021ed2bd09287713c6a923db9ffdb43f126e8965d777fbf0"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.autoport.nz/resources/terms-and-conditions",
+          "result": "浏览工具404；未重复尝试其他猜测路径"
+        }
+      ],
+      "openedUrls": [
+        "https://www.autoport.nz/robots.txt",
+        "https://www.autoport.nz/",
+        "https://www.autoport.nz/resources/terms-and-conditions"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "brianscott",
+      "name": "Brian Scott Motors",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.brianscottmotors.co.nz",
+      "requests": [
+        {
+          "url": "https://www.brianscottmotors.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:01.770735+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "b885d75bc26c303991cf9a1cccdceb1113dcfe1616ea4fbea9c65a3eb7e7797c"
+        },
+        {
+          "url": "https://www.brianscottmotors.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:02.529247+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "0eb6f2ab4a09df3dc97e3dc0aef736408d5fb64d7b1668db25c95459041f30da"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.brianscottmotors.co.nz/robots.txt",
+        "https://www.brianscottmotors.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "brianscott-robots.txt",
+      "publishedRobotsSha256": "f32a0011543d4a881f74d2b1352338544b6ff47addedd68c46f2359cc8373dfa"
+    },
+    {
+      "key": "budget",
+      "name": "Budget Car Sales",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.budgetcarsales.co.nz",
+      "requests": [
+        {
+          "url": "https://www.budgetcarsales.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:57:27.002257+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=UTF-8",
+          "sha256": "8454fc2b590b8475ead750196468395abf23bdac7693c2f54adc2297e032111e"
+        },
+        {
+          "url": "https://www.budgetcarsales.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:57:28.028016+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "6f9dd9fda7f09d13282a3af383289fb27514f038264840aae184c12ebd31aa3c"
+        },
+        {
+          "url": "https://www.budgetcarsales.co.nz/terms-conditions",
+          "kind": "policy",
+          "at": "2026-11-24T07:57:29.183239+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "48a510df53de357e4e88fbe250a21cf1b63cca926706a864b77c24cee7dcc976"
+        },
+        {
+          "url": "https://www.budgetcarsales.co.nz/privacy-policy",
+          "kind": "policy",
+          "at": "2026-11-24T07:57:30.198953+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "0a9f019b716762867e73d8092b444517ebd0d0308ed2c31629ccf8a3ccf2a446"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://www.budgetcarsales.co.nz/terms-conditions",
+          "result": "浏览工具复核同一已读条款；本地全文已读§1–6"
+        }
+      ],
+      "openedUrls": [
+        "https://www.budgetcarsales.co.nz/robots.txt",
+        "https://www.budgetcarsales.co.nz/",
+        "https://www.budgetcarsales.co.nz/terms-conditions",
+        "https://www.budgetcarsales.co.nz/privacy-policy"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "可采集",
+      "policyUrl": "https://www.budgetcarsales.co.nz/terms-conditions",
+      "quote": "These terms and conditions govern the use of our website",
+      "fullPolicyPublished": false,
+      "robotsFile": "budget-robots.txt",
+      "publishedRobotsSha256": "39fea4ad1ad3a866bbdd0729d622bb6d44be38efbc6e135d68bebe5b5aa56ec9"
+    },
+    {
+      "key": "croydons",
+      "name": "Croydon Wholesalers",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.croydons.co.nz",
+      "requests": [
+        {
+          "url": "https://www.croydons.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:59:32.660633+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "b885d75bc26c303991cf9a1cccdceb1113dcfe1616ea4fbea9c65a3eb7e7797c"
+        },
+        {
+          "url": "https://www.croydons.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:59:33.386337+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "b201e7ea3de77db829d325ed5bab1709c34c82bd1ce4a3bd060e853f25130472"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.croydons.co.nz/robots.txt",
+        "https://www.croydons.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "croydons-robots.txt",
+      "publishedRobotsSha256": "f32a0011543d4a881f74d2b1352338544b6ff47addedd68c46f2359cc8373dfa"
+    },
+    {
+      "key": "daveallen",
+      "name": "Dave Allen Motors",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.daveallenmotors.co.nz",
+      "requests": [
+        {
+          "url": "https://www.daveallenmotors.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:02.260019+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "d57a35296f5744d3a137632b6ce8e5aa3ff2cf072035aa7afcf4f106147376c2"
+        },
+        {
+          "url": "https://www.daveallenmotors.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:03.182527+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "d458068707cab768987a7bc6fab6282b6bd91500acab56a3bf225b62807466e5"
+        },
+        {
+          "url": "https://www.daveallenmotors.co.nz/terms-and-conditions/",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:04.293160+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "3eac23c33ffb37d1e465921e419d4aadb1ddf50f09973e44e8ea9e0e8862c492"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.daveallenmotors.co.nz/robots.txt",
+        "https://www.daveallenmotors.co.nz/",
+        "https://www.daveallenmotors.co.nz/terms-and-conditions/"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "daveallen-robots.txt",
+      "publishedRobotsSha256": "b4102b672c117d0e9a79e5465274025fab71299ca79610acaebce0f4fefb6278"
+    },
+    {
+      "key": "gvi-cars",
+      "name": "Genuine Vehicle Imports",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.gvi.kiwi",
+      "requests": [
+        {
+          "url": "https://www.gvi.kiwi/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:57:23.847347+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "76e20bcb06f53c494919364254581f9acfc04db44672ba11ac0a402f76b74348"
+        },
+        {
+          "url": "https://www.gvi.kiwi/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:57:24.567178+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "0cfb7146ac019d492f89ec039a7daa185c0b23c9ced971c4359399cf8fa9030c"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.gvi.kiwi/robots.txt",
+        "https://www.gvi.kiwi/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "gvi-cars-robots.txt",
+      "publishedRobotsSha256": "f8fe5df3b78f8cd911f797217b0483b7999f74a708ca2343415ae95331582109"
+    },
+    {
+      "key": "manheim",
+      "name": "Manheim NZ",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.manheim.co.nz",
+      "requests": [
+        {
+          "url": "https://www.manheim.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:00.043057+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "58bf2215b395dcac74c009aa98701854e43cbe54a1cd3a95fee6a647ca9910d4"
+        },
+        {
+          "url": "https://www.manheim.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.853988+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "58bf2215b395dcac74c009aa98701854e43cbe54a1cd3a95fee6a647ca9910d4"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.manheim.co.nz/robots.txt",
+        "https://www.manheim.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "motorco",
+      "name": "MotorCo",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.motorco.co.nz",
+      "requests": [
+        {
+          "url": "https://www.motorco.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:02.841840+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "446a6087825fa73eadb045e5a2e9e2adf7df241b571228187728191d961dda1f",
+          "redirectTo": "https://motorco.co.nz/robots.txt"
+        },
+        {
+          "url": "https://motorco.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:03.010435+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=utf-8",
+          "sha256": "8d149dd06e7107a05d88a29f52373a7d01c04e9205d64dab08537a8c50feb080"
+        },
+        {
+          "url": "https://www.motorco.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:04.181145+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "446a6087825fa73eadb045e5a2e9e2adf7df241b571228187728191d961dda1f",
+          "redirectTo": "https://motorco.co.nz/"
+        },
+        {
+          "url": "https://motorco.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:04.254450+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "3a5e24f8ca7f1ed8ba6b8f5bd80b510a5fbb19a829d1c77f63e9306b84fc82ad"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.motorco.co.nz/robots.txt",
+        "https://motorco.co.nz/robots.txt",
+        "https://www.motorco.co.nz/",
+        "https://motorco.co.nz/"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "motorco-robots.txt",
+      "publishedRobotsSha256": "6d32d03ae86c53c8db5ad18e8bf450ffc829995fd389ca2b0d90564ebd7771fd"
+    },
+    {
+      "key": "nzcheap",
+      "name": "NZ Cheap Cars",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.nzcheapcars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.nzcheapcars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:01.063476+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        },
+        {
+          "url": "https://www.nzcheapcars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:01.699878+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        },
+        {
+          "url": "https://www.nzcheapcars.co.nz/terms-and-conditions",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:20.557403+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.nzcheapcars.co.nz/robots.txt",
+        "https://www.nzcheapcars.co.nz/",
+        "https://www.nzcheapcars.co.nz/terms-and-conditions"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "nzc",
+      "name": "NZC Cars",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://nzc.kiwi",
+      "requests": [
+        {
+          "url": "https://nzc.kiwi/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:00.923031+00:00",
+          "status": 200,
+          "contentType": "text/plain; charset=UTF-8",
+          "sha256": "6ed84c7ea44f8d735369060a85eb96f7a5e6059c548d6ce8b7778a51bc546e80"
+        },
+        {
+          "url": "https://nzc.kiwi/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:01.928025+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "ced2a7a1377d7fc36d98072d33d77a94dcc1d1ca7e86113b9bd6c905d8f3fa1f"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://nzc.kiwi/robots.txt",
+        "https://nzc.kiwi/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false,
+      "robotsFile": "nzc-robots.txt",
+      "publishedRobotsSha256": "6ed84c7ea44f8d735369060a85eb96f7a5e6059c548d6ce8b7778a51bc546e80"
+    },
+    {
+      "key": "portage",
+      "name": "Portage Cars",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.portagecars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.portagecars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:02.352805+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        },
+        {
+          "url": "https://www.portagecars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:03.052534+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        },
+        {
+          "url": "https://portagecars.co.nz/terms-and-conditions/",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:21.214724+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.portagecars.co.nz/robots.txt",
+        "https://www.portagecars.co.nz/",
+        "https://portagecars.co.nz/terms-and-conditions/"
+      ],
+      "reviewedPageCount": 3,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "tauranga",
+      "name": "Tauranga Cars",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.taurangacars.co.nz",
+      "requests": [
+        {
+          "url": "https://www.taurangacars.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:55:01.852302+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "4f9203db638e585baf38b7be11618ec2b6fd9a4aeb522803bfb17e6f39165608"
+        },
+        {
+          "url": "https://www.taurangacars.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:02.676647+00:00",
+          "status": 403,
+          "contentType": "text/html",
+          "sha256": "4f9203db638e585baf38b7be11618ec2b6fd9a4aeb522803bfb17e6f39165608"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://www.taurangacars.co.nz/robots.txt",
+        "https://www.taurangacars.co.nz/"
+      ],
+      "reviewedPageCount": 2,
+      "conclusion": "不确定",
+      "policyUrl": null,
+      "quote": null,
+      "fullPolicyPublished": false
+    },
+    {
+      "key": "turners",
+      "name": "Turners",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://www.turners.co.nz",
+      "requests": [
+        {
+          "url": "https://www.turners.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:54:59.569990+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "edf6a0aff798820cd3488c67451c42e70ddd71b9fe16c71fc32648d7bc7c07c1"
+        },
+        {
+          "url": "https://www.turners.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:55:00.191586+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "dbc190c040336a15f2d488dd194296b4bab3a876cd9e86e59d9320d2d89ccabf"
+        },
+        {
+          "url": "https://www.turners.co.nz/Company/Terms-and-Conditions/terms-conditions/",
+          "kind": "policy",
+          "at": "2026-11-24T07:55:00.877479+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "12ee1b5cf59c085a315b3dd4fb572c786135beeb6068cfe87cec881a156913e9"
+        },
+        {
+          "url": "https://www.turners.co.nz/Company/Terms-and-Conditions/terms-conditions/",
+          "kind": "policy-followup",
+          "at": "2026-11-24T07:57:22.530229+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "12ee1b5cf59c085a315b3dd4fb572c786135beeb6068cfe87cec881a156913e9"
+        }
+      ],
+      "webReads": [
+        {
+          "url": "https://content.tgstatic.co.nz/webassets/globalassets/terms-and-conditions/website-terms-and-conditions-may-2025.pdf",
+          "result": "浏览工具读取9页PDF；§4.2、§5.1(e)适用Turners网站"
+        }
+      ],
+      "openedUrls": [
+        "https://www.turners.co.nz/robots.txt",
+        "https://www.turners.co.nz/",
+        "https://www.turners.co.nz/Company/Terms-and-Conditions/terms-conditions/",
+        "https://content.tgstatic.co.nz/webassets/globalassets/terms-and-conditions/website-terms-and-conditions-may-2025.pdf"
+      ],
+      "reviewedPageCount": 4,
+      "conclusion": "禁止",
+      "policyUrl": "https://content.tgstatic.co.nz/webassets/globalassets/terms-and-conditions/website-terms-and-conditions-may-2025.pdf",
+      "quote": "use automated scripts to collect information",
+      "fullPolicyPublished": false,
+      "robotsFile": "turners-robots.txt",
+      "publishedRobotsSha256": "788d7ebbd035ff9106d6a0ab9e1eca6916089646aeb5a1ea5981e049c24806d2"
+    },
+    {
+      "key": "wheeler",
+      "name": "Wheeler Motor Company",
+      "type": "拍卖与进口商及独立车行",
+      "base": "https://wheelermotors.co.nz",
+      "requests": [
+        {
+          "url": "https://wheelermotors.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:57:24.799892+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "d48fd4905f8ef4b4d3e5841a4c43663373d2969be7bd589f9963e9d711dfaa4f",
+          "redirectTo": "https://www.wheelermotors.co.nz/robots.txt"
+        },
+        {
+          "url": "https://www.wheelermotors.co.nz/robots.txt",
+          "kind": "robots",
+          "at": "2026-11-24T07:57:24.974820+00:00",
+          "status": 200,
+          "contentType": "text/plain",
+          "sha256": "de4d068a71e57b27e584e747314cf4668c744ae77d5d6c911c93afef755b4cd6"
+        },
+        {
+          "url": "https://wheelermotors.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:57:25.694911+00:00",
+          "status": 301,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "32e5943dc0390f21d6775fa092b483d66d6aaae3e2636016e928c99575d73556",
+          "redirectTo": "https://www.wheelermotors.co.nz/"
+        },
+        {
+          "url": "https://www.wheelermotors.co.nz/",
+          "kind": "policy-entry",
+          "at": "2026-11-24T07:57:25.856929+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "d11213d266abd1bbee5a898b7942d1842273ef080faf435fc479c8db371acdbc"
+        },
+        {
+          "url": "https://www.wheelermotors.co.nz/terms-of-use",
+          "kind": "policy",
+          "at": "2026-11-24T07:57:26.738835+00:00",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "ab3f986db98b13caaa071ee5374dfadd1c06213e05c513ac5be37e9910227e59"
+        }
+      ],
+      "webReads": [],
+      "openedUrls": [
+        "https://wheelermotors.co.nz/robots.txt",
+        "https://www.wheelermotors.co.nz/robots.txt",
+        "https://wheelermotors.co.nz/",
+        "https://www.wheelermotors.co.nz/",
+        "https://www.wheelermotors.co.nz/terms-of-use"
+      ],
+      "reviewedPageCount": 5,
+      "conclusion": "禁止",
+      "policyUrl": "https://www.wheelermotors.co.nz/terms-of-use",
+      "quote": "Copy, scrape, harvest or systematically extract our listings, images or content",
+      "fullPolicyPublished": false,
+      "robotsFile": "wheeler-robots.txt",
+      "publishedRobotsSha256": "856e9859c9706a6a9411c1574ccd522b6e2681ad63d01c598f529c6c39751bff"
+    }
+  ],
+  "excluded": {
+    "gvi": "实际为GVI Logistics货运企业，正确车行是gvi.kiwi",
+    "wmc": "wmc.co.nz为停放域名，正确车行是wheelermotors.co.nz",
+    "enterprise": "enterprise.co.nz为招聘企业，正确车行为enterprisecars.co.nz",
+    "croydon": "初猜croydonwholesalers.co.nz不可访问，官方检索定位croydons.co.nz",
+    "capitalcity": "查到车行目录记录，但capitalcitycars.co.nz当前网址归属/可用性未核实，列发现线索，不计已核查站点"
+  },
+  "snapshotNote": "Only robots published; UTF-8 BOM decoded/removed, LF/trailing whitespace normalized. HTTP response sha256 differs from normalized text hash. Full policies and homepage bodies not published."
+}

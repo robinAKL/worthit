@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /auth/logout
+Disallow: /auth/verify
+Disallow: /embed
+Disallow: /_/
+
+Sitemap: https://www.giltrap.com/sitemap.xml

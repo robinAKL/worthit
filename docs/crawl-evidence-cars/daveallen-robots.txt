@@ -1,0 +1,11 @@
+User-agent: *
+
+allow: /
+
+
+
+User-agent: *
+
+Disallow: /i/files
+
+Disallow: /sitemap/

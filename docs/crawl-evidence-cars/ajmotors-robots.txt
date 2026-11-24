@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow:
+
+
+
+Sitemap: https://www.ajmotors.co.nz/sitemap.xml

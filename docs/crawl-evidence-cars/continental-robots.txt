@@ -1,0 +1,30 @@
+
+Sitemap: https://www.continentalcars.co.nz/sitemap_index.xml
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: *
+Allow: /cms/wp-admin/admin-ajax.php
+Disallow: /cms/wp-admin/
+Disallow: /book-test-list*
+Disallow: /my-cc/
+Disallow: */feed/?
+Disallow: *?wordfence_lh=1&hid=*
+Disallow: *?wc-ajax*
+Disallow: */modules/notification/
+Disallow: *?search=*
+Disallow: */search/*
+Disallow: *?s=*
+Disallow: *?__hstc=*
+Disallow: *?pushout=*
+Disallow: *?overlay=*
+Disallow: *?atc*
+Disallow: /*add-to-cart=*
+Disallow: */themes/*/index.php
+Disallow: *page_id=*
+Disallow: *nocache=*
+Disallow: *preview=*
+Disallow: /cdn-cgi/*
+
+User-agent: *OAI-SearchBot*
+Allow: /cms/wp-admin/admin-ajax.php
+Disallow: /cms/wp-admin/

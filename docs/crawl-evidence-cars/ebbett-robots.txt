@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /thanks/*
+Disallow: /log-in
+Disallow: /reset-password
+Disallow: /sign-up
+Disallow: /test-page
+Disallow: /update-password
+Disallow: /user-account
+Disallow: /values-nomination
+Disallow: /wized-test
+
+Sitemap: https://www.ebbett.co.nz/sitemap.xml

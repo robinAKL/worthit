@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /home/search
+Disallow: /s/
+
+# Block transactional and application pages
+Disallow: /buy-now/
+Disallow: /finance/application/
+Disallow: /finance/calculator/
+Disallow: /test-drive/
+
+# NEW: Block internal utility pages (Similar cars, Finance & Banners)
+Disallow: /home/similar/
+Disallow: /BannerLink/
+Disallow: /*?vehicle=
+Disallow: /*&vehicle=
+
+# Block internal search parameters to prevent duplicate content
+Disallow: /*?keywords
+Disallow: /*?keywords=
+Disallow: /*&keywords=
+
+# SITEMAPS
+Sitemap: https://www.2cheapcars.co.nz/sitemap.xml
+Sitemap: https://www.2cheapcars.co.nz/sitemap-inventory.xml

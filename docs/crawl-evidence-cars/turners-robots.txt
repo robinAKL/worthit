@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://www.turners.co.nz/main-sitemap.xml

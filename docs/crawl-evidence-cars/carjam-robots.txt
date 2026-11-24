@@ -1,0 +1,71 @@
+User-agent: dotbot
+
+Crawl-delay: 10
+
+
+
+User-agent: SeekportBot
+
+Crawl-delay: 10
+
+
+
+User-agent: facebookexternalhit
+
+Crawl-delay: 10
+
+
+
+User-agent: YandexBot
+
+Crawl-delay: 10
+
+Disallow: /nz-fleet/
+
+
+
+User-Agent: *
+
+Allow: /
+
+Disallow: /pedia/
+
+Disallow: /wiki/
+
+Disallow: /car/
+
+Disallow: /car/photos/
+
+Disallow: /photos/
+
+Disallow: /photo/
+
+Disallow: /photos:photos
+
+Disallow: /photos:photo
+
+Disallow: /*.jpg$
+
+Disallow: /*.jpeg$
+
+Disallow: /*.gif$
+
+Disallow: /*.png$
+
+Disallow: /*.bmp$
+
+Disallow: /car-insurance:certificate
+
+Disallow: /car-insurance:certificate?*
+
+Disallow: /car-insurance/?plate=*
+
+Disallow: /car-videos/
+
+Disallow: /coys:certificate
+
+Disallow: /coys/:certificate
+
+
+
+Sitemap: https://www.carjam.co.nz/sitemap.xml

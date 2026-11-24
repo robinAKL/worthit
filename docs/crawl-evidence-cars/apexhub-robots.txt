@@ -1,0 +1,13 @@
+# Apex Hub: public listing discovery; bulk exports are private.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /list
+Disallow: /tasks
+Disallow: /feeds/
+Sitemap: https://www.apexhub.co.nz/sitemap.xml
+Sitemap: https://www.apexhub.co.nz/sitemap-ollie.xml
+Sitemap: https://www.apexhub.co.nz/sitemap-car-comparisons.xml
+Sitemap: https://www.apexhub.co.nz/sitemap-houses.xml
+Sitemap: https://www.apexhub.co.nz/sitemap-granny-flats.xml

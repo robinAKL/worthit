@@ -1,0 +1,65 @@
+User-agent: *
+
+Disallow: /Motorcentral/
+
+Disallow: /Admin
+
+Disallow: /Admin.aspx
+
+Disallow: /AdminCustomContent
+
+Disallow: /AdminCustomContent.aspx
+
+Disallow: /AdminCustomContentList
+
+Disallow: /AdminCustomContentList.aspx
+
+Disallow: /AdminMBI
+
+Disallow: /AdminMBI.aspx
+
+Disallow: /BuyerScore/
+
+Disallow: /BuyNow
+
+Disallow: /BuyNow.aspx
+
+Disallow: /BuyNowPayment
+
+Disallow: /BuyNowPayment.aspx
+
+Disallow: /ConfigQuickView
+
+Disallow: /ConfigQuickView.aspx
+
+Disallow: /Error
+
+Disallow: /Product-Admin
+
+Disallow: /Product-Admin.aspx
+
+Disallow: /Product-Entry
+
+Disallow: /Product-Entry.aspx
+
+Disallow: /Error.aspx
+
+Disallow: /VehicleService
+
+Disallow: /VehicleService.asmx
+
+Disallow: /SaleMap
+
+Disallow: /SaleMap.aspx
+
+Disallow: /SaleMap-Admin
+
+Disallow: /SaleMap-Admin.aspx
+
+Disallow: /Testimonial-Admin
+
+Disallow: /Testimonial-Admin.aspx
+
+Disallow: /Testimonial-Entry
+
+Disallow: /Testimonial-Entry.aspx

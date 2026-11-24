@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /wp-admin/
+
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://motorco.co.nz/sitemap_index.xml
