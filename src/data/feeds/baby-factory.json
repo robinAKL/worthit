@@ -1,6 +1,986 @@
 {
   "products": [
     {
+      "id": "feed-8ed791fa",
+      "title": "​babylo Stroller Hook 2-pack One",
+      "titles": {
+        "en": "​babylo Stroller Hook 2-pack One"
+      },
+      "category": "stroller-accessories",
+      "price": 16.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-stroller-hook-2-pack-4021305-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021305|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-bcc026dd",
+      "title": "Babylo Roller Sunshade Single One",
+      "titles": {
+        "en": "Babylo Roller Sunshade Single One"
+      },
+      "category": "carseat-accessories",
+      "price": 14.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-roller-sunshade-single-4021301-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021301|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-24dfd185",
+      "title": "Babylo Babylo Super Cling Car Seat Sunshade​ 2-pack One",
+      "titles": {
+        "en": "Babylo Babylo Super Cling Car Seat Sunshade​ 2-pack One"
+      },
+      "category": "carseat-accessories",
+      "price": 12.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-babylo-super-cling-car-seat-sunshade-2-pack-4021299-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021299|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-833cd983",
+      "title": "Babylo Stroller Sunshade One",
+      "titles": {
+        "en": "Babylo Stroller Sunshade One"
+      },
+      "category": "stroller-accessories",
+      "price": 29.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-stroller-sunshade-4021297-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021297|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f767ceeb",
+      "title": "Babylo Stroller Travel Bag One",
+      "titles": {
+        "en": "Babylo Stroller Travel Bag One"
+      },
+      "category": "stroller-accessories",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-stroller-travel-bag-4021295-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021295|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b1eed1c3",
+      "title": "Babylo Roller Sunshade 2-pack One",
+      "titles": {
+        "en": "Babylo Roller Sunshade 2-pack One"
+      },
+      "category": "stroller-accessories",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-roller-sunshade-2-pack-4021293-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021293|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-23855b4a",
+      "title": "Babylo Stroller Clips 4-pack One",
+      "titles": {
+        "en": "Babylo Stroller Clips 4-pack One"
+      },
+      "category": "stroller-accessories",
+      "price": 9.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-stroller-clips-4-pack-4021291-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021291|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2031ae0e",
+      "title": "Babylo 3-in-1 Seat Protector With Storage One",
+      "titles": {
+        "en": "Babylo 3-in-1 Seat Protector With Storage One"
+      },
+      "category": "stroller-accessories",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-3-in-1-seat-protector-with-storage-4021289-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021289|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-eab94f43",
+      "title": "Babylo Baby Ear Defenders One",
+      "titles": {
+        "en": "Babylo Baby Ear Defenders One"
+      },
+      "category": "accessories",
+      "price": 59.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-baby-ear-defenders-4021287-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021287|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2688785c",
+      "title": "Babylo ​2-in-1 Phone & Cup Holder One",
+      "titles": {
+        "en": "Babylo ​2-in-1 Phone & Cup Holder One"
+      },
+      "category": "stroller-accessories",
+      "price": 29.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-2-in-1-phone-cup-holder-4021285-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021285|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7ad28672",
+      "title": "Babylo Upf 50+ Solar Sunshade One",
+      "titles": {
+        "en": "Babylo Upf 50+ Solar Sunshade One"
+      },
+      "category": "carseat-accessories",
+      "price": 29.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-upf-50-solar-sunshade-4021283-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021283|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7b134169",
+      "title": "Babylo Baby Rear View Mirror One",
+      "titles": {
+        "en": "Babylo Baby Rear View Mirror One"
+      },
+      "category": "carseat-accessories",
+      "price": 25.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-baby-rear-view-mirror-4021279-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021279|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-80f5d795",
+      "title": "Babylo Universal Stroller Raincover One",
+      "titles": {
+        "en": "Babylo Universal Stroller Raincover One"
+      },
+      "category": "stormcovers",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-universal-stroller-raincover-4021277-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021277|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c5aca53d",
+      "title": "Babylo Multi-purpose Hook Set One",
+      "titles": {
+        "en": "Babylo Multi-purpose Hook Set One"
+      },
+      "category": "carseat-accessories",
+      "price": 9.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-multi-purpose-hook-set-4021275-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021275|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-30deaa08",
+      "title": "Edinburgh Regal Car Seat Aqua",
+      "titles": {
+        "en": "Edinburgh Regal Car Seat Aqua"
+      },
+      "category": "carseats",
+      "price": 219.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-regal-car-seat-4013233-aqua",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4013233|aqua",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2c3c6f90",
+      "title": "Edinburgh Regal Car Seat Pink",
+      "titles": {
+        "en": "Edinburgh Regal Car Seat Pink"
+      },
+      "category": "carseats",
+      "price": 219.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-regal-car-seat-4013231-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4013231|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f1e6ad9c",
+      "title": "Edinburgh Regal Car Seat Grey",
+      "titles": {
+        "en": "Edinburgh Regal Car Seat Grey"
+      },
+      "category": "carseats",
+      "price": 219.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-regal-car-seat-4013229-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4013229|grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5ba0bb90",
+      "title": "Baby Einstein Sky Explorers Walker Blue",
+      "titles": {
+        "en": "Baby Einstein Sky Explorers Walker Blue"
+      },
+      "category": "baby-walkers",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-einstein-sky-explorers-walker-4013425-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Einstein",
+        "model": "4013425|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b395f0f",
+      "title": "Bright Starts Ford F-150 4-ways-to-play Walker Red Red",
+      "titles": {
+        "en": "Bright Starts Ford F-150 4-ways-to-play Walker Red Red"
+      },
+      "category": "baby-walkers",
+      "price": 149.5,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/bright-starts-ford-f-150-4-ways-to-play-walker-red-4010493-red",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bright Starts",
+        "model": "4010493|red",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6223fbf6",
+      "title": "Babyco Organic Bamboo Cotton Innerspring Mattress White",
+      "titles": {
+        "en": "Babyco Organic Bamboo Cotton Innerspring Mattress White"
+      },
+      "category": "mattresses",
+      "price": 159,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-organic-bamboo-cotton-innerspring-mattress-4019331-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4019331|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ff0210a",
+      "title": "Cozy N Safe Wye Highchair White/grey",
+      "titles": {
+        "en": "Cozy N Safe Wye Highchair White/grey"
+      },
+      "category": "highchairs",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-wye-highchair-4019189-white-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4019189|white/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-45031863",
+      "title": "Little Haven Printed Applique Blanket Wildflower",
+      "titles": {
+        "en": "Little Haven Printed Applique Blanket Wildflower"
+      },
+      "category": "blankets",
+      "price": 14.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/little-haven-printed-applique-blanket-wildflower-4021905",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Little Haven",
+        "model": "4021905",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-eafaec66",
+      "title": "Oval Baby Bath White/grey",
+      "titles": {
+        "en": "Oval Baby Bath White/grey"
+      },
+      "category": "baby-baths",
+      "price": 39.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/oval-baby-bath-4019151-white-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019151|white/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c0cdfa54",
+      "title": "Disney Baby Simple Fold Lx Travel System Mickey Blogger One",
+      "titles": {
+        "en": "Disney Baby Simple Fold Lx Travel System Mickey Blogger One"
+      },
+      "category": "4-wheel-strollers",
+      "price": 449,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-simple-fold-lx-travel-system-mickey-blogger-4020571-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020571|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-fa940bd9",
+      "title": "Babyco Flair Highchair Green Tea",
+      "titles": {
+        "en": "Babyco Flair Highchair Green Tea"
+      },
+      "category": "highchairs",
+      "price": 169,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-flair-highchair-4017919-green-tea",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4017919|green tea",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f7f4ae8d",
+      "title": "Babyco Flair Highchair Tiffany Pink",
+      "titles": {
+        "en": "Babyco Flair Highchair Tiffany Pink"
+      },
+      "category": "highchairs",
+      "price": 169,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-flair-highchair-tiffany-4012479-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4012479|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-873e0ad8",
+      "title": "Babyco Flair Highchair Slate Grey",
+      "titles": {
+        "en": "Babyco Flair Highchair Slate Grey"
+      },
+      "category": "highchairs",
+      "price": 169,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-flair-highchair-slate-4012477-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4012477|grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5c72fb0a",
+      "title": "Babyco Flair Highchair Cool Grey",
+      "titles": {
+        "en": "Babyco Flair Highchair Cool Grey"
+      },
+      "category": "highchairs",
+      "price": 169,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-flair-highchair-cool-4012475-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4012475|grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dc236432",
+      "title": "Buzzy Bee Wooden Pull Along Toy Tba",
+      "titles": {
+        "en": "Buzzy Bee Wooden Pull Along Toy Tba"
+      },
+      "category": "wooden-toys",
+      "price": 29.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/buzzy-bee-wooden-pull-along-toy-12860-tba",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Buzzy Bee",
+        "model": "12860|tba",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b589ec8d",
+      "title": "Hot Wheels Reusable Swim Nappy .",
+      "titles": {
+        "en": "Hot Wheels Reusable Swim Nappy ."
+      },
+      "category": "swimwear",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/hot-wheels-reusable-swim-nappy-5020851",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Hot Wheels",
+        "model": "5020851|.",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-480ccbb9",
+      "title": "Barbie Reusable Swim Nappy .",
+      "titles": {
+        "en": "Barbie Reusable Swim Nappy ."
+      },
+      "category": "swimwear",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/barbie-reusable-swim-nappy-5020849",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Barbie",
+        "model": "5020849|.",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1b5dae10",
+      "title": "Q Play Cosy 4-in-1 Trike Blue",
+      "titles": {
+        "en": "Q Play Cosy 4-in-1 Trike Blue"
+      },
+      "category": "ride-on-toys",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/q-play-cosy-4-in-1-trike-4016831-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Q Play",
+        "model": "4016831|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e10f8bc6",
+      "title": "Q Play Cosy 4-in-1 Trike Grey",
+      "titles": {
+        "en": "Q Play Cosy 4-in-1 Trike Grey"
+      },
+      "category": "ride-on-toys",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/q-play-cosy-4-in-1-trike-4016829-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Q Play",
+        "model": "4016829|grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9250d1c8",
+      "title": "Q Play Cosy 4-in-1 Trike Red",
+      "titles": {
+        "en": "Q Play Cosy 4-in-1 Trike Red"
+      },
+      "category": "ride-on-toys",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/q-play-cosy-4-in-1-trike-4016827-red",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Q Play",
+        "model": "4016827|red",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f651e749",
+      "title": "Infantino Ollie 3-in-1 Sit, Walk & Ride Elephant Blue",
+      "titles": {
+        "en": "Infantino Ollie 3-in-1 Sit, Walk & Ride Elephant Blue"
+      },
+      "category": "ride-on-toys",
+      "price": 103.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-ollie-3-in-1-sit-walk-ride-elephant-4016001-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4016001|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f1f98c19",
+      "title": "Bmw Push Car Blue",
+      "titles": {
+        "en": "Bmw Push Car Blue"
+      },
+      "category": "ride-on-toys",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/bmw-push-car-4014591-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4014591|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2498c3b3",
+      "title": "Bmw Push Car Red",
+      "titles": {
+        "en": "Bmw Push Car Red"
+      },
+      "category": "ride-on-toys",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/bmw-push-car-4014589-red",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4014589|red",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-96693b56",
+      "title": "Androni Green Garden 3-in-1 Swing One",
+      "titles": {
+        "en": "Androni Green Garden 3-in-1 Swing One"
+      },
+      "category": "out-door-toys",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/androni-green-garden-3-in-1-swing-4021453-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Androni Toys",
+        "model": "4021453|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-68bcc945",
+      "title": "Grey And White Giraffe Animal Rocker Grey/white",
+      "titles": {
+        "en": "Grey And White Giraffe Animal Rocker Grey/white"
+      },
+      "category": "ride-on-toys",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/grey-and-white-giraffe-animal-rocker-4019779-grey-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019779|grey/white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d314a9d9",
+      "title": "Brown Pony Animal Rocker Brown",
+      "titles": {
+        "en": "Brown Pony Animal Rocker Brown"
+      },
+      "category": "ride-on-toys",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/brown-pony-animal-rocker-4019775-brown",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019775|brown",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7c84296d",
+      "title": "Black And White Calf Animal Rocker Black/white",
+      "titles": {
+        "en": "Black And White Calf Animal Rocker Black/white"
+      },
+      "category": "ride-on-toys",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/black-and-white-calf-animal-rocker-4019773-black-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019773|black/white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-359d3a02",
+      "title": "Rocking Lamb Chair White",
+      "titles": {
+        "en": "Rocking Lamb Chair White"
+      },
+      "category": "ride-on-toys",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/rocking-lamb-chair-4011491-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4011491|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f3b48219",
+      "title": "Rocking Unicorn Chair Pink Pink",
+      "titles": {
+        "en": "Rocking Unicorn Chair Pink Pink"
+      },
+      "category": "ride-on-toys",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/rocking-unicorn-chair-pink-4011487-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4011487|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e035c38b",
+      "title": "Glow In The Dark Armchair Blue",
+      "titles": {
+        "en": "Glow In The Dark Armchair Blue"
+      },
+      "category": "children-s-furniture",
+      "price": 135.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/glow-in-the-dark-armchair-4020147-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4020147|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-db9311f3",
+      "title": "Glow In The Dark Armchair Pink",
+      "titles": {
+        "en": "Glow In The Dark Armchair Pink"
+      },
+      "category": "children-s-furniture",
+      "price": 135.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/glow-in-the-dark-armchair-4020145-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4020145|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:49:31.971Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
       "id": "feed-ed532925",
       "title": "Babyco Stuffed Toy Dolly One",
       "titles": {
