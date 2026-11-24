@@ -23,8 +23,14 @@ export function quartile(sortedPrices: number[], fraction: number): number {
   return sortedPrices[lower] + (sortedPrices[upper] - sortedPrices[lower]) * (index - lower);
 }
 
+export function countsAsSpec(product: Product, key: string, value: string | number): boolean {
+  if (key === 'note') return false;
+  const text = String(value);
+  return !(key === 'model' && /^\d+$/.test(text) && product.url.includes(text));
+}
+
 export function hasSpecs(product: Product): boolean {
-  return Object.keys(product.specs).filter((key) => key !== 'note').length > 0;
+  return Object.entries(product.specs).some(([key, value]) => countsAsSpec(product, key, value));
 }
 
 export function conditionIsSpecific(product: Product): boolean {
@@ -42,7 +48,8 @@ export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number
   const reviews = product.reviewCount ?? 0;
   if (product.fixture ? product.imageCount < 3 : product.imageCount < 1) return true;
   if (lane === 'cheap') {
-    return reviews === 0 && product.price < lowerQuartile * 0.7;
+    const reviewRisk = product.fixture || product.condition === 'used';
+    return reviewRisk && reviews === 0 && product.price < lowerQuartile * 0.7;
   }
   if (lane === 'value') {
     return !hasSpecs(product);
@@ -71,8 +78,17 @@ export function reasonFor(
   const q1 = Math.round(lowerQuartile);
   const mid = Math.round(median);
   const reviews = product.reviewCount ?? 0;
-  const specCount = Object.keys(product.specs).filter((key) => key !== 'note').length;
+  const specCount = Object.entries(product.specs).filter(([key, value]) => countsAsSpec(product, key, value)).length;
   const sample = product.fixture;
+  const facts = sample
+    ? locale === 'zh-Hans'
+      ? `图片 ${product.imageCount} 张，反馈 ${reviews} 条。`
+      : `${product.imageCount} photos, ${reviews} reviews. `
+    : product.reviewCount === undefined
+      ? ''
+      : locale === 'zh-Hans'
+        ? `反馈 ${product.reviewCount} 条。`
+        : `${product.reviewCount} reviews. `;
   const tail =
     locale === 'zh-Hans'
       ? sample
@@ -84,25 +100,29 @@ export function reasonFor(
   if (locale === 'zh-Hans') {
     if (lane === 'cheap') {
       const band = sample ? `同组示例价的下四分位 ${q1}` : `同组的下四分位 ${q1}`;
-      return `标价 ${price} 纽币，不高于${band}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。${tail}`;
+      return `标价 ${price} 纽币，不高于${band}。${facts}${tail}`;
     }
     if (lane === 'value') {
       const midLabel = sample ? `同组示例中位是 ${mid}` : `同组中位是 ${mid}`;
-      return `标价 ${price} 纽币，${midLabel}。规格写了 ${specCount} 项，反馈 ${reviews} 条。${tail}`;
+      const specs = sample ? `规格写了 ${specCount} 项，反馈 ${reviews} 条。` : `规格写了 ${specCount} 项。${facts}`;
+      return `标价 ${price} 纽币，${midLabel}。${specs}${tail}`;
     }
     const note = String(product.localizedSpecs?.['zh-Hans']?.note ?? product.specs.note ?? '');
-    return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。${tail}`;
+    const lead = sample ? `反馈 ${reviews} 条，` : facts;
+    return `${lead}成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。${tail}`;
   }
   if (lane === 'cheap') {
     const band = sample ? `the sample lower quartile of ${q1}` : `the lower quartile of ${q1} in this group`;
-    return `Listed at ${price} NZD, at or below ${band}. ${product.imageCount} photos, ${reviews} reviews. ${tail}`;
+    return `Listed at ${price} NZD, at or below ${band}. ${facts}${tail}`;
   }
   if (lane === 'value') {
     const midLabel = sample ? `The sample median is ${mid}` : `The median in this group is ${mid}`;
-    return `Listed at ${price} NZD. ${midLabel}. ${specCount} specs filled in, ${reviews} reviews. ${tail}`;
+    const specs = sample ? `${specCount} specs filled in, ${reviews} reviews. ` : `${specCount} specs filled in. ${facts}`;
+    return `Listed at ${price} NZD. ${midLabel}. ${specs}${tail}`;
   }
   const group = sample ? 'this sample' : 'this group';
-  return `${reviews} reviews, and the condition is written out in detail. Listed at ${price} NZD, not the lowest price in ${group}. ${tail}`;
+  const lead = sample ? `${reviews} reviews, and the condition is written out in detail. ` : facts;
+  return `${lead}Listed at ${price} NZD, not the lowest price in ${group}. ${tail}`;
 }
 
 /** A captured group smaller than five has no quartile to cite. */

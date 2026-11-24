@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
-import { excludedFrom, quartile, reasonFor } from './score';
+import { countsAsSpec, excludedFrom, quartile, reasonFor } from './score';
 import { comparisonKey, search } from './search';
 
 describe('parseQuery', () => {
@@ -80,6 +80,30 @@ describe('search', () => {
       expect(hit.reason).not.toMatch(/quartile|median|四分位|中位/);
       expect(hit.reason).toContain('Price captured from the merchant');
     }
+  });
+
+  it('does not present a catalog number as a spec, or a missing review as zero', () => {
+    const product = {
+      ...productsIn('phone')[0],
+      fixture: false,
+      source: 'feed' as const,
+      condition: 'new' as const,
+      reviewCount: undefined,
+      imageCount: 1,
+      price: 10,
+      url: 'https://www.ascent.co.nz/productspecification.aspx?itemID=566531',
+      specs: { brand: 'Samsung', model: '566531', stock: 'in stock' },
+    };
+    expect(countsAsSpec(product, 'model', '566531')).toBe(false);
+    expect(countsAsSpec(product, 'brand', 'Samsung')).toBe(true);
+    for (const locale of ['en', 'zh-Hans'] as const) {
+      const reason = reasonFor(product, 'value', 100, 200, locale);
+      expect(reason).not.toMatch(/0 reviews|photos|反馈 0 条|图片/);
+      expect(reason).toContain(locale === 'en' ? '2 specs' : '2 项');
+    }
+    expect(excludedFrom(product, 'cheap', 100)).toBe(false);
+    expect(excludedFrom({ ...product, condition: 'used' }, 'cheap', 100)).toBe(true);
+    expect(excludedFrom({ ...product, fixture: true, imageCount: 4, reviewCount: 0 }, 'cheap', 100)).toBe(true);
   });
 
   it('keeps a captured price that has one catalog photo', () => {

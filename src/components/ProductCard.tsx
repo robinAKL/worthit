@@ -1,4 +1,5 @@
 import { DICTIONARIES, type Copy, type Locale } from '../i18n';
+import { countsAsSpec } from '../lib/score';
 import type { Recommendation } from '../lib/types';
 
 const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
@@ -26,7 +27,7 @@ export function ProductCard({ rec, position, copy, locale }: Props) {
   const { product: p, band, reason } = rec;
   const specs = Object.entries(p.specs)
     .map(([key, value]) => [key, p.localizedSpecs?.[locale]?.[key] ?? value] as const)
-    .filter(([key, value]) => key !== 'note' && String(value).length <= 14)
+    .filter(([key, value]) => countsAsSpec(p, key, value) && String(value).length <= 14)
     .slice(0, 3);
 
   const captured = formatCaptured(locale, p.capturedAt);
