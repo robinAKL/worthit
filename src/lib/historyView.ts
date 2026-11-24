@@ -15,18 +15,31 @@ for (const file of Object.values(historyFiles)) {
 const live = [...(ascentFeed.products as Product[]), ...(babyFeed.products as Product[])];
 const groups = matchOffers(live);
 
+export function describeHistory(
+  read: NonNullable<ReturnType<typeof readPrice>>,
+  wasPrice: number | undefined,
+  copy: Copy['results']['history'],
+  money: (n: number) => string,
+): string[] {
+  const parts: string[] = [];
+  if (read.covered) {
+    parts.push(read.atLow ? copy.atLow : copy.low(money(read.low30)));
+    if (read.suspiciousWas && wasPrice) parts.push(copy.suspicious(money(wasPrice)));
+  } else if (read.earliest) {
+    parts.push(copy.since(read.earliest));
+  }
+  if (read.change === 'down') parts.push(copy.down);
+  if (read.change === 'up') parts.push(copy.up);
+  return parts;
+}
+
 export function historySentence(product: Product, copy: Copy['results']['history'], money: (n: number) => string): string {
   const points = pointsById.get(product.id);
   const parts: string[] = [];
   if (points && points.length > 0) {
     const today = points[points.length - 1].date || dayOf(product.capturedAt);
     const read = readPrice(points, today, product.wasPrice);
-    if (read) {
-      parts.push(read.atLow ? copy.atLow : copy.low(money(read.low30)));
-      if (read.change === 'down') parts.push(copy.down);
-      if (read.change === 'up') parts.push(copy.up);
-      if (read.suspiciousWas && product.wasPrice) parts.push(copy.suspicious(money(product.wasPrice)));
-    }
+    if (read) parts.push(...describeHistory(read, product.wasPrice, copy, money));
   }
   const others = otherShops(product, groups);
   if (others) parts.push(copy.others(others.count, money(others.low)));

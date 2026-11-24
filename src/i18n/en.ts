@@ -47,6 +47,7 @@ export const en = {
       down: 'Lower than the previous reading',
       up: 'Higher than the previous reading',
       suspicious: (price: string) => `The earlier price ${price} has not appeared in the last 30 days`,
+      since: (date: string) => `Prices recorded since ${date}`,
       others: (n: number, price: string) => `${n} other ${n === 1 ? 'shop' : 'shops'}, from ${price}`,
     },
     clear: 'Clear search',

@@ -47,6 +47,7 @@ export const zhHans: Copy = {
       down: '比上次记录低',
       up: '比上次记录高',
       suspicious: (price: string) => `原价 ${price} 近 30 天未出现过`,
+      since: (date: string) => `价格自 ${Number(date.slice(5, 7))}月${Number(date.slice(8, 10))}日 开始记录`,
       others: (n: number, price: string) => `另有 ${n} 家在卖，从 ${price} 起`,
     },
     clear: '清除搜索',
