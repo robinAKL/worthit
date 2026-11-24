@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { DICTIONARIES, type Copy, type Locale } from '../i18n';
-import { carResults, type CarPick } from '../lib/cars';
+import { allVehicles, carResults, type CarPick } from '../lib/cars';
+import { vehiclesForQuery } from '../lib/cars/query';
 import { carReason } from '../lib/cars/reason';
 import type { Lane } from '../lib/types';
 import { CardMedia, toneOf } from './CardMedia';
@@ -25,12 +26,15 @@ function formatDate(locale: Locale, iso?: string, withTime = false) {
 interface Props {
   copy: Copy;
   locale: Locale;
+  query?: string;
 }
 
-export function CarSection({ copy, locale }: Props) {
+export function CarSection({ copy, locale, query = '' }: Props) {
   const [lane, setLane] = useState<Lane>('value');
   const [shown, setShown] = useState(PAGE_SIZE);
-  const result = useMemo(() => carResults(lane), [lane]);
+  const fleet = useMemo(() => vehiclesForQuery(query, allVehicles()) ?? undefined, [query]);
+  const result = useMemo(() => carResults(lane, fleet), [lane, fleet]);
+  useEffect(() => setShown(PAGE_SIZE), [query]);
   const t = copy.cars;
   const visible = result.picks.slice(0, shown);
   const hidden = result.picks.length - visible.length;
@@ -76,7 +80,7 @@ export function CarSection({ copy, locale }: Props) {
               ))}
             </ul>
           ) : (
-            <p className="empty">{t.empty}</p>
+            <p className="empty">{fleet ? t.emptyQuery : t.empty}</p>
           )}
           {hidden > 0 ? (
             <div className="more">

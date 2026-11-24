@@ -122,6 +122,8 @@ export interface Vehicle {
 export interface ParsedQuery {
   raw: string;
   keywords: string[];
+  /** `car` when the words ask for a vehicle. Product search then stays empty. */
+  kind: 'product' | 'car';
   category?: string;
   /** Upper budget in NZD, if the query states one. */
   budgetMax?: number;

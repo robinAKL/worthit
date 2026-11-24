@@ -44,10 +44,26 @@ describe('catalog', () => {
 
 describe('search', () => {
   it('reads the English sample prompts', () => {
-    expect(parseQuery('laptop under $1500')).toMatchObject({ category: 'laptop', budgetMax: 1500 });
+    expect(parseQuery('laptop under $1500')).toMatchObject({ category: 'laptop', budgetMax: 1500, kind: 'product' });
     expect(parseQuery('Laptop under $1,500').budgetMax).toBe(1500);
     expect(parseQuery('phone for my mum').category).toBe('phone');
     expect(parseQuery('desk for a small flat').category).toBe('furniture');
+    expect(parseQuery('car under $15000')).toMatchObject({ kind: 'car', budgetMax: 15000 });
+    expect(parseQuery('二手车 2万以内')).toMatchObject({ kind: 'car', budgetMax: 20000 });
+  });
+
+  it('narrows fridge words and does not dump the catalogue for an unknown search', () => {
+    const all = search('', 'value', 'en');
+    const fridge = search('fridge', 'value', 'en');
+    const chinese = search('冰箱', 'value', 'zh-Hans');
+    expect(fridge.items.length).toBeGreaterThan(0);
+    expect(fridge.items.length).toBeLessThan(all.items.length);
+    expect(fridge.items.every((hit) => /fridge|refrigerator|freezer/i.test(hit.product.title))).toBe(true);
+    expect(chinese.items.map((hit) => hit.product.id)).toEqual(fridge.items.map((hit) => hit.product.id));
+    expect(search('Toyota Aqua', 'value', 'en').items).toHaveLength(0);
+    expect(search('car under $15000', 'value', 'en').items).toHaveLength(0);
+    expect(search('phone for my mum', 'value', 'en').items.length).toBeGreaterThan(0);
+    expect(search('laptop under $1500', 'value', 'en').items.every((hit) => hit.product.category === 'laptop' && hit.product.price <= 1500)).toBe(true);
   });
 
   it('describes a cheap-lane price at the quartile as at or below', () => {

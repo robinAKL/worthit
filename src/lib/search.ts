@@ -32,6 +32,23 @@ function liveProducts(): Product[] {
   return [...ascentFeed.products, ...babyFeed.products] as Product[];
 }
 
+/** Words that should hit the English titles we actually stored. */
+const ALIASES: Record<string, readonly string[]> = {
+  fridge: ['fridge', 'refrigerator', 'freezer'],
+  refrigerator: ['refrigerator', 'fridge', 'freezer'],
+  freezer: ['freezer', 'fridge'],
+  冰箱: ['fridge', 'refrigerator', 'freezer'],
+};
+
+function matchesKeyword(product: Product, keyword: string): boolean {
+  const hay = haystack(product);
+  return (ALIASES[keyword] ?? [keyword]).some((term) => hay.includes(term));
+}
+
+function noMatches(parsed: ReturnType<typeof parseQuery>, lane: Lane): SearchResult {
+  return { query: parsed, lane, items: [], excludedCount: 0, fixture: false };
+}
+
 export function comparisonKey(product: Product): string {
   const base = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
   if (product.fixture) return base;
@@ -50,17 +67,17 @@ function titleKind(title: string): string {
 
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE, source?: Product[]): SearchResult {
   const parsed = parseQuery(query);
+  if (parsed.kind === 'car') return noMatches(parsed, lane);
   const pool = (source ?? [...catalog, ...liveProducts()]).filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
     return true;
   });
-  const activeKeywords = parsed.keywords.filter((keyword) =>
-    pool.some((product) => haystack(product).includes(keyword)),
-  );
-  const matched = pool.filter((product) =>
-    activeKeywords.every((keyword) => haystack(product).includes(keyword)),
-  );
+  const activeKeywords = parsed.keywords.filter((keyword) => pool.some((product) => matchesKeyword(product, keyword)));
+  // A word that no product uses is ignored ("for my mum"). If every word misses, and there is
+  // no category, show nothing instead of the whole catalogue.
+  if (parsed.keywords.length > 0 && activeKeywords.length === 0 && !parsed.category) return noMatches(parsed, lane);
+  const matched = pool.filter((product) => activeKeywords.every((keyword) => matchesKeyword(product, keyword)));
 
   const byCategory = new Map<string, Product[]>();
   for (const product of matched) {

@@ -7,6 +7,8 @@ import { LaneTabs } from './components/LaneTabs';
 import { ProductCard } from './components/ProductCard';
 import { RentCheck } from './components/RentCheck';
 import { CarSection } from './components/CarSection';
+import { allVehicles } from './lib/cars';
+import { querySelectsCars } from './lib/cars/query';
 
 const PANEL_ID = 'results-panel';
 /** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
@@ -46,17 +48,24 @@ export default function App() {
   const hidden = result.items.length - visible.length;
   const captured = formatDate(locale, result.items[0]?.product.capturedAt);
 
+  function reveal(text: string) {
+    const id = querySelectsCars(text, allVehicles()) ? 'cars' : 'results';
+    document.getElementById(id)?.scrollIntoView({ block: 'start' });
+  }
+
   function submit(e: FormEvent) {
     e.preventDefault();
-    setQuery(draft.trim());
+    const text = draft.trim();
+    setQuery(text);
     setShown(PAGE_SIZE);
-    document.getElementById('results')?.scrollIntoView({ block: 'start' });
+    reveal(text);
   }
 
   function pickExample(text: string) {
     setDraft(text);
     setQuery(text);
     setShown(PAGE_SIZE);
+    reveal(text);
   }
 
   return (
@@ -182,7 +191,24 @@ export default function App() {
                   ))}
                 </ul>
               ) : (
-                <p className="empty">{copy.results.empty}</p>
+                <div className="empty">
+                  <p>{result.query.kind === 'car' ? copy.results.emptyCars : copy.results.empty}</p>
+                  {result.query.kind === 'car' ? (
+                    <a className="text-button" href="#cars">
+                      {copy.results.showCars}
+                    </a>
+                  ) : (
+                    <ul className="examples-list">
+                      {copy.hero.examples.map((ex) => (
+                        <li key={ex}>
+                          <button type="button" className="chip" onClick={() => pickExample(ex)}>
+                            {ex}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               )}
 
               {hidden > 0 ? (
@@ -196,7 +222,7 @@ export default function App() {
           </div>
         </section>
 
-        <CarSection copy={copy} locale={locale} />
+        <CarSection copy={copy} locale={locale} query={query} />
 
         <section id="rank" className="rank" aria-labelledby="rank-title">
           <div className="wrap split">
