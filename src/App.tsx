@@ -2,7 +2,7 @@ import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
 import { comparisonKey, search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
 import { priceRankIn, type Cohort } from './lib/deal';
-import { isUnitComparable } from './lib/specCompare';
+import { isUnitComparable, peersFor } from './lib/specCompare';
 import { unitPrice } from './lib/specs';
 import { DICTIONARIES, useLocale, type Locale } from './i18n';
 import { LanguageSelect } from './components/LanguageSelect';
@@ -27,16 +27,18 @@ function formatDate(locale: Locale, iso?: string) {
 function cohorts(items: Recommendation[]): Cohort[] {
   // Sized families (fridges, washers...) compare price per unit; everything else compares price.
   const valueOf = (p: Recommendation['product']) => (isUnitComparable(p) ? unitPrice(p.price, p.spec)! : p.price);
-  const groups = new Map<string, number[]>();
+  const groups = new Map<string, Recommendation['product'][]>();
   for (const { product: p } of items) {
     const key = comparisonKey(p);
-    groups.set(key, [...(groups.get(key) ?? []), valueOf(p)]);
+    groups.set(key, [...(groups.get(key) ?? []), p]);
   }
-  for (const values of groups.values()) values.sort((x, y) => x - y);
   return items.map(({ product: p }) => {
-    const prices = groups.get(comparisonKey(p))!;
+    const group = groups.get(comparisonKey(p))!;
+    // Same rule as the ranking: a sized item is compared within its size band when that band is big enough.
+    const { peers, band } = isUnitComparable(p) ? peersFor(p, group) : { peers: group, band: undefined };
+    const prices = peers.map(valueOf).sort((x, y) => x - y);
     const base: Cohort = { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, valueOf(p)) };
-    return isUnitComparable(p) ? { ...base, unit: p.spec.unit, size: p.spec.size, family: p.spec.family } : base;
+    return isUnitComparable(p) ? { ...base, unit: p.spec.unit, size: p.spec.size, family: p.spec.family, band } : base;
   });
 }
 

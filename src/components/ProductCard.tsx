@@ -5,7 +5,7 @@ import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/d
 import { CardMedia, toneOf } from './CardMedia';
 import { historySentence } from '../lib/historyView';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
-import { familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
+import { bandLabel, familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
 
 /** Above this p90/p10 price ratio a group is too mixed to call one price typical. */
 const MAX_SPREAD = 3;
@@ -110,7 +110,14 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
             mixed
               ? d.mixed(format(cohort.prices[0]), format(cohort.prices[size - 1]))
               : perUnit
-                ? d.rankUnit(cohort.rank, size, familyName(cohort.family ?? '', locale), UNIT_NAME[locale][perUnit.unit])
+                ? d.rankUnit(
+                    cohort.rank,
+                    size,
+                    cohort.band
+                      ? `${familyName(cohort.family ?? '', locale)} (${bandLabel(cohort.band, locale)})`
+                      : familyName(cohort.family ?? '', locale),
+                    UNIT_NAME[locale][perUnit.unit],
+                  )
                 : d.rankGroup(cohort.rank, size)
           }
           stripLabel={d.strip(cohort.rank, size)}

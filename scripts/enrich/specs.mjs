@@ -15,13 +15,19 @@ import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..', '..');
-const { specFromTitle, verifySpec, FAMILY_UNIT } = await import('../../src/lib/specs.ts');
+const { specFromTitle, verifySpec, factsText, FAMILY_UNIT } = await import('../../src/lib/specs.ts');
 
-export const FAMILIES = ['fridge', 'freezer', 'washer', 'dryer', 'microwave', 'dishwasher', 'oven', 'cooktop', 'car-seat', 'combo', 'accessory'];
+export const FAMILIES = ['fridge', 'freezer', 'washer', 'dryer', 'microwave', 'dishwasher', 'oven', 'cooktop', 'car-seat', 'laptop', 'combo', 'accessory'];
 
-/** A title needs the AI step when the rules find no family, or a sized family without a size. */
-export function needsAi(title) {
-  const spec = specFromTitle(title);
+/** What the model reads and what every value is checked against: the title plus the structured facts the collector kept. */
+export function sourceText(product) {
+  return [product.title, factsText(product.specs)].filter(Boolean).join(' | ');
+}
+
+/** A product needs the AI step when the rules find no family, or a sized family without a size. */
+export function needsAi(productOrTitle) {
+  const text = typeof productOrTitle === 'string' ? productOrTitle : sourceText(productOrTitle);
+  const spec = specFromTitle(text);
   if (!spec) return true;
   return Boolean(FAMILY_UNIT[spec.family]) && spec.size === undefined;
 }
@@ -33,7 +39,7 @@ export function needsAi(title) {
 export async function enrich({ products, cache, extract, limit = Infinity, log = () => {} }) {
   const stats = { asked: 0, kept: 0, dropped: 0, cached: 0, rulesOnly: 0 };
   for (const product of products) {
-    if (!needsAi(product.title)) {
+    if (!needsAi(product)) {
       stats.rulesOnly += 1;
       continue;
     }
@@ -46,12 +52,12 @@ export async function enrich({ products, cache, extract, limit = Infinity, log =
     stats.asked += 1;
     let raw = null;
     try {
-      raw = await extract(product.title);
+      raw = await extract(sourceText(product));
     } catch (error) {
       log(`skip ${product.id}: ${error?.message ?? error}`);
       continue;
     }
-    const spec = raw && raw.family !== 'unknown' ? verifySpec(product.title, raw) : null;
+    const spec = raw && raw.family !== 'unknown' ? verifySpec(sourceText(product), raw) : null;
     if (spec) {
       cache[product.id] = spec;
       stats.kept += 1;
@@ -77,6 +83,12 @@ export async function claudeExtractor() {
       style: z.string().nullable(),
       size: z.string().nullable(),
     }),
+    // How sure the reading is, 0 to 1, per field. Below 0.6 the field is dropped.
+    confidence: z.object({
+      family: z.number(),
+      style: z.number().nullable(),
+      size: z.number().nullable(),
+    }),
   });
   const client = new Anthropic();
   const system = [
@@ -84,6 +96,7 @@ export async function claudeExtractor() {
     'Size means litres for fridges, freezers, microwaves and ovens; kilograms for washers and dryers; place settings for dishwashers.',
     'For every value you return, copy the exact words from the title that show it into `evidence`. If the title does not state a value, return null for it. Never infer a size from a model number.',
     'Use family "unknown" when the title is none of the listed families.',
+    'Give a confidence from 0 to 1 for each value: 1 when the words state it outright, lower when you are reading between the lines.',
   ].join('\n');
 
   return async (title) => {
@@ -94,7 +107,7 @@ export async function claudeExtractor() {
       fallbacks: 'default',
       output_config: { effort: 'low', format: betaZodOutputFormat(Spec) },
       system,
-      messages: [{ role: 'user', content: `Title: ${title}` }],
+      messages: [{ role: 'user', content: `Product text: ${title}` }],
     });
     if (response.stop_reason === 'refusal') return null;
     const out = response.parsed_output;
@@ -104,6 +117,7 @@ export async function claudeExtractor() {
       style: out.style ?? undefined,
       size: out.size ?? undefined,
       evidence: Object.fromEntries(Object.entries(out.evidence).filter(([, v]) => v)),
+      confidence: Object.fromEntries(Object.entries(out.confidence).filter(([, v]) => v !== null)),
     };
   };
 }
@@ -118,9 +132,9 @@ async function main() {
     .flatMap((f) => JSON.parse(readFileSync(join(feedsDir, f), 'utf8')).products ?? []);
   const cachePath = join(root, 'src', 'data', 'specs', 'ai.json');
   const cache = JSON.parse(readFileSync(cachePath, 'utf8'));
-  const waiting = products.filter((p) => needsAi(p.title) && !(p.id in cache));
+  const waiting = products.filter((p) => needsAi(p) && !(p.id in cache));
   if (!useAi) {
-    console.log(JSON.stringify({ products: products.length, rulesOnly: products.length - products.filter((p) => needsAi(p.title)).length, waitingForAi: waiting.length, note: 'run with --ai to fill these from Claude' }, null, 2));
+    console.log(JSON.stringify({ products: products.length, rulesOnly: products.length - products.filter((p) => needsAi(p)).length, waitingForAi: waiting.length, note: 'run with --ai to fill these from Claude' }, null, 2));
     return;
   }
   const extract = await claudeExtractor();

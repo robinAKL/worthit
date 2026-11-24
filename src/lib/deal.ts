@@ -58,4 +58,6 @@ export interface Cohort {
   size?: number;
   /** Product family for per-unit groups, e.g. "fridge". */
   family?: string;
+  /** Size band the comparison was limited to, e.g. "mid" for 200-449 L fridges. */
+  band?: string;
 }

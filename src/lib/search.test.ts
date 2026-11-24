@@ -3,6 +3,7 @@ import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
 import { countsAsSpec, excludedFrom, quartile, reasonFor } from './score';
 import { comparisonKey, search } from './search';
+import { sizeBand, specFromProduct } from './specs';
 
 describe('parseQuery', () => {
   it('reads a budget and a laptop category', () => {
@@ -227,8 +228,13 @@ describe('search', () => {
     const group = productsIn('laptop');
     const prices = group.map((product) => product.price).sort((a, b) => a - b);
     const lower = quartile(prices, 0.25);
+    // Laptops compare within a RAM band, so the cutoff is the lower quartile of each band.
+    const bandOf = (p: (typeof group)[number]) => sizeBand(specFromProduct(p)!);
+    const lowerIn = (band: string | undefined) =>
+      quartile(group.filter((p) => bandOf(p) === band).map((p) => p.price).sort((a, b) => a - b), 0.25);
     const cheap = search('笔记本', 'cheap');
-    expect(cheap.items.every((hit) => hit.product.price <= lower)).toBe(true);
+    expect(cheap.items.length).toBeGreaterThan(0);
+    expect(cheap.items.every((hit) => hit.product.price <= lowerIn(bandOf(hit.product)))).toBe(true);
     expect(cheap.items.every((hit) => hit.band === 'low')).toBe(true);
     expect(excludedFrom(group[0], 'cheap', lower)).toBe(true);
   });

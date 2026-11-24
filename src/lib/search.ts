@@ -2,7 +2,7 @@ import { catalog } from './catalog';
 import ascentFeed from '../data/feeds/ascent.json';
 import babyFeed from '../data/feeds/baby-factory.json';
 import aiSpecs from '../data/specs/ai.json';
-import { specFromTitle, UNRANKED, type ProductSpec } from './specs';
+import { sizeBand, specFromProduct, UNRANKED, type ProductSpec } from './specs';
 import { isUnitComparable, MIN_UNIT_GROUP, rankUnitGroup } from './specCompare';
 import { parseQuery } from './parseQuery';
 import {
@@ -33,7 +33,7 @@ function haystack(product: Product): string {
 
 /** Rules first; a cached AI reading (verified against the title at collection time) only fills a gap. */
 function withSpec(product: Product): Product {
-  const fromRules = specFromTitle(product.title);
+  const fromRules = specFromProduct(product);
   const fromAi = (aiSpecs as Record<string, ProductSpec | false>)[product.id] || undefined;
   const spec = fromRules?.size || !fromAi ? (fromRules ?? undefined) : fromAi;
   return spec ? { ...product, spec } : product;
@@ -62,7 +62,8 @@ function noMatches(parsed: ReturnType<typeof parseQuery>, lane: Lane): SearchRes
 
 export function comparisonKey(product: Product): string {
   const base = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
-  if (product.fixture) return base;
+  // Sample laptops compare within a RAM band (16 GB and under, or 32 GB and over).
+  if (product.fixture) return product.spec?.family === 'laptop' && sizeBand(product.spec) ? `${base}:${sizeBand(product.spec)}` : base;
   // Known product families compare like with like: fridges with fridges, per litre.
   if (product.spec) return UNRANKED.has(product.spec.family) ? `live:${product.spec.family}:${product.id}` : `spec:${product.spec.family}`;
   const kind = titleKind(product.title);
@@ -81,7 +82,7 @@ function titleKind(title: string): string {
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE, source?: Product[]): SearchResult {
   const parsed = parseQuery(query);
   if (parsed.kind === 'car') return noMatches(parsed, lane);
-  const pool = (source ?? [...catalog, ...liveProducts()]).filter((product) => {
+  const pool = (source ?? [...catalog.map(withSpec), ...liveProducts()]).filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
     return true;

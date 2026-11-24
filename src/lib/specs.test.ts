@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { specFromTitle, unitPrice, verifySpec } from './specs';
+import { sizeBand, specFromProduct, specFromTitle, unitPrice, verifySpec } from './specs';
 
 /** Real titles from the collected Ascent and Baby Factory feeds. */
 const cases: Array<[string, Record<string, unknown>]> = [
@@ -61,5 +61,49 @@ describe('AI spec check', () => {
     expect(spec.size).toBeUndefined();
     expect(verifySpec(title, { family: 'washer', evidence: { family: 'Washer' } })).toBeNull();
     expect(verifySpec(title, { family: 'fridge', size: 569, evidence: { family: 'Fridge', size: '56' } })!.size).toBeUndefined();
+  });
+});
+
+describe('structured facts, laptops, car seats, energy stars', () => {
+  it('reads laptop RAM, storage and screen from catalogue specs as well as the title', () => {
+    const spec = specFromProduct({ title: '14 寸示例笔记本，16GB 内存', specs: { memory: '16GB', screen: '14 寸', storage: '512GB', note: '键盘无缺损' } })!;
+    expect(spec).toMatchObject({ family: 'laptop', ramGb: 16, storageGb: 512, screenIn: 14 });
+    expect(spec.evidence.storageGb).toBe('512GB storage');
+    expect(sizeBand(spec)).toBe('ram16');
+    expect(sizeBand(specFromProduct({ title: 'Laptop 32GB RAM 1TB SSD 16-inch Core i7' })!)).toBe('ram32');
+    expect(specFromProduct({ title: 'Laptop 32GB RAM 1TB SSD 16-inch Core i7' })).toMatchObject({ storageGb: 1024, screenIn: 16, cpuTier: 'high' });
+  });
+
+  it('reads ISOFIX and the use range on car seats only when stated, and energy stars on appliances', () => {
+    expect(specFromTitle('Britax Safe-n-Sound Maxi Guard Pro ISOFIX Booster Seat 15-36kg')).toMatchObject({
+      family: 'car-seat',
+      isofix: true,
+      range: { min: 15, max: 36, unit: 'kg' },
+    });
+    const plain = specFromTitle('Cozy N Safe Elias I-size Booster Seat')!;
+    expect(plain.isofix).toBeUndefined();
+    expect(plain.range).toBeUndefined();
+    expect(specFromTitle('Haier HRF450 450L French Door Refrigerator 4 Star')).toMatchObject({ energyStars: 4, size: 450 });
+  });
+
+  it('puts fridges in capacity bands', () => {
+    expect(sizeBand(specFromTitle('Midea 124L Bar Fridge')!)).toBe('compact');
+    expect(sizeBand(specFromTitle('Samsung 310L Refrigerator, Bottom Mounted Freezer')!)).toBe('mid');
+    expect(sizeBand(specFromTitle('Samsung 655L Side-by-Side Refrigerator')!)).toBe('large');
+  });
+
+  it('drops an AI field the model is not sure about', () => {
+    const title = 'Fisher & Paykel RF610ADX6 569L French Door Fridge';
+    const spec = verifySpec(title, {
+      family: 'fridge',
+      style: 'french-door',
+      size: 569,
+      evidence: { family: 'Fridge', style: 'French Door', size: '569L' },
+      confidence: { family: 0.95, style: 0.4, size: 0.9 },
+    })!;
+    expect(spec.style).toBeUndefined();
+    expect(spec.size).toBe(569);
+    expect(spec.confidence).toEqual({ family: 0.95, size: 0.9 });
+    expect(verifySpec(title, { family: 'fridge', evidence: { family: 'Fridge' }, confidence: { family: 0.3 } })).toBeNull();
   });
 });
