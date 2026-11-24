@@ -33,7 +33,9 @@ export function vehiclesFromHtml(html, pageUrl, dealer, capturedAt) {
     const offer = firstOffer(node.offers);
     const currency = String(offer?.priceCurrency ?? 'NZD').toUpperCase();
     if (currency !== 'NZD') continue;
-    const url = text(node.url || offer?.url) || pageUrl;
+    // Some dealer platforms put a staging host in JSON-LD `url`; the page we read is the real one.
+    const declared = text(node.url || offer?.url);
+    const url = declared && sameOrigin(declared, pageUrl) ? declared : pageUrl;
     rows.push({
       id: idFor(url).replace('feed-', 'car-'),
       dealer,
@@ -53,6 +55,14 @@ export function vehiclesFromHtml(html, pageUrl, dealer, capturedAt) {
     });
   }
   return rows;
+}
+
+function sameOrigin(a, b) {
+  try {
+    return new URL(a).origin === new URL(b).origin;
+  } catch {
+    return false;
+  }
 }
 
 function yearOf(value) {

@@ -29,7 +29,7 @@ export async function discover(adapter, session, cap) {
 
   const pages = [];
   const seen = new Set();
-  const queue = seeds.slice(0, opts.maxSeeds);
+  const queue = adapter.useSitemaps === false ? [] : seeds.slice(0, opts.maxSeeds);
   while (queue.length > 0 && pages.length < cap * 3 && seen.size < opts.maxSitemaps) {
     const sitemapUrl = queue.shift();
     if (!sitemapUrl || seen.has(sitemapUrl)) continue;
@@ -78,6 +78,25 @@ export async function discover(adapter, session, cap) {
           if (pages.length >= cap) break;
         }
       }
+    }
+  }
+
+  // Sites with no useful sitemap name their stock pages directly (e.g. /vehicles, /vehicles?Page=2).
+  let fetched = 0;
+  for (const path of adapter.listings ?? []) {
+    if (pages.length >= cap || fetched >= opts.maxListings) break;
+    const page = await session.get(new URL(path, origin).href);
+    fetched += 1;
+    if (session.stopped) return pages;
+    if (!page) continue;
+    for (const url of linksFrom(page.body, origin)) {
+      if (pages.includes(url) || !isDetail(url)) continue;
+      if (!session.permits(url)) {
+        session.stats.skipped += 1;
+        continue;
+      }
+      pages.push(url);
+      if (pages.length >= cap) break;
     }
   }
   return pages;

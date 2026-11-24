@@ -33,7 +33,7 @@ const { parseFeed } = await import('../../src/lib/feed/parseFeed.ts');
 
 async function fetchImpl(url, { userAgent: agent }) {
   const response = await fetch(url, {
-    headers: { 'user-agent': agent, accept: 'text/html,application/xml,text/plain' },
+    headers: { 'user-agent': agent, accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,text/xml;q=0.9,text/plain;q=0.8,*/*;q=0.5' },
     redirect: 'follow',
   });
   return { status: response.status, body: await response.text(), url: response.url };
