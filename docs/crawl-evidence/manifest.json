@@ -1,0 +1,246 @@
+[
+  {
+    "key": "woolworths-robots",
+    "url": "https://www.woolworths.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.321664+00:00",
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "key": "woolworths-terms",
+    "url": "https://www.woolworths.co.nz/help/terms-conditions/online-shopping-website-app",
+    "checkedAt": "2026-11-24T05:51:56.322144+00:00",
+    "error": "HTTPSConnectionPool(host='www.woolworths.co.nz', port=443): Read timed out. (read timeout=25)",
+    "snapshotPublished": false
+  },
+  {
+    "key": "paknsave-robots",
+    "url": "https://www.paknsave.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.322516+00:00",
+    "status": 403,
+    "finalUrl": "https://www.paknsave.co.nz/robots.txt",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "0301bcabe9a424432152bc76b50bd8a65a2df2c23ed271a3c60d6e6714e0e461",
+    "file": "paknsave-robots.txt",
+    "chars": 59
+  },
+  {
+    "key": "paknsave-terms",
+    "url": "https://www.paknsave.co.nz/terms-and-conditions",
+    "checkedAt": "2026-11-24T05:51:56.322893+00:00",
+    "status": 403,
+    "finalUrl": "https://www.paknsave.co.nz/terms-and-conditions",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8ea94a611b20d3d1fad9d3031c3cf5a7f697a5cf5772d4d5980752ff57b3a5c8",
+    "chars": 59,
+    "snapshotPublished": false
+  },
+  {
+    "key": "newworld-robots",
+    "url": "https://www.newworld.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.323102+00:00",
+    "status": 403,
+    "finalUrl": "https://www.newworld.co.nz/robots.txt",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "428f0a426220e3559a53904273ecb934b1b508557683e91b9b26c1ae1dd41baa",
+    "file": "newworld-robots.txt",
+    "chars": 59
+  },
+  {
+    "key": "newworld-terms",
+    "url": "https://www.newworld.co.nz/terms-and-conditions",
+    "checkedAt": "2026-11-24T05:51:56.323268+00:00",
+    "status": 403,
+    "finalUrl": "https://www.newworld.co.nz/terms-and-conditions",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "6a182dbe29729939ca78b11eca5f8c82f2354ad99862061f6f1c1cbef31f7fd3",
+    "chars": 59,
+    "snapshotPublished": false
+  },
+  {
+    "key": "warehouse-robots",
+    "url": "https://www.thewarehouse.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.427690+00:00",
+    "status": 200,
+    "finalUrl": "https://www.thewarehouse.co.nz/robots.txt",
+    "contentType": "text/plain;charset=UTF-8",
+    "sha256": "f855a02ba0b749fd524a184b4f0b069635df2b2100e2b4fe50100c9764f36ecc",
+    "file": "warehouse-robots.txt",
+    "chars": 4050
+  },
+  {
+    "key": "stationery-robots",
+    "url": "https://www.warehousestationery.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.429409+00:00",
+    "status": 200,
+    "finalUrl": "https://www.warehousestationery.co.nz/robots.txt",
+    "contentType": "text/plain;charset=UTF-8",
+    "sha256": "6e1f986d58cbbac0d231b80efb5fa022758a8a822e2759e0da7c065c99c8e521",
+    "file": "stationery-robots.txt",
+    "chars": 4057
+  },
+  {
+    "key": "stationery-terms",
+    "url": "https://www.warehousestationery.co.nz/c/terms-and-conditions",
+    "checkedAt": "2026-11-24T05:51:56.431819+00:00",
+    "status": 200,
+    "finalUrl": "https://www.warehousestationery.co.nz/c/terms-and-conditions",
+    "contentType": "text/html;charset=UTF-8",
+    "sha256": "f81bb194438b3ba971c71c66203925c0189306c6db3a93d80cee9ea78a1ba31d",
+    "chars": 61650,
+    "snapshotPublished": false
+  },
+  {
+    "key": "noelleeming-robots",
+    "url": "https://www.noelleeming.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.432794+00:00",
+    "status": 200,
+    "finalUrl": "https://www.noelleeming.co.nz/robots.txt",
+    "contentType": "text/plain;charset=UTF-8",
+    "sha256": "7e334d9420217bc33708c432b767d189429407d9bfb0712e4d6f9d2f1bcf86b8",
+    "file": "noelleeming-robots.txt",
+    "chars": 4023
+  },
+  {
+    "key": "pbtech-robots",
+    "url": "https://www.pbtech.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.528253+00:00",
+    "status": 200,
+    "finalUrl": "https://www.pbtech.co.nz/robots.txt",
+    "contentType": "text/plain",
+    "sha256": "04fda74ea68bf173e0d68442ee81b4e73f706f280c91f15ea8500f39960c5f1a",
+    "file": "pbtech-robots.txt",
+    "chars": 1493
+  },
+  {
+    "key": "pbtech-terms",
+    "url": "https://www.pbtech.co.nz/help/article/87/terms-and-conditions",
+    "checkedAt": "2026-11-24T05:51:56.576996+00:00",
+    "status": 403,
+    "finalUrl": "https://www.pbtech.co.nz/help/article/87/terms-and-conditions",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a43df9e6472acb827b11713ab1509040559c1d0766387c8ea04fbcc968ef4abd",
+    "chars": 762,
+    "snapshotPublished": false
+  },
+  {
+    "key": "mightyape-robots",
+    "url": "https://www.mightyape.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.629020+00:00",
+    "status": 200,
+    "finalUrl": "https://www.mightyape.co.nz/robots.txt",
+    "contentType": "text/plain",
+    "sha256": "b7bb2abe93f0ffc14513e9dd3126728d1fe137f3265ce6d76f4a3e1689f2474f",
+    "file": "mightyape-robots.txt",
+    "chars": 2436
+  },
+  {
+    "key": "jbhifi-robots",
+    "url": "https://www.jbhifi.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.638040+00:00",
+    "status": 200,
+    "finalUrl": "https://www.jbhifi.co.nz/robots.txt",
+    "contentType": "text/plain; charset=UTF-8",
+    "sha256": "8232528420d686b8563a6f73f1fa5990ffc334f7ac6b87c906f0b0664bd8e047",
+    "file": "jbhifi-robots.txt",
+    "chars": 6015
+  },
+  {
+    "key": "jbhifi-terms",
+    "url": "https://www.jbhifi.co.nz/pages/help-and-support/terms-of-use",
+    "checkedAt": "2026-11-24T05:51:56.642288+00:00",
+    "status": 200,
+    "finalUrl": "https://www.jbhifi.co.nz/pages/help-and-support/terms-of-use",
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "d570ce46c9d1f48f03dfc481c5ff36fd1fd954a1a7949a56a8ac578646b1b48e",
+    "chars": 131,
+    "snapshotPublished": false
+  },
+  {
+    "key": "kmart-robots",
+    "url": "https://www.kmart.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.652922+00:00",
+    "status": 403,
+    "finalUrl": "https://www.kmart.co.nz/robots.txt",
+    "contentType": "text/html",
+    "sha256": "d2700fa586c65fab8f7e50738765c2b9befcc133a14d8fd4f9f6d00b7e1f4515",
+    "file": "kmart-robots.txt",
+    "chars": 226
+  },
+  {
+    "key": "kmart-terms",
+    "url": "https://www.kmart.co.nz/terms-and-conditions/",
+    "checkedAt": "2026-11-24T05:51:56.689300+00:00",
+    "status": 403,
+    "finalUrl": "https://www.kmart.co.nz/terms-and-conditions/",
+    "contentType": "text/html",
+    "sha256": "808e99492c0511891726ff174e62a54a53e5a8e096b3f1efce51aac77b87fd23",
+    "chars": 237,
+    "snapshotPublished": false
+  },
+  {
+    "key": "bunnings-robots",
+    "url": "https://www.bunnings.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.712485+00:00",
+    "status": 200,
+    "finalUrl": "https://www.bunnings.co.nz/robots.txt",
+    "contentType": "text/plain; charset=utf-8",
+    "sha256": "f4c9c0c1947ae9ee02a3e6d5e1ca0cc283ffb1dd8e5b53d74bed8c9a02bd6ff7",
+    "file": "bunnings-robots.txt",
+    "chars": 1107
+  },
+  {
+    "key": "bunnings-terms",
+    "url": "https://www.bunnings.co.nz/terms-conditions/website-terms-of-use",
+    "checkedAt": "2026-11-24T05:51:56.727411+00:00",
+    "status": 200,
+    "finalUrl": "https://www.bunnings.co.nz/terms-conditions/website-terms-of-use",
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "4d8ce37aa81f7ee8e4143e0c539a2d9755e43e78b1c8291a08020e6bf7b2cc02",
+    "chars": 9592,
+    "snapshotPublished": false
+  },
+  {
+    "key": "harveynorman-robots",
+    "url": "https://www.harveynorman.co.nz/robots.txt",
+    "checkedAt": "2026-11-24T05:51:56.746209+00:00",
+    "status": 200,
+    "finalUrl": "https://www.harveynorman.co.nz/robots.txt",
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "38a4747a60ae6166e2cfa5f40d32bd543c0885dcdcedeba02c779077ca4aa569",
+    "file": "harveynorman-robots.txt",
+    "chars": 249
+  },
+  {
+    "key": "harveynorman-terms",
+    "url": "https://www.harveynorman.co.nz/corporate-information/terms-of-use.html",
+    "checkedAt": "2026-11-24T05:51:56.801653+00:00",
+    "status": 200,
+    "finalUrl": "https://www.harveynorman.co.nz/corporate-information/terms-of-use.html",
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "f5bdbf7888b56d6d586e5bca06844014a1017d31c48094360598dce890941b59",
+    "chars": 34927,
+    "snapshotPublished": false
+  },
+  {
+    "key": "warehouse-terms",
+    "url": "https://help.thewarehouse.co.nz/Help/s/article/Terms-and-conditions",
+    "checkedAt": "2026-11-24T05:51:56.976662+00:00",
+    "status": 200,
+    "finalUrl": "https://help.thewarehouse.co.nz/Help/s/article/Terms-and-conditions",
+    "contentType": "text/html;charset=UTF-8",
+    "sha256": "e4064bd87f63ac1929fc49d6bbad0e77aa5d897f64d8d5254e27217e3473e572",
+    "chars": 56,
+    "snapshotPublished": false
+  },
+  {
+    "key": "mightyape-terms",
+    "url": "https://help.mightyape.co.nz/hc/en-nz/articles/115012110928-Terms-Conditions",
+    "checkedAt": "2026-11-24T05:51:57.054162+00:00",
+    "status": 403,
+    "finalUrl": "https://help.mightyape.co.nz/hc/en-nz/articles/115012110928-Terms-Conditions",
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "4b6daca4d45463dc212f1ee518285d02a1030335e93cddb2d3694565f2dd54ed",
+    "chars": 59,
+    "snapshotPublished": false
+  }
+]

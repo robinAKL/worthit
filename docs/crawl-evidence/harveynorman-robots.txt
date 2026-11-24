@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /store_closed.html
+Sitemap: https://www.harveynorman.co.nz/index.php?dispatch=xmlsitemap.view 
+Disallow:*sli_af=*
+Disallow:*subcats=*
+Disallow:*features_hash=*
+Disallow:*sort_by=*
+Disallow:*dispatch=*
+Disallow:*category_id=*

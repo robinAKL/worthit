@@ -1,0 +1,79 @@
+# robots.txt for PB Tech public websites
+
+Sitemap: https://www.pbtech.co.nz/sitemap.xml
+Sitemap: https://www.pbtech.com/sitemap.xml
+Sitemap: https://www.pbtech.com/au/sitemap.xml
+Sitemap: https://www.pbtech.com/pacific/sitemap.xml
+
+Content-Signal: ai-train=no
+Content-Signal: search=yes
+Content-Signal: ai-input=yes
+
+# list disallows
+
+User-agent: *
+Disallow: /_staff/*
+Disallow: /my-account/*
+Disallow: /*myaccount*
+Disallow: /basket/*
+Disallow: /shipping/*
+Disallow: /billing/*
+Disallow: /confirm-order/*
+Disallow: /checkout/*
+Disallow: /process-order/*
+Disallow: /order-complete/*
+Disallow: /*basket$
+Disallow: /*shipping$
+Disallow: /*billing$
+Disallow: /*confirm-order$
+Disallow: /*checkout$
+Disallow: /*process-order$
+Disallow: /*order-complete$
+Disallow: /pdf_soin.php*
+Disallow: /cameras.php*
+Disallow: /games.php*
+Disallow: /xmlrpc.php*
+Disallow: /extprint.php*
+Disallow: /search*
+Disallow: /code/*.php*
+Disallow: /cdn-cgi/*
+
+Allow: /
+
+#ads and social share allows
+User-agent: Adsbot-Google
+Allow: /search*
+
+User-agent: Mediapartners-Google
+Allow: /search*
+
+User-agent: FacebookBot
+Disallow: /new-arrival*
+Allow: /search*
+
+User-agent: facebookexternalhit
+Disallow: /new-arrival*
+
+User-agent: Facebot
+Disallow: /new-arrival*
+
+User-agent: Amazonbot
+Disallow: /new-arrival*
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /

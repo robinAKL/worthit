@@ -1,0 +1,47 @@
+User-agent: *
+Disallow: /login
+Disallow: /user/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /search
+Disallow: /sitec*
+Disallow: /Login*
+Disallow: /login*
+Disallow: */undefined*
+Disallow: /indoor-living*
+Disallow: /products/kitchen/bakeware*
+Disallow: /products/kitchen/cookware*
+Disallow: /products/kitchen/kitchenware*
+Disallow: /products/kitchen/servingware*
+Disallow: /references*
+Disallow: */references*
+Disallow: /api/
+Disallow: /apis/
+Disallow: *?device=
+Disallow: /rb_*
+Disallow: *?gclid=
+Disallow: *?utm_s=
+Disallow: *?ref=
+Disallow: *?postcode=
+Disallow: /stores*?*
+Disallow: /stores?
+Disallow: /-/media/*
+
+Sitemap: https://www.bunnings.co.nz/sitemapssl.xml
+Sitemap: https://www.bunnings.co.nz/diy.xml
+Sitemap: https://www.bunnings.co.nz/categories.xml
+Sitemap: https://www.bunnings.co.nz/generalcontent.xml
+Sitemap: https://www.bunnings.co.nz/stores.xml
+Sitemap: https://www.bunnings.co.nz/services.xml
+
+User-agent: PowerMapper
+Allow: /
+
+User-agent: Pinterestbot
+Crawl-delay: 1
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: Googlebot-image
+Disallow:
