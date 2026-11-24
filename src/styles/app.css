@@ -531,7 +531,7 @@
 }
 .rent-form {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.7fr) minmax(0, 0.8fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 0.7fr) minmax(0, 0.8fr);
   gap: var(--space-md);
   align-items: end;
 }
@@ -573,6 +573,11 @@
 .rent-link {
   color: var(--color-accent);
   font-weight: 700;
+}
+@media (max-width: 900px) {
+  .rent-form {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 720px) {
   .rent-form {

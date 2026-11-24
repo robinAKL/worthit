@@ -8,10 +8,18 @@ v0.2 默认英语，支持简体中文。导航栏可随时切换，保留搜索
 
 新增语言：在 `src/lib/types.ts` 的 `Locale` 和 `LOCALES` 登记 ID，新增一个以 `Copy` 为类型的字典文件，在 `src/i18n/registry.ts` 的 `DICTIONARIES` 登记，并补齐商品标题和理由的翻译。类型检查会检测缺失的字典和文案键。详见 [语言维护说明](src/i18n/README.md)。
 
-租金对照使用 Tenancy Services 按地区（territorial authority）公布的月度押金 CSV。当前文件是 2026-11-24 从官网下载的，数据月份为 2026-09。这份月度文件没有卧室数列，所以工具里的卧室数只有“全部”会给出区间。许可是 CC BY 3.0 NZ，署名 MBIE。重新生成数据：
+租金对照有两层，都在 2026-11-24 下载：
+
+- 郊区：Tenancy Services 季度押金文件的最新季度（2026-07-01 起），按 SA2、房型、卧室数各取一行。样本是 Active Bonds。少于 5 笔，或四分位数被抑制时，页面写明数据不足，并回退到下面的地区结果。不跨 SA2 合并四分位数。
+- 地区：月度 territorial authority 文件，数据月份 2026-09，没有卧室列，只作为全部卧室的回退。
+
+郊区名称和所属地区来自 Stats NZ「Statistical Area 2 Higher Geographies 2019 (generalised)」，datafinder layer 98779，CC BY 4.0，署名 Stats NZ。押金数据 CC BY 3.0 NZ，署名 MBIE。
+
+重新生成：把季度 CSV 放在 `scripts/cache/quarterly.csv`，把 layer 98779 的属性 CSV 放在 `scripts/cache/sa2-2019.csv`，然后运行：
 
 ```bash
 node scripts/build-rent-data.mjs
+node scripts/build-rent-sa2.mjs
 ```
 
 ## 开发

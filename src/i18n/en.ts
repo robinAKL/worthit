@@ -62,15 +62,41 @@ export const en = {
   },
   rent: {
     title: 'Is your rent in range?',
-    lede: 'Enter an area and a weekly rent. We place it against new bonds lodged in that territorial authority.',
-    note: 'These are rents from lodged bonds, not current advertised rents. Publication lags by about two months. Source: MBIE, licensed under CC BY 3.0 NZ.',
+    lede: 'Choose a suburb, a dwelling type and a bedroom count. We compare your weekly rent with that single published row.',
+    note: 'A suburb figure counts active bonds for one statistical area, one dwelling type and one bedroom count. It is not an advertised rent. When that cell is too small to publish, the fallback is the territorial-authority figure for all bedrooms, which counts newly lodged bonds and is not split by bedroom. Publication lags. Sources: MBIE, CC BY 3.0 NZ, and Stats NZ Statistical Area 2 2019 names, CC BY 4.0.',
     link: 'View the rental bond data',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
     licence: 'CC BY 3.0 NZ',
     licenceHref: 'https://creativecommons.org/licenses/by/3.0/nz/',
+    geography: 'Stats NZ SA2 2019 names',
+    geographyHref: 'https://datafinder.stats.govt.nz/layer/98779-statistical-area-2-higher-geographies-2019-generalised/',
+    geographyLicence: 'CC BY 4.0',
+    geographyLicenceHref: 'https://creativecommons.org/licenses/by/4.0/',
     newWindow: ' (opens in a new tab)',
     areaLabel: 'Area',
     areaPlaceholder: 'Search areas',
+    suburbLabel: 'Suburb',
+    suburbPlaceholder: 'Search suburbs',
+    dwellingLabel: 'Dwelling type',
+    dwellings: {
+      ALL: 'All dwelling types',
+      House: 'House',
+      Flat: 'Flat',
+      Apartment: 'Apartment',
+      Room: 'Room',
+      'Boarding House': 'Boarding house',
+    },
+    beds: {
+      ALL: 'All',
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '4': '4',
+      '5': '5',
+      '5+': '5 or more',
+      '6': '6',
+      NA: 'Not recorded',
+    },
     bedroomsLabel: 'Bedrooms',
     bedrooms: {
       all: 'All',
@@ -84,8 +110,12 @@ export const en = {
     rentPlaceholder: '650',
     prompt: 'Enter a weekly rent to see where it sits.',
     insufficient: 'Not enough bonds were recorded to show a range.',
+    suburbInsufficient: 'Not enough bonds were published for this suburb, dwelling type and bedroom count.',
+    fallbackLead: 'Territorial authority, all bedrooms:',
+    fallbackMissing: 'The territorial-authority file has no matching area for this fallback.',
     unsplit: 'This monthly file is not split by bedroom. Choose all bedrooms to see the range for the area.',
     unknownArea: 'Choose an area from the list.',
+    unknownSuburb: 'Choose a suburb from the list.',
     oneBedroom: 'Tenancy Services says one-bedroom figures can be inaccurate, because some bonds are recorded as one bedroom when the home has more.',
     bands: {
       below: (area: string, month: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
@@ -97,6 +127,16 @@ export const en = {
       above: (area: string, month: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
         `$${rent} a week is above the upper quartile of $${upper} for ${count.toLocaleString('en-NZ')} new bonds in ${area} (${month}).`,
     },
+    suburbBands: {
+      below: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
+        `$${rent} a week is under the lower quartile of $${lower} for ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+      'lower-to-median': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
+        `$${rent} a week sits from the lower quartile ($${lower}) to the median ($${median}) of ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+      'median-to-upper': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
+        `$${rent} a week sits from the median ($${median}) to the upper quartile ($${upper}) of ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+      above: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
+        `$${rent} a week is above the upper quartile of $${upper} for ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+    },
   },
   data: {
     title: 'Our sources',
@@ -105,7 +145,7 @@ export const en = {
     rows: [
       ['Sample products', 'In use', 'Products, merchants and prices on this page are fictional examples of how ranking works.'],
       ['Merchant product data', 'Planned', 'Merchants provide product data. We show its date and link to their website.'],
-      ['Public rental data', 'In use', 'MBIE rental bond records for September 2026, CC BY 3.0 NZ, with attribution to MBIE.'],
+      ['Public rental data', 'In use', 'MBIE active bonds by suburb for the quarter starting 1 July 2026, plus September 2026 territorial figures. CC BY 3.0 NZ, attribute MBIE. Suburb names: Stats NZ SA2 2019, CC BY 4.0.'],
       ['Sites that restrict collection', 'Excluded', 'We do not collect data where site terms or robots.txt prohibit it.'],
     ],
   },

@@ -62,15 +62,41 @@ export const zhHans: Copy = {
   },
   rent: {
     title: '房租贵不贵？',
-    lede: '输入地区和每周租金，对照该地区新登记押金的租金区间。',
-    note: '这是押金登记的租金，不是当前广告价，发布有滞后。数据来自 MBIE，按 CC BY 3.0 NZ 许可使用。',
+    lede: '选择郊区、房型和卧室数。每周租金只对照公布的那一行，不会把几个郊区合在一起算。',
+    note: '郊区数字是一个统计区、一种房型、一种卧室数下仍在登记的押金，不是广告价。格子太小、没有公布时，回退到所属地区全部卧室的月度结果。那一份按新登记押金计算，没有按卧室拆开。发布有滞后。押金数据来自 MBIE，CC BY 3.0 NZ。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。',
     link: '查看数据原始页面',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
     licence: 'CC BY 3.0 NZ',
     licenceHref: 'https://creativecommons.org/licenses/by/3.0/nz/',
+    geography: 'Stats NZ 2019 SA2 名称',
+    geographyHref: 'https://datafinder.stats.govt.nz/layer/98779-statistical-area-2-higher-geographies-2019-generalised/',
+    geographyLicence: 'CC BY 4.0',
+    geographyLicenceHref: 'https://creativecommons.org/licenses/by/4.0/',
     newWindow: '（在新标签页打开）',
     areaLabel: '地区',
     areaPlaceholder: '搜索地区',
+    suburbLabel: '郊区',
+    suburbPlaceholder: '搜索郊区',
+    dwellingLabel: '房型',
+    dwellings: {
+      ALL: '全部房型',
+      House: '独立屋',
+      Flat: '平房',
+      Apartment: '公寓',
+      Room: '单间',
+      'Boarding House': '寄宿屋',
+    },
+    beds: {
+      ALL: '全部',
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '4': '4',
+      '5': '5',
+      '5+': '5 间或更多',
+      '6': '6',
+      NA: '未记录',
+    },
     bedroomsLabel: '卧室数',
     bedrooms: {
       all: '全部',
@@ -84,8 +110,12 @@ export const zhHans: Copy = {
     rentPlaceholder: '650',
     prompt: '输入每周租金，查看它落在哪一档。',
     insufficient: '数据不足，登记的押金太少，无法给出区间。',
+    suburbInsufficient: '数据不足，这个郊区、房型和卧室数没有公布足够的押金。',
+    fallbackLead: '所属地区、全部卧室：',
+    fallbackMissing: '月度地区文件里没有对应的地区，无法回退。',
     unsplit: '这份按月公布的地区文件没有按卧室数拆开。选择全部卧室，才能看到该地区的区间。',
     unknownArea: '请从列表中选择地区。',
+    unknownSuburb: '请从列表中选择郊区。',
     oneBedroom: 'Tenancy Services 说明，一居室数据可能不准确，因为有些押金被记成一居室，实际卧室更多。',
     bands: {
       below: (area: string, month: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
@@ -97,6 +127,16 @@ export const zhHans: Copy = {
       above: (area: string, month: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
         `每周 ${rent} 纽币，高于 ${area} 在 ${month} 新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的上四分位 ${upper} 纽币。`,
     },
+    suburbBands: {
+      below: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
+        `每周 ${rent} 纽币，低于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币。`,
+      'lower-to-median': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
+        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币到中位 ${median} 纽币之间。`,
+      'median-to-upper': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
+        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的中位 ${median} 纽币到上四分位 ${upper} 纽币之间。`,
+      above: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
+        `每周 ${rent} 纽币，高于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的上四分位 ${upper} 纽币。`,
+    },
   },
   data: {
     title: '数据从哪来',
@@ -105,7 +145,7 @@ export const zhHans: Copy = {
     rows: [
       ['示例数据', '正在使用', '当前页面上的商品、商家和价格都是示例，用来演示排序方式。'],
       ['商家主动提供的商品数据', '计划接入', '商家提交商品数据，我们标明采集时间，点击跳转到商家页面。'],
-      ['政府公开租金数据', '正在使用', 'MBIE 2026 年 9 月押金登记，CC BY 3.0 NZ，署名 MBIE。'],
+      ['政府公开租金数据', '正在使用', 'MBIE 2026 年 7 月 1 日起这个季度的郊区存续押金，以及 2026 年 9 月的地区数字。CC BY 3.0 NZ，署名 MBIE。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。'],
       ['明确禁止抓取的网站', '不收录', '对方条款或 robots.txt 禁止的，我们不抓取。'],
     ],
   },
