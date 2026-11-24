@@ -11,6 +11,8 @@ import {
   assertReasonAllowed,
   bandFor,
   excludedFrom,
+  hasSpecs,
+  isAccessory,
   laneScore,
   quartile,
   reasonFor,
@@ -84,6 +86,11 @@ export function withoutNeedlessSamples(products: Product[], browsing: boolean): 
   if (browsing) return real;
   const realCategories = new Set(real.map((p) => p.category));
   return products.filter((p) => !p.fixture || !realCategories.has(p.category));
+}
+
+/** The Lower-price floor that does not depend on a group: in stock, not an accessory, key specs present. */
+export function failsCheapFloor(product: Product): boolean {
+  return /out of stock/i.test(String(product.specs.stock ?? '')) || isAccessory(product.title) || !hasSpecs(product);
 }
 
 function noMatches(parsed: ReturnType<typeof parseQuery>, lane: Lane): SearchResult {
@@ -209,6 +216,16 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
         ranked: true,
       });
     }
+  }
+
+  // Lower price must never list something out of stock, an accessory, or an item without key specs,
+  // whichever path above it came through (ranked, unranked, outlier or unsized).
+  if (lane === 'cheap') {
+    const before = items.length;
+    const kept = items.filter((item) => !failsCheapFloor(item.product));
+    excludedCount += before - kept.length;
+    items.length = 0;
+    items.push(...kept);
   }
 
   items.sort((a, b) => Number(b.ranked !== false) - Number(a.ranked !== false) || b.score - a.score);

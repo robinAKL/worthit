@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
 import { countsAsSpec, excludedFrom, laneScore, quartile, reasonFor, specPoints } from './score';
-import { comparisonKey, search, withoutNeedlessSamples } from './search';
+import { comparisonKey, failsCheapFloor, search, withoutNeedlessSamples } from './search';
 import { sizeBand, specFromProduct } from './specs';
 
 describe('parseQuery', () => {
@@ -269,5 +269,21 @@ describe('Lower price for products is not the worst (T-42)', () => {
     expect(excludedFrom({ ...p, title: 'Axis Mounting Bracket' }, 'cheap', 10_000, 600)).toBe(true);
     expect(excludedFrom({ ...p, price: 100 }, 'cheap', 10_000, 600)).toBe(true);
     expect(excludedFrom(p, 'cheap', 10_000, 600)).toBe(false);
+  });
+});
+
+describe('Lower price: the floor holds on every path (T-42 review)', () => {
+  it('drops an out-of-stock item even when it is shown unranked (Codex case)', () => {
+    const p = { ...productsIn('laptop')[0], id: 'desk-1', title: 'Example Desk', category: 'desks', fixture: false, source: 'feed' as const, imageCount: 1, specs: { brand: 'Test', stock: 'out of stock' } };
+    expect(search('', 'cheap', 'en', [p]).items).toHaveLength(0);
+    expect(search('', 'cheap', 'en', [{ ...p, specs: { brand: 'Test', stock: 'in stock' } }]).items).toHaveLength(1);
+  });
+
+  it('the live cheap lane has no out-of-stock items, accessories or items without specs', () => {
+    for (const locale of ['en', 'zh-Hans'] as const) {
+      const items = search('', 'cheap', locale).items;
+      expect(items.length).toBeGreaterThan(0);
+      expect(items.filter((h) => failsCheapFloor(h.product)).map((h) => h.product.title)).toEqual([]);
+    }
   });
 });
