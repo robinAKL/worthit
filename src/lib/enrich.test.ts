@@ -60,3 +60,16 @@ describe('AI spec enrichment', () => {
     expect(cache).toEqual({});
   });
 });
+
+describe('AI route', () => {
+  it('uses Vercel AI Gateway when AI_GATEWAY_API_KEY is set, the Claude API otherwise', async () => {
+    const { routeFor } = await import('../../scripts/enrich/specs.mjs');
+    expect(routeFor({ AI_GATEWAY_API_KEY: 'test-key' })).toEqual({
+      gateway: true,
+      clientOptions: { apiKey: 'test-key', baseURL: 'https://ai-gateway.vercel.sh' },
+      model: 'anthropic/claude-opus-5.5',
+    });
+    expect(routeFor({})).toEqual({ gateway: false, clientOptions: {}, model: 'claude-opus-5-5' });
+    expect(routeFor({ AI_GATEWAY_API_KEY: 'k', WORTHIT_AI_MODEL: 'anthropic/claude-haiku-5.5' }).model).toBe('anthropic/claude-haiku-5.5');
+  });
+});

@@ -6,7 +6,8 @@
  * value must quote a fragment of the title, and anything it cannot back up is dropped.
  * Results go to src/data/specs/ai.json, keyed by product id, so a title is asked about once.
  *
- * Credentials come from the environment (ANTHROPIC_API_KEY or an `ant auth login` profile).
+ * Credentials come from the environment: AI_GATEWAY_API_KEY routes through Vercel AI Gateway;
+ * otherwise ANTHROPIC_API_KEY or an `ant auth login` profile. WORTHIT_AI_MODEL overrides the model.
  * Never commit a key, never paste one into chat.
  */
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -69,10 +70,24 @@ export async function enrich({ products, cache, extract, limit = Infinity, log =
   return stats;
 }
 
+/**
+ * Where the call goes. With AI_GATEWAY_API_KEY set, requests go through Vercel AI Gateway
+ * (Anthropic-compatible endpoint, gateway model ids, gateway billing and provider failover).
+ * Otherwise they go straight to the Claude API with the SDK's usual credentials, and a
+ * declined request falls back server-side.
+ */
+export function routeFor(env = process.env) {
+  if (env.AI_GATEWAY_API_KEY) {
+    return { gateway: true, clientOptions: { apiKey: env.AI_GATEWAY_API_KEY, baseURL: 'https://ai-gateway.vercel.sh' }, model: env.WORTHIT_AI_MODEL || 'anthropic/claude-opus-5.5' };
+  }
+  return { gateway: false, clientOptions: {}, model: env.WORTHIT_AI_MODEL || 'claude-opus-5-5' };
+}
+
 /** The Claude call: JSON only, every value tied to a quoted title fragment. */
-export async function claudeExtractor() {
+export async function claudeExtractor(route = routeFor()) {
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   const { betaZodOutputFormat } = await import('@anthropic-ai/sdk/helpers/beta/zod');
+  const { zodOutputFormat } = await import('@anthropic-ai/sdk/helpers/zod');
   const { z } = await import('zod');
   const Spec = z.object({
     family: z.enum([...FAMILIES, 'unknown']),
@@ -90,7 +105,7 @@ export async function claudeExtractor() {
       size: z.number().nullable(),
     }),
   });
-  const client = new Anthropic();
+  const client = new Anthropic(route.clientOptions);
   const system = [
     'You read New Zealand retail product titles and return the product family, style and size as JSON.',
     'Size means litres for fridges, freezers, microwaves and ovens; kilograms for washers and dryers; place settings for dishwashers.',
@@ -100,15 +115,19 @@ export async function claudeExtractor() {
   ].join('\n');
 
   return async (title) => {
-    const response = await client.beta.messages.parse({
-      model: 'claude-opus-5-5',
-      max_tokens: 2000,
-      betas: ['server-side-fallback-2026-07-01'],
-      fallbacks: 'default',
-      output_config: { effort: 'low', format: betaZodOutputFormat(Spec) },
-      system,
-      messages: [{ role: 'user', content: `Product text: ${title}` }],
-    });
+    const messages = [{ role: 'user', content: `Product text: ${title}` }];
+    // The gateway documents the GA structured-output path; the refusal-fallback beta is used only on the direct API.
+    const response = route.gateway
+      ? await client.messages.parse({ model: route.model, max_tokens: 2000, output_config: { effort: 'low', format: zodOutputFormat(Spec) }, system, messages })
+      : await client.beta.messages.parse({
+          model: route.model,
+          max_tokens: 2000,
+          betas: ['server-side-fallback-2026-07-01'],
+          fallbacks: 'default',
+          output_config: { effort: 'low', format: betaZodOutputFormat(Spec) },
+          system,
+          messages,
+        });
     if (response.stop_reason === 'refusal') return null;
     const out = response.parsed_output;
     if (!out) return null;
@@ -137,7 +156,9 @@ async function main() {
     console.log(JSON.stringify({ products: products.length, rulesOnly: products.length - products.filter((p) => needsAi(p)).length, waitingForAi: waiting.length, note: 'run with --ai to fill these from Claude' }, null, 2));
     return;
   }
-  const extract = await claudeExtractor();
+  const route = routeFor();
+  console.error(`AI step via ${route.gateway ? 'Vercel AI Gateway' : 'Claude API'}, model ${route.model}`);
+  const extract = await claudeExtractor(route);
   const stats = await enrich({ products, cache, extract, limit, log: (m) => console.error(m) });
   writeFileSync(cachePath, `${JSON.stringify(cache, null, 2)}\n`);
   console.log(JSON.stringify(stats, null, 2));
