@@ -1,3 +1,4 @@
+import { confidenceFrom, priceRankIn, type Cohort, type Confidence } from '../deal';
 import type { Fuel, Lane, Vehicle } from '../types';
 
 /**
@@ -52,6 +53,10 @@ export interface CarPick {
   priceRank: number;
   /** How many cars were valued (the population behind priceRank). */
   valued: number;
+  /** Comparable cars on sale: same make and model when there are 3 or more, else same body and nearby years. */
+  cohort: Cohort;
+  /** How firm the estimate is: same-model cars behind it, else make support. */
+  confidence: Confidence;
 }
 
 const PREMIUM = new Set(['bmw', 'mercedes-benz', 'audi', 'lexus', 'volvo', 'land rover', 'porsche', 'jaguar', 'mini', 'tesla', 'genesis']);
@@ -240,6 +245,23 @@ export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFul
   const priceRank = new Map(byPrice.map((c, i) => [c.id, i + 1]));
 
   const knownMakes = new Set(model.makes);
+  const byModel = new Map<string, Car[]>();
+  for (const c of ranked) byModel.set(c.modelKey, [...(byModel.get(c.modelKey) ?? []), c]);
+  const cohortOf = (c: Car): Cohort => {
+    const same = byModel.get(c.modelKey) ?? [c];
+    if (same.length >= 3) {
+      const prices = same.map((x) => x.priceNzd).sort((a, b) => a - b);
+      return { kind: 'model', label: `${c.make} ${c.model}`, prices, rank: priceRankIn(prices, c.priceNzd) };
+    }
+    const peers = ranked.filter((x) => x.bodyClass === c.bodyClass && Math.abs(x.year - c.year) <= 2);
+    const prices = peers.map((x) => x.priceNzd).sort((a, b) => a - b);
+    return { kind: 'segment', label: c.bodyClass, prices, rank: priceRankIn(prices, c.priceNzd), years: [c.year - 2, c.year + 2] };
+  };
+  const confidenceOf = (c: Car): Confidence => {
+    const v = values.get(c.id)!;
+    if (v.groupSize > 0) return confidenceFrom(v.groupSize);
+    return knownMakes.has(c.make.toLowerCase()) ? 2 : 1;
+  };
   const score = (c: Car): number | null => {
     const v = values.get(c.id)!;
     // A value claim needs enough cars of the same make behind the estimate.
@@ -258,5 +280,5 @@ export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFul
     .map((car) => ({ car, s: score(car) }))
     .filter((x): x is { car: Car; s: number } => x.s !== null)
     .sort((a, b) => b.s - a.s)
-    .map(({ car, s }) => ({ car, lane, score: s, valuation: values.get(car.id)!, priceRank: priceRank.get(car.id)!, valued: ranked.length }));
+    .map(({ car, s }) => ({ car, lane, score: s, valuation: values.get(car.id)!, priceRank: priceRank.get(car.id)!, valued: ranked.length, cohort: cohortOf(car), confidence: confidenceOf(car) }));
 }

@@ -57,6 +57,31 @@ export const en = {
     cheap: { label: 'Lower price', hint: 'Lower prices with key details checked' },
     refined: { label: 'Quality', hint: 'Reviews, condition and warranty come first' },
   },
+  deal: {
+    tier: {
+      car: { 'well-below': 'Well under estimate', below: 'Under estimate', near: 'Close to estimate', above: 'Over estimate', 'well-above': 'Well over estimate' },
+      product: { 'well-below': 'Well under typical price', below: 'Under typical price', near: 'Typical price', above: 'Over typical price', 'well-above': 'Well over typical price' },
+    },
+    under: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `${amount} under our estimate` : `${amount} under the typical price`),
+    over: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `${amount} over our estimate` : `${amount} over the typical price`),
+    near: (ref: 'car' | 'product'): string => (ref === 'car' ? 'In line with our estimate' : 'In line with similar items'),
+    rankModel: (rank: number, size: number, label: string) => `Price #${rank} of ${size} ${label} for sale`,
+    rankSegment: (rank: number, size: number, body: string, from: number, to: number) => `Price #${rank} of ${size} ${body} from ${from}–${to}`,
+    rankGroup: (rank: number, size: number) => `Price #${rank} of ${size} similar items`,
+    mixed: (low: string, high: string) => `Similar items range from ${low} to ${high}`,
+    mixedNote: 'Specs differ a lot here, so we make no price call' as string,
+    body: { hatch: 'hatchbacks', sedan: 'sedans', wagon: 'wagons', suv: 'SUVs', ute: 'utes', van: 'vans', coupe: 'coupes', other: 'cars' } as Record<string, string>,
+    confidence: {
+      car: (level: number, group: number, total: number) =>
+        level === 3 ? `Firm estimate: ${group} of this model and ${total} cars` : level === 2 ? `Estimate from ${total} cars and this make` : 'Few similar cars, treat as a rough guide',
+      product: (level: number, size: number) => (level === 3 ? `Firm: ${size} similar items` : level === 2 ? `Based on ${size} similar items` : `Only ${size} similar items, rough guide`),
+      label: (level: number) => `Confidence ${level} of 3`,
+    },
+    estimateMark: 'Estimate' as string,
+    typicalMark: 'Typical' as string,
+    strip: (rank: number, size: number) => `This item is number ${rank} by price of ${size} comparable listings`,
+    notEnough: (n: number) => `Only ${n} similar ${n === 1 ? 'item' : 'items'}, not enough to compare`,
+  },
   cars: {
     title: 'Used cars worth a look',
     lede: 'Cars for sale at New Zealand dealers whose sites allow collection. Each card says how its estimate was made, so you can check it.',

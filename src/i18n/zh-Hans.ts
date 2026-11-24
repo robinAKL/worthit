@@ -57,6 +57,31 @@ export const zhHans: Copy = {
     cheap: { label: '便宜', hint: '同类里价格偏低，且没有风险信号' },
     refined: { label: '精致', hint: '关注反馈、成色描述和保修，价格不一定低' },
   } satisfies Record<Lane, { label: string; hint: string }>,
+  deal: {
+    tier: {
+      car: { 'well-below': '明显低于估价', below: '低于估价', near: '接近估价', above: '高于估价', 'well-above': '明显高于估价' },
+      product: { 'well-below': '明显低于同类价', below: '低于同类价', near: '同类常见价', above: '高于同类价', 'well-above': '明显高于同类价' },
+    },
+    under: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `比估价便宜 ${amount}` : `比同类中位价低 ${amount}`),
+    over: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `比估价贵 ${amount}` : `比同类中位价高 ${amount}`),
+    near: (ref: 'car' | 'product') => (ref === 'car' ? '价格与估价基本一致' : '价格与同类基本一致'),
+    rankModel: (rank: number, size: number, label: string) => `在售 ${size} 台 ${label} 里价格第 ${rank} 低`,
+    rankSegment: (rank: number, size: number, body: string, from: number, to: number) => `${from}–${to} 年的 ${size} 台${body}里价格第 ${rank} 低`,
+    rankGroup: (rank: number, size: number) => `同类 ${size} 件里价格第 ${rank} 低`,
+    mixed: (low: string, high: string) => `同类价格从 ${low} 到 ${high} 不等`,
+    mixedNote: '配置差异大，暂不判断划算',
+    body: { hatch: '掀背车', sedan: '轿车', wagon: '旅行车', suv: 'SUV', ute: '皮卡', van: '面包车', coupe: '双门车', other: '车' } as Record<string, string>,
+    confidence: {
+      car: (level: number, group: number, total: number) =>
+        level === 3 ? `估价可靠：参考同款 ${group} 台、在售 ${total} 台` : level === 2 ? `估价参考在售 ${total} 台及同品牌` : '同类车少，估价仅供参考',
+      product: (level: number, size: number) => (level === 3 ? `比较可靠：同类 ${size} 件` : level === 2 ? `参考同类 ${size} 件` : `同类仅 ${size} 件，仅供参考`),
+      label: (level: number) => `可信度 ${level}/3`,
+    },
+    estimateMark: '估价',
+    typicalMark: '中位价',
+    strip: (rank: number, size: number) => `在 ${size} 个可比价格里排第 ${rank} 低`,
+    notEnough: (n: number) => `同类只有 ${n} 件，暂不比较`,
+  },
   cars: {
     title: '值得看的二手车',
     lede: '来自允许采集的新西兰车行的在售车辆。每张卡片都写明估价怎么算的，你可以自己核对。',

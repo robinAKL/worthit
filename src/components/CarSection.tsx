@@ -4,13 +4,14 @@ import { allVehicles, carResults, type CarPick } from '../lib/cars';
 import { vehiclesForQuery } from '../lib/cars/query';
 import { carReason } from '../lib/cars/reason';
 import type { Lane } from '../lib/types';
+import { dealTier, savings } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
+import { DealBadge, DealDelta, DealPanel, formatNzd } from './DealPanel';
 import { LaneTabs } from './LaneTabs';
 
 const PANEL_ID = 'cars-panel';
 /** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
 const PAGE_SIZE = 12;
-const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
 
 function formatDate(locale: Locale, iso?: string, withTime = false) {
   if (!iso) return '';
@@ -96,32 +97,63 @@ export function CarSection({ copy, locale, query = '' }: Props) {
   );
 }
 
+function titleCase(text: string) {
+  return text.replace(/(^|[\s/-])(\p{L})/gu, (_, sep: string, ch: string) => sep + ch.toUpperCase());
+}
+
 function CarCard({ pick, copy, locale }: { pick: CarPick; copy: Copy; locale: Locale }) {
-  const { car } = pick;
+  const { car, valuation: v, cohort } = pick;
   const t = copy.cars;
+  const d = copy.deal;
   const facts = [
     car.odometerKm !== undefined ? t.km(Math.round(car.odometerKm).toLocaleString('en-NZ')) : null,
     car.fuel ? t.fuel[car.fuel] : null,
     car.transmission ? t.transmission[car.transmission] : null,
     car.region ?? null,
   ].filter((f): f is string => Boolean(f));
-  const caption = [car.model, car.body ? car.body.replace(/w/g, (c) => c.toUpperCase()) : null, car.fuel ? t.fuel[car.fuel] : null].filter(Boolean).join(' · ');
+  const caption = [car.model, car.body ? titleCase(car.body) : null, car.fuel ? t.fuel[car.fuel] : null].filter(Boolean).join(' · ');
   const title = `${car.year} ${car.make} ${car.model}`;
+
+  const tier = dealTier(v.gap);
+  const diff = savings(car.priceNzd, v.expected);
+  const deltaText = tier === 'near' ? d.near('car') : diff > 0 ? d.under(formatNzd(diff), 'car') : d.over(formatNzd(-diff), 'car');
+  const size = cohort.prices.length;
+  const rankText =
+    cohort.kind === 'model'
+      ? d.rankModel(cohort.rank, size, cohort.label)
+      : d.rankSegment(cohort.rank, size, d.body[cohort.label] ?? d.body.other, cohort.years?.[0] ?? car.year, cohort.years?.[1] ?? car.year);
 
   return (
     <article className="card car-card">
-      <CardMedia src={car.imageUrl} mark={car.make} caption={caption} tone={toneOf(car.make)} />
+      <CardMedia
+        src={car.imageUrl}
+        mark={car.make}
+        caption={caption}
+        tone={toneOf(car.make)}
+        badge={<DealBadge tier={tier} label={d.tier.car[tier]} />}
+      />
       <p className="card-flag">{t.captured(formatDate(locale, car.capturedAt, true))}</p>
       <h3 className="card-title car-title" title={car.variant ? `${title} ${car.variant}` : title}>
         <span className="car-name">{title}</span>
         <span className="car-variant">{car.variant ?? ''}</span>
       </h3>
 
-      <p className="card-price">
-        <span className="price">{nzd.format(car.priceNzd)}</span>
-      </p>
+      <div className="card-price">
+        <span className="price">{formatNzd(car.priceNzd)}</span>
+        <DealDelta tier={tier} text={deltaText} />
+      </div>
 
-      <p className="car-estimate">{t.estimate(nzd.format(pick.valuation.expected))}</p>
+      <DealPanel
+        cohort={cohort}
+        price={car.priceNzd}
+        reference={v.expected}
+        referenceLabel={`${d.estimateMark} ${formatNzd(v.expected)}`}
+        rankText={rankText}
+        stripLabel={d.strip(cohort.rank, size)}
+        confidence={pick.confidence}
+        confidenceText={d.confidence.car(pick.confidence, v.groupSize, v.sample)}
+        confidenceLabel={d.confidence.label(pick.confidence)}
+      />
 
       <p className="card-reason">{carReason(pick, locale)}</p>
 

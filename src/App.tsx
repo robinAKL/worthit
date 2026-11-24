@@ -1,6 +1,7 @@
 import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
 import { comparisonKey, search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
+import { priceRankIn, type Cohort } from './lib/deal';
 import { DICTIONARIES, useLocale, type Locale } from './i18n';
 import { LanguageSelect } from './components/LanguageSelect';
 import { LaneTabs } from './components/LaneTabs';
@@ -20,17 +21,17 @@ function formatDate(locale: Locale, iso?: string) {
   return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat(DICTIONARIES[locale].language.intlLocale, { dateStyle: 'long', timeZone: 'Pacific/Auckland' }).format(d);
 }
 
-/** Price position (0 to 100) of each item within its own category in this result set. */
-function positions(items: Recommendation[]) {
-  const range = new Map<string, { min: number; max: number }>();
+/** Each item's comparable prices: the other items in its comparison group in this result set. */
+function cohorts(items: Recommendation[]): Cohort[] {
+  const groups = new Map<string, number[]>();
   for (const { product: p } of items) {
     const key = comparisonKey(p);
-    const r = range.get(key) ?? { min: p.price, max: p.price };
-    range.set(key, { min: Math.min(r.min, p.price), max: Math.max(r.max, p.price) });
+    groups.set(key, [...(groups.get(key) ?? []), p.price]);
   }
+  for (const prices of groups.values()) prices.sort((x, y) => x - y);
   return items.map(({ product: p }) => {
-    const r = range.get(comparisonKey(p))!;
-    return r.max === r.min ? 50 : ((p.price - r.min) / (r.max - r.min)) * 100;
+    const prices = groups.get(comparisonKey(p))!;
+    return { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, p.price) };
   });
 }
 
@@ -43,7 +44,7 @@ export default function App() {
   const deferredQuery = useDeferredValue(query);
 
   const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
-  const pos = useMemo(() => positions(result.items), [result.items]);
+  const groups = useMemo(() => cohorts(result.items), [result.items]);
   const visible = result.items.slice(0, shown);
   const hidden = result.items.length - visible.length;
   const captured = formatDate(locale, result.items[0]?.product.capturedAt);
@@ -186,7 +187,7 @@ export default function App() {
                 <ul className="grid">
                   {visible.map((rec, i) => (
                     <li key={rec.product.id}>
-                      <ProductCard rec={rec} position={pos[i]} locale={locale} copy={copy} />
+                      <ProductCard rec={rec} cohort={groups[i]} locale={locale} copy={copy} />
                     </li>
                   ))}
                 </ul>
