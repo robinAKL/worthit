@@ -1,0 +1,37 @@
+{
+  "sample": true,
+  "note": "Example merchant feed. Sample Store D is fictional. These are not live prices.",
+  "products": [
+    {
+      "id": "sample-lamp-01",
+      "title": "Sample desk lamp",
+      "title_zh": "示例台灯",
+      "category": "furniture",
+      "price": 89,
+      "currency": "NZD",
+      "merchant": "Sample Store D",
+      "url": "https://example.com/feed/sample-lamp-01",
+      "imageCount": 4,
+      "condition": "new",
+      "capturedAt": "2026-11-24",
+      "reviewCount": 6,
+      "rating": 4.5,
+      "specs": { "note": "Example feed row. Not a live price." }
+    },
+    {
+      "id": "sample-kettle-01",
+      "title": "Sample kettle",
+      "title_zh": "示例电水壶",
+      "category": "home",
+      "price": 64.5,
+      "currency": "NZD",
+      "merchant": "Sample Store D",
+      "url": "https://example.com/feed/sample-kettle-01",
+      "imageCount": 3,
+      "condition": "new",
+      "capturedAt": "2026-11-24T09:00:00Z",
+      "warrantyMonths": 12,
+      "specs": { "capacity": "1.7 L", "note": "Example feed row. Not a live price." }
+    }
+  ]
+}

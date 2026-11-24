@@ -7,7 +7,7 @@ const CATEGORIES: { category: string; pattern: RegExp }[] = [
 ];
 
 const BUDGET =
-  /(?:预算|不超过|少于|under|below)?\s*\$?\s*(\d{2,6}(?:\.\d+)?)\s*(?:刀|纽币|nzd|元|块)?(?:\s*(?:以内|以下|内))?/i;
+  /(?:预算|不超过|少于|under|below)?\s*\$?\s*(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s*(?:刀|纽币|nzd|元|块)?(?:\s*(?:以内|以下|内))?/i;
 
 const FILLER =
   /笔记本|手提电脑|laptop|notebook|手机|phone|家具|书桌|椅子|沙发|餐桌|desk|chair|sofa|以内|以下|适合|一个|我想要|想要|预算|不超过|刀|纽币|nzd|元|块|的|和|与/gi;
@@ -16,7 +16,7 @@ export function parseQuery(input: string): ParsedQuery {
   const raw = input.trim();
   const category = CATEGORIES.find((entry) => entry.pattern.test(raw))?.category;
   const budgetMatch = raw.match(BUDGET);
-  const budgetMax = budgetMatch ? Number(budgetMatch[1]) : undefined;
+  const budgetMax = budgetMatch ? Number(budgetMatch[1].replace(/,/g, '')) : undefined;
   const keywords = raw
     .replace(BUDGET, ' ')
     .replace(FILLER, ' ')

@@ -42,6 +42,7 @@ describe('catalog', () => {
 describe('search', () => {
   it('reads the English sample prompts', () => {
     expect(parseQuery('laptop under $1500')).toMatchObject({ category: 'laptop', budgetMax: 1500 });
+    expect(parseQuery('Laptop under $1,500').budgetMax).toBe(1500);
     expect(parseQuery('phone for my mum').category).toBe('phone');
     expect(parseQuery('desk for a small flat').category).toBe('furniture');
   });
