@@ -47,7 +47,10 @@ export const en = {
       down: 'Lower than the previous reading',
       up: 'Higher than the previous reading',
       suspicious: (price: string) => `The earlier price ${price} has not appeared in the last 30 days`,
-      since: (date: string) => `Prices recorded since ${date}`,
+      since: (date: string) => {
+        const label = new Intl.DateTimeFormat('en-NZ', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+        return `Prices recorded since ${label}`;
+      },
       others: (n: number, price: string) => `${n} other ${n === 1 ? 'shop' : 'shops'}, from ${price}`,
     },
     clear: 'Clear search',

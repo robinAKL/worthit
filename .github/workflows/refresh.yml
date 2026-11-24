@@ -1,0 +1,44 @@
+name: Refresh data
+
+on:
+  workflow_dispatch:
+  # Midnight in New Zealand daylight time (UTC+13). During standard time this is 01:00.
+  # Delete the two comment marks below to turn the daily run on.
+  # schedule:
+  #   - cron: '0 11 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Collect
+        run: node --experimental-strip-types scripts/collect/run.mjs
+      - name: Enrich specs
+        env:
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          WORTHIT_AI_MODEL: ${{ vars.WORTHIT_AI_MODEL }}
+        run: |
+          if [ -n "$AI_GATEWAY_API_KEY" ]; then
+            node --experimental-strip-types scripts/enrich/specs.mjs --ai
+          else
+            echo "AI_GATEWAY_API_KEY is not set. Skipping spec enrichment."
+          fi
+      - run: npm test
+      - name: Commit src/data
+        run: |
+          git add src/data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git -c user.name='worthit-refresh' -c user.email='github-actions[bot]@users.noreply.github.com' commit -m "Refresh collected prices and specs."
+          git push

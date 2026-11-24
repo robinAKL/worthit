@@ -66,6 +66,7 @@ describe('price history', () => {
     const copy = DICTIONARIES['zh-Hans'].results.history;
     const money = (n: number) => `$${n}`;
     expect(describeHistory(oneDay!, 200, copy, money).join(' ')).toBe('价格自 11月24日 开始记录');
+    expect(describeHistory(oneDay!, 200, DICTIONARIES.en.results.history, money).join(' ')).toBe('Prices recorded since 24 Nov 2026');
     expect(describeHistory(tenDays!, 200, copy, money).join(' ')).toContain('比上次记录低');
     expect(describeHistory(tenDays!, 200, copy, money).join(' ')).not.toContain('30 天');
     const full = describeHistory(covered!, 200, copy, money).join(' ');

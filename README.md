@@ -49,3 +49,14 @@ npm run build    # 类型检查 + 生产构建
 ```bash
 node --experimental-strip-types scripts/collect/run.mjs --limit=50
 ```
+
+## 每日更新
+
+`.github/workflows/refresh.yml` 默认只能手动运行：GitHub → Actions → Refresh data → Run workflow。定时那一段是注释，所以不会自己跑。
+
+Robin 要做两件事：
+
+1. 仓库 Settings → Secrets and variables → Actions，添加 secret `AI_GATEWAY_API_KEY`。没有这个 secret 时，采集照常进行，规格补抽会跳过。
+2. 要每天新西兰时间凌晨自动跑，去掉 `refresh.yml` 里 `schedule` 两行的注释。`0 11 * * *` 在夏令时（UTC+13）是午夜，在标准时间是凌晨 1 点。
+
+采集遇到 403、429 或空结果时，不覆盖已有 feed。一件商品或一辆车连续 3 次完整采集都没有出现，才从 feed 里删除。价格历史保留。运行日志会写出每个站的请求数、跳过数和错误数。

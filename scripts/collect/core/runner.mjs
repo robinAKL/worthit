@@ -95,7 +95,7 @@ export async function runAdapter({
       if (rows.length >= cap) break;
     }
   }
-  return result(rows, rejected.length ? { rejected: rejected.slice(0, 20) } : {});
+  return result(rows, { capped: rows.length >= cap, ...(rejected.length ? { rejected: rejected.slice(0, 20) } : {}) });
 }
 
 function defaultExtract(kind) {
