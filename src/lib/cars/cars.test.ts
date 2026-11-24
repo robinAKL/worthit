@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Vehicle } from '../types';
-import { allVehicles, carResults, comparableSet, dedupe, fitModel, rankCars, toCar, type Car } from './index';
+import { allCarPicks, allVehicles, carResults, isRough, CHEAP_MAX_KM, CHEAP_MIN_YEAR, comparableSet, conditionScore, MAX_OVER_FAIR, dedupe, fitModel, rankCars, toCar, type Car } from './index';
 import { carReason } from './reason';
 
 /** Synthetic fleet: four makes, ages 1..12, km rising with age, Toyota Aqua as a same-model group. */
@@ -162,7 +162,7 @@ describe('comparison rules v2 (T-38)', () => {
   });
 
   it('gives one consistent answer: the rank and the fair price come from the same adjusted prices', () => {
-    for (const pick of carResults('refined').picks) {
+    for (const pick of allCarPicks()) {
       if (pick.cohort.kind === 'none') continue;
       const { prices, rank } = pick.cohort;
       // Under the fair price means in the cheaper half of the adjusted prices, and over means the dearer half.
@@ -172,7 +172,7 @@ describe('comparison rules v2 (T-38)', () => {
   });
 
   it('keeps premium brands within 8% of their fair price at every age, on the live data', () => {
-    const picks = carResults('refined').picks.filter((p) => p.car.premium);
+    const picks = allCarPicks().filter((p) => p.car.premium);
     for (const [lo, hi] of [[0, 5], [6, 10], [11, 99]]) {
       const gaps = picks.filter((p) => 2026 - p.car.year >= lo && 2026 - p.car.year <= hi).map((p) => p.valuation.gap).sort((a, b) => a - b);
       if (gaps.length < 5) continue;
@@ -182,7 +182,7 @@ describe('comparison rules v2 (T-38)', () => {
 
   it('makes no value claim from too few cars: such cars are listed after every car we can judge', () => {
     const picks = carResults('value').picks;
-    const rough = (b: string) => b === 'pooled' || b === 'model-few';
+    const rough = (b: Parameters<typeof isRough>[0]) => isRough(b);
     const firstRough = picks.findIndex((p) => rough(p.valuation.basis));
     expect(firstRough).toBeGreaterThan(0);
     expect(picks.slice(firstRough).every((p) => rough(p.valuation.basis))).toBe(true);
@@ -207,9 +207,38 @@ describe('car search (T-38)', () => {
   it('values searched cars against the whole fleet, not only the matches', async () => {
     const { vehiclesForQuery } = await import('./query');
     const fleet = vehiclesForQuery('Toyota Aqua', allVehicles())!;
-    const searched = carResults('refined', fleet).picks;
-    const everywhere = new Map(carResults('refined').picks.map((p) => [p.car.id, p.valuation.expected]));
+    const searched = carResults('value', fleet).picks;
+    const everywhere = new Map(allCarPicks().map((p) => [p.car.id, p.valuation.expected]));
     expect(searched.length).toBeGreaterThan(0);
     for (const p of searched) expect(p.valuation.expected).toBe(everywhere.get(p.car.id));
+  });
+});
+
+describe('lanes v3 (T-42): "lower price" is not the worst, "good condition" is not just dear', () => {
+  it('Lower price lists only cars that pass the floor, cheapest first, ranked among those', () => {
+    const picks = carResults('cheap').picks;
+    expect(picks.length).toBeGreaterThan(0);
+    for (const p of picks) {
+      expect(p.car.year).toBeGreaterThanOrEqual(CHEAP_MIN_YEAR);
+      expect(p.car.odometerKm ?? Infinity).toBeLessThanOrEqual(CHEAP_MAX_KM);
+      expect(p.valuation.gap).toBeLessThanOrEqual(MAX_OVER_FAIR);
+      expect(p.valuation.basis).not.toBe('pooled');
+    }
+    expect(picks.map((p) => p.car.priceNzd)).toEqual([...picks.map((p) => p.car.priceNzd)].sort((a, b) => a - b));
+    expect(picks.map((p) => p.priceRank)).toEqual(picks.map((_, i) => i + 1));
+    expect(picks.every((p) => p.valued === picks.length)).toBe(true);
+  });
+
+  it('Good condition keeps the top third of each body type and nothing overpriced', () => {
+    const all = allCarPicks();
+    const picks = carResults('refined').picks;
+    expect(picks.length).toBeGreaterThan(0);
+    expect(picks.length).toBeLessThan(all.length / 2);
+    for (const p of picks) {
+      expect(p.valuation.gap).toBeLessThanOrEqual(MAX_OVER_FAIR);
+      const sameBody = all.filter((x) => x.car.bodyClass === p.car.bodyClass).map((x) => conditionScore(x.car, 2026));
+      const better = sameBody.filter((s) => s > conditionScore(p.car, 2026)).length;
+      expect(better).toBeLessThan(Math.ceil(sameBody.length / 3));
+    }
   });
 });

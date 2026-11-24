@@ -68,7 +68,7 @@ export const en = {
   },
   lanes: {
     value: { label: 'Value', hint: 'Furthest below the typical price of comparable items' },
-    cheap: { label: 'Lower price', hint: 'Lower prices with key details checked' },
+    cheap: { label: 'Lower price', hint: 'Lowest prices after leaving out accessories, items out of stock or missing specs, and suspiciously low prices' },
     refined: { label: 'Higher spec', hint: 'At a similar price, more capacity, energy stars or warranty' },
   },
   ask: {
@@ -134,8 +134,8 @@ export const en = {
     sort: 'Sort used cars',
     lanes: {
       value: { label: 'Value', hint: 'Furthest below our estimate' },
-      cheap: { label: 'Lower price', hint: 'Lower asking prices first, leaving out very old or high-kilometre cars' },
-      refined: { label: 'Newer', hint: 'Newest and lowest kilometres, hybrids and EVs first' },
+      cheap: { label: 'Lower price', hint: 'Lowest asking prices first, among cars that pass a floor: 2008 or newer, under 200,000 km, not overpriced' },
+      refined: { label: 'Good condition', hint: 'Top third on age and kilometres for their type, and not overpriced' },
     },
     count: (n: number) => `${n} ${n === 1 ? 'car' : 'cars'}`,
     more: (n: number) => `Show ${n} more`,
@@ -157,7 +157,7 @@ export const en = {
     head: ['Lane', 'What we consider', 'What we do not promise'],
     rows: [
       { lane: 'value' as Lane, how: 'How far the price is below the middle of comparable items: same family and size band, or price per litre or kilogram where size matters. Key specifications required. Photo counts are never used.', never: 'One choice that suits everyone.' },
-      { lane: 'cheap' as Lane, how: 'Lowest total price in the lower quarter of comparable items, leaving out anything out of stock or missing key specifications.', never: 'The lowest price across every shop.' },
+      { lane: 'cheap' as Lane, how: 'Lowest total price in the lower quarter of comparable items. Left out first: accessories, anything out of stock or missing key specifications, and prices more than 70% below the middle of the group, which are usually a different product or an error.', never: 'The lowest price across every shop.' },
       { lane: 'refined' as Lane, how: 'Only items priced within 25% of the middle of their group. Among those, more measurable spec first: capacity, energy stars, warranty, or for laptops memory, storage and processor. Photo counts are never used.', never: 'Quality, durability or reliability claims: we have no review data for that.' },
     ],
   },

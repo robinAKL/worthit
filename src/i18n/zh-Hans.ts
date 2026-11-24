@@ -65,8 +65,8 @@ export const zhHans: Copy = {
   },
   lanes: {
     value: { label: '性价比', hint: '比可比商品的中位价低得最多' },
-    cheap: { label: '便宜', hint: '同类里价格偏低，且没有风险信号' },
-    refined: { label: '规格更高', hint: '价格相近时，容量、节能星级或保修更高的靠前' },
+    cheap: { label: '便宜', hint: '先排除配件、缺货、缺规格和低得反常的价格，再按价格从低到高' },
+    refined: { label: '优质', hint: '价格相近时，容量、节能星级或保修更高的靠前' },
   } satisfies Record<Lane, { label: string; hint: string }>,
   ask: {
     open: '提个问题',
@@ -131,8 +131,8 @@ export const zhHans: Copy = {
     sort: '二手车排序方式',
     lanes: {
       value: { label: '性价比', hint: '比我们的估价低得最多' },
-      cheap: { label: '便宜', hint: '按标价从低到高，排除车龄太老或里程太高的' },
-      refined: { label: '较新', hint: '车龄新、里程少，混动和电动优先' },
+      cheap: { label: '便宜', hint: '先过门槛（2008 年以后、20 万公里以内、价格不离谱），再按标价从低到高' },
+      refined: { label: '优质', hint: '车龄和里程在同类里排前三分之一，且价格不离谱' },
     },
     count: (n: number) => `${n} 台车`,
     more: (n: number) => `再看 ${n} 台`,
@@ -154,7 +154,7 @@ export const zhHans: Copy = {
     head: ['栏目', '怎么算', '我们不会说的话'],
     rows: [
       { lane: 'value' as Lane, how: '只看价格比可比商品的中位价低多少：同品类、同容量档；容量重要的品类按每升或每公斤价格比较。要求有关键规格，图片数量不参与评分。', never: '“最优选择”“闭眼买”' },
-      { lane: 'cheap' as Lane, how: '在可比商品价格最低的四分之一里按总价排序，排除缺货和缺关键规格的商品。', never: '“全网最低”“保证最便宜”' },
+      { lane: 'cheap' as Lane, how: '在可比商品价格最低的四分之一里按总价排序。先排除配件、缺货、缺关键规格，以及比同组中位价低 70% 以上的价格（通常是别的商品或标错价）。', never: '“全网最低”“保证最便宜”' },
       { lane: 'refined' as Lane, how: '只看价格在同组中位上下 25% 以内的商品，其中容量、节能星级、保修（笔记本看内存、存储和处理器）更高的靠前。图片数量不参与评分。', never: '“质量更好”“更耐用”：我们没有评价数据，不做这类判断' },
     ],
   },

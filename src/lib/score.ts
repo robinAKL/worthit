@@ -44,6 +44,14 @@ export function bandFor(price: number, lowerQuartile: number, upperQuartile: num
   return 'high';
 }
 
+/** Lower price leaves out prices more than this share below the group median. */
+export const CHEAP_FLOOR = 0.7;
+
+/** Mounts, cables, filters and the like: never the "cheapest fridge" or "cheapest camera". */
+export function isAccessory(title: string): boolean {
+  return /\b(filter|filters|accessory|accessories|kit|cover|mount|mounting|bracket|housing|adapter|cable|injector|power supply|spare|replacement)\b/i.test(title);
+}
+
 /** "Higher spec" compares items priced within this share of the group median, so it never favours a dearer class. */
 export const SPEC_PRICE_BAND = 0.25;
 
@@ -75,6 +83,9 @@ export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number
   if (lane === 'cheap') {
     if (/out of stock/i.test(String(product.specs.stock ?? ''))) return true;
     if (!hasSpecs(product)) return true;
+    if (isAccessory(product.title)) return true;
+    // Far below the middle of the group is usually a different product or a pricing error, not a bargain.
+    if (Number.isFinite(median) && product.price < median * (1 - CHEAP_FLOOR)) return true;
     const reviewRisk = product.fixture || product.condition === 'used';
     return reviewRisk && reviews === 0 && product.price < lowerQuartile * 0.7;
   }

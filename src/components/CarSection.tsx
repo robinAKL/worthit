@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { DICTIONARIES, type Copy, type Locale } from '../i18n';
-import { allVehicles, carResults, type CarPick } from '../lib/cars';
+import { allVehicles, carResults, isRough, type CarPick } from '../lib/cars';
 import { vehiclesForQuery } from '../lib/cars/query';
 import { carReason } from '../lib/cars/reason';
 import type { Lane } from '../lib/types';
@@ -120,8 +120,8 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
   const photo = modelPhotoFor(car.make, car.model);
 
   const tier = dealTier(v.gap);
-  // Too few similar cars on sale: the estimate is a rough guide, so no under/over badge.
-  const rough = v.basis === 'pooled' || v.basis === 'model-few';
+  // Too few of the same model on sale: the estimate is a rough guide, so no under/over badge.
+  const rough = isRough(v.basis);
   const diff = savings(car.priceNzd, v.expected);
   const deltaText = tier === 'near' ? d.near('car') : diff > 0 ? d.under(formatNzd(diff), 'car') : d.over(formatNzd(-diff), 'car');
   const size = cohort.prices.length;

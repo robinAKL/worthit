@@ -1,5 +1,5 @@
 import type { Locale } from '../types';
-import type { CarPick } from './model';
+import { CHEAP_MAX_KM, CHEAP_MIN_YEAR, MAX_OVER_FAIR, type CarPick } from './model';
 
 /**
  * One sentence per car, built only from that car's own fields and its valuation.
@@ -23,9 +23,10 @@ export function carReason(pick: CarPick, locale: Locale): string {
           : `在售的相近车太少，只能按 ${v.sample} 台在售车的整体规律粗估，约 ${nzd(v.expected)}`;
     const cmp = pct < 1 ? '标价与估算基本持平。' : v.gap < 0 ? `标价 ${nzd(car.priceNzd)}，低 ${pct}%。` : `标价 ${nzd(car.priceNzd)}，高 ${pct}%。`;
     if (lane === 'value') return `${basis}；${cmp}`;
-    if (lane === 'cheap') return `标价 ${nzd(car.priceNzd)}，在 ${total} 台可比车里第 ${priceRank} 便宜；${car.year} 年${km ? `，${km} 公里` : ''}。${basis}。`;
+    if (lane === 'cheap')
+      return `通过了最低门槛（${CHEAP_MIN_YEAR} 年以后、${CHEAP_MAX_KM / 10_000} 万公里以内、标价不高于合理价 ${Math.round(MAX_OVER_FAIR * 100)}%）。标价 ${nzd(car.priceNzd)}，在 ${total} 台通过门槛的车里第 ${priceRank} 便宜；${car.year} 年${km ? `，${km} 公里` : ''}。${basis}。`;
     const drive = car.fuelClass === 'hybrid' ? '混动' : car.fuelClass === 'plugin' ? '插电混动' : car.fuelClass === 'electric' ? '纯电' : '';
-    return `${car.year} 年${km ? `、${km} 公里` : ''}${drive ? `、${drive}` : ''}，在可比车里车龄和里程都靠前。${cmp}`;
+    return `${car.year} 年${km ? `、${km} 公里` : ''}${drive ? `、${drive}` : ''}，车龄和公里数在同类车里排前三分之一，标价不高于合理价 ${Math.round(MAX_OVER_FAIR * 100)}%。${cmp}`;
   }
 
   const basis =
@@ -36,7 +37,8 @@ export function carReason(pick: CarPick, locale: Locale): string {
         : `Too few similar cars on sale; a rough estimate of ${nzd(v.expected)} from the overall pattern of ${v.sample} cars`;
   const cmp = pct < 1 ? 'The asking price is about the same.' : v.gap < 0 ? `Asking ${nzd(car.priceNzd)}, ${pct}% below.` : `Asking ${nzd(car.priceNzd)}, ${pct}% above.`;
   if (lane === 'value') return `${basis}. ${cmp}`;
-  if (lane === 'cheap') return `Asking ${nzd(car.priceNzd)}, number ${priceRank} by price of ${total} comparable cars. ${car.year}${km ? `, ${km} km` : ''}. ${basis}.`;
+  if (lane === 'cheap')
+    return `Passes the floor (${CHEAP_MIN_YEAR} or newer, under ${(CHEAP_MAX_KM / 1000).toLocaleString('en-NZ')},000 km, no more than ${Math.round(MAX_OVER_FAIR * 100)}% over its fair price). Asking ${nzd(car.priceNzd)}, number ${priceRank} by price of ${total} cars that pass. ${car.year}${km ? `, ${km} km` : ''}. ${basis}.`;
   const drive = car.fuelClass === 'hybrid' ? ', hybrid' : car.fuelClass === 'plugin' ? ', plug-in hybrid' : car.fuelClass === 'electric' ? ', electric' : '';
-  return `${car.year}${km ? `, ${km} km` : ''}${drive}. Among the newest and lowest-kilometre cars we compared. ${cmp}`;
+  return `${car.year}${km ? `, ${km} km` : ''}${drive}. In the top third of similar cars on age and kilometres, and no more than ${Math.round(MAX_OVER_FAIR * 100)}% over its fair price. ${cmp}`;
 }

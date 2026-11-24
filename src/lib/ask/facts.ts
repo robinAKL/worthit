@@ -1,4 +1,4 @@
-import { allVehicles, carResults, type CarPick } from '../cars';
+import { allCarPicks, allVehicles, carResults, type CarPick } from '../cars';
 import { vehiclesForQuery } from '../cars/query';
 import { carReason } from '../cars/reason';
 import { comparisonKey, search } from '../search';
@@ -117,7 +117,7 @@ function carFact(pick: CarPick, locale: Locale): Omit<Fact, 'id'> {
  */
 export function factsFor(input: AskInput): Fact[] {
   const out: Omit<Fact, 'id'>[] = [];
-  const carPool = carResults('refined').picks;
+  const carPool = allCarPicks();
 
   // Asked from a card: that item, then only items it is actually compared with.
   if (input.productId) {

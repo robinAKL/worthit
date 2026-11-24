@@ -1,4 +1,4 @@
-import { assertReasonAllowed, inSpecPriceBand, quartile, specPoints } from './score';
+import { assertReasonAllowed, CHEAP_FLOOR, inSpecPriceBand, isAccessory, quartile, specPoints } from './score';
 import { FAMILY_UNIT, sizeBand, unitPrice, type ProductSpec, type Unit } from './specs';
 import type { Band, Lane, Locale, Product, Recommendation } from './types';
 
@@ -101,6 +101,7 @@ export function rankUnitGroup(group: Product[], lane: Lane, locale: Locale): Rec
     const v = per.get(product)!;
     if (lane === 'cheap' && product.price > lowerTotal) continue;
     if (lane === 'cheap' && /out of stock/i.test(String(product.specs.stock ?? ''))) continue;
+    if (lane === 'cheap' && (isAccessory(product.title) || product.price < quartile(totalSorted, 0.5) * (1 - CHEAP_FLOOR))) continue;
     // Higher spec: only against items priced like this one, then more measurable spec first.
     const peerMedianTotal = quartile(peers.map((p) => p.price).sort((a, b) => a - b), 0.5);
     if (lane === 'refined' && !inSpecPriceBand(product.price, peerMedianTotal)) continue;

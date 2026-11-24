@@ -262,3 +262,12 @@ describe('Chinese words find English listings', () => {
     expect(search('冰箱', 'value', 'zh-Hans').items.length).toBeGreaterThan(0);
   });
 });
+
+describe('Lower price for products is not the worst (T-42)', () => {
+  it('leaves out accessories and prices far below the group', () => {
+    const p = { ...productsIn('laptop')[0], fixture: false, source: 'feed' as const, specs: { brand: 'Axis', stock: 'in stock' }, price: 500 };
+    expect(excludedFrom({ ...p, title: 'Axis Mounting Bracket' }, 'cheap', 10_000, 600)).toBe(true);
+    expect(excludedFrom({ ...p, price: 100 }, 'cheap', 10_000, 600)).toBe(true);
+    expect(excludedFrom(p, 'cheap', 10_000, 600)).toBe(false);
+  });
+});

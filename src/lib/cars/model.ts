@@ -18,8 +18,19 @@ import type { Fuel, Lane, Vehicle } from '../types';
  */
 
 export const MIN_GROUP = 5;
-export const CHEAP_MAX_KM = 250_000;
-export const CHEAP_MIN_YEAR = 2005;
+/** "Cheapest, not the worst": the floor a car must pass before it is ranked by price. */
+export const CHEAP_MAX_KM = 200_000;
+export const CHEAP_MIN_YEAR = 2008;
+/** Neither Lower price nor Good condition lists a car asking more than this over its fair price. */
+export const MAX_OVER_FAIR = 0.15;
+/** Good condition keeps the top third of cars of the same body type on age and kilometres. */
+export const CONDITION_SHARE = 1 / 3;
+
+/** Higher is better: one point per year younger, one per 15,000 km fewer. */
+export function conditionScore(car: Pick<Car, 'year' | 'odometerKm'>, nowYear: number): number {
+  const age = Math.max(0, nowYear - car.year);
+  return -age - (car.odometerKm ?? 0) / 15_000;
+}
 /**
  * A car priced more than this far below its estimate is left out of the Value lane: the model
  * cannot see trim, cab style or condition, so a gap that large is more often a mismatch than a bargain.
@@ -58,6 +69,14 @@ export interface Valuation {
  * pooled: nothing close enough; the pooled model alone, and the car is not ranked for value.
  */
 export type Basis = 'model-near' | 'model-wide' | 'model-any' | 'model-few' | 'segment' | 'pooled';
+
+/**
+ * A rough estimate: fewer than three of the same model on sale, or only other models to compare
+ * with. Good enough for a guide and a rank, not for "under our estimate".
+ */
+export function isRough(basis: Basis): boolean {
+  return basis === 'pooled' || basis === 'model-few' || basis === 'segment';
+}
 
 export interface CarPick {
   car: Car;
@@ -295,7 +314,12 @@ export function valueAll(cars: Car[], model: PriceModel): Map<string, Assessment
 
 // ---------- lanes ----------
 
-export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFullYear()): CarPick[] {
+/** Every car we could value, in no lane's order and with no lane's filters. */
+export function assessCars(all: Vehicle[], nowYear = new Date().getFullYear()): CarPick[] {
+  return rankCars(all, 'value', nowYear, true);
+}
+
+export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFullYear(), unfiltered = false): CarPick[] {
   const cars = dedupe(all.map((v) => toCar(v, nowYear)).filter((c): c is Car => c !== null));
   const model = fitModel(cars, nowYear);
   const assessed = valueAll(cars, model);
@@ -331,22 +355,41 @@ export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFul
     // A value claim needs a comparable set behind the estimate, and a gap small enough to be believable.
     if (lane === 'value') {
       if (v.gap < -VALUE_MAX_GAP) return null;
-      // Too few similar cars for a value claim: still listed, after every car we can judge.
-      return v.basis === 'pooled' || v.basis === 'model-few' ? -10 - v.gap : -v.gap;
+      // A value claim needs the same model on sale. Other cars are still listed, after every car we can judge.
+      return isRough(v.basis) ? -10 - v.gap : -v.gap;
     }
+    // Lower price: only cars that pass a floor (age, kilometres, a real comparison, not overpriced), then cheapest first.
     if (lane === 'cheap') {
       if ((c.odometerKm ?? Infinity) > CHEAP_MAX_KM || c.year < CHEAP_MIN_YEAR) return null;
+      if (v.basis === 'pooled' || v.gap > MAX_OVER_FAIR) return null;
       return -c.priceNzd;
     }
-    // refined: newer, fewer kilometres, electrified drivetrains first. Price does not count.
-    const age = Math.max(0, nowYear - c.year);
+    // Good condition: top third of the same body type on age and kilometres, not overpriced.
+    if (v.gap > MAX_OVER_FAIR || conditionScore(c, nowYear) < conditionCut.get(c.bodyClass)!) return null;
     const electrified = c.fuelClass === 'hybrid' || c.fuelClass === 'plugin' || c.fuelClass === 'electric' ? 1.5 : 0;
-    return -age - (c.odometerKm ?? 0) / 30_000 + electrified;
+    return conditionScore(c, nowYear) + electrified;
   };
 
-  return ranked
-    .map((car) => ({ car, s: score(car) }))
+  // The score a car must reach to be in the top third of its body type.
+  const conditionCut = new Map<BodyClass, number>();
+  for (const body of new Set(ranked.map((c) => c.bodyClass))) {
+    const scores = ranked.filter((c) => c.bodyClass === body).map((c) => conditionScore(c, nowYear)).sort((a, b) => b - a);
+    conditionCut.set(body, scores[Math.max(0, Math.ceil(scores.length * CONDITION_SHARE) - 1)]);
+  }
+
+  const listed = ranked
+    .map((car) => ({ car, s: unfiltered ? -values.get(car.id)!.gap : score(car) }))
     .filter((x): x is { car: Car; s: number } => x.s !== null)
-    .sort((a, b) => b.s - a.s)
-    .map(({ car, s }) => ({ car, lane, score: s, valuation: values.get(car.id)!, priceRank: priceRank.get(car.id)!, valued: ranked.length, cohort: cohortOf(car), confidence: confidenceOf(car) }));
+    .sort((a, b) => b.s - a.s);
+  // In Lower price the price rank is among the cars that passed the floor, which is what the card says.
+  return listed.map(({ car, s }, i) => ({
+    car,
+    lane,
+    score: s,
+    valuation: values.get(car.id)!,
+    priceRank: lane === 'cheap' ? i + 1 : priceRank.get(car.id)!,
+    valued: lane === 'cheap' ? listed.length : ranked.length,
+    cohort: cohortOf(car),
+    confidence: confidenceOf(car),
+  }));
 }

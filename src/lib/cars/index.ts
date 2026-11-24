@@ -1,5 +1,5 @@
 import type { Lane, Vehicle } from '../types';
-import { rankCars, type CarPick } from './model';
+import { assessCars, rankCars, type CarPick } from './model';
 
 export * from './model';
 
@@ -28,12 +28,17 @@ export function carResults(lane: Lane, vehicles?: Vehicle[], nowYear?: number): 
   const only = vehicles && vehicles !== universe ? new Set(vehicles.map((v) => v.id)) : null;
   const keep = (p: CarPick) => !only || only.has(p.car.id);
   const picks = rankCars(universe, lane, nowYear).filter(keep);
-  // The refined lane keeps every valued car, so it gives the full count and dealer list.
-  const all = lane === 'refined' ? picks : rankCars(universe, 'refined', nowYear).filter(keep);
+  // Every valued car, whatever the lane, gives the full count and dealer list.
+  const all = assessCars(universe, nowYear).filter(keep);
   return {
     picks,
     valued: only ? all.length : (all[0]?.valued ?? 0),
     dealers: new Set(all.map((p) => p.car.dealer)).size,
     capturedAt: (vehicles ?? universe).map((v) => v.capturedAt).sort().at(-1),
   };
+}
+
+/** Every car we could value, unfiltered: for looking a car up by id, and for checks. */
+export function allCarPicks(nowYear?: number): CarPick[] {
+  return assessCars(allVehicles(), nowYear);
 }
