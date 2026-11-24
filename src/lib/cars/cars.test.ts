@@ -104,6 +104,14 @@ describe('used-car valuation', () => {
     expect(toCar({ ...base, make: 'Mercedes', model: 'Benz', variant: 'C200 Avantgarde' })).toMatchObject({ make: 'Mercedes-Benz', model: 'C200', variant: 'Avantgarde', premium: true });
   });
 
+  it('keeps brand-new stock out of the used-car ranking', () => {
+    const base = fleet()[0];
+    expect(toCar({ ...base, url: 'https://dealer.example/stock/details/1/2026-mitsubishi-pajero-sport-new' }, 2026)).toBeNull();
+    expect(toCar({ ...base, year: 2026, odometerKm: 25 }, 2026)).toBeNull();
+    expect(toCar({ ...base, url: 'https://dealer.example/car/2/2015-subaru-outback-new-shape-rv-suv' }, 2026)).not.toBeNull();
+    expect(toCar({ ...base, year: 2026, odometerKm: 8_100 }, 2026)).not.toBeNull();
+  });
+
   it('loads the collected dealer feeds bundled with the app', () => {
     expect(allVehicles().length).toBeGreaterThan(100);
     const r = carResults('value');

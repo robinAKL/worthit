@@ -86,8 +86,20 @@ function normaliseNames(v: Vehicle): { make: string; model: string; variant?: st
   return { make, model, variant };
 }
 
-export function toCar(v: Vehicle): Car | null {
+/** A brand-new car is not a used car: a "-new" stock URL, or this year's model with under 500 km. */
+export function looksNew(v: Vehicle, nowYear = new Date().getFullYear()): boolean {
+  let path = '';
+  try {
+    path = new URL(v.url).pathname.replace(/\/$/, '');
+  } catch {
+    /* keep empty */
+  }
+  return /-new$/i.test(path) || (v.year >= nowYear && (v.odometerKm ?? Infinity) < 500);
+}
+
+export function toCar(v: Vehicle, nowYear = new Date().getFullYear()): Car | null {
   if (!v.make || !v.model || !Number.isInteger(v.year) || !(v.priceNzd > 0)) return null;
+  if (looksNew(v, nowYear)) return null;
   const names = normaliseNames(v);
   const bc = bodyClass(v.body);
   if (/motor ?bike|motorcycle|scooter/i.test(v.body ?? '')) return null;
@@ -215,7 +227,7 @@ export function valueAll(cars: Car[], model: PriceModel): Map<string, Valuation>
 // ---------- lanes ----------
 
 export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFullYear()): CarPick[] {
-  const cars = dedupe(all.map(toCar).filter((c): c is Car => c !== null));
+  const cars = dedupe(all.map((v) => toCar(v, nowYear)).filter((c): c is Car => c !== null));
   const model = fitModel(cars, nowYear);
   const values = valueAll(cars, model);
   const ranked = cars.filter((c) => values.has(c.id));
