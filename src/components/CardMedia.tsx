@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Art, type ArtKind } from './art/Art';
+import type { SpecTile } from '../lib/specTile';
 
 /** An openly licensed photo of the model (not the item for sale), with its credit. */
 export interface ModelPhoto {
@@ -17,7 +18,9 @@ interface Props {
   src?: string;
   /** Next best: an openly licensed photo of the same model. */
   photo?: ModelPhoto;
-  /** Otherwise: our own illustration. */
+  /** Products without a permitted photo: key figure, brand and kind, with a faint line icon. */
+  tile?: SpecTile;
+  /** Cars without a photo: our own body-type illustration. Products: the faint icon on the tile. */
   art?: ArtKind;
   /** Brand or make shown with the illustration, e.g. "Toyota". */
   mark: string;
@@ -28,7 +31,7 @@ interface Props {
 }
 
 /** Fixed-ratio image slot. Every card has one, so card rows stay aligned with or without photos. */
-export function CardMedia({ src, photo, art = 'generic', mark, caption, tone = 0, badge }: Props) {
+export function CardMedia({ src, photo, tile, art = 'generic', mark, caption, tone = 0, badge }: Props) {
   const overlay = badge ? <div className="card-media-badge">{badge}</div> : null;
   if (src) {
     return (
@@ -45,6 +48,19 @@ export function CardMedia({ src, photo, art = 'generic', mark, caption, tone = 0
         <figcaption className="card-media-tag">{photo.label}</figcaption>
         {overlay}
       </figure>
+    );
+  }
+  if (tile) {
+    return (
+      <div className="card-media card-media-tile" data-tone={tone % 4}>
+        <Art kind={art} />
+        <div className="tile-text" aria-hidden="true">
+          {tile.brand ? <span className="tile-brand">{tile.brand}</span> : null}
+          {tile.figure ? <span className="tile-figure">{tile.figure}</span> : null}
+          <span className="tile-detail">{tile.detail}</span>
+        </div>
+        {overlay}
+      </div>
     );
   }
   return (

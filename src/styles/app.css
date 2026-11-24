@@ -494,6 +494,82 @@
   color: var(--color-ink-2);
   text-transform: capitalize;
 }
+/* Products without a permitted photo: a spec tile. Information, not a picture of the item. */
+.card-media-tile {
+  display: grid;
+  align-content: end;
+  padding: var(--space-sm) var(--space-md);
+  background: oklch(97% 0.008 160);
+  border: 1px solid oklch(90% 0.015 160);
+}
+.card-media-tile[data-tone='1'] {
+  background: oklch(97.5% 0.01 85);
+  border-color: oklch(91% 0.02 85);
+}
+.card-media-tile[data-tone='2'] {
+  background: oklch(97% 0.008 230);
+  border-color: oklch(90% 0.015 230);
+}
+.card-media-tile[data-tone='3'] {
+  background: oklch(97.5% 0.008 35);
+  border-color: oklch(91% 0.015 35);
+}
+/* The icon is a quiet hint of the category, drawn in outline only. */
+.card-media-tile .art {
+  position: absolute;
+  inset-block-end: var(--space-sm);
+  inset-inline-end: var(--space-sm);
+  width: 30%;
+  height: auto;
+  max-height: 55%;
+  opacity: 0.32;
+}
+.card-media-tile .art-body,
+.card-media-tile .art-glass,
+.card-media-tile .art-line-fill,
+.card-media-tile .art-hub {
+  fill: none;
+}
+.card-media-tile .art-accent,
+.card-media-tile .art-tyre {
+  fill: oklch(30% 0.03 160);
+}
+.card-media-tile {
+  --art-line: oklch(30% 0.03 160);
+}
+.tile-text {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  max-width: 68%;
+}
+.tile-brand {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: oklch(42% 0.03 160);
+}
+.tile-figure {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: oklch(22% 0.03 160);
+}
+.tile-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--text-sm);
+  color: oklch(40% 0.02 160);
+}
 /* An openly licensed photo of the model, labelled so nobody takes it for the car on sale. */
 .card-media-photo {
   margin: 0;

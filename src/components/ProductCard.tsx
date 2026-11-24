@@ -4,6 +4,7 @@ import type { Recommendation } from '../lib/types';
 import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
 import { productArt } from './art/kind';
+import { specTile } from '../lib/specTile';
 import { historySentence } from '../lib/historyView';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
 import type { AskContext } from './AskDialog';
@@ -79,6 +80,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
       <CardMedia
         src={p.imageUrl}
         art={productArt(p)}
+        tile={specTile(p, locale)}
         mark={String(p.specs.brand ?? p.category.replace(/-/g, ' '))}
         caption={
           p.spec?.size && p.spec.unit
