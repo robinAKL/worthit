@@ -62,7 +62,7 @@ export interface Product {
   capturedAt: string;
   /** Where the record came from. */
   source: 'fixture' | 'feed';
-  /** True for sample data. v0.1 only ships fixtures. */
+  /** True for sample data. Captured merchant rows are false. */
   fixture: boolean;
 }
 

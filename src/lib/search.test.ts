@@ -69,6 +69,18 @@ describe('search', () => {
     }
   });
 
+  it('keeps a captured price that has one catalog photo', () => {
+    const captured = {
+      ...productsIn('laptop')[0],
+      fixture: false,
+      source: 'feed' as const,
+      imageCount: 1,
+      specs: { brand: 'Acer' },
+    };
+    expect(excludedFrom(captured, 'value', 1000)).toBe(false);
+    expect(excludedFrom({ ...captured, fixture: true, imageCount: 1 }, 'value', 1000)).toBe(true);
+  });
+
   it('drops laptops without enough photos from the cheap lane', () => {
     const result = search('笔记本', 'cheap');
     expect(result.fixture).toBe(true);
@@ -120,10 +132,12 @@ describe('search', () => {
     expect(desks.items.every((hit) => hit.product.category === 'furniture')).toBe(true);
   });
 
-  it('keeps products with fewer than three photos out of every lane', () => {
+  it('keeps sample products with fewer than three photos out of every lane', () => {
     for (const lane of ['value', 'cheap', 'refined'] as const) {
       const result = search('', lane);
-      expect(result.items.every((hit) => hit.product.imageCount >= 3)).toBe(true);
+      const samples = result.items.filter((hit) => hit.product.fixture);
+      expect(samples.every((hit) => hit.product.imageCount >= 3)).toBe(true);
+      expect(result.items.filter((hit) => !hit.product.fixture).every((hit) => hit.product.imageCount >= 1)).toBe(true);
       expect(result.items.some((hit) => hit.product.id === 'laptop-01')).toBe(false);
       expect(result.items.some((hit) => hit.product.id === 'phone-01')).toBe(false);
       expect(result.items.some((hit) => hit.product.id === 'furn-01')).toBe(false);

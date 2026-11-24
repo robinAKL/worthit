@@ -31,7 +31,10 @@ export const zhHans: Copy = {
     titleDefault: '今天值得看的',
     titleQuery: (q: string) => `“${q}”的比较结果`,
     notice: '示例数据，非实时价格。',
+    feedNotice: '标了采集时间的，是从商家页面记下的价格。标着「示例」的不是在售价。',
     capturedOn: (date: string) => `示例日期： ${date}。`,
+    sampleFlag: '示例',
+    capturedPrice: (date: string) => `价格采集于 ${date}`,
     count: (n: number) => `${n} 件`,
     excluded: (n: number) => `另有 ${n} 件因缺少照片或关键规格，没有进入这一栏。`,
     empty: '没有找到符合条件的示例商品。试试放宽预算，或者换一种说法。',
@@ -44,6 +47,7 @@ export const zhHans: Copy = {
     warranty: (m: number) => `保修 ${m} 个月`,
     rating: (r: number, n?: number) => (n ? `评分 ${r.toFixed(1)}（${n} 条）` : `评分 ${r.toFixed(1)}`),
     meterLabel: (pos: number) => `在同类示例商品的价格区间里，位于 ${pos}% 的位置`,
+    meterLabelLive: (pos: number) => `在同组已采集价格里，位于 ${pos}% 的位置`,
   },
   lanes: {
     value: { label: '性价比', hint: '价格和品质的平衡' },
@@ -149,5 +153,5 @@ export const zhHans: Copy = {
       ['明确禁止抓取的网站', '不收录', '对方条款或 robots.txt 禁止的，我们不抓取。'],
     ],
   },
-  footer: 'WorthIt 2026。当前为示例阶段，页面上的商品和价格均为示例数据。',
+  footer: 'WorthIt 2026。标着「示例」的不是在售价。标了采集时间的，是从商家页面记下的价格。',
 };

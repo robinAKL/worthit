@@ -40,7 +40,7 @@ export function bandFor(price: number, lowerQuartile: number, upperQuartile: num
 
 export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number): boolean {
   const reviews = product.reviewCount ?? 0;
-  if (product.imageCount < 3) return true;
+  if (product.fixture ? product.imageCount < 3 : product.imageCount < 1) return true;
   if (lane === 'cheap') {
     return reviews === 0 && product.price < lowerQuartile * 0.7;
   }
@@ -72,21 +72,35 @@ export function reasonFor(
   const mid = Math.round(median);
   const reviews = product.reviewCount ?? 0;
   const specCount = Object.keys(product.specs).filter((key) => key !== 'note').length;
+  const sample = product.fixture;
+  const tail =
+    locale === 'zh-Hans'
+      ? sample
+        ? '这是示例价，不是在售价。'
+        : '这是采集到的商家标价。'
+      : sample
+        ? 'Sample price, not a live price.'
+        : 'Price captured from the merchant.';
   if (locale === 'zh-Hans') {
     if (lane === 'cheap') {
-      return `标价 ${price} 纽币，不高于同组示例价的下四分位 ${q1}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+      const band = sample ? `同组示例价的下四分位 ${q1}` : `同组的下四分位 ${q1}`;
+      return `标价 ${price} 纽币，不高于${band}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。${tail}`;
     }
     if (lane === 'value') {
-      return `标价 ${price} 纽币，同组示例中位是 ${mid}。规格写了 ${specCount} 项，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+      const midLabel = sample ? `同组示例中位是 ${mid}` : `同组中位是 ${mid}`;
+      return `标价 ${price} 纽币，${midLabel}。规格写了 ${specCount} 项，反馈 ${reviews} 条。${tail}`;
     }
     const note = String(product.localizedSpecs?.['zh-Hans']?.note ?? product.specs.note ?? '');
-    return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。这是示例价，不是在售价。`;
+    return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。${tail}`;
   }
   if (lane === 'cheap') {
-    return `Listed at ${price} NZD, at or below the sample lower quartile of ${q1}. ${product.imageCount} photos, ${reviews} reviews. Sample price, not a live price.`;
+    const band = sample ? `the sample lower quartile of ${q1}` : `the lower quartile of ${q1} in this group`;
+    return `Listed at ${price} NZD, at or below ${band}. ${product.imageCount} photos, ${reviews} reviews. ${tail}`;
   }
   if (lane === 'value') {
-    return `Listed at ${price} NZD. The sample median is ${mid}. ${specCount} specs filled in, ${reviews} reviews. Sample price, not a live price.`;
+    const midLabel = sample ? `The sample median is ${mid}` : `The median in this group is ${mid}`;
+    return `Listed at ${price} NZD. ${midLabel}. ${specCount} specs filled in, ${reviews} reviews. ${tail}`;
   }
-  return `${reviews} reviews, and the condition is written out in detail. Listed at ${price} NZD, not the lowest price in this sample. Sample price, not a live price.`;
+  const group = sample ? 'this sample' : 'this group';
+  return `${reviews} reviews, and the condition is written out in detail. Listed at ${price} NZD, not the lowest price in ${group}. ${tail}`;
 }

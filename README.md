@@ -37,8 +37,15 @@ npm run build    # 类型检查 + 生产构建
 - `src/lib/`：示例目录、查询解析、三栏打分和推荐理由。
 - `src/App.tsx`、`src/components/`：落地页。
 - `src/styles/tokens.css`：设计 token（OKLCH 颜色、字号、间距），遵循 hallmark 设计规则。
-- `docs/crawl-allowlist.md`：零售商 robots.txt 和使用条款核查。目前没有一家允许采集。
+- `docs/crawl-allowlist.md`：零售商 robots.txt 和使用条款核查。书面授权仍然是零。
+- `scripts/collect/`：试点采集。`sites.json` 里每家有独立开关，运行前读取当天的 robots.txt。
 
 ## 数据原则
 
-只收录商家主动提供、或者明确允许收录的商品。条款或 robots.txt 禁止采集的网站一律不抓取。
+只收录商家主动提供、或者明确允许收录的商品。条款或 robots.txt 禁止采集的网站一律不抓取。试点脚本只保留名称、品牌、型号、价格、库存、规格、商品链接和采集时间。
+
+重跑试点（每家最多 50 个商品）：
+
+```bash
+node --experimental-strip-types scripts/collect/run.mjs --limit=50
+```

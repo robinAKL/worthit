@@ -31,7 +31,10 @@ export const en = {
     titleDefault: 'Start with these picks',
     titleQuery: (q: string) => `Results for “${q}”`,
     notice: 'Sample data. Prices are not live.',
+    feedNotice: 'A card with a capture time is a price taken from the merchant page. A card marked Sample is not a live price.',
     capturedOn: (date: string) => `Sample dated ${date}.`,
+    sampleFlag: 'Sample',
+    capturedPrice: (date: string) => `Price captured ${date}`,
     count: (n: number) => `${n} ${n === 1 ? 'item' : 'items'}`,
     excluded: (n: number) => `${n} ${n === 1 ? 'item was' : 'items were'} left out for missing photos or key details.`,
     empty: 'No sample products match. Try a higher budget or a different description.',
@@ -44,6 +47,7 @@ export const en = {
     warranty: (m: number) => `${m}-month warranty`,
     rating: (r: number, n?: number) => n ? `Rated ${r.toFixed(1)} (${n} ${n === 1 ? 'review' : 'reviews'})` : `Rated ${r.toFixed(1)}`,
     meterLabel: (pos: number) => `${pos}% of the way from the lower to the upper price in this sample category`,
+    meterLabelLive: (pos: number) => `${pos}% of the way from the lower to the upper captured price in this group`,
   },
   lanes: {
     value: { label: 'Value', hint: 'A balance of price and quality' },
@@ -149,7 +153,7 @@ export const en = {
       ['Sites that restrict collection', 'Excluded', 'We do not collect data where site terms or robots.txt prohibit it.'],
     ],
   },
-  footer: 'WorthIt 2026. This is a demo. Products and prices are sample data.',
+  footer: 'WorthIt 2026. A card marked Sample is not a live price. A capture time is a price recorded from the merchant.',
 };
 
 export type Copy = typeof en;

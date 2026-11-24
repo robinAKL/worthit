@@ -1,4 +1,6 @@
 import { catalog } from './catalog';
+import ascentFeed from '../data/feeds/ascent.json';
+import babyFeed from '../data/feeds/baby-factory.json';
 import { parseQuery } from './parseQuery';
 import {
   assertReasonAllowed,
@@ -25,9 +27,13 @@ function haystack(product: Product): string {
     .toLowerCase();
 }
 
+function liveProducts(): Product[] {
+  return [...ascentFeed.products, ...babyFeed.products] as Product[];
+}
+
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE): SearchResult {
   const parsed = parseQuery(query);
-  const pool = catalog.filter((product) => {
+  const pool = [...catalog, ...liveProducts()].filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
     return true;
@@ -41,9 +47,10 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
 
   const byCategory = new Map<string, Product[]>();
   for (const product of matched) {
-    const group = byCategory.get(product.category) ?? [];
+    const key = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
+    const group = byCategory.get(key) ?? [];
     group.push(product);
-    byCategory.set(product.category, group);
+    byCategory.set(key, group);
   }
 
   const items: SearchResult['items'] = [];

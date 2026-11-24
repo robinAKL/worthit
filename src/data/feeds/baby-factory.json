@@ -1,0 +1,772 @@
+{
+  "products": [
+    {
+      "id": "feed-70bea078",
+      "title": "Cozy N Safe Kea Plus I-size Half Booster Seat",
+      "titles": {
+        "en": "Cozy N Safe Kea Plus I-size Half Booster Seat"
+      },
+      "category": "other",
+      "price": 59.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-kea-plus-i-size-half-booster-seat-4023685",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4023685",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b1ce278",
+      "title": "Cozy N Safe Eiger I-size Booster Seat",
+      "titles": {
+        "en": "Cozy N Safe Eiger I-size Booster Seat"
+      },
+      "category": "other",
+      "price": 129.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-eiger-i-size-booster-seat-4023683",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4023683",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-44795698",
+      "title": "Cozy N Safe Elias I-size Booster Seat",
+      "titles": {
+        "en": "Cozy N Safe Elias I-size Booster Seat"
+      },
+      "category": "other",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-elias-i-size-booster-seat-4023681",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4023681",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5ddc412e",
+      "title": "Infasecure Acclaim More Booster Seat",
+      "titles": {
+        "en": "Infasecure Acclaim More Booster Seat"
+      },
+      "category": "other",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infasecure-acclaim-more-booster-seat-4023653",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "InfaSecure",
+        "model": "4023653",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-39f0ac09",
+      "title": "Jolly Jumper 2-in-1 Head Hugger",
+      "titles": {
+        "en": "Jolly Jumper 2-in-1 Head Hugger"
+      },
+      "category": "other",
+      "price": 29.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/jolly-jumper-2-in-1-head-hugger-4023593",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jolly Jumper",
+        "model": "4023593",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1f70cfb7",
+      "title": "Outlook Autoshade Car Sunshade Single - Curved",
+      "titles": {
+        "en": "Outlook Autoshade Car Sunshade Single - Curved"
+      },
+      "category": "other",
+      "price": 44.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/outlook-autoshade-car-sunshade-single-curved-4023385",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Outlook",
+        "model": "4023385",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f6774ac1",
+      "title": "Outlook Autoshade Car Sunshade Single - Rectangle",
+      "titles": {
+        "en": "Outlook Autoshade Car Sunshade Single - Rectangle"
+      },
+      "category": "other",
+      "price": 44.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/outlook-autoshade-car-sunshade-single-rectangle-4023383",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Outlook",
+        "model": "4023383",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9120a24a",
+      "title": "Ingenuity 3dtravelmate Pro Car Seat Adapter",
+      "titles": {
+        "en": "Ingenuity 3dtravelmate Pro Car Seat Adapter"
+      },
+      "category": "other",
+      "price": 49.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3dtravelmate-pro-car-seat-adapter-4023373",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4023373",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d324b85f",
+      "title": "Ingenuity 3dsuite Car Seat Adapter",
+      "titles": {
+        "en": "Ingenuity 3dsuite Car Seat Adapter"
+      },
+      "category": "other",
+      "price": 49,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3dsuite-car-seat-adapter-4023371",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4023371",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-a343e808",
+      "title": "Ingenuity 3dsuite Modular Stroller Cashew",
+      "titles": {
+        "en": "Ingenuity 3dsuite Modular Stroller Cashew"
+      },
+      "category": "other",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3dsuite-modular-stroller-cashew-4023369",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4023369",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2156af8c",
+      "title": "Ingenuity Fold Away Ride-on Board",
+      "titles": {
+        "en": "Ingenuity Fold Away Ride-on Board"
+      },
+      "category": "other",
+      "price": 129.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-fold-away-ride-on-board-4023367",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4023367",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f909f3b4",
+      "title": "Ingenuity 3d Travelmate Pro Stroller With Ride-on Board Black",
+      "titles": {
+        "en": "Ingenuity 3d Travelmate Pro Stroller With Ride-on Board Black"
+      },
+      "category": "other",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3d-travelmate-pro-stroller-with-ride-on-board-black-4023365",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4023365",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9d1ab419",
+      "title": "Baby Jogger City Select 1 Stroller Charcoal",
+      "titles": {
+        "en": "Baby Jogger City Select 1 Stroller Charcoal"
+      },
+      "category": "other",
+      "price": 699,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-jogger-city-select-1-stroller-2234-charcoal",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Jogger",
+        "model": "2234|charcoal",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f45cd39f",
+      "title": "Edinburgh Saferide Booster Seat",
+      "titles": {
+        "en": "Edinburgh Saferide Booster Seat"
+      },
+      "category": "other",
+      "price": 139.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-saferide-booster-seat-4023289",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4023289",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cb2f3c80",
+      "title": "Safety First Everslim All In One Convertible Car Seat Mountain Air",
+      "titles": {
+        "en": "Safety First Everslim All In One Convertible Car Seat Mountain Air"
+      },
+      "category": "other",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-everslim-all-in-one-convertible-car-seat-mountain-air-4023263",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "4023263",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c7bcc6d8",
+      "title": "The Peanutshell Nursing Cover Mint Dot",
+      "titles": {
+        "en": "The Peanutshell Nursing Cover Mint Dot"
+      },
+      "category": "other",
+      "price": 9.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/the-peanutshell-nursing-cover-mint-dot-4023185",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peanutshell",
+        "model": "4023185",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-20937b3c",
+      "title": "The Peanutshell Nursing Cover Navy Dot",
+      "titles": {
+        "en": "The Peanutshell Nursing Cover Navy Dot"
+      },
+      "category": "other",
+      "price": 9.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/the-peanutshell-nursing-cover-navy-dot-4023183",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peanutshell",
+        "model": "4023183",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-43989682",
+      "title": "The Peanutshell Nursing Cover Mint Chevron",
+      "titles": {
+        "en": "The Peanutshell Nursing Cover Mint Chevron"
+      },
+      "category": "other",
+      "price": 9.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/the-peanutshell-nursing-cover-mint-chevron-4023181",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peanutshell",
+        "model": "4023181",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9d360f66",
+      "title": "The Peanutshell Nursing Cover Grey",
+      "titles": {
+        "en": "The Peanutshell Nursing Cover Grey"
+      },
+      "category": "other",
+      "price": 9.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/the-peanutshell-nursing-cover-grey-4023179",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peanutshell",
+        "model": "4023179",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c199bdd9",
+      "title": "Baby Sure Multi-function Potty",
+      "titles": {
+        "en": "Baby Sure Multi-function Potty"
+      },
+      "category": "other",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-sure-multi-function-potty-4023897",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Sure",
+        "model": "4023897",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-62969bd6",
+      "title": "Karibu Cushion Potty Seat With Handle Duck",
+      "titles": {
+        "en": "Karibu Cushion Potty Seat With Handle Duck"
+      },
+      "category": "other",
+      "price": 9.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/karibu-cushion-potty-seat-with-handle-duck-4023895",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023895",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-92f4405b",
+      "title": "Karibu Cushion Potty Seat With Handle Frog",
+      "titles": {
+        "en": "Karibu Cushion Potty Seat With Handle Frog"
+      },
+      "category": "other",
+      "price": 9.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/karibu-cushion-potty-seat-with-handle-frog-4023893",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023893",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7ad17fe0",
+      "title": "Star Wars Swaddle & Beanie Set 3-6m",
+      "titles": {
+        "en": "Star Wars Swaddle & Beanie Set 3-6m"
+      },
+      "category": "other",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-swaddle-beanie-set-3-6m-4023783",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023783",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dbd7b458",
+      "title": "Star Wars Swaddle & Beanie Set 0-3m",
+      "titles": {
+        "en": "Star Wars Swaddle & Beanie Set 0-3m"
+      },
+      "category": "other",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-swaddle-beanie-set-0-3m-4023781",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023781",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ebef400f",
+      "title": "Star Wars Washcloths 3-pack",
+      "titles": {
+        "en": "Star Wars Washcloths 3-pack"
+      },
+      "category": "other",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-washcloths-3-pack-4023775",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023775",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-aa997b30",
+      "title": "Star Wars Hooded Towel & Wash Mitt Set",
+      "titles": {
+        "en": "Star Wars Hooded Towel & Wash Mitt Set"
+      },
+      "category": "other",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-hooded-towel-wash-mitt-set-4023773",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023773",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-60b7ac1",
+      "title": "Star Wars Muslin Wraps 2-pack",
+      "titles": {
+        "en": "Star Wars Muslin Wraps 2-pack"
+      },
+      "category": "other",
+      "price": 27.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-muslin-wraps-2-pack-4023767",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023767",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e289af42",
+      "title": "Toy Story Embroidered Towel",
+      "titles": {
+        "en": "Toy Story Embroidered Towel"
+      },
+      "category": "other",
+      "price": 23.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-story-embroidered-towel-4023765",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023765",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5a8ccb1f",
+      "title": "Toy Story Wash Cloths 3-pack",
+      "titles": {
+        "en": "Toy Story Wash Cloths 3-pack"
+      },
+      "category": "other",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-story-wash-cloths-3-pack-4023763",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023763",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-fe590e53",
+      "title": "Toy Story Hooded Towel & Wash Mitt Set",
+      "titles": {
+        "en": "Toy Story Hooded Towel & Wash Mitt Set"
+      },
+      "category": "other",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-story-hooded-towel-wash-mitt-set-4023761",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023761",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4dae6a90",
+      "title": "Toy Store Muslin Wraps 2-pack",
+      "titles": {
+        "en": "Toy Store Muslin Wraps 2-pack"
+      },
+      "category": "other",
+      "price": 27.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-store-muslin-wraps-2-pack-4023755",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023755",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-85a028ea",
+      "title": "Star Wars Grogu Embroidered Towel",
+      "titles": {
+        "en": "Star Wars Grogu Embroidered Towel"
+      },
+      "category": "other",
+      "price": 23.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-embroidered-towel-4023753",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023753",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-35e74f3a",
+      "title": "Star Wars Grogu 3-pack Washcloths",
+      "titles": {
+        "en": "Star Wars Grogu 3-pack Washcloths"
+      },
+      "category": "other",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-3-pack-washcloths-4023751",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023751",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ad28bc44",
+      "title": "Star Wars Grogu Hooded Towel & Wash Mitt Set",
+      "titles": {
+        "en": "Star Wars Grogu Hooded Towel & Wash Mitt Set"
+      },
+      "category": "other",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-hooded-towel-wash-mitt-set-4023749",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023749",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-80f261b9",
+      "title": "Star Wars Grogu Muslin Wrap 2-pack",
+      "titles": {
+        "en": "Star Wars Grogu Muslin Wrap 2-pack"
+      },
+      "category": "other",
+      "price": 27.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-muslin-wrap-2-pack-4023743",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023743",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T07:57:08.114Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    }
+  ]
+}

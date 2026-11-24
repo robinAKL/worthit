@@ -407,6 +407,11 @@
   color: var(--color-ink-2);
 }
 
+.card-flag {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
 .card-reason {
   color: var(--color-ink);
   line-height: 1.55;

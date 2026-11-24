@@ -20,11 +20,12 @@ function formatDate(locale: Locale, iso?: string) {
 function positions(items: Recommendation[]) {
   const range = new Map<string, { min: number; max: number }>();
   for (const { product: p } of items) {
-    const r = range.get(p.category) ?? { min: p.price, max: p.price };
-    range.set(p.category, { min: Math.min(r.min, p.price), max: Math.max(r.max, p.price) });
+    const key = `${p.fixture ? 'sample' : 'live'}:${p.category}`;
+    const r = range.get(key) ?? { min: p.price, max: p.price };
+    range.set(key, { min: Math.min(r.min, p.price), max: Math.max(r.max, p.price) });
   }
   return items.map(({ product: p }) => {
-    const r = range.get(p.category)!;
+    const r = range.get(`${p.fixture ? 'sample' : 'live'}:${p.category}`)!;
     return r.max === r.min ? 50 : ((p.price - r.min) / (r.max - r.min)) * 100;
   });
 }
@@ -144,7 +145,13 @@ export default function App() {
                 ) : null}
               </div>
               <p className="notice" role="note">
-                <strong>{copy.results.notice}</strong> {captured ? copy.results.capturedOn(captured) : null}
+                {result.fixture ? (
+                  <>
+                    <strong>{copy.results.notice}</strong> {captured ? copy.results.capturedOn(captured) : null}
+                  </>
+                ) : (
+                  <strong>{copy.results.feedNotice}</strong>
+                )}
               </p>
             </div>
 
