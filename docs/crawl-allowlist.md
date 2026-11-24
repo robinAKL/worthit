@@ -639,7 +639,7 @@
 
 核查日期：2026-11-25（Pacific/Auckland）。第一批、第二批和 Kogan 的结论不变。本批不在前两批名单里，优先电器、电脑、母婴、户外、家居。只请求了 robots.txt、首页（用来找条款链接）和条款页，没有请求商品详情、搜索接口或购物车。User-Agent 为 `WorthItBot/0.1 (+https://github.com/robinAKL/worthit)`。访问失败不当成“没有条款”。口径与第二批相同：允许＝一般组没有挡住普通商品详情，且已读条款里没有自动采集、复制或商用禁令；禁止＝读到了拟议用途的限制；不明确＝条款正文没读到，或商品路径是否被挡还没核清。允许只覆盖价格和规格事实，不是书面授权。上线前仍需新西兰律师复核。
 
-本批 **允许 3 家、禁止 9 家、不明确 6 家**。候选见 [crawl-candidates-batch3.json](crawl-candidates-batch3.json)。robots 快照见 [crawl-evidence-batch3](crawl-evidence-batch3/)。完整条款正文不入库。
+本批 **允许 3 家、禁止 8 家、不明确 7 家**。候选见 [crawl-candidates-batch3.json](crawl-candidates-batch3.json)。robots 快照见 [crawl-evidence-batch3](crawl-evidence-batch3/)。完整条款正文不入库。
 
 | 零售商 | 类别 | 结论 | 依据 |
 |---|---|---|---|
@@ -807,4 +807,4 @@
 
 ### 第三批候选的下一步
 
-Heathcotes 和 Early Settler 写了适配器，`enabled: true`。`--dry-run --limit=5` 各抽出 5 件，没有写入 feed。Target Furniture 条款上允许，但分类页 HTML 里没有商品事实，默认适配器 10 次请求 saved=0，所以没有打开适配器。Kitchen Things、100%、Hunting & Fishing、Baby Bunting、Just Laptops、Retravision、Big Save 按不明确处理，不写适配器。其余九家条款已有明文限制，不写适配器。正式全量采集不在本批。
+Heathcotes 和 Early Settler 写了适配器，`enabled: true`。`--dry-run --limit=5` 各抽出 5 件，没有写入 feed。Target Furniture 条款上允许，但分类页 HTML 里没有商品事实，默认适配器 10 次请求 saved=0，所以没有打开适配器。Kitchen Things、100%、Hunting & Fishing、Baby Bunting、Just Laptops、Retravision、Big Save 按不明确处理，不写适配器。其余八家条款已有明文限制，不写适配器。正式全量采集不在本批。
