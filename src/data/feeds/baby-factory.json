@@ -1,6 +1,1665 @@
 {
   "products": [
     {
+      "id": "feed-6a2e4d1b",
+      "title": "Infantino Swift Classic Carrier Black",
+      "titles": {
+        "en": "Infantino Swift Classic Carrier Black"
+      },
+      "category": "front-back-packs",
+      "price": 55.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-swift-classic-carrier-99041-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "99041|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-29ba3e61",
+      "title": "Infantino Flip 4-in-1 Convertible Carrier Grey/mint Chev",
+      "titles": {
+        "en": "Infantino Flip 4-in-1 Convertible Carrier Grey/mint Chev"
+      },
+      "category": "infantino-baby-carriers",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-flip-4-in-1-convertible-carrier-4010631-grey-mint-chev",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4010631|grey/mint chev",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-43f03950",
+      "title": "Disney Baby Summit Wagon Stroller Vintage Disney",
+      "titles": {
+        "en": "Disney Baby Summit Wagon Stroller Vintage Disney"
+      },
+      "category": "4-wheel-strollers",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-summit-wagon-stroller-4020565-vintage-disney",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020565|vintage disney",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e70d3f31",
+      "title": "Safety First All Terrain 3 Wheel Travel System Black",
+      "titles": {
+        "en": "Safety First All Terrain 3 Wheel Travel System Black"
+      },
+      "category": "3-wheel-strollers",
+      "price": 599,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-all-terrain-3-wheel-travel-system-4020559-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "4020559|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7c3bfa08",
+      "title": "Babylo Soda Auto Fold Stroller Black",
+      "titles": {
+        "en": "Babylo Soda Auto Fold Stroller Black"
+      },
+      "category": "4-wheel-strollers",
+      "price": 249,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-soda-auto-fold-stroller-4019575-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4019575|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d49fa214",
+      "title": "Babylo Mitro 3 Wheel Stroller Black",
+      "titles": {
+        "en": "Babylo Mitro 3 Wheel Stroller Black"
+      },
+      "category": "3-wheel-strollers",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-mitro-3-wheel-stroller-4019573-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4019573|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f7a04ee4",
+      "title": "Peg Perego Pliko Mini Stroller Graphic Gold",
+      "titles": {
+        "en": "Peg Perego Pliko Mini Stroller Graphic Gold"
+      },
+      "category": "4-wheel-strollers",
+      "price": 249,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/peg-perego-pliko-mini-stroller-4016727-graphic-gold",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peg Perego",
+        "model": "4016727|graphic gold",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2fea4ca1",
+      "title": "Maxi Cosi Zelia2 2-in-1 Bassinet Stroller Black",
+      "titles": {
+        "en": "Maxi Cosi Zelia2 2-in-1 Bassinet Stroller Black"
+      },
+      "category": "4-wheel-strollers",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maxi-cosi-zelia2-2-in-1-bassinet-stroller-5010765-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxi-Cosi",
+        "model": "5010765|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-beed3aec",
+      "title": "Baby Jogger City Mini Gt2 Stroller Barre",
+      "titles": {
+        "en": "Baby Jogger City Mini Gt2 Stroller Barre"
+      },
+      "category": "3-wheel-strollers",
+      "price": 699,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-jogger-city-mini-gt2-stroller-4016155-barre",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Jogger",
+        "model": "4016155|barre",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-303f8aa",
+      "title": "Peg Perego Selfie Stroller Mon Amour",
+      "titles": {
+        "en": "Peg Perego Selfie Stroller Mon Amour"
+      },
+      "category": "4-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/peg-perego-selfie-stroller-4015617-mon-amour",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peg Perego",
+        "model": "4015617|mon amour",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ad32d2de",
+      "title": "Peg Perego Selfie Stroller Graphic Gold",
+      "titles": {
+        "en": "Peg Perego Selfie Stroller Graphic Gold"
+      },
+      "category": "4-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/peg-perego-selfie-stroller-4015615-graphic-gold",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peg Perego",
+        "model": "4015615|graphic gold",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-880e9d17",
+      "title": "Peg Perego Book Stroller Mon Amour",
+      "titles": {
+        "en": "Peg Perego Book Stroller Mon Amour"
+      },
+      "category": "4-wheel-strollers",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/peg-perego-book-stroller-4015611-mon-amour",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peg Perego",
+        "model": "4015611|mon amour",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-a44794c0",
+      "title": "Peg Perego Book Stroller Urban Denim",
+      "titles": {
+        "en": "Peg Perego Book Stroller Urban Denim"
+      },
+      "category": "4-wheel-strollers",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/peg-perego-book-stroller-108731-urban-denim",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Peg Perego",
+        "model": "108731|urban denim",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-aea35eff",
+      "title": "Lullaby Dreams Plush Mink Blanket One",
+      "titles": {
+        "en": "Lullaby Dreams Plush Mink Blanket One"
+      },
+      "category": "blankets",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-plush-mink-blanket-4020847-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020847|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e676c724",
+      "title": "Lullaby Dreams Plush Mink Blanket Animal Paws One",
+      "titles": {
+        "en": "Lullaby Dreams Plush Mink Blanket Animal Paws One"
+      },
+      "category": "blankets",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-plush-mink-blanket-animal-paws-4020845-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020845|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6bc4f60",
+      "title": "Lullaby Dreams Plush Mink Blanket Balloons One",
+      "titles": {
+        "en": "Lullaby Dreams Plush Mink Blanket Balloons One"
+      },
+      "category": "blankets",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-plush-mink-blanket-balloons-4020841-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020841|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-857e0db2",
+      "title": "Lullaby Dreams Plush Mink Blanket Baby Bear One",
+      "titles": {
+        "en": "Lullaby Dreams Plush Mink Blanket Baby Bear One"
+      },
+      "category": "blankets",
+      "price": 39.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-plush-mink-blanket-baby-bear-4020839-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020839|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d4b2eb42",
+      "title": "Lullaby Dreams Heavyweight Mink Cot Blanket Toys Blue Blue",
+      "titles": {
+        "en": "Lullaby Dreams Heavyweight Mink Cot Blanket Toys Blue Blue"
+      },
+      "category": "blankets",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-heavyweight-mink-cot-blanket-toys-blue-4005187-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4005187|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-963fbfff",
+      "title": "Lullaby Dreams Heavyweight Mink Cot Blanket Teddy Pink Pink",
+      "titles": {
+        "en": "Lullaby Dreams Heavyweight Mink Cot Blanket Teddy Pink Pink"
+      },
+      "category": "blankets",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-heavyweight-mink-cot-blanket-teddy-pink-4005185-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4005185|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c3bd44c1",
+      "title": "Lullaby Dreams Heavyweight Mink Cot Blanket Bears Blue Light Blue",
+      "titles": {
+        "en": "Lullaby Dreams Heavyweight Mink Cot Blanket Bears Blue Light Blue"
+      },
+      "category": "blankets",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-heavyweight-mink-cot-blanket-bears-blue-4005183-light-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4005183|light blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-98320abb",
+      "title": "Step2 Kids Hammerhead Flip Seat",
+      "titles": {
+        "en": "Step2 Kids Hammerhead Flip Seat"
+      },
+      "category": "out-door-toys",
+      "price": 103.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-kids-hammerhead-flip-seat-4023623",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023623",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-90de308e",
+      "title": "Step2 All Around Playtime Patio With Canopy",
+      "titles": {
+        "en": "Step2 All Around Playtime Patio With Canopy"
+      },
+      "category": "out-door-toys",
+      "price": 679.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-all-around-playtime-patio-with-canopy-4023621",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023621",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2d18ca01",
+      "title": "Step2 Cooking Time Kitchen",
+      "titles": {
+        "en": "Step2 Cooking Time Kitchen"
+      },
+      "category": "activity-toys",
+      "price": 559.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-cooking-time-kitchen-4023617",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023617",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c517b000",
+      "title": "Step2 Alpine Ridge Climber & Slide",
+      "titles": {
+        "en": "Step2 Alpine Ridge Climber & Slide"
+      },
+      "category": "out-door-toys",
+      "price": 1279.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-alpine-ridge-climber-slide-4023615",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023615",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-efeff4bb",
+      "title": "Step2 Scout & Slide Climber",
+      "titles": {
+        "en": "Step2 Scout & Slide Climber"
+      },
+      "category": "out-door-toys",
+      "price": 1119.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-scout-slide-climber-4023613",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023613",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-61aafb59",
+      "title": "Step2 Safari Truck Climber",
+      "titles": {
+        "en": "Step2 Safari Truck Climber"
+      },
+      "category": "out-door-toys",
+      "price": 1279.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-safari-truck-climber-4023611",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023611",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cf1c3b2e",
+      "title": "Step2 Push Around Sled",
+      "titles": {
+        "en": "Step2 Push Around Sled"
+      },
+      "category": "out-door-toys",
+      "price": 215.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-push-around-sled-4022127",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4022127",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2f0ccb51",
+      "title": "Step2 My First Lemonade Stand",
+      "titles": {
+        "en": "Step2 My First Lemonade Stand"
+      },
+      "category": "out-door-toys",
+      "price": 239.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-my-first-lemonade-stand-4022121",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4022121",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-483c76b5",
+      "title": "Step2 Side-by-side Push Around Roadster",
+      "titles": {
+        "en": "Step2 Side-by-side Push Around Roadster"
+      },
+      "category": "out-door-toys",
+      "price": 559.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-side-by-side-push-around-roadster-4022117",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4022117",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-348beb64",
+      "title": "Step2 Harmony All-in-one Activity Table",
+      "titles": {
+        "en": "Step2 Harmony All-in-one Activity Table"
+      },
+      "category": "activity-toys",
+      "price": 359.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-harmony-all-in-one-activity-table-4022113",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4022113",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f13f5e37",
+      "title": "Lullaby Dreams 2-pack Cot Flannelette Fitted Sheets Wild Life",
+      "titles": {
+        "en": "Lullaby Dreams 2-pack Cot Flannelette Fitted Sheets Wild Life"
+      },
+      "category": "sheets",
+      "price": 29.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-2-pack-cot-flannelette-fitted-sheets-4017901-wild-life",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4017901|wild life",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-3d95a079",
+      "title": "Lullaby Dreams 2-pack Cot Fitted Sheets Cute Critters",
+      "titles": {
+        "en": "Lullaby Dreams 2-pack Cot Fitted Sheets Cute Critters"
+      },
+      "category": "sheets",
+      "price": 29.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-2-pack-cot-fitted-sheets-4017899-cute-critters",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4017899|cute critters",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-596e4a6f",
+      "title": "Lullaby Dreams 2-pack Cot Fitted Sheets Amazon",
+      "titles": {
+        "en": "Lullaby Dreams 2-pack Cot Fitted Sheets Amazon"
+      },
+      "category": "sheets",
+      "price": 29.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-2-pack-cot-fitted-sheets-4017897-amazon",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4017897|amazon",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-a94d5982",
+      "title": "Lullaby Dreams 2-pack Cot Flannelette Fitted Sheets Pink Meadow",
+      "titles": {
+        "en": "Lullaby Dreams 2-pack Cot Flannelette Fitted Sheets Pink Meadow"
+      },
+      "category": "sheets",
+      "price": 29.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-2-pack-cot-flannelette-fitted-sheets-4017895-pink-meadow",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4017895|pink meadow",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4fdc8c9a",
+      "title": "Lullaby Dreams 2-pack Co Sleeper Flannelette Fitted Sheets Cute Critters",
+      "titles": {
+        "en": "Lullaby Dreams 2-pack Co Sleeper Flannelette Fitted Sheets Cute Critters"
+      },
+      "category": "sheets",
+      "price": 17.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-2-pack-co-sleeper-flannelette-fitted-sheets-4017883-cute-critters",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4017883|cute critters",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-616d7b3a",
+      "title": "Dolls Wagon 9703a",
+      "titles": {
+        "en": "Dolls Wagon 9703a"
+      },
+      "category": "dolls-toys",
+      "price": 39.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-wagon-9703a-4021777",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4021777",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6fcb02b4",
+      "title": "Dolls 2-in-1 Stroller 9346",
+      "titles": {
+        "en": "Dolls 2-in-1 Stroller 9346"
+      },
+      "category": "dolls-toys",
+      "price": 79.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-2-in-1-stroller-9346-4021773",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4021773",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ae47e434",
+      "title": "Dolls 4 Wheel Stroller 9617 Fm001 Pink/grey",
+      "titles": {
+        "en": "Dolls 4 Wheel Stroller 9617 Fm001 Pink/grey"
+      },
+      "category": "dolls-toys",
+      "price": 47.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-4-wheel-stroller-9617-fm001-4019793-pink-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019793|pink/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-57632938",
+      "title": "Dolls 3 Wheel Stroller 9665 K058 Pink/grey",
+      "titles": {
+        "en": "Dolls 3 Wheel Stroller 9665 K058 Pink/grey"
+      },
+      "category": "dolls-toys",
+      "price": 63.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-3-wheel-stroller-9665-k058-4019791-pink-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019791|pink/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4d364ab1",
+      "title": "Dolls 4 Wheel Stroller 9351a Fm0007 Pink/black",
+      "titles": {
+        "en": "Dolls 4 Wheel Stroller 9351a Fm0007 Pink/black"
+      },
+      "category": "dolls-toys",
+      "price": 63.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-4-wheel-stroller-9351a-fm0007-4019789-pink-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019789|pink/black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-fc7a0df9",
+      "title": "Dolls Pram 9325d Fm007 Pink/black",
+      "titles": {
+        "en": "Dolls Pram 9325d Fm007 Pink/black"
+      },
+      "category": "dolls-toys",
+      "price": 55.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-pram-9325d-fm007-4019787-pink-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019787|pink/black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-61f5f63d",
+      "title": "Dolls Luxury Pram 9325a Pink/grey",
+      "titles": {
+        "en": "Dolls Luxury Pram 9325a Pink/grey"
+      },
+      "category": "dolls-toys",
+      "price": 63.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-luxury-pram-9325a-4019785-pink-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019785|pink/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f4d94fbc",
+      "title": "Dolls 4 Wheel Stroller 9304b M2403 Pink",
+      "titles": {
+        "en": "Dolls 4 Wheel Stroller 9304b M2403 Pink"
+      },
+      "category": "dolls-toys",
+      "price": 39.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-4-wheel-stroller-9304b-m2403-4019783-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019783|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-fd451acc",
+      "title": "Dolls Buggy S9302 M2402 Pink",
+      "titles": {
+        "en": "Dolls Buggy S9302 M2402 Pink"
+      },
+      "category": "dolls-toys",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-buggy-s9302-m2402-4019781-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4019781|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c6c56f3b",
+      "title": "Dolls Highchair Pink",
+      "titles": {
+        "en": "Dolls Highchair Pink"
+      },
+      "category": "dolls-toys",
+      "price": 23.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-highchair-4011581-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4011581|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2c37ea1",
+      "title": "Dolls 3 Wheel Stroller 57cm 9326c Pink",
+      "titles": {
+        "en": "Dolls 3 Wheel Stroller 57cm 9326c Pink"
+      },
+      "category": "dolls-toys",
+      "price": 39.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dolls-3-wheel-stroller-57cm-9326c-4011579-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4011579|pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1dab6652",
+      "title": "Safety First Summit Wagon Stroller High Street",
+      "titles": {
+        "en": "Safety First Summit Wagon Stroller High Street"
+      },
+      "category": "4-wheel-strollers",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-summit-wagon-stroller-4019201-high-street",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "4019201|high street",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-816a4fcc",
+      "title": "Edinburgh Pathfinder 3 Wheel Stroller Black",
+      "titles": {
+        "en": "Edinburgh Pathfinder 3 Wheel Stroller Black"
+      },
+      "category": "3-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-pathfinder-3-wheel-stroller-4018249-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4018249|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-3f5c7e72",
+      "title": "Babylo Robin Lieback Stroller Red",
+      "titles": {
+        "en": "Babylo Robin Lieback Stroller Red"
+      },
+      "category": "4-wheel-strollers",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-robin-lieback-stroller-4016913-red",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4016913|red",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ee04647d",
+      "title": "Babylo Robin Lieback Stroller Khaki",
+      "titles": {
+        "en": "Babylo Robin Lieback Stroller Khaki"
+      },
+      "category": "4-wheel-strollers",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-robin-lieback-stroller-4016911-khaki",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4016911|khaki",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ebeb3373",
+      "title": "Babylo Robin Lieback Stroller Grey",
+      "titles": {
+        "en": "Babylo Robin Lieback Stroller Grey"
+      },
+      "category": "4-wheel-strollers",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-robin-lieback-stroller-4016909-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4016909|grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-385085bd",
+      "title": "Baby Jogger City Select 2 Second Seat Radiant Slate",
+      "titles": {
+        "en": "Baby Jogger City Select 2 Second Seat Radiant Slate"
+      },
+      "category": "stroller-accessories",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-jogger-city-select-2-second-seat-4016503-radiant-slate",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Jogger",
+        "model": "4016503|radiant slate",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c44804bc",
+      "title": "Baby Jogger City Select 2 Stroller Radiant Slate",
+      "titles": {
+        "en": "Baby Jogger City Select 2 Stroller Radiant Slate"
+      },
+      "category": "4-wheel-strollers",
+      "price": 799,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-jogger-city-select-2-stroller-4016501-radiant-slate",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Jogger",
+        "model": "4016501|radiant slate",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cdd0fc8e",
+      "title": "Disney Baby Pronto! Belt-positioning Booster Seat Modern Minnie Black/grey/pink",
+      "titles": {
+        "en": "Disney Baby Pronto! Belt-positioning Booster Seat Modern Minnie Black/grey/pink"
+      },
+      "category": "booster-seats",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-pronto-belt-positioning-booster-seat-modern-minnie-4020601-black-grey-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020601|black/grey/pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5e331ec5",
+      "title": "Disney Baby Pronto! Belt-positioning Booster Seat Modern Mickey Black/red",
+      "titles": {
+        "en": "Disney Baby Pronto! Belt-positioning Booster Seat Modern Mickey Black/red"
+      },
+      "category": "booster-seats",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-pronto-belt-positioning-booster-seat-modern-mickey-4020599-black-red",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020599|black/red",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df677402",
+      "title": "Disney Baby Turn & Go 360 All-in-one Convertible Car Seat Vintage Disney Black/grey",
+      "titles": {
+        "en": "Disney Baby Turn & Go 360 All-in-one Convertible Car Seat Vintage Disney Black/grey"
+      },
+      "category": "carseats",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-turn-go-360-all-in-one-convertible-car-seat-vintage-disney-4020563-black-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020563|black/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-481e141f",
+      "title": "Disney Baby Everslim 4-in-1 Convertible Car Seat Vintage Disney Black/grey",
+      "titles": {
+        "en": "Disney Baby Everslim 4-in-1 Convertible Car Seat Vintage Disney Black/grey"
+      },
+      "category": "carseats",
+      "price": 359.4,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-everslim-4-in-1-convertible-car-seat-vintage-disney-4020561-black-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020561|black/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4284fce5",
+      "title": "Edinburgh Victory 360 Spin Car Seat Black/grey",
+      "titles": {
+        "en": "Edinburgh Victory 360 Spin Car Seat Black/grey"
+      },
+      "category": "carseats",
+      "price": 249,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-victory-360-spin-car-seat-4019569-black-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4019569|black/grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9d4f113c",
+      "title": "Infasecure Momentum More Isofix Car Seat Black",
+      "titles": {
+        "en": "Infasecure Momentum More Isofix Car Seat Black"
+      },
+      "category": "carseats",
+      "price": 349,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infasecure-momentum-more-isofix-car-seat-4019185-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "InfaSecure",
+        "model": "4019185|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7dd3a92d",
+      "title": "Cozy N Safe Snowdon I-size Infant Capsule With Base Black",
+      "titles": {
+        "en": "Cozy N Safe Snowdon I-size Infant Capsule With Base Black"
+      },
+      "category": "infant-capsules",
+      "price": 229,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-snowdon-i-size-infant-capsule-with-base-4019053-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4019053|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ae6a6b25",
+      "title": "Edinburgh Travelsafe I-size Car Seat Black",
+      "titles": {
+        "en": "Edinburgh Travelsafe I-size Car Seat Black"
+      },
+      "category": "carseats",
+      "price": 169.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-travelsafe-i-size-car-seat-4018245-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4018245|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ab6c4524",
+      "title": "Infasecure Luxi Ii Contour Car Seat Black",
+      "titles": {
+        "en": "Infasecure Luxi Ii Contour Car Seat Black"
+      },
+      "category": "carseats",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infasecure-luxi-ii-contour-car-seat-4016981-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "InfaSecure",
+        "model": "4016981|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-48e35446",
+      "title": "Edinburgh I-size Infant Capsule Grey/black",
+      "titles": {
+        "en": "Edinburgh I-size Infant Capsule Grey/black"
+      },
+      "category": "infant-capsules",
+      "price": 169,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-i-size-infant-capsule-4016899-grey-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4016899|grey/black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4ed522b0",
+      "title": "Cozy N Safe Augusta I-size Booster Seat Black",
+      "titles": {
+        "en": "Cozy N Safe Augusta I-size Booster Seat Black"
+      },
+      "category": "booster-seats",
+      "price": 179,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-augusta-i-size-booster-seat-4016843-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4016843|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-3c486caa",
+      "title": "Maxi Cosi Pria All-in-one Convertible Car Seat Midnight Slate",
+      "titles": {
+        "en": "Maxi Cosi Pria All-in-one Convertible Car Seat Midnight Slate"
+      },
+      "category": "carseats",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maxi-cosi-pria-all-in-one-convertible-car-seat-5000410-midnight-slate",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxi-Cosi",
+        "model": "5000410|midnight slate",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6f77e055",
+      "title": "Bubba Blue Comforter Toy/security Blanket Crocodile",
+      "titles": {
+        "en": "Bubba Blue Comforter Toy/security Blanket Crocodile"
+      },
+      "category": "soft-toys",
+      "price": 7.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/bubba-blue-comforter-toy-security-blanket-crocodile-4021651",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bubba Blue",
+        "model": "4021651",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-3d890beb",
+      "title": "Evenflo Omni Ultra Travel System Caviar Black",
+      "titles": {
+        "en": "Evenflo Omni Ultra Travel System Caviar Black"
+      },
+      "category": "4-wheel-strollers",
+      "price": 899,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/evenflo-omni-ultra-travel-system-caviar-black-5020835",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Evenflo",
+        "model": "5020835",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-3dc233a3",
+      "title": "Evenflo Pivot Nxt Travel System Pacific Green",
+      "titles": {
+        "en": "Evenflo Pivot Nxt Travel System Pacific Green"
+      },
+      "category": "4-wheel-strollers",
+      "price": 899,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/evenflo-pivot-nxt-travel-system-pacific-green-4023017",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Evenflo",
+        "model": "4023017",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-aba9924f",
+      "title": "Babylo Tara Cot Natural/white One",
+      "titles": {
+        "en": "Babylo Tara Cot Natural/white One"
+      },
+      "category": "cots",
+      "price": 199,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-tara-cot-natural-white-4021097-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021097|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-25ce8755",
+      "title": "Babyco Pocket Spring Cot Mattress White",
+      "titles": {
+        "en": "Babyco Pocket Spring Cot Mattress White"
+      },
+      "category": "mattresses",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-pocket-spring-cot-mattress-4020849-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4020849|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-10b9e174",
+      "title": "Genesis Marbella Cot White",
+      "titles": {
+        "en": "Genesis Marbella Cot White"
+      },
+      "category": "cots",
+      "price": 599,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/genesis-marbella-cot-4019587-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Genesis",
+        "model": "4019587|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-58ed4bf2",
+      "title": "Babylo Nora Dropside Cot White",
+      "titles": {
+        "en": "Babylo Nora Dropside Cot White"
+      },
+      "category": "cots",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-nora-dropside-cot-4019583-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4019583|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4ca2f5bf",
+      "title": "Genesis Bordeaux Cot Ash",
+      "titles": {
+        "en": "Genesis Bordeaux Cot Ash"
+      },
+      "category": "cots",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/genesis-bordeaux-cot-4018551-ash",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Genesis",
+        "model": "4018551|ash",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dc10eddf",
+      "title": "Fjord Cot White",
+      "titles": {
+        "en": "Fjord Cot White"
+      },
+      "category": "cots",
+      "price": 699,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/fjord-cot-4015603-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4015603|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7325949a",
+      "title": "Houston Cot White/light Grey Mar",
+      "titles": {
+        "en": "Houston Cot White/light Grey Mar"
+      },
+      "category": "cots",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/houston-cot-4014767-white-light-grey-mar",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4014767|white/light grey marle",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-848c8f4a",
+      "title": "Cozy N Safe Champion 4 Wheel Stroller Black",
+      "titles": {
+        "en": "Cozy N Safe Champion 4 Wheel Stroller Black"
+      },
+      "category": "4-wheel-strollers",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/cozy-n-safe-champion-4-wheel-stroller-4019049-black",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cozy n Safe",
+        "model": "4019049|black",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:22:29.653Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
       "id": "feed-c53922b3",
       "title": "Twinkle & Twirl Twinkle Plush Toy Multi",
       "titles": {

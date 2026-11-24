@@ -1,6 +1,4384 @@
 {
   "products": [
     {
+      "id": "feed-d88a74a2",
+      "title": "Axis TS3001, Wall Mount",
+      "titles": {
+        "en": "Axis TS3001, Wall Mount"
+      },
+      "category": "web-ip-cameras",
+      "price": 66.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=596333",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "596333",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d88a7523",
+      "title": "Dell UltraSharp WB7022 Webcam",
+      "titles": {
+        "en": "Dell UltraSharp WB7022 Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 261.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=596370",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dell",
+        "model": "596370",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d88a78e9",
+      "title": "Logitech Rally Bar Mini All-In-One Video Bar, White",
+      "titles": {
+        "en": "Logitech Rally Bar Mini All-In-One Video Bar, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 6936.58,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=596439",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "596439",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d88a7901",
+      "title": "Logitech Rally Bar Mini All-In-One Video Bar, Graphite",
+      "titles": {
+        "en": "Logitech Rally Bar Mini All-In-One Video Bar, Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 6936.58,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=596440",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "596440",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d88b847e",
+      "title": "MXL AC-360-Z V2 Conferencing Microphone",
+      "titles": {
+        "en": "MXL AC-360-Z V2 Conferencing Microphone"
+      },
+      "category": "web-ip-cameras",
+      "price": 937.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=598102",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "MXL",
+        "model": "598102",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d88b847f",
+      "title": "MXL USB-Powered Microphone for Zoom",
+      "titles": {
+        "en": "MXL USB-Powered Microphone for Zoom"
+      },
+      "category": "web-ip-cameras",
+      "price": 159.38,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=598103",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "MXL",
+        "model": "598103",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3a02b2",
+      "title": "D-Link Vigilance DCS-4612EK Network Camera, Dome",
+      "titles": {
+        "en": "D-Link Vigilance DCS-4612EK Network Camera, Dome"
+      },
+      "category": "web-ip-cameras",
+      "price": 377.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=601321",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "601321",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3a0bfb",
+      "title": "Axis T94B02M, Mounting Plate",
+      "titles": {
+        "en": "Axis T94B02M, Mounting Plate"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=601582",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "601582",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3a18a1",
+      "title": "360 D503C Smart IP Camera 720P 24/7 Keep Your Home Much Safer, 7 Metres Night Vision Distance, Two- +way real time communication, Face Recognition",
+      "titles": {
+        "en": "360 D503C Smart IP Camera 720P 24/7 Keep Your Home Much Safer, 7 Metres Night Vision Distance, Two- +way real time communication, Face Recognition"
+      },
+      "category": "web-ip-cameras",
+      "price": 67.1,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=601876",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "360",
+        "model": "601876",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3aa4de",
+      "title": "Axis Camera Stand, Black, 5506-621",
+      "titles": {
+        "en": "Axis Camera Stand, Black, 5506-621"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=602863",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "602863",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3ba83a",
+      "title": "Axis T8415 Wireless Installation Tool Kit, 5506-881",
+      "titles": {
+        "en": "Axis T8415 Wireless Installation Tool Kit, 5506-881"
+      },
+      "category": "web-ip-cameras",
+      "price": 2144.15,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=604353",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "604353",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3c2733",
+      "title": "Axis TQ3101-E, Ceiling Mount",
+      "titles": {
+        "en": "Axis TQ3101-E, Ceiling Mount"
+      },
+      "category": "web-ip-cameras",
+      "price": 297.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=605003",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "605003",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3c4143",
+      "title": "Logitech Rally Bar Mini All-In-One Video Bar, Graphite, with Tap with Cat5e",
+      "titles": {
+        "en": "Logitech Rally Bar Mini All-In-One Video Bar, Graphite, with Tap with Cat5e"
+      },
+      "category": "web-ip-cameras",
+      "price": 9695.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=605649",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "605649",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3c4dbc",
+      "title": "D-Link DCS-6500LH Network Camera",
+      "titles": {
+        "en": "D-Link DCS-6500LH Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 111.68,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=605921",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "605921",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3d4d19",
+      "title": "Lilin P5R8852E2 IP Bullet Camera, Day & Night, Fixed IR",
+      "titles": {
+        "en": "Lilin P5R8852E2 IP Bullet Camera, Day & Night, Fixed IR"
+      },
+      "category": "web-ip-cameras",
+      "price": 277.48,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=607331",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "607331",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3d4d1a",
+      "title": "Lilin PZD6422EX3 3X Day&Night 1080P HD Vandal Resistant Mini Fast Dome IP Camera",
+      "titles": {
+        "en": "Lilin PZD6422EX3 3X Day&Night 1080P HD Vandal Resistant Mini Fast Dome IP Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 641.95,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=607332",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "607332",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3d4d1b",
+      "title": "Lilin P5R6522E2 Dome IP Camera, Day & Night, Fixed IR, Vandal Resistant",
+      "titles": {
+        "en": "Lilin P5R6522E2 Dome IP Camera, Day & Night, Fixed IR, Vandal Resistant"
+      },
+      "category": "web-ip-cameras",
+      "price": 226.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=607333",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "607333",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3d625d",
+      "title": "Jabra PanaCast 20 Personal Video Conferencing",
+      "titles": {
+        "en": "Jabra PanaCast 20 Personal Video Conferencing"
+      },
+      "category": "web-ip-cameras",
+      "price": 450.43,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=607830",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jabra",
+        "model": "607830",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3e7ae0",
+      "title": "Axis CAMERA M4216-V MINI-DOME 4MP 3-6MM",
+      "titles": {
+        "en": "Axis CAMERA M4216-V MINI-DOME 4MP 3-6MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 1515.94,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=609813",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "609813",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3e7b41",
+      "title": "Axis CAMERA M4216-LV MINI-DOME 4MP 3-6MM IR",
+      "titles": {
+        "en": "Axis CAMERA M4216-LV MINI-DOME 4MP 3-6MM IR"
+      },
+      "category": "web-ip-cameras",
+      "price": 1602.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=609841",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "609841",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3e7b42",
+      "title": "Axis CAMERA Q6078-E 50HZ PTZ 4K 20X OUTDOOR/IP66",
+      "titles": {
+        "en": "Axis CAMERA Q6078-E 50HZ PTZ 4K 20X OUTDOOR/IP66"
+      },
+      "category": "web-ip-cameras",
+      "price": 10107.86,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=609842",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "609842",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4c28c1",
+      "title": "Fortinet FortiCamera FD50 Network Camera, Dome",
+      "titles": {
+        "en": "Fortinet FortiCamera FD50 Network Camera, Dome"
+      },
+      "category": "web-ip-cameras",
+      "price": 1429.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=611686",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Fortinet",
+        "model": "611686",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ca358",
+      "title": "Axis TP5801-E CLEAR DOME FOR P56 SERIES",
+      "titles": {
+        "en": "Axis TP5801-E CLEAR DOME FOR P56 SERIES"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612226",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "612226",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ca359",
+      "title": "Axis TP5801-E SMOKED DOME FOR P56 SERIES",
+      "titles": {
+        "en": "Axis TP5801-E SMOKED DOME FOR P56 SERIES"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612227",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "612227",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ca7ba",
+      "title": "Axis FA FA3105-L Network Camera, Eyeball",
+      "titles": {
+        "en": "Axis FA FA3105-L Network Camera, Eyeball"
+      },
+      "category": "web-ip-cameras",
+      "price": 471.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612336",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "612336",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ca83e",
+      "title": "Axis P56 P5655-E Network Camera, Dome, White",
+      "titles": {
+        "en": "Axis P56 P5655-E Network Camera, Dome, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 5646.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612376",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "612376",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4cb523",
+      "title": "Ferret CFWF50P Plus - Multipurpose Wireless Inspection Camera & Cable Pulling Tool Kit. 720p HD Streaming. Rechargeable. Built-in Wifi Hotspot for Con",
+      "titles": {
+        "en": "Ferret CFWF50P Plus - Multipurpose Wireless Inspection Camera & Cable Pulling Tool Kit. 720p HD Streaming. Rechargeable. Built-in Wifi Hotspot for Con"
+      },
+      "category": "web-ip-cameras",
+      "price": 294.31,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612687",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ferret",
+        "model": "612687",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4cb525",
+      "title": "Ferret CFWF50A2 Pro - Multipurpose Wireless Inspection Camera & Cable Pulling Tool Kit. 720p HD Streaming. Rechargeable. Built-in Wifi Hotspot for Con",
+      "titles": {
+        "en": "Ferret CFWF50A2 Pro - Multipurpose Wireless Inspection Camera & Cable Pulling Tool Kit. 720p HD Streaming. Rechargeable. Built-in Wifi Hotspot for Con"
+      },
+      "category": "web-ip-cameras",
+      "price": 244.21,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=612689",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ferret",
+        "model": "612689",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4d2b55",
+      "title": "Logitech RoomMate CollabOS Appliance, White, Computing Appliance for video conferencing rooms",
+      "titles": {
+        "en": "Logitech RoomMate CollabOS Appliance, White, Computing Appliance for video conferencing rooms"
+      },
+      "category": "web-ip-cameras",
+      "price": 3074.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=613114",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "613114",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4d2c61",
+      "title": "Neat Tabletop/Wall Mountable",
+      "titles": {
+        "en": "Neat Tabletop/Wall Mountable"
+      },
+      "category": "web-ip-cameras",
+      "price": 2210,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=613198",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Neat",
+        "model": "613198",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4d2f74",
+      "title": "Neat BAR, 16X ZOOM, PRO 50MP CAMERA, 1080P, SPEAKERBOX, WOOFERS, 16 MICS, NOISE SUPPRESS (Neat pad required. Sold separately)",
+      "titles": {
+        "en": "Neat BAR, 16X ZOOM, PRO 50MP CAMERA, 1080P, SPEAKERBOX, WOOFERS, 16 MICS, NOISE SUPPRESS (Neat pad required. Sold separately)"
+      },
+      "category": "web-ip-cameras",
+      "price": 12674.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=613203",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Neat",
+        "model": "613203",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4d2f75",
+      "title": "Neat BAR, 16X ZOOM, PRO 50MP CAMERA, 1080P, SPEAKERBOX, WOOFERS, 16 MICS + NEATPAD-SE",
+      "titles": {
+        "en": "Neat BAR, 16X ZOOM, PRO 50MP CAMERA, 1080P, SPEAKERBOX, WOOFERS, 16 MICS + NEATPAD-SE"
+      },
+      "category": "web-ip-cameras",
+      "price": 14874.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=613204",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Neat",
+        "model": "613204",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4dbc1b",
+      "title": "Adesso 1080P Webcam H4",
+      "titles": {
+        "en": "Adesso 1080P Webcam H4"
+      },
+      "category": "web-ip-cameras",
+      "price": 67.48,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=614227",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Adesso",
+        "model": "614227",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4dbc3d",
+      "title": "Adesso 720P Webcam H3",
+      "titles": {
+        "en": "Adesso 720P Webcam H3"
+      },
+      "category": "web-ip-cameras",
+      "price": 56.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=614238",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Adesso",
+        "model": "614238",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4e449d",
+      "title": "DataLocker WEBCAM ALPHACAM H 1080P PRIVACY-SHUTTER",
+      "titles": {
+        "en": "DataLocker WEBCAM ALPHACAM H 1080P PRIVACY-SHUTTER"
+      },
+      "category": "web-ip-cameras",
+      "price": 296.06,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=615156",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "DataLocker",
+        "model": "615156",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ed13e",
+      "title": "Ubiquiti UniFi Protect Network Video Recorder Pro, 7x 3.5\" bays",
+      "titles": {
+        "en": "Ubiquiti UniFi Protect Network Video Recorder Pro, 7x 3.5\" bays"
+      },
+      "category": "web-ip-cameras",
+      "price": 1241.2,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=616174",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ubiquiti",
+        "model": "616174",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ee63d",
+      "title": "Logitech Rally Bar Mini All-In-One Video Bar, White, with Tap with Cat5e Kit",
+      "titles": {
+        "en": "Logitech Rally Bar Mini All-In-One Video Bar, White, with Tap with Cat5e Kit"
+      },
+      "category": "web-ip-cameras",
+      "price": 9695.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=616650",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "616650",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5db07d",
+      "title": "Axis CAMERA P3265-V DOME 2MP 3.4-8.9MM",
+      "titles": {
+        "en": "Axis CAMERA P3265-V DOME 2MP 3.4-8.9MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 1658.53,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=620574",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "620574",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5db07e",
+      "title": "Axis P3265-LV Dome Camera, White",
+      "titles": {
+        "en": "Axis P3265-LV Dome Camera, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 1882.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=620575",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "620575",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5db4e4",
+      "title": "Logitech Desk Mount, Graphite",
+      "titles": {
+        "en": "Logitech Desk Mount, Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 582.51,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=620689",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "620689",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5db4fc",
+      "title": "Logitech Mounting Bracket",
+      "titles": {
+        "en": "Logitech Mounting Bracket"
+      },
+      "category": "web-ip-cameras",
+      "price": 234.75,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=620690",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "620690",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e277b",
+      "title": "AVA CAMERA BULLET TELE 4K WHITE 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 4K WHITE 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3345.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621067",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621067",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e277c",
+      "title": "AVA CAMERA BULLET TELE 4K WHITE 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 4K WHITE 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4844.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621068",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621068",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e2795",
+      "title": "AVA CAMERA BULLET TELE 5MP WHITE 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 5MP WHITE 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4132.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621070",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621070",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e2796",
+      "title": "AVA CAMERA BULLET WIDE 4K WHITE 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 4K WHITE 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4676.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621071",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621071",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e2797",
+      "title": "AVA CAMERA BULLET WIDE 5MP BLACK 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 5MP BLACK 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 2819.8,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621072",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621072",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e2798",
+      "title": "AVA CAMERA BULLET WIDE 5MP BLACK 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 5MP BLACK 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3569.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621073",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621073",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e2799",
+      "title": "AVA CAMERA BULLET TELE 4K BLACK - 4K - 30 DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 4K BLACK - 4K - 30 DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3343.77,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621074",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621074",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e279b",
+      "title": "AVA CAMERA BULLET TELE 5MP BLACK 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 5MP BLACK 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3157.62,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621076",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621076",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e279c",
+      "title": "AVA CAMERA BULLET TELE 5MP WHITE 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 5MP WHITE 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3157.62,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621077",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621077",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27b7",
+      "title": "AVA CAMERA BULLET WIDE 5MP WHITE 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 5MP WHITE 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 2819.8,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621081",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621081",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27b8",
+      "title": "AVA CAMERA BULLET WIDE 5MP WHITE 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 5MP WHITE 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3569.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621082",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621082",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27be",
+      "title": "AVA CAMERA BULLET TELE 5MP BLACK 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 5MP BLACK 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4132.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621088",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621088",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27d7",
+      "title": "AVA CAMERA BULLET WIDE 4K BLACK 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 4K BLACK 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3176.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621090",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621090",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27d8",
+      "title": "AVA CAMERA BULLET WIDE 4K BLACK 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 4K BLACK 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4676.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621091",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621091",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27db",
+      "title": "AVA CAMERA BULLET TELE 4K BLACK 60/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET TELE 4K BLACK 60/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 4844.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621094",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621094",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5e27de",
+      "title": "AVA CAMERA BULLET WIDE 4K WHITE 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA BULLET WIDE 4K WHITE 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 3176.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=621097",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "621097",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da607222",
+      "title": "Verbatim Webcam HD 1080P Auto Focus - Black",
+      "titles": {
+        "en": "Verbatim Webcam HD 1080P Auto Focus - Black"
+      },
+      "category": "web-ip-cameras",
+      "price": 107.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=625637",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Verbatim",
+        "model": "625637",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da617e43",
+      "title": "TP-Link Tapo C110 Home Wi-Fi Security Camera",
+      "titles": {
+        "en": "TP-Link Tapo C110 Home Wi-Fi Security Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 81.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627348",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "627348",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da617e5e",
+      "title": "TP-Link Tapo C210 Pan/Tilt Home Security Wi-Fi Camera",
+      "titles": {
+        "en": "TP-Link Tapo C210 Pan/Tilt Home Security Wi-Fi Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 90.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627352",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "627352",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618abd",
+      "title": "Axis CAMERA M2036-LE BULLET 4MP IR OUTDOOR BLK",
+      "titles": {
+        "en": "Axis CAMERA M2036-LE BULLET 4MP IR OUTDOOR BLK"
+      },
+      "category": "web-ip-cameras",
+      "price": 1345.55,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627621",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627621",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618ac2",
+      "title": "Axis CAMERA M2035-LE 8MM BULLET 2MP IR OUTDOOR WHI",
+      "titles": {
+        "en": "Axis CAMERA M2035-LE 8MM BULLET 2MP IR OUTDOOR WHI"
+      },
+      "category": "web-ip-cameras",
+      "price": 1175.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627626",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627626",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618ac3",
+      "title": "Axis CAMERA Q1656 BOX 4MP 3.9-10MM",
+      "titles": {
+        "en": "Axis CAMERA Q1656 BOX 4MP 3.9-10MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 4023.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627627",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627627",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618ac5",
+      "title": "Axis PSU PS-P EIAJ 12V/3.33A/40W FOR V5925/V5938",
+      "titles": {
+        "en": "Axis PSU PS-P EIAJ 12V/3.33A/40W FOR V5925/V5938"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627629",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627629",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618ae3",
+      "title": "Axis CAMERA M2035-LE BULLET 2MP IR OUTDOOR BLK",
+      "titles": {
+        "en": "Axis CAMERA M2035-LE BULLET 2MP IR OUTDOOR BLK"
+      },
+      "category": "web-ip-cameras",
+      "price": 1175.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627636",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627636",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618ae4",
+      "title": "Axis CAMERA M2036-LE BULLET 4MP IR OUTDOOR WHI",
+      "titles": {
+        "en": "Axis CAMERA M2036-LE BULLET 4MP IR OUTDOOR WHI"
+      },
+      "category": "web-ip-cameras",
+      "price": 1345.55,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627637",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627637",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618afe",
+      "title": "Axis CAMERA M2035-LE 8MM BULLET 2MP IR OUTDOOR BLK",
+      "titles": {
+        "en": "Axis CAMERA M2035-LE 8MM BULLET 2MP IR OUTDOOR BLK"
+      },
+      "category": "web-ip-cameras",
+      "price": 1175.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627640",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627640",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618aff",
+      "title": "Axis CAMERA M2035-LE BULLET 2MP IR OUTDOOR WHI",
+      "titles": {
+        "en": "Axis CAMERA M2035-LE BULLET 2MP IR OUTDOOR WHI"
+      },
+      "category": "web-ip-cameras",
+      "price": 1175.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627641",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627641",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da618b00",
+      "title": "Axis CAMERA Q1656-LE BOX 4MP 3.9-10MM OUTDOOR",
+      "titles": {
+        "en": "Axis CAMERA Q1656-LE BOX 4MP 3.9-10MM OUTDOOR"
+      },
+      "category": "web-ip-cameras",
+      "price": 5560.89,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627642",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "627642",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da6fd95c",
+      "title": "Logitech Rally Table Hub",
+      "titles": {
+        "en": "Logitech Rally Table Hub"
+      },
+      "category": "web-ip-cameras",
+      "price": 1135.6,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=630923",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "630923",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da6fd95d",
+      "title": "Logitech Rally Display Hub",
+      "titles": {
+        "en": "Logitech Rally Display Hub"
+      },
+      "category": "web-ip-cameras",
+      "price": 1049.5,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=630924",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "630924",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7043f4",
+      "title": "Neat NEATFRAME-SE",
+      "titles": {
+        "en": "Neat NEATFRAME-SE"
+      },
+      "category": "web-ip-cameras",
+      "price": 1341.27,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631140",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Neat",
+        "model": "631140",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70447a",
+      "title": "Lilin P2R6552E2 5MP Day & Night Fixed IR Vandal Resistant Dome IP Camera",
+      "titles": {
+        "en": "Lilin P2R6552E2 5MP Day & Night Fixed IR Vandal Resistant Dome IP Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 405.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631182",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "631182",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7047b8",
+      "title": "Lilin UHR6582E4 4K Day & Night Fixed IR Dome IP Camera",
+      "titles": {
+        "en": "Lilin UHR6582E4 4K Day & Night Fixed IR Dome IP Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 699.71,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631207",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "631207",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7047d4",
+      "title": "Lilin P5R6552E2K Black 5MP D&N AF 2.8mm IR30M IP67IK10 D",
+      "titles": {
+        "en": "Lilin P5R6552E2K Black 5MP D&N AF 2.8mm IR30M IP67IK10 D"
+      },
+      "category": "web-ip-cameras",
+      "price": 312.82,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631212",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lilin",
+        "model": "631212",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70591e",
+      "title": "Lenovo THINKSMART CORE FULL RM(ZOOM), I5-1145G7E, 8GB, 256GB10.1\" FHD, TOUCH, W10 IOT, 3YO",
+      "titles": {
+        "en": "Lenovo THINKSMART CORE FULL RM(ZOOM), I5-1145G7E, 8GB, 256GB10.1\" FHD, TOUCH, W10 IOT, 3YO"
+      },
+      "category": "web-ip-cameras",
+      "price": 5659.27,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631636",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lenovo",
+        "model": "631636",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7065df",
+      "title": "Axis MOUNT TQ1602-E CONDUIT BACK BOX",
+      "titles": {
+        "en": "Axis MOUNT TQ1602-E CONDUIT BACK BOX"
+      },
+      "category": "web-ip-cameras",
+      "price": 471.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631934",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "631934",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7065fd",
+      "title": "Axis T90 SINGLE BRACKET",
+      "titles": {
+        "en": "Axis T90 SINGLE BRACKET"
+      },
+      "category": "web-ip-cameras",
+      "price": 151.98,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631941",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "631941",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da7065fe",
+      "title": "Axis T91A10 MOUNTING KIT",
+      "titles": {
+        "en": "Axis T91A10 MOUNTING KIT"
+      },
+      "category": "web-ip-cameras",
+      "price": 66.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=631942",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "631942",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70e97e",
+      "title": "Lenovo Video Conferencing Camera, 4XC1D66055",
+      "titles": {
+        "en": "Lenovo Video Conferencing Camera, 4XC1D66055"
+      },
+      "category": "web-ip-cameras",
+      "price": 109.72,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=632716",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lenovo",
+        "model": "632716",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70ee80",
+      "title": "Logitech Tap IP Meeting Room Touch Controller, Graphite",
+      "titles": {
+        "en": "Logitech Tap IP Meeting Room Touch Controller, Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 1949.88,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=632871",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "632871",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70ee81",
+      "title": "Logitech Tap IP Meeting Room Touch Controller, White",
+      "titles": {
+        "en": "Logitech Tap IP Meeting Room Touch Controller, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 1914.43,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=632872",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "632872",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da70ee82",
+      "title": "Logitech Rally Camera Power Splitter",
+      "titles": {
+        "en": "Logitech Rally Camera Power Splitter"
+      },
+      "category": "web-ip-cameras",
+      "price": 109.04,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=632873",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "632873",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da741f06",
+      "title": "Axis T91A06, Mounting Adapter, 5503-091",
+      "titles": {
+        "en": "Axis T91A06, Mounting Adapter, 5503-091"
+      },
+      "category": "web-ip-cameras",
+      "price": 51.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=638259",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "638259",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da741f1e",
+      "title": "Axis TD9301, Pole Mount",
+      "titles": {
+        "en": "Axis TD9301, Pole Mount"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=638260",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "638260",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da741f20",
+      "title": "Axis TQ6501-E, Mounting Bracket",
+      "titles": {
+        "en": "Axis TQ6501-E, Mounting Bracket"
+      },
+      "category": "web-ip-cameras",
+      "price": 646.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=638262",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "638262",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da741f22",
+      "title": "Axis T91M47, Pole Mount",
+      "titles": {
+        "en": "Axis T91M47, Pole Mount"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=638264",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "638264",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da74a2bf",
+      "title": "Alogic A09 Webcam",
+      "titles": {
+        "en": "Alogic A09 Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 90.02,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=639044",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Alogic",
+        "model": "639044",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da81f19b",
+      "title": "HP 325 Webcam",
+      "titles": {
+        "en": "HP 325 Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 72.71,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=640903",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "640903",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da82f55f",
+      "title": "Jabra PanaCast 50 Remote, Grey",
+      "titles": {
+        "en": "Jabra PanaCast 50 Remote, Grey"
+      },
+      "category": "web-ip-cameras",
+      "price": 189.93,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=642428",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jabra",
+        "model": "642428",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da82f57d",
+      "title": "Jabra PanaCast 50 Remote, Black",
+      "titles": {
+        "en": "Jabra PanaCast 50 Remote, Black"
+      },
+      "category": "web-ip-cameras",
+      "price": 101.28,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=642435",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jabra",
+        "model": "642435",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da82f5fc",
+      "title": "Axis CAMERA M5000 50HZ PTZ 3X-5MP 10X OPTICAL",
+      "titles": {
+        "en": "Axis CAMERA M5000 50HZ PTZ 3X-5MP 10X OPTICAL"
+      },
+      "category": "web-ip-cameras",
+      "price": 3567.48,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=642470",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "642470",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da8306a1",
+      "title": "Hikmicro Pocket2 8MP Mini Thermal Imaging Camera with 3.5\" LCD Touch Screen. Thermal Res 256x192 (49,152 Pixels). Temp Range -20~400?. Accuracy ±2 °C",
+      "titles": {
+        "en": "Hikmicro Pocket2 8MP Mini Thermal Imaging Camera with 3.5\" LCD Touch Screen. Thermal Res 256x192 (49,152 Pixels). Temp Range -20~400?. Accuracy ±2 °C"
+      },
+      "category": "web-ip-cameras",
+      "price": 1019.87,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=642844",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Hikmicro",
+        "model": "642844",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da86d50a",
+      "title": "Ubiquiti UniFi Protect AI 360 Camera, Black",
+      "titles": {
+        "en": "Ubiquiti UniFi Protect AI 360 Camera, Black"
+      },
+      "category": "web-ip-cameras",
+      "price": 1019.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=649666",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ubiquiti",
+        "model": "649666",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da93e8da",
+      "title": "Synology Deep Learning DVA1622 NVR",
+      "titles": {
+        "en": "Synology Deep Learning DVA1622 NVR"
+      },
+      "category": "web-ip-cameras",
+      "price": 1988.9,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=650163",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Synology",
+        "model": "650163",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95ab66",
+      "title": "Axis CAMERA M5075 PTZ 1080P 5X-OPTICAL WHI",
+      "titles": {
+        "en": "Axis CAMERA M5075 PTZ 1080P 5X-OPTICAL WHI"
+      },
+      "category": "web-ip-cameras",
+      "price": 1915.62,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653838",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653838",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95ab80",
+      "title": "Axis TW1104 MAGNET MOUNT 5/PK",
+      "titles": {
+        "en": "Axis TW1104 MAGNET MOUNT 5/PK"
+      },
+      "category": "web-ip-cameras",
+      "price": 1261.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653841",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653841",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95ab81",
+      "title": "Axis WALL MOUNT EXCAM XF",
+      "titles": {
+        "en": "Axis WALL MOUNT EXCAM XF"
+      },
+      "category": "web-ip-cameras",
+      "price": 3424.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653842",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653842",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95ab87",
+      "title": "Axis CAMERA M1135 MKII BOX 2MP 3-10.5MM",
+      "titles": {
+        "en": "Axis CAMERA M1135 MKII BOX 2MP 3-10.5MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 1431.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653848",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653848",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95aba4",
+      "title": "Axis CAMERA Q1656-BLE BOX 4MP NO-LENS OUTDOOR",
+      "titles": {
+        "en": "Axis CAMERA Q1656-BLE BOX 4MP NO-LENS OUTDOOR"
+      },
+      "category": "web-ip-cameras",
+      "price": 4849.23,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653854",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653854",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da95abc9",
+      "title": "Axis MOUNT TM3001 TILT MOUNT WHITE",
+      "titles": {
+        "en": "Axis MOUNT TM3001 TILT MOUNT WHITE"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=653868",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "653868",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da96a284",
+      "title": "AVA CAMERA QUAD 4X-5MP BLACK 30/DAYS",
+      "titles": {
+        "en": "AVA CAMERA QUAD 4X-5MP BLACK 30/DAYS"
+      },
+      "category": "web-ip-cameras",
+      "price": 5519.91,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=655069",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "655069",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da98e929",
+      "title": "Logitech RoomMate CollabOS Appliance, with Tap IP + Compute Mount",
+      "titles": {
+        "en": "Logitech RoomMate CollabOS Appliance, with Tap IP + Compute Mount"
+      },
+      "category": "web-ip-cameras",
+      "price": 5169.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=659556",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "659556",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da98e9b0",
+      "title": "Logitech Rally Bar + Tap IP Video Conferencing",
+      "titles": {
+        "en": "Logitech Rally Bar + Tap IP Video Conferencing"
+      },
+      "category": "web-ip-cameras",
+      "price": 10341.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=659599",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "659599",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da98ecc1",
+      "title": "Logitech Rally Bar Mini + Tap IP Video Conferencing, for Small + Medium Rooms",
+      "titles": {
+        "en": "Logitech Rally Bar Mini + Tap IP Video Conferencing, for Small + Medium Rooms"
+      },
+      "category": "web-ip-cameras",
+      "price": 8412.95,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=659602",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "659602",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa609fd",
+      "title": "AVA WEATHER SHIELD BLK FOR AVA BULLET",
+      "titles": {
+        "en": "AVA WEATHER SHIELD BLK FOR AVA BULLET"
+      },
+      "category": "web-ip-cameras",
+      "price": 115.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660372",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "660372",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa609fe",
+      "title": "AVA WEATHER SHIELD WHI FOR AVA BULLET",
+      "titles": {
+        "en": "AVA WEATHER SHIELD WHI FOR AVA BULLET"
+      },
+      "category": "web-ip-cameras",
+      "price": 115.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660373",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "660373",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa611bc",
+      "title": "Swann SWIFI-CORECAM CoreCam Wireless Security Camera, 2-Way Talk, Siren & Heat + Motion Detection",
+      "titles": {
+        "en": "Swann SWIFI-CORECAM CoreCam Wireless Security Camera, 2-Way Talk, Siren & Heat + Motion Detection"
+      },
+      "category": "web-ip-cameras",
+      "price": 172.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660515",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660515",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa611bd",
+      "title": "Swann SWDVK-455804WL Spotlight Security System, 4x PRO-4KWLB Sensor Light Security Cameras, DVR-5580 4-channel DVR",
+      "titles": {
+        "en": "Swann SWDVK-455804WL Spotlight Security System, 4x PRO-4KWLB Sensor Light Security Cameras, DVR-5580 4-channel DVR"
+      },
+      "category": "web-ip-cameras",
+      "price": 820.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660516",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660516",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa61221",
+      "title": "Swann True Detect Shape White Bullet Dummy Camera 1-pack",
+      "titles": {
+        "en": "Swann True Detect Shape White Bullet Dummy Camera 1-pack"
+      },
+      "category": "web-ip-cameras",
+      "price": 35.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660547",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660547",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa61222",
+      "title": "Swann PRO-4KWLB Sensor Light Security Camera",
+      "titles": {
+        "en": "Swann PRO-4KWLB Sensor Light Security Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 133.07,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660548",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660548",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa61282",
+      "title": "Swann SW312-WDD Imitation Dome Camera",
+      "titles": {
+        "en": "Swann SW312-WDD Imitation Dome Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 34.28,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660575",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660575",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa612a5",
+      "title": "Swann SWNVK-886804FB 4K Ultra HD Professional NVR Security System, 4x NHD-887MSFB Cameras, NVR-8580 8-channel NVR",
+      "titles": {
+        "en": "Swann SWNVK-886804FB 4K Ultra HD Professional NVR Security System, 4x NHD-887MSFB Cameras, NVR-8580 8-channel NVR"
+      },
+      "category": "web-ip-cameras",
+      "price": 1468.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660587",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660587",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa612bf",
+      "title": "Swann SWIFI-2KOCAM 2KO Outdoor Wi-Fi Spotlight Security Camera, 2-Way Talk, Siren & Heat + Motion Detection",
+      "titles": {
+        "en": "Swann SWIFI-2KOCAM 2KO Outdoor Wi-Fi Spotlight Security Camera, 2-Way Talk, Siren & Heat + Motion Detection"
+      },
+      "category": "web-ip-cameras",
+      "price": 196.66,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660590",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660590",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa612c0",
+      "title": "Swann SWIFI-2KICAM 2KI Indoor Security Camera",
+      "titles": {
+        "en": "Swann SWIFI-2KICAM 2KI Indoor Security Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 106.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=660591",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "660591",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a3a",
+      "title": "Axis CAMERA M3215-LVE DOME 2MP IR",
+      "titles": {
+        "en": "Axis CAMERA M3215-LVE DOME 2MP IR"
+      },
+      "category": "web-ip-cameras",
+      "price": 1829.93,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661440",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661440",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a3b",
+      "title": "Axis CAMERA Q6225-LE PTZ 2MP IR/400M 30X GREY",
+      "titles": {
+        "en": "Axis CAMERA Q6225-LE PTZ 2MP IR/400M 30X GREY"
+      },
+      "category": "web-ip-cameras",
+      "price": 11057.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661441",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661441",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a3c",
+      "title": "Axis MOUNT T94C01U UNIVERSAL MOUNT",
+      "titles": {
+        "en": "Axis MOUNT T94C01U UNIVERSAL MOUNT"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661442",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661442",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a3f",
+      "title": "Axis WEATHERSHIELD TP3823-E WEATHERSHIELD WHI 2/PK",
+      "titles": {
+        "en": "Axis WEATHERSHIELD TP3823-E WEATHERSHIELD WHI 2/PK"
+      },
+      "category": "web-ip-cameras",
+      "price": 240.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661445",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661445",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a41",
+      "title": "Axis CAMERA M1137 MKII BOX 5MP 2.8-13MM",
+      "titles": {
+        "en": "Axis CAMERA M1137 MKII BOX 5MP 2.8-13MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 1688.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661447",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661447",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a5d",
+      "title": "Axis CASING TP3821-E CASING WHITE 4/PK",
+      "titles": {
+        "en": "Axis CASING TP3821-E CASING WHITE 4/PK"
+      },
+      "category": "web-ip-cameras",
+      "price": 327.11,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661452",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661452",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a61",
+      "title": "Axis CAMERA M3086-V MINI-DOME 4MP DAY/NIGHT",
+      "titles": {
+        "en": "Axis CAMERA M3086-V MINI-DOME 4MP DAY/NIGHT"
+      },
+      "category": "web-ip-cameras",
+      "price": 1146.83,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661456",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661456",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a62",
+      "title": "Axis CAMERA M3216-LVE DOME 4MP IR",
+      "titles": {
+        "en": "Axis CAMERA M3216-LVE DOME 4MP IR"
+      },
+      "category": "web-ip-cameras",
+      "price": 2144.15,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661457",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661457",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa69a7c",
+      "title": "Axis MOUNT TP3201-E RECESSED MOUNT",
+      "titles": {
+        "en": "Axis MOUNT TP3201-E RECESSED MOUNT"
+      },
+      "category": "web-ip-cameras",
+      "price": 442.61,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=661460",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "661460",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa7159d",
+      "title": "Logitech Mic Pod Pendant Mount - Off White",
+      "titles": {
+        "en": "Logitech Mic Pod Pendant Mount - Off White"
+      },
+      "category": "web-ip-cameras",
+      "price": 213.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=662046",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "662046",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa715a0",
+      "title": "Logitech Tap Scheduler Angle Mount - Graphite",
+      "titles": {
+        "en": "Logitech Tap Scheduler Angle Mount - Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 213.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=662049",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "662049",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa715b9",
+      "title": "Logitech Tap Scheduler Angle Mount - Off White",
+      "titles": {
+        "en": "Logitech Tap Scheduler Angle Mount - Off White"
+      },
+      "category": "web-ip-cameras",
+      "price": 217.95,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=662051",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "662051",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa7c888",
+      "title": "Logitech Brio 500 Webcam, Graphite",
+      "titles": {
+        "en": "Logitech Brio 500 Webcam, Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=663965",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "663965",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa7c889",
+      "title": "Logitech Brio 500 Webcam, Off White",
+      "titles": {
+        "en": "Logitech Brio 500 Webcam, Off White"
+      },
+      "category": "web-ip-cameras",
+      "price": 181.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=663966",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "663966",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa7c88a",
+      "title": "Logitech Brio 500 Webcam, Rose",
+      "titles": {
+        "en": "Logitech Brio 500 Webcam, Rose"
+      },
+      "category": "web-ip-cameras",
+      "price": 179.98,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=663967",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "663967",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa84844",
+      "title": "Dell WB5023 Webcam",
+      "titles": {
+        "en": "Dell WB5023 Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 200.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=664672",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dell",
+        "model": "664672",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa8d800",
+      "title": "ELO Edge Connect Webcam",
+      "titles": {
+        "en": "ELO Edge Connect Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 414.05,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=665703",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "ELO",
+        "model": "665703",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa9fa6c",
+      "title": "AVA NVR CLOUD CONNECTOR A750 32TB 50/CAM",
+      "titles": {
+        "en": "AVA NVR CLOUD CONNECTOR A750 32TB 50/CAM"
+      },
+      "category": "web-ip-cameras",
+      "price": 16255.76,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=667992",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "667992",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daaa5f7f",
+      "title": "AVA CAMERA FLEX 2MP WHITE",
+      "titles": {
+        "en": "AVA CAMERA FLEX 2MP WHITE"
+      },
+      "category": "web-ip-cameras",
+      "price": 551.91,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=668015",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AVA",
+        "model": "668015",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daaa712a",
+      "title": "Axis CAMERA P4705-PLVE PANORAMIC 2X-2MP 2.5X-ZOOM",
+      "titles": {
+        "en": "Axis CAMERA P4705-PLVE PANORAMIC 2X-2MP 2.5X-ZOOM"
+      },
+      "category": "web-ip-cameras",
+      "price": 2997.41,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=668467",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "668467",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daaaf061",
+      "title": "Axis CAMERA Q1715 BLOCK 2MP 4-84MM 21X-ZOOM BLK",
+      "titles": {
+        "en": "Axis CAMERA Q1715 BLOCK 2MP 4-84MM 21X-ZOOM BLK"
+      },
+      "category": "web-ip-cameras",
+      "price": 3424.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=669133",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "669133",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daaaf062",
+      "title": "Axis DOME CLEAR 5/PK FOR A8105-E",
+      "titles": {
+        "en": "Axis DOME CLEAR 5/PK FOR A8105-E"
+      },
+      "category": "web-ip-cameras",
+      "price": 112.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=669134",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "669134",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab82a62",
+      "title": "Logitech Brio 505 Business Webcam",
+      "titles": {
+        "en": "Logitech Brio 505 Business Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 238.49,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=670529",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "670529",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab82b24",
+      "title": "Kensington W1050 1080p Fixed Focus Wide Angle Webcam",
+      "titles": {
+        "en": "Kensington W1050 1080p Fixed Focus Wide Angle Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 83.8,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=670585",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Kensington",
+        "model": "670585",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab82f26",
+      "title": "Axis CAMERA P4707-PLVE PANORAMIC 2X-5MP 2.5X-ZOOM",
+      "titles": {
+        "en": "Axis CAMERA P4707-PLVE PANORAMIC 2X-5MP 2.5X-ZOOM"
+      },
+      "category": "web-ip-cameras",
+      "price": 3424.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=670668",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "670668",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab82f27",
+      "title": "Axis MOUNT TM3205 RECESSED FOR M3057/M3058/M3077",
+      "titles": {
+        "en": "Axis MOUNT TM3205 RECESSED FOR M3057/M3058/M3077"
+      },
+      "category": "web-ip-cameras",
+      "price": 384.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=670669",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "670669",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab82f41",
+      "title": "Axis MOUNT TM3208 RECESSED",
+      "titles": {
+        "en": "Axis MOUNT TM3208 RECESSED"
+      },
+      "category": "web-ip-cameras",
+      "price": 210.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=670672",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "670672",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a5bd",
+      "title": "EPOS EXPAND Vision 1 Video Conferencing Camera",
+      "titles": {
+        "en": "EPOS EXPAND Vision 1 Video Conferencing Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 437.08,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671127",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "EPOS",
+        "model": "671127",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a5d9",
+      "title": "EPOS EXPAND Control Meeting Room Controller",
+      "titles": {
+        "en": "EPOS EXPAND Control Meeting Room Controller"
+      },
+      "category": "web-ip-cameras",
+      "price": 1639.03,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671132",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "EPOS",
+        "model": "671132",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a5f9",
+      "title": "Maxhub UC Bar 4K no OS",
+      "titles": {
+        "en": "Maxhub UC Bar 4K no OS"
+      },
+      "category": "web-ip-cameras",
+      "price": 383,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671141",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671141",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a5fb",
+      "title": "Maxhub UC Camera 4k PTZ",
+      "titles": {
+        "en": "Maxhub UC Camera 4k PTZ"
+      },
+      "category": "web-ip-cameras",
+      "price": 631.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671143",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671143",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a61b",
+      "title": "Maxhub UC Camera 4K 180' FOV",
+      "titles": {
+        "en": "Maxhub UC Camera 4K 180' FOV"
+      },
+      "category": "web-ip-cameras",
+      "price": 631.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671152",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671152",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a61c",
+      "title": "Maxhub UC Camera 4k 80' FOV",
+      "titles": {
+        "en": "Maxhub UC Camera 4k 80' FOV"
+      },
+      "category": "web-ip-cameras",
+      "price": 73.84,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671153",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671153",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a642",
+      "title": "Maxhub UC Bar 4K Android 9",
+      "titles": {
+        "en": "Maxhub UC Bar 4K Android 9"
+      },
+      "category": "web-ip-cameras",
+      "price": 320.9,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671168",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671168",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a65c",
+      "title": "Maxhub UC Camera 1080P USB",
+      "titles": {
+        "en": "Maxhub UC Camera 1080P USB"
+      },
+      "category": "web-ip-cameras",
+      "price": 32.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671171",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671171",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab8a684",
+      "title": "Maxhub UC Camera 4K 120' FOV",
+      "titles": {
+        "en": "Maxhub UC Camera 4K 120' FOV"
+      },
+      "category": "web-ip-cameras",
+      "price": 84.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=671188",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maxhub",
+        "model": "671188",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e5e",
+      "title": "TP-Link VIGI C340I (4mm) 4MP Outdoor IR Bullet Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C340I (4mm) 4MP Outdoor IR Bullet Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 116,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672064",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672064",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e5f",
+      "title": "TP-Link VIGI C540-W(4mm) 4MP Outdoor Full-Colour Wi-Fi Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C540-W(4mm) 4MP Outdoor Full-Colour Wi-Fi Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 213.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672065",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672065",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e63",
+      "title": "TP-Link VIGI C340 (2.8mm) 4MP Outdoor Full-Colour Bullet Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C340 (2.8mm) 4MP Outdoor Full-Colour Bullet Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672069",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672069",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e7b",
+      "title": "TP-Link VIGI C340-W (4mm) 4MP Outdoor Full-Colour Wi-Fi Bullet Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C340-W (4mm) 4MP Outdoor Full-Colour Wi-Fi Bullet Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 174.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672070",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672070",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e7e",
+      "title": "TP-Link VIGI C440-W (4mm) 4MP Full-Colour Wi-Fi Turret Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C440-W (4mm) 4MP Full-Colour Wi-Fi Turret Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 152.02,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672073",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672073",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e7f",
+      "title": "TP-Link VIGI C540 (4mm) 4MP Outdoor Full-Colour Pan Tilt Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C540 (4mm) 4MP Outdoor Full-Colour Pan Tilt Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 182.94,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672074",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672074",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e80",
+      "title": "TP-Link VIGI C340 (4mm) 4MP Outdoor Full-Colour Bullet Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C340 (4mm) 4MP Outdoor Full-Colour Bullet Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672075",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672075",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e81",
+      "title": "TP-Link VIGI C440 (2.8mm) 4MP Full-Colour Turret Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C440 (2.8mm) 4MP Full-Colour Turret Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672076",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672076",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92e83",
+      "title": "TP-Link VIGI C440 (4mm) 4MP Full-Colour Turret Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C440 (4mm) 4MP Full-Colour Turret Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672078",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "672078",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab94b84",
+      "title": "Logitech Brio 300 Webcam, Graphite",
+      "titles": {
+        "en": "Logitech Brio 300 Webcam, Graphite"
+      },
+      "category": "web-ip-cameras",
+      "price": 121.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672718",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "672718",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab94b85",
+      "title": "Logitech Brio 300 Webcam, Rose",
+      "titles": {
+        "en": "Logitech Brio 300 Webcam, Rose"
+      },
+      "category": "web-ip-cameras",
+      "price": 134.04,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672719",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "672719",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab94fa3",
+      "title": "Ring Floodlight Camera Wired Plus Camera, White, (Hardwired)",
+      "titles": {
+        "en": "Ring Floodlight Camera Wired Plus Camera, White, (Hardwired)"
+      },
+      "category": "web-ip-cameras",
+      "price": 156.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672807",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "672807",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab95044",
+      "title": "Ring Floodlight Camera Wired Plus Camera, Black, (Hardwired)",
+      "titles": {
+        "en": "Ring Floodlight Camera Wired Plus Camera, Black, (Hardwired)"
+      },
+      "category": "web-ip-cameras",
+      "price": 156.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672853",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "672853",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab95047",
+      "title": "Ring Quick Release Battery Pack",
+      "titles": {
+        "en": "Ring Quick Release Battery Pack"
+      },
+      "category": "web-ip-cameras",
+      "price": 57.78,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672856",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "672856",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab954c8",
+      "title": "Logitech Brio 300 Webcam, Off White",
+      "titles": {
+        "en": "Logitech Brio 300 Webcam, Off White"
+      },
+      "category": "web-ip-cameras",
+      "price": 119.5,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672974",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "672974",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab954e8",
+      "title": "Axis CAMERA M3085-V MINI-DOME 2MP DAY/NIGHT",
+      "titles": {
+        "en": "Axis CAMERA M3085-V MINI-DOME 2MP DAY/NIGHT"
+      },
+      "category": "web-ip-cameras",
+      "price": 965.49,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672983",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "672983",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab9ba7e",
+      "title": "Axis MOUNT TA8201 RECESSED MOUNT FOR A8207-VE",
+      "titles": {
+        "en": "Axis MOUNT TA8201 RECESSED MOUNT FOR A8207-VE"
+      },
+      "category": "web-ip-cameras",
+      "price": 384.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=673045",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "673045",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabae025",
+      "title": "Axis CAMERA F1025 SENSOR 1080P 12M CABLE",
+      "titles": {
+        "en": "Axis CAMERA F1025 SENSOR 1080P 12M CABLE"
+      },
+      "category": "web-ip-cameras",
+      "price": 786.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=675356",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "675356",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabaed2a",
+      "title": "Axis CASING P32 A BLK 5PK FOR P32-VE/P32-LVE 2ND",
+      "titles": {
+        "en": "Axis CASING P32 A BLK 5PK FOR P32-VE/P32-LVE 2ND"
+      },
+      "category": "web-ip-cameras",
+      "price": 133.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=675676",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "675676",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabc09ee",
+      "title": "Axis LENS TAMRON 5MP LENS P-IRIS 8-50MM F1.6",
+      "titles": {
+        "en": "Axis LENS TAMRON 5MP LENS P-IRIS 8-50MM F1.6"
+      },
+      "category": "web-ip-cameras",
+      "price": 733.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=677759",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "677759",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabc8d67",
+      "title": "TP-Link VIGI C240I (2.8mm) 4MP IR Dome Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C240I (2.8mm) 4MP IR Dome Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 131.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=678526",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "678526",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabc8d82",
+      "title": "TP-Link VIGI C240 (2.8mm) 4MP Full-Color Dome Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C240 (2.8mm) 4MP Full-Color Dome Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 136.62,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=678530",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "678530",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabc8d83",
+      "title": "TP-Link VIGI C340I (2.8mm) 4MP Outdoor IR Bullet Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C340I (2.8mm) 4MP Outdoor IR Bullet Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 116,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=678531",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "678531",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd0da6",
+      "title": "Dell WEBCAM WB3023 2K QHD",
+      "titles": {
+        "en": "Dell WEBCAM WB3023 2K QHD"
+      },
+      "category": "web-ip-cameras",
+      "price": 125.63,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679272",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dell",
+        "model": "679272",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd19e3",
+      "title": "Barco ClickShare CX-50-Gen2 Conference Set ( Include Base Unit + 2 CX-Button-Gen4 ) -- For Dual +Display Support - Including 5 Year SmartCare",
+      "titles": {
+        "en": "Barco ClickShare CX-50-Gen2 Conference Set ( Include Base Unit + 2 CX-Button-Gen4 ) -- For Dual +Display Support - Including 5 Year SmartCare"
+      },
+      "category": "web-ip-cameras",
+      "price": 5691.43,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679530",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Barco",
+        "model": "679530",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd1a2c",
+      "title": "TP-Link VIGI NVR1104H-4P PoE+ Network Video Recorder, 4-channel",
+      "titles": {
+        "en": "TP-Link VIGI NVR1104H-4P PoE+ Network Video Recorder, 4-channel"
+      },
+      "category": "web-ip-cameras",
+      "price": 247.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679557",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "679557",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd1a2d",
+      "title": "TP-Link VIGI C240 (4mm) 4MP Full-Color Dome Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C240 (4mm) 4MP Full-Color Dome Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 137.89,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679558",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "679558",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd1a46",
+      "title": "TP-Link VIGI C240I (4mm) 4MP IR Dome Network Camera",
+      "titles": {
+        "en": "TP-Link VIGI C240I (4mm) 4MP IR Dome Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 131.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679560",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "679560",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca2e40",
+      "title": "TP-Link Tapo C500 Outdoor Pan/Tilt Security WiFi Camera",
+      "titles": {
+        "en": "TP-Link Tapo C500 Outdoor Pan/Tilt Security WiFi Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680076",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "680076",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca3f47",
+      "title": "Axis CAMERA M3088-V MINI-DOME 8MP 2.9MM",
+      "titles": {
+        "en": "Axis CAMERA M3088-V MINI-DOME 8MP 2.9MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 1402.68,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680479",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "680479",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca4fa1",
+      "title": "D-Link DNR-F4432-16P Video Surveillance Station",
+      "titles": {
+        "en": "D-Link DNR-F4432-16P Video Surveillance Station"
+      },
+      "category": "web-ip-cameras",
+      "price": 1905.16,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680824",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "680824",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca4fa2",
+      "title": "D-Link Vigilance Network Camera, Dome",
+      "titles": {
+        "en": "D-Link Vigilance Network Camera, Dome"
+      },
+      "category": "web-ip-cameras",
+      "price": 455.37,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680825",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "680825",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca4fa4",
+      "title": "Lenovo ThinkSmart Cam (wave-2) Webcam, Desktop",
+      "titles": {
+        "en": "Lenovo ThinkSmart Cam (wave-2) Webcam, Desktop"
+      },
+      "category": "web-ip-cameras",
+      "price": 665.84,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680827",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lenovo",
+        "model": "680827",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacac2c1",
+      "title": "Axis TP3802 CLEAR DOME 4/PK",
+      "titles": {
+        "en": "Axis TP3802 CLEAR DOME 4/PK"
+      },
+      "category": "web-ip-cameras",
+      "price": 327.11,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=681247",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "681247",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacae043",
+      "title": "Ring Spotlight Cam Pro Plug-In Camera, White",
+      "titles": {
+        "en": "Ring Spotlight Cam Pro Plug-In Camera, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 139.14,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=681924",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "681924",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacae047",
+      "title": "Ring Spotlight Cam Plus Plug-In Security Camera, Black",
+      "titles": {
+        "en": "Ring Spotlight Cam Plus Plug-In Security Camera, Black"
+      },
+      "category": "web-ip-cameras",
+      "price": 78.66,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=681928",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "681928",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacb4ac0",
+      "title": "Ring Spotlight Cam Plus Battery Security Camera, Black",
+      "titles": {
+        "en": "Ring Spotlight Cam Plus Battery Security Camera, Black"
+      },
+      "category": "web-ip-cameras",
+      "price": 104.57,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=682137",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "682137",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacb4ac1",
+      "title": "Ring Spotlight Cam Plus Battery Security Camera, White, 4-pack",
+      "titles": {
+        "en": "Ring Spotlight Cam Plus Battery Security Camera, White, 4-pack"
+      },
+      "category": "web-ip-cameras",
+      "price": 294.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=682138",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ring",
+        "model": "682138",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacb5bc3",
+      "title": "Synology TC500 IP67 POE Surveilliance Camera 1X RJ-45 10/100Mbps Ethernet Port, PoE or 12V DC, Micro +SD Supported (128GB Max), 3 Years Warranty",
+      "titles": {
+        "en": "Synology TC500 IP67 POE Surveilliance Camera 1X RJ-45 10/100Mbps Ethernet Port, PoE or 12V DC, Micro +SD Supported (128GB Max), 3 Years Warranty"
+      },
+      "category": "web-ip-cameras",
+      "price": 529.55,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=682536",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Synology",
+        "model": "682536",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacb5bdf",
+      "title": "Synology BC500 AI-powered Bullet Security Camera, White",
+      "titles": {
+        "en": "Synology BC500 AI-powered Bullet Security Camera, White"
+      },
+      "category": "web-ip-cameras",
+      "price": 534.45,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=682541",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Synology",
+        "model": "682541",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacc6407",
+      "title": "Swann SWNVW-800CAM-AU 4K Wi-FI Add-on Camera",
+      "titles": {
+        "en": "Swann SWNVW-800CAM-AU 4K Wi-FI Add-on Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 156.16,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=684178",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "684178",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacc6b9c",
+      "title": "Swann SONVK-1690008 Professional Security System, 8x NHD-1200BE Bullet Cameras, NVR-8580 16-Channel NVR",
+      "titles": {
+        "en": "Swann SONVK-1690008 Professional Security System, 8x NHD-1200BE Bullet Cameras, NVR-8580 16-Channel NVR"
+      },
+      "category": "web-ip-cameras",
+      "price": 2561.87,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=684302",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Swann",
+        "model": "684302",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daccf45f",
+      "title": "HP 320 Webcam",
+      "titles": {
+        "en": "HP 320 Webcam"
+      },
+      "category": "web-ip-cameras",
+      "price": 71.67,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685250",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "685250",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd0507",
+      "title": "D-Link DCS-6500LHV2 Camera",
+      "titles": {
+        "en": "D-Link DCS-6500LHV2 Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 123.05,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685627",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "685627",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd05ce",
+      "title": "D-Link COMPACT FULL HD PAN TILT WI-FI CAMERA DU",
+      "titles": {
+        "en": "D-Link COMPACT FULL HD PAN TILT WI-FI CAMERA DU"
+      },
+      "category": "web-ip-cameras",
+      "price": 232.31,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685688",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "685688",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd0a31",
+      "title": "Axis CAMERA P5676-LE 50HZ PTZ 4MP 30X IR",
+      "titles": {
+        "en": "Axis CAMERA P5676-LE 50HZ PTZ 4MP 30X IR"
+      },
+      "category": "web-ip-cameras",
+      "price": 6558.22,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685799",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "685799",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd0e48",
+      "title": "Axis CAMERA Q1961-TE THERMAL 7MM 30FPS ARTPEC 8",
+      "titles": {
+        "en": "Axis CAMERA Q1961-TE THERMAL 7MM 30FPS ARTPEC 8"
+      },
+      "category": "web-ip-cameras",
+      "price": 12568.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685880",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "685880",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd0e4f",
+      "title": "Axis CAMERA Q1656-DLE RADAR/VIDEO 4MP 3.9-10MM",
+      "titles": {
+        "en": "Axis CAMERA Q1656-DLE RADAR/VIDEO 4MP 3.9-10MM"
+      },
+      "category": "web-ip-cameras",
+      "price": 7725.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=685887",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "685887",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:15:33.292Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
       "id": "feed-df099a66",
       "title": "Midea MDRC284FZE01APE 198L Chest Freezer",
       "titles": {
