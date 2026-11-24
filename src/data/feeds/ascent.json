@@ -1,6 +1,4339 @@
 {
   "products": [
     {
+      "id": "feed-dcfd6cc7",
+      "title": "Axis M3905-R M12 2.8MM Network Camera",
+      "titles": {
+        "en": "Axis M3905-R M12 2.8MM Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 1032.56,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=764584",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "764584",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd32196a",
+      "title": "Axis P3285-LVE 29mm 2MP Dome Network Camera",
+      "titles": {
+        "en": "Axis P3285-LVE 29mm 2MP Dome Network Camera"
+      },
+      "category": "web-ip-cameras",
+      "price": 2428.57,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=791767",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "791767",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def6f55d",
+      "title": "Lenovo ThinkSmart Core Gen 2 12WJ000HAU, for Microsoft Team Rooms",
+      "titles": {
+        "en": "Lenovo ThinkSmart Core Gen 2 12WJ000HAU, for Microsoft Team Rooms"
+      },
+      "category": "web-ip-cameras",
+      "price": 9338.05,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=812283",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lenovo",
+        "model": "812283",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da961620",
+      "title": "HP Quadro T1000 Graphic Card, 4GB, GDDR6",
+      "titles": {
+        "en": "HP Quadro T1000 Graphic Card, 4GB, GDDR6"
+      },
+      "category": "video-graphics-cards",
+      "price": 1530.47,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=654066",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "654066",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0812bf",
+      "title": "Apricorn Aegis Secure Key 3.0 USB 3.2 Flash Drive, 4TB, USB-A, AES 256-bit XTS",
+      "titles": {
+        "en": "Apricorn Aegis Secure Key 3.0 USB 3.2 Flash Drive, 4TB, USB-A, AES 256-bit XTS"
+      },
+      "category": "usb-flash-drives",
+      "price": 8691.98,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=820970",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Apricorn",
+        "model": "820970",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d85555aa",
+      "title": "Vertiv EDGE, EDGE-22000IRT2UXL, Line-interactive UPS, 2.20 kVA/1.98 kW",
+      "titles": {
+        "en": "Vertiv EDGE, EDGE-22000IRT2UXL, Line-interactive UPS, 2.20 kVA/1.98 kW"
+      },
+      "category": "ups",
+      "price": 2413.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=568792",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Vertiv",
+        "model": "568792",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0e5f01",
+      "title": "Eaton 5P Gen2 5P850IRG2 UPS, 850VA, 1U",
+      "titles": {
+        "en": "Eaton 5P Gen2 5P850IRG2 UPS, 850VA, 1U"
+      },
+      "category": "ups",
+      "price": 1276.72,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=772228",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Eaton",
+        "model": "772228",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd31fbc4",
+      "title": "Sony Bravia Series 8 II 55\" FWD55XR80M2 QD-OLED 4K UHD Google TV",
+      "titles": {
+        "en": "Sony Bravia Series 8 II 55\" FWD55XR80M2 QD-OLED 4K UHD Google TV"
+      },
+      "category": "tvs",
+      "price": 6702.55,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=791077",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Sony Bravia",
+        "model": "791077",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd22258b",
+      "title": "Samsung Galaxy Tab S10 FE Tablet, 10.9\", 8GB RAM, Android 15, Grey, 128GB Storage",
+      "titles": {
+        "en": "Samsung Galaxy Tab S10 FE Tablet, 10.9\", 8GB RAM, Android 15, Grey, 128GB Storage"
+      },
+      "category": "tablets",
+      "price": 911.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=785459",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Samsung",
+        "model": "785459",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5a52e63",
+      "title": "D-Link DGS-1008A Ethernet Switch",
+      "titles": {
+        "en": "D-Link DGS-1008A Ethernet Switch"
+      },
+      "category": "switches",
+      "price": 66.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=417972",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "D-Link",
+        "model": "417972",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d808877c",
+      "title": "Fortinet FortiSwitch FS-224E Ethernet Switch",
+      "titles": {
+        "en": "Fortinet FortiSwitch FS-224E Ethernet Switch"
+      },
+      "category": "switches",
+      "price": 2442.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=520547",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Fortinet",
+        "model": "520547",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da950ea6",
+      "title": "Allied Telesis x230-28GP Layer 3 Switch, Rackmountable, (24x 10/100/1000T PoE+, 4x 100/1000X SFP)",
+      "titles": {
+        "en": "Allied Telesis x230-28GP Layer 3 Switch, Rackmountable, (24x 10/100/1000T PoE+, 4x 100/1000X SFP)"
+      },
+      "category": "switches",
+      "price": 2542.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=652488",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Allied Telesis",
+        "model": "652488",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0f95aa",
+      "title": "TP-Link Omada ES205G Switch, (5x Gigabit)",
+      "titles": {
+        "en": "TP-Link Omada ES205G Switch, (5x Gigabit)"
+      },
+      "category": "switches",
+      "price": 68.32,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=774937",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "774937",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def5f518",
+      "title": "HPE Aruba Networking CX 6000 48p 10M/100M/1G 4p SFP 1G Layer 2 Switch, (48x Gigabit, 4x 1G SFP)",
+      "titles": {
+        "en": "HPE Aruba Networking CX 6000 48p 10M/100M/1G 4p SFP 1G Layer 2 Switch, (48x Gigabit, 4x 1G SFP)"
+      },
+      "category": "switches",
+      "price": 2621.08,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=810802",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HPE",
+        "model": "810802",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcee168e",
+      "title": "Zebra WRIST MNT DBL DIAL STRAP - XL WT5400/WT6400",
+      "titles": {
+        "en": "Zebra WRIST MNT DBL DIAL STRAP - XL WT5400/WT6400"
+      },
+      "category": "straps",
+      "price": 417.77,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=759695",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "759695",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df091557",
+      "title": "APPLE 49mm Black Titanium Milanese Loop - Medium",
+      "titles": {
+        "en": "APPLE 49mm Black Titanium Milanese Loop - Medium"
+      },
+      "category": "straps",
+      "price": 368.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=822402",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Apple",
+        "model": "822402",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfb367a",
+      "title": "Sansai VK-S321 Bluetooth Speaker",
+      "titles": {
+        "en": "Sansai VK-S321 Bluetooth Speaker"
+      },
+      "category": "speakers",
+      "price": 35.41,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=760440",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Sansai",
+        "model": "760440",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3bc120",
+      "title": "ManageEngine Endpoint Central UEM On-Demand 1yr 50-device 1-admin Cloud No Delivery",
+      "titles": {
+        "en": "ManageEngine Endpoint Central UEM On-Demand 1yr 50-device 1-admin Cloud No Delivery"
+      },
+      "category": "software-licencing",
+      "price": 3003.05,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=604908",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "ManageEngine",
+        "model": "604908",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0d42c4",
+      "title": "Avigilon Alta ALTA GSUITE ID PROVIDER: 500 USERS 1YR",
+      "titles": {
+        "en": "Avigilon Alta ALTA GSUITE ID PROVIDER: 500 USERS 1YR"
+      },
+      "category": "software-licencing",
+      "price": 1037.53,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=770188",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Avigilon Alta",
+        "model": "770188",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def6691b",
+      "title": "NVIDIA NETQ ON-PREM 10G OR GREATER SWITCH SW SUBSCRIPTION WITH BUSINESS STANDARD SUPPORT,R",
+      "titles": {
+        "en": "NVIDIA NETQ ON-PREM 10G OR GREATER SWITCH SW SUBSCRIPTION WITH BUSINESS STANDARD SUPPORT,R"
+      },
+      "category": "software-licencing",
+      "price": 3322.81,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=811291",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "NVIDIA",
+        "model": "811291",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daca5486",
+      "title": "Logitech Warranty/Support - Extended Warranty, 1 Year, 994-000098",
+      "titles": {
+        "en": "Logitech Warranty/Support - Extended Warranty, 1 Year, 994-000098"
+      },
+      "category": "services",
+      "price": 137.21,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=680973",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Logitech",
+        "model": "680973",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd234ea4",
+      "title": "PCLOCS 5YR Advanced",
+      "titles": {
+        "en": "PCLOCS 5YR Advanced"
+      },
+      "category": "services",
+      "price": 11878.53,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=787801",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "PC Locs",
+        "model": "787801",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-defae4c3",
+      "title": "Teltonika RMS Management Pack 12 Months + Extended Warranty 12 Month (GROUP F)",
+      "titles": {
+        "en": "Teltonika RMS Management Pack 12 Months + Extended Warranty 12 Month (GROUP F)"
+      },
+      "category": "services",
+      "price": 80.67,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=819822",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Teltonika",
+        "model": "819822",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da96227b",
+      "title": "HPE Smart Array P408i-a SR G10 LH Ctrlr",
+      "titles": {
+        "en": "HPE Smart Array P408i-a SR G10 LH Ctrlr"
+      },
+      "category": "servers",
+      "price": 6177.33,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=654331",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HPE",
+        "model": "654331",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d8773ae0",
+      "title": "Datalogic 95ACC1033 Screen Protector, 5-pack",
+      "titles": {
+        "en": "Datalogic 95ACC1033 Screen Protector, 5-pack"
+      },
+      "category": "screens-filters",
+      "price": 94.23,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=584136",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Datalogic",
+        "model": "584136",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd1f56e2",
+      "title": "StarTech 14\" (16:9) Notebook Magnetic Privacy Screen",
+      "titles": {
+        "en": "StarTech 14\" (16:9) Notebook Magnetic Privacy Screen"
+      },
+      "category": "screens-filters",
+      "price": 93.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=780077",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "780077",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def67ddb",
+      "title": "RockRose Premium Tempered Glass Screen Protector, 2-pack, for Samsung A17",
+      "titles": {
+        "en": "RockRose Premium Tempered Glass Screen Protector, 2-pack, for Samsung A17"
+      },
+      "category": "screens-filters",
+      "price": 29.74,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=811750",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "RockRose",
+        "model": "811750",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d7f8979a",
+      "title": "Motorola LI4278, Barcode Scanner, LI4278-PRBU2100AWR",
+      "titles": {
+        "en": "Motorola LI4278, Barcode Scanner, LI4278-PRBU2100AWR"
+      },
+      "category": "scanners",
+      "price": 1028.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=514317",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Motorola",
+        "model": "514317",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcff95eb",
+      "title": "Zebra DS3608-XR3U4602ZVW Ultra-Rugged Barcode Scanner Kit, with USB Cable",
+      "titles": {
+        "en": "Zebra DS3608-XR3U4602ZVW Ultra-Rugged Barcode Scanner Kit, with USB Cable"
+      },
+      "category": "scanners",
+      "price": 1550.84,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=768395",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "768395",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d62326bf",
+      "title": "HPE 370 series AP-375, Wireless Access Point, Wireless AC, 2 Gbps",
+      "titles": {
+        "en": "HPE 370 series AP-375, Wireless Access Point, Wireless AC, 2 Gbps"
+      },
+      "category": "routers-aps-firewalls",
+      "price": 3695.12,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=486035",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HPE",
+        "model": "486035",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa7b6dc",
+      "title": "Cambium Networks Cambium ePMP Force 300-19R 5GHz 19dBi IP67 Radio",
+      "titles": {
+        "en": "Cambium Networks Cambium ePMP Force 300-19R 5GHz 19dBi IP67 Radio"
+      },
+      "category": "routers-aps-firewalls",
+      "price": 560.8,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=663512",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Cambium Networks",
+        "model": "663512",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfefc61",
+      "title": "Ubiquiti UniFi U7 Paintable Cover",
+      "titles": {
+        "en": "Ubiquiti UniFi U7 Paintable Cover"
+      },
+      "category": "routers-aps-firewalls",
+      "price": 54.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=767062",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ubiquiti",
+        "model": "767062",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee68601",
+      "title": "Fortinet FortiAP FAP-23JK-H Wireless Access Point, Wi-Fi 7 (be)",
+      "titles": {
+        "en": "Fortinet FortiAP FAP-23JK-H Wireless Access Point, Wi-Fi 7 (be)"
+      },
+      "category": "routers-aps-firewalls",
+      "price": 1789.66,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=805366",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Fortinet",
+        "model": "805366",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5b7ad3c",
+      "title": "Dynamix RSS42-6X10, Rack Cabinet, 42U",
+      "titles": {
+        "en": "Dynamix RSS42-6X10, Rack Cabinet, 42U"
+      },
+      "category": "racks-cabinets",
+      "price": 5139.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=428090",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "428090",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3bbde6",
+      "title": "Dynamix RAFSM-650, Rack Shelf",
+      "titles": {
+        "en": "Dynamix RAFSM-650, Rack Shelf"
+      },
+      "category": "racks-cabinets",
+      "price": 141.81,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=604887",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "604887",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0a3384",
+      "title": "HIKVISION XSPB04 RACK SHELF, 3YR",
+      "titles": {
+        "en": "HIKVISION XSPB04 RACK SHELF, 3YR"
+      },
+      "category": "racks-cabinets",
+      "price": 40.51,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=824593",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Hikvision",
+        "model": "824593",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5dc7f86",
+      "title": "Kyocera Ecosys P8060cdn Laser Printer, Colour, Ethernet/USB-A",
+      "titles": {
+        "en": "Kyocera Ecosys P8060cdn Laser Printer, Colour, Ethernet/USB-A"
+      },
+      "category": "printers",
+      "price": 6874.59,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=449565",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Kyocera",
+        "model": "449565",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daa84383",
+      "title": "Zebra MOB ZQ310-PLUS 2 INCH INDOOR WIFI",
+      "titles": {
+        "en": "Zebra MOB ZQ310-PLUS 2 INCH INDOOR WIFI"
+      },
+      "category": "printers",
+      "price": 1302.08,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=664536",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "664536",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def80d7b",
+      "title": "Kyocera Ecosys PA2600cx A4 Laser Printer, Colour, Ethernet/USB-A",
+      "titles": {
+        "en": "Kyocera Ecosys PA2600cx A4 Laser Printer, Colour, Ethernet/USB-A"
+      },
+      "category": "printers",
+      "price": 713.32,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=814234",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Kyocera",
+        "model": "814234",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3b3544",
+      "title": "Brother Peel-off Module, PALP002",
+      "titles": {
+        "en": "Brother Peel-off Module, PALP002"
+      },
+      "category": "printer-accessories",
+      "price": 82.25,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=603949",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "603949",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcda5ca7",
+      "title": "Honeywell ROLLER KIT PC42E-T",
+      "titles": {
+        "en": "Honeywell ROLLER KIT PC42E-T"
+      },
+      "category": "printer-accessories",
+      "price": 26.96,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=746755",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Honeywell",
+        "model": "746755",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd32a14a",
+      "title": "Silverstone Triton 1000Rz ATX 3.1 Power Supply, 1000W, Cybenetics Gold, Fully Modular",
+      "titles": {
+        "en": "Silverstone Triton 1000Rz ATX 3.1 Power Supply, 1000W, Cybenetics Gold, Fully Modular"
+      },
+      "category": "power-supplies",
+      "price": 225.09,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=792649",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Silverstone",
+        "model": "792649",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d624e1cf",
+      "title": "Fortinet AC Adapter, SP-FG30E-PA-AR-10",
+      "titles": {
+        "en": "Fortinet AC Adapter, SP-FG30E-PA-AR-10"
+      },
+      "category": "power-devices",
+      "price": 749.06,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=489588",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Fortinet",
+        "model": "489588",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabaf5f1",
+      "title": "Generic Notebook Power Adapter 65W, (power cable not included), 20v, OEM, USB-C, for Dell",
+      "titles": {
+        "en": "Generic Notebook Power Adapter 65W, (power cable not included), 20v, OEM, USB-C, for Dell"
+      },
+      "category": "power-devices",
+      "price": 61.04,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=675899",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Generic",
+        "model": "675899",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0e7d28",
+      "title": "Digitus 40 Bay USB-C Charging Trolley for Chromebook/Tablet",
+      "titles": {
+        "en": "Digitus 40 Bay USB-C Charging Trolley for Chromebook/Tablet"
+      },
+      "category": "power-devices",
+      "price": 2255.78,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=772955",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Digitus",
+        "model": "772955",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee7aac3",
+      "title": "Bluetti PV350S 350W Foldable Solar Panel",
+      "titles": {
+        "en": "Bluetti PV350S 350W Foldable Solar Panel"
+      },
+      "category": "power-devices",
+      "price": 1564.63,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=807609",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bluetti",
+        "model": "807609",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df090960",
+      "title": "OEM Manufacture For MSI 230W 19.5V 11.8A Gaming Laptop Charger Connector Size - 5.5x2.5mm (Power cord not included) - Compatilbe Model A17-230P1A ADP-230TB T ADP-230JB D ADP-230CB",
+      "titles": {
+        "en": "OEM Manufacture For MSI 230W 19.5V 11.8A Gaming Laptop Charger Connector Size - 5.5x2.5mm (Power cord not included) - Compatilbe Model A17-230P1A ADP-230TB T ADP-230JB D ADP-230CB"
+      },
+      "category": "power-devices",
+      "price": 131.89,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=822168",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "OEM",
+        "model": "822168",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd34c5e6",
+      "title": "Zebra Havis Kiosk Stand, Countertop Height Base, Back-to-Back Monitor, for KC50",
+      "titles": {
+        "en": "Zebra Havis Kiosk Stand, Countertop Height Base, Back-to-Back Monitor, for KC50"
+      },
+      "category": "pos",
+      "price": 1441.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=796335",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "796335",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee3ba8e",
+      "title": "Apple iPhone 17, Blue, 6.3\", 512GB Storage, 8GB Memory",
+      "titles": {
+        "en": "Apple iPhone 17, Blue, 6.3\", 512GB Storage, 8GB Memory"
+      },
+      "category": "phones",
+      "price": 2299,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=800001",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Apple",
+        "model": "800001",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd8b322",
+      "title": "HP POLY HEADSETS 77P34AA Poly Sync 10 Microsoft Teams Certified Speakerphone",
+      "titles": {
+        "en": "HP POLY HEADSETS 77P34AA Poly Sync 10 Microsoft Teams Certified Speakerphone"
+      },
+      "category": "phone-accessories",
+      "price": 201.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=743645",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "743645",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d83f5036",
+      "title": "APC Rack PDU, Switched, 1U, 16A, 208/230V, (8)C13",
+      "titles": {
+        "en": "APC Rack PDU, Switched, 1U, 16A, 208/230V, (8)C13"
+      },
+      "category": "pdus",
+      "price": 2191.37,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=551213",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "APC",
+        "model": "551213",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee6797e",
+      "title": "Lenovo ThinkCentre M70q Gen 6 Tiny PC, Core Ultra 7 265T, 32GB RAM, 512GB SSD, Windows 11 Pro",
+      "titles": {
+        "en": "Lenovo ThinkCentre M70q Gen 6 Tiny PC, Core Ultra 7 265T, 32GB RAM, 512GB SSD, Windows 11 Pro"
+      },
+      "category": "pcs",
+      "price": 3788.51,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=805084",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lenovo",
+        "model": "805084",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0b3b26",
+      "title": "GGPC RTX 5050 Gaming PC, Ryzen 5 5600, RTX 5050, 16GB RAM, 500GB SSD, Windows 11 Home",
+      "titles": {
+        "en": "GGPC RTX 5050 Gaming PC, Ryzen 5 5600, RTX 5050, 16GB RAM, 500GB SSD, Windows 11 Home"
+      },
+      "category": "pcs",
+      "price": 2019.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=826188",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "GGPC",
+        "model": "826188",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4b81d0",
+      "title": "APC Easy Rack Vertical 0U Accessory Channel, 24U, 2-pack, ER7RCC24",
+      "titles": {
+        "en": "APC Easy Rack Vertical 0U Accessory Channel, 24U, 2-pack, ER7RCC24"
+      },
+      "category": "panels",
+      "price": 148.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=610004",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "APC",
+        "model": "610004",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4dc919",
+      "title": "Paladone Gaming Accessories Paladone Stranger Things Desk Mat",
+      "titles": {
+        "en": "Paladone Gaming Accessories Paladone Stranger Things Desk Mat"
+      },
+      "category": "other-accessories",
+      "price": 37.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=614540",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Paladone",
+        "model": "614540",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab9dc01",
+      "title": "Generic 180 Degree Rotatable Ergonomic Wrist & Forearm Rester Support Pad For Office Gaming Computer Table Desk",
+      "titles": {
+        "en": "Generic 180 Degree Rotatable Ergonomic Wrist & Forearm Rester Support Pad For Office Gaming Computer Table Desk"
+      },
+      "category": "other-accessories",
+      "price": 36.69,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=673804",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Generic",
+        "model": "673804",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcdacfa6",
+      "title": "Impact Merch Homeware Donkey Kong Shaped Money Bank",
+      "titles": {
+        "en": "Impact Merch Homeware Donkey Kong Shaped Money Bank"
+      },
+      "category": "other-accessories",
+      "price": 37.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=747168",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Impact Merch",
+        "model": "747168",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0021e4",
+      "title": "StarTech COM SINGLE BAY HARD DRIVE ERASER, USB 3.0 TO SATA, 4KN, 2 YR",
+      "titles": {
+        "en": "StarTech COM SINGLE BAY HARD DRIVE ERASER, USB 3.0 TO SATA, 4KN, 2 YR"
+      },
+      "category": "other-accessories",
+      "price": 601.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=769360",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "769360",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd22a963",
+      "title": "CaDA Brick Model Toyota Trueno AE86 Initial D 1:12 1324Pcs For Ages 8+!",
+      "titles": {
+        "en": "CaDA Brick Model Toyota Trueno AE86 Initial D 1:12 1324Pcs For Ages 8+!"
+      },
+      "category": "other-accessories",
+      "price": 147.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=786252",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "CaDA",
+        "model": "786252",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee821f9",
+      "title": "Wolfbox MegaFlow MF100 Electric Compressed Air Duster/Blower",
+      "titles": {
+        "en": "Wolfbox MegaFlow MF100 Electric Compressed Air Duster/Blower"
+      },
+      "category": "other-accessories",
+      "price": 162.83,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=808112",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Wolfbox",
+        "model": "808112",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def9d028",
+      "title": "ProsKit 1PK-209 120mm Clean Cut Micro Nipper 22AWG / 0.6mm",
+      "titles": {
+        "en": "ProsKit 1PK-209 120mm Clean Cut Micro Nipper 22AWG / 0.6mm"
+      },
+      "category": "other-accessories",
+      "price": 26.55,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=817919",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "ProsKit",
+        "model": "817919",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5da7bb",
+      "title": "Microsoft Windows 11 Pro, USB Flash Drive",
+      "titles": {
+        "en": "Microsoft Windows 11 Pro, USB Flash Drive"
+      },
+      "category": "operating-systems",
+      "price": 367.11,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=620356",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Microsoft",
+        "model": "620356",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee71b00",
+      "title": "Dell Pro 15 Essential Notebook, 15.6\", 1920x1080, Core i5-1334U, 16GB RAM, 512GB SSD, Windows 11 Pro",
+      "titles": {
+        "en": "Dell Pro 15 Essential Notebook, 15.6\", 1920x1080, Core i5-1334U, 16GB RAM, 512GB SSD, Windows 11 Pro"
+      },
+      "category": "notebooks",
+      "price": 2121.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=806571",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dell",
+        "model": "806571",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def815d9",
+      "title": "HP EliteBook 8 Flip G2i 2-in-1 Notebook, 13.3\", 1920x1200, Core Ultra 7 355, 32GB RAM, 512GB SSD, Windows 11 Pro, Touchscreen, 5G, SureView",
+      "titles": {
+        "en": "HP EliteBook 8 Flip G2i 2-in-1 Notebook, 13.3\", 1920x1200, Core Ultra 7 355, 32GB RAM, 512GB SSD, Windows 11 Pro, Touchscreen, 5G, SureView"
+      },
+      "category": "notebooks",
+      "price": 5747.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=814421",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "814421",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df09aac0",
+      "title": "Asus Vivobook S14 S5408QA-TM283W Notebook, 14\", 1920x1200, Snapdragon X1-26-101, 8GB RAM, 256GB SSD, Windows 11 Home, Grey",
+      "titles": {
+        "en": "Asus Vivobook S14 S5408QA-TM283W Notebook, 14\", 1920x1200, Snapdragon X1-26-101, 8GB RAM, 256GB SSD, Windows 11 Home, Grey"
+      },
+      "category": "notebooks",
+      "price": 1610.82,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=823644",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Asus",
+        "model": "823644",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d623bfa1",
+      "title": "Planet GTP-805A, 1000Base-X to 10/100/1000Base-T PoE+",
+      "titles": {
+        "en": "Planet GTP-805A, 1000Base-X to 10/100/1000Base-T PoE+"
+      },
+      "category": "networking-other",
+      "price": 210.43,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=487315",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Planet",
+        "model": "487315",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da85c869",
+      "title": "MikroTik CA150 Black aluminium indoor case with with installation set for MikroTik RB450, RB450G and RB850Gx2",
+      "titles": {
+        "en": "MikroTik CA150 Black aluminium indoor case with with installation set for MikroTik RB450, RB450G and RB850Gx2"
+      },
+      "category": "networking-other",
+      "price": 47.77,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=647919",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "MikroTik",
+        "model": "647919",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcda5d0b",
+      "title": "Milesight IoT Milesight UC502-EA AU915/AS923 LoraWan IoT Controller with External Antenna Connectors and GPIO/AI/RS232/RS485/SDI12",
+      "titles": {
+        "en": "Milesight IoT Milesight UC502-EA AU915/AS923 LoraWan IoT Controller with External Antenna Connectors and GPIO/AI/RS232/RS485/SDI12"
+      },
+      "category": "networking-other",
+      "price": 428.12,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=746786",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Milesight",
+        "model": "746786",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0e5a79",
+      "title": "Extreme Networks EXTREME 550W AC PSU FB",
+      "titles": {
+        "en": "Extreme Networks EXTREME 550W AC PSU FB"
+      },
+      "category": "networking-other",
+      "price": 2239.79,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=772103",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Extreme Networks",
+        "model": "772103",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee3e1a0",
+      "title": "Aten 1-PORT RS-232 SECURE DEVICE SERVER",
+      "titles": {
+        "en": "Aten 1-PORT RS-232 SECURE DEVICE SERVER"
+      },
+      "category": "networking-other",
+      "price": 322.12,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=800964",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Aten",
+        "model": "800964",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0aae3e",
+      "title": "Fanvil GA 100-32T Gateway Hardware",
+      "titles": {
+        "en": "Fanvil GA 100-32T Gateway Hardware"
+      },
+      "category": "networking-other",
+      "price": 1360.96,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=825145",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Fanvil",
+        "model": "825145",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd92abf",
+      "title": "TP-Link Archer T1300U Nano, AC1300 Nano Wireless MU-MIMO USB Adapter",
+      "titles": {
+        "en": "TP-Link Archer T1300U Nano, AC1300 Nano Wireless MU-MIMO USB Adapter"
+      },
+      "category": "network-cards-adapters",
+      "price": 67.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=744182",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TP-Link",
+        "model": "744182",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da73afe6",
+      "title": "QNAP HS-M2SSD-05 Heatsink , for QDA-A2MAR",
+      "titles": {
+        "en": "QNAP HS-M2SSD-05 Heatsink , for QDA-A2MAR"
+      },
+      "category": "nas",
+      "price": 41.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=637917",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "QNAP",
+        "model": "637917",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df07ec13",
+      "title": "Synology RackStation RS826+ 1U NAS, 4-bays, 64TB (4x16TB Synology Enterprise HDDs)",
+      "titles": {
+        "en": "Synology RackStation RS826+ 1U NAS, 4-bays, 64TB (4x16TB Synology Enterprise HDDs)"
+      },
+      "category": "nas",
+      "price": 11844.28,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=820040",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Synology",
+        "model": "820040"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5ec5dbc",
+      "title": "Brateck LCD-501A Wall Mount, Swivel, Tilt, up to 42\" display, up to 30kg, Black",
+      "titles": {
+        "en": "Brateck LCD-501A Wall Mount, Swivel, Tilt, up to 42\" display, up to 30kg, Black"
+      },
+      "category": "mounts-stands",
+      "price": 36.16,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=455342",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brateck",
+        "model": "455342",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d7f787ff",
+      "title": "Datalogic Mounting Bracket, 94ACC0155",
+      "titles": {
+        "en": "Datalogic Mounting Bracket, 94ACC0155"
+      },
+      "category": "mounts-stands",
+      "price": 407.84,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=512567",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Datalogic",
+        "model": "512567",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d876d01e",
+      "title": "Atdec ADB 125mm Rail - Black",
+      "titles": {
+        "en": "Atdec ADB 125mm Rail - Black"
+      },
+      "category": "mounts-stands",
+      "price": 350.88,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=583900",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Atdec",
+        "model": "583900",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da6192fe",
+      "title": "Bouncepad Floorstand iPad Stand + Brother Printer Bracket, White, Exposed Front Camera, for Apple iPad Mini (6-7th Gen)",
+      "titles": {
+        "en": "Bouncepad Floorstand iPad Stand + Brother Printer Bracket, White, Exposed Front Camera, for Apple iPad Mini (6-7th Gen)"
+      },
+      "category": "mounts-stands",
+      "price": 971.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=627802",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bouncepad",
+        "model": "627802",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daaaf904",
+      "title": "Ergonomic Solutions SPACEPOLE MULTIGRIP BLK CASTLES SATURN 1000",
+      "titles": {
+        "en": "Ergonomic Solutions SPACEPOLE MULTIGRIP BLK CASTLES SATURN 1000"
+      },
+      "category": "mounts-stands",
+      "price": 91.13,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=669343",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ergonomic Solutions",
+        "model": "669343",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcc71e5f",
+      "title": "AV Supply Group LARGE UNIVERSAL FIXED MOUNT",
+      "titles": {
+        "en": "AV Supply Group LARGE UNIVERSAL FIXED MOUNT"
+      },
+      "category": "mounts-stands",
+      "price": 254.93,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=734435",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AV Supply Group",
+        "model": "734435",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcdc0230",
+      "title": "AV Supply Group CHIEF SMALL PROJECTOR CAGE - WHITE",
+      "titles": {
+        "en": "AV Supply Group CHIEF SMALL PROJECTOR CAGE - WHITE"
+      },
+      "category": "mounts-stands",
+      "price": 933.11,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=749788",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "AV Supply Group",
+        "model": "749788",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfe84a7",
+      "title": "Bouncepad Wallmount iPad Mount, Black, Covered Front Camera, for Apple iPad Air 11 (M3/M2)",
+      "titles": {
+        "en": "Bouncepad Wallmount iPad Mount, Black, Covered Front Camera, for Apple iPad Air 11 (M3/M2)"
+      },
+      "category": "mounts-stands",
+      "price": 446.82,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=766519",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bouncepad",
+        "model": "766519",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd20fba4",
+      "title": "FlexiSpot E2 Pro Essential Standing Desk, Black, 1400x700mm (Black Top/Black Frame)",
+      "titles": {
+        "en": "FlexiSpot E2 Pro Essential Standing Desk, Black, 1400x700mm (Black Top/Black Frame)"
+      },
+      "category": "mounts-stands",
+      "price": 664.21,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=783049",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "FlexiSpot",
+        "model": "783049",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd3446cf",
+      "title": "Bouncepad Wallmount iPad Mount, Black, Exposed Front Camera, for Apple iPad 10.9 (10th Gen)",
+      "titles": {
+        "en": "Bouncepad Wallmount iPad Mount, Black, Exposed Front Camera, for Apple iPad 10.9 (10th Gen)"
+      },
+      "category": "mounts-stands",
+      "price": 446.82,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=795678",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bouncepad",
+        "model": "795678",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee71adf",
+      "title": "Heckler Surface Hub 85\" Spacer Kit",
+      "titles": {
+        "en": "Heckler Surface Hub 85\" Spacer Kit"
+      },
+      "category": "mounts-stands",
+      "price": 156.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=806561",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Heckler",
+        "model": "806561",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def8095f",
+      "title": "Bosstab Elite Evo-X iPad Floor Stand, White, for Apple iPad Pro 13 (M4)/Air 13 (M3/M2)",
+      "titles": {
+        "en": "Bosstab Elite Evo-X iPad Floor Stand, White, for Apple iPad Pro 13 (M4)/Air 13 (M3/M2)"
+      },
+      "category": "mounts-stands",
+      "price": 774.23,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=814148",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bosstab",
+        "model": "814148",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd368471",
+      "title": "Gigabyte B850 Gaming WIFI6 Motherboard, Socket AM5, AMD B850, ATX",
+      "titles": {
+        "en": "Gigabyte B850 Gaming WIFI6 Motherboard, Socket AM5, AMD B850, ATX"
+      },
+      "category": "motherboards",
+      "price": 370.85,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=799928",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Gigabyte",
+        "model": "799928",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd210885",
+      "title": "Firich XMonitor XM-3015 15\" Monitor, 1024x768, Black, PCAP",
+      "titles": {
+        "en": "Firich XMonitor XM-3015 15\" Monitor, 1024x768, Black, PCAP"
+      },
+      "category": "monitors",
+      "price": 863.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=783356",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Firich",
+        "model": "783356",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-defa3747",
+      "title": "Samsung Essential G31H 27\" Monitor, 1920x1080",
+      "titles": {
+        "en": "Samsung Essential G31H 27\" Monitor, 1920x1080"
+      },
+      "category": "monitors",
+      "price": 210.32,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=818098",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Samsung",
+        "model": "818098",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d82ef324",
+      "title": "Aruba Aruba 3810M 4SFP+ Module",
+      "titles": {
+        "en": "Aruba Aruba 3810M 4SFP+ Module"
+      },
+      "category": "modules",
+      "price": 965.38,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=544792",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Aruba",
+        "model": "544792",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacd9229",
+      "title": "StarTech.com SFP+ - Palo Alto Networks PLUS-SR Comp",
+      "titles": {
+        "en": "StarTech.com SFP+ - Palo Alto Networks PLUS-SR Comp"
+      },
+      "category": "modules",
+      "price": 275.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=686682",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "686682",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0ac829",
+      "title": "PERLE PSFP-100D-S1LC40D Fast Ethernet SFP Optical Transceiver 100BASE-BX 1550nm TX / 1310nm RX single fiber single mode LC 40 km/24.9 miles. DOM DMI - Digital Optical Monitoring. G",
+      "titles": {
+        "en": "PERLE PSFP-100D-S1LC40D Fast Ethernet SFP Optical Transceiver 100BASE-BX 1550nm TX / 1310nm RX single fiber single mode LC 40 km/24.9 miles. DOM DMI - Digital Optical Monitoring. G"
+      },
+      "category": "modules",
+      "price": 1368.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=825777",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "PERLE",
+        "model": "825777",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacad44a",
+      "title": "Hewlett Packard Enterprise ProLiant DL325 Gen11 8SFF x1 Tri-Mode U.3 Backplane Kit, P54999-B21",
+      "titles": {
+        "en": "Hewlett Packard Enterprise ProLiant DL325 Gen11 8SFF x1 Tri-Mode U.3 Backplane Kit, P54999-B21"
+      },
+      "category": "miscellaneous-kits",
+      "price": 243.93,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=681688",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HPE",
+        "model": "681688",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d83ed97a",
+      "title": "Playmax Surface X1 RGB Gaming Mouse Pad, +",
+      "titles": {
+        "en": "Playmax Surface X1 RGB Gaming Mouse Pad, +"
+      },
+      "category": "mice",
+      "price": 41.32,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=550740",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Playmax",
+        "model": "550740",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd35d688",
+      "title": "Unitek T060A Wireless Mouse, Wireless, Grey",
+      "titles": {
+        "en": "Unitek T060A Wireless Mouse, Wireless, Grey"
+      },
+      "category": "mice",
+      "price": 24.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=798164",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Unitek",
+        "model": "798164",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd22b605",
+      "title": "Adata Premier Extreme microSDXC SD7.1 Express Memory Card, 256GB, Class 10, V30, EX I",
+      "titles": {
+        "en": "Adata Premier Extreme microSDXC SD7.1 Express Memory Card, 256GB, Class 10, V30, EX I"
+      },
+      "category": "memory-cards",
+      "price": 160.51,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=786542",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Adata",
+        "model": "786542",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd71ac6",
+      "title": "PNY Performance MD16GSD4320016-TB, DIMM RAM, 16GB, (1x 16GB), DDR4-3200, CL16",
+      "titles": {
+        "en": "PNY Performance MD16GSD4320016-TB, DIMM RAM, 16GB, (1x 16GB), DDR4-3200, CL16"
+      },
+      "category": "memory",
+      "price": 240.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=740949",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "PNY",
+        "model": "740949",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd322168",
+      "title": "Kingston FURY Renegade KF588CU42RS-24, DIMM RAM, 24GB, (1x 24GB), DDR5-8800, CL42, CUDIMM, XMP, Silver/Black",
+      "titles": {
+        "en": "Kingston FURY Renegade KF588CU42RS-24, DIMM RAM, 24GB, (1x 24GB), DDR5-8800, CL42, CUDIMM, XMP, Silver/Black"
+      },
+      "category": "memory",
+      "price": 1726.83,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=791927",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Kingston",
+        "model": "791927",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfb3aa2",
+      "title": "Sansai GL-LA608B LED Bulb A60-12W-B22-Warm Whit",
+      "titles": {
+        "en": "Sansai GL-LA608B LED Bulb A60-12W-B22-Warm Whit"
+      },
+      "category": "lighting",
+      "price": 17.84,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=760538",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Sansai",
+        "model": "760538",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee3dd3e",
+      "title": "Aten 4-PORT USB DISPLAYPORT SECURE KVM SWITCH (PSD PP V4.0 COMPLIANT)",
+      "titles": {
+        "en": "Aten 4-PORT USB DISPLAYPORT SECURE KVM SWITCH (PSD PP V4.0 COMPLIANT)"
+      },
+      "category": "kvms",
+      "price": 2229.33,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=800854",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Aten",
+        "model": "800854",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def5f95c",
+      "title": "Rapoo X130 Pro Wired Mouse & Keyboard Combo, Wired, Black",
+      "titles": {
+        "en": "Rapoo X130 Pro Wired Mouse & Keyboard Combo, Wired, Black"
+      },
+      "category": "keyboards-mice",
+      "price": 41.33,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=810905",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Rapoo",
+        "model": "810905",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0efd09",
+      "title": "Zagg Wireless - Bluetooth/USB C Medium Size Keyboard",
+      "titles": {
+        "en": "Zagg Wireless - Bluetooth/USB C Medium Size Keyboard"
+      },
+      "category": "keyboards",
+      "price": 92.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=773676",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zagg",
+        "model": "773676",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5eac9e6",
+      "title": "StarTech PEXUSB3S44V, Adapter Card, PCIe-1, USB 3.0 external x4",
+      "titles": {
+        "en": "StarTech PEXUSB3S44V, Adapter Card, PCIe-1, USB 3.0 external x4"
+      },
+      "category": "o-cards",
+      "price": 220.21,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=452769",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "452769",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd35e6ca",
+      "title": "Orico MH5PC 6-port Clamp-Mounted Hub, (1x USB-C, 2x USB-A, TF Card Reader, SD Card Reader), Silver",
+      "titles": {
+        "en": "Orico MH5PC 6-port Clamp-Mounted Hub, (1x USB-C, 2x USB-A, TF Card Reader, SD Card Reader), Silver"
+      },
+      "category": "hubs",
+      "price": 62.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=798508",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Orico",
+        "model": "798508",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabd1a70",
+      "title": "Moki Starmaker Karaoke Combo with Microphone & LED Speaker",
+      "titles": {
+        "en": "Moki Starmaker Karaoke Combo with Microphone & LED Speaker"
+      },
+      "category": "home-electronics",
+      "price": 72.57,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=679579",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Moki",
+        "model": "679579",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0d5be1",
+      "title": "Braun Series 8 8513S Wet & Dry Shaver",
+      "titles": {
+        "en": "Braun Series 8 8513S Wet & Dry Shaver"
+      },
+      "category": "home-electronics",
+      "price": 480.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=770752",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Braun",
+        "model": "770752",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd33a96b",
+      "title": "Axis TI8204 RECESSED MOUNT BLACK FOR I8116-E",
+      "titles": {
+        "en": "Axis TI8204 RECESSED MOUNT BLACK FOR I8116-E"
+      },
+      "category": "home-electronics",
+      "price": 268.73,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=794279",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Axis",
+        "model": "794279",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee82303",
+      "title": "Sony PSLX5BT Turntable, Bluetooth",
+      "titles": {
+        "en": "Sony PSLX5BT Turntable, Bluetooth"
+      },
+      "category": "home-electronics",
+      "price": 725.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=808194",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Sony",
+        "model": "808194",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-defa431b",
+      "title": "Roborock Q Revo Curv 2 Flow Roller Mop 9.01.6016",
+      "titles": {
+        "en": "Roborock Q Revo Curv 2 Flow Roller Mop 9.01.6016"
+      },
+      "category": "home-electronics",
+      "price": 61.31,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=818320",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Roborock",
+        "model": "818320",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da82f9fd",
+      "title": "Jabra Link Electronic Hook Switch Control (EHS) , for Alcatel phones",
+      "titles": {
+        "en": "Jabra Link Electronic Hook Switch Control (EHS) , for Alcatel phones"
+      },
+      "category": "headphones-headsets",
+      "price": 93.63,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=642552",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jabra",
+        "model": "642552",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd8aa7e",
+      "title": "HP Poly 3.5mm to QD Cable, 3m, for IP Touch",
+      "titles": {
+        "en": "HP Poly 3.5mm to QD Cable, 3m, for IP Touch"
+      },
+      "category": "headphones-headsets",
+      "price": 47.46,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=743434",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "743434",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dced7d05",
+      "title": "Baseus Bowie E13 True Wireless Earphones, Bluetooth/USB-C/USB-A, Black, (USB-C to USB-A cable included)",
+      "titles": {
+        "en": "Baseus Bowie E13 True Wireless Earphones, Bluetooth/USB-C/USB-A, Black, (USB-C to USB-A cable included)"
+      },
+      "category": "headphones-headsets",
+      "price": 69.12,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=758363",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baseus",
+        "model": "758363",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd317821",
+      "title": "Rode Wireless ME TX Transmitter, 2-pack, for Wireless ME",
+      "titles": {
+        "en": "Rode Wireless ME TX Transmitter, 2-pack, for Wireless ME"
+      },
+      "category": "headphones-headsets",
+      "price": 397.61,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=790291",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Rode",
+        "model": "790291",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def805bb",
+      "title": "Rode PSA1+ Studio Boom Arm, Red",
+      "titles": {
+        "en": "Rode PSA1+ Studio Boom Arm, Red"
+      },
+      "category": "headphones-headsets",
+      "price": 355.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=814090",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Rode",
+        "model": "814090",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d7e7a035",
+      "title": "Western Digital My Passport WDBPKJ0050BBK USB 3.2 External Hard Drive, 5TB, Portable, USB-A, Black",
+      "titles": {
+        "en": "Western Digital My Passport WDBPKJ0050BBK USB 3.2 External Hard Drive, 5TB, Portable, USB-A, Black"
+      },
+      "category": "hard-drives",
+      "price": 450.96,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=506500",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Western Digital",
+        "model": "506500",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd111502",
+      "title": "Adata XPG Gammix S60 Blade Internal SSD, 1TB, M.2 2280, PCIe Gen 4.0 x4",
+      "titles": {
+        "en": "Adata XPG Gammix S60 Blade Internal SSD, 1TB, M.2 2280, PCIe Gen 4.0 x4"
+      },
+      "category": "hard-drives",
+      "price": 449.83,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=777071",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Adata",
+        "model": "777071",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5eea425",
+      "title": "Zebra Data Transfer Cable, 2.1m, CBA-M01-S07ZAR",
+      "titles": {
+        "en": "Zebra Data Transfer Cable, 2.1m, CBA-M01-S07ZAR"
+      },
+      "category": "handheld-terminals",
+      "price": 115.2,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=459815",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "459815",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab92dfc",
+      "title": "Zebra PDT TC78 2D-SE55 4/64 CAM 5G AD/GMS",
+      "titles": {
+        "en": "Zebra PDT TC78 2D-SE55 4/64 CAM 5G AD/GMS"
+      },
+      "category": "handheld-terminals",
+      "price": 6174.29,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672035",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "672035",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd221924",
+      "title": "Honeywell CK67, 8GB/128GB, 4.3\", 31-KEY LARGE NUMERIC, S0803 FR XLR, CAM, COLD STORAGE",
+      "titles": {
+        "en": "Honeywell CK67, 8GB/128GB, 4.3\", 31-KEY LARGE NUMERIC, S0803 FR XLR, CAM, COLD STORAGE"
+      },
+      "category": "handheld-terminals",
+      "price": 5886.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=785182",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Honeywell",
+        "model": "785182",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da6fc943",
+      "title": "Zebra ET8X MPP 2.0 ACTIVE STYLUS",
+      "titles": {
+        "en": "Zebra ET8X MPP 2.0 ACTIVE STYLUS"
+      },
+      "category": "graphics-tablets-pens",
+      "price": 253.36,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=630597",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "630597",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dce93381",
+      "title": "Hori Switch Accessories Hori Switch Wireless HORIPAD (Sonic)",
+      "titles": {
+        "en": "Hori Switch Accessories Hori Switch Wireless HORIPAD (Sonic)"
+      },
+      "category": "gaming-gear",
+      "price": 115.69,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=750961",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Hori",
+        "model": "750961",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def92e7e",
+      "title": "Generic PS5 Train Sim World 5",
+      "titles": {
+        "en": "Generic PS5 Train Sim World 5"
+      },
+      "category": "gaming-gear",
+      "price": 62.89,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=816415",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Generic",
+        "model": "816415",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcec5c26",
+      "title": "StarTech SDOCK2U313 USB 3.1 Gen 2 (10Gbps) Dual-bay Dock",
+      "titles": {
+        "en": "StarTech SDOCK2U313 USB 3.1 Gen 2 (10Gbps) Dual-bay Dock"
+      },
+      "category": "drive-enclosures",
+      "price": 226.42,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=756195",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "756195",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d63550aa",
+      "title": "LG 55VM5E 55\" FHD 24/7 500nit 0.9mm Videowall",
+      "titles": {
+        "en": "LG 55VM5E 55\" FHD 24/7 500nit 0.9mm Videowall"
+      },
+      "category": "digital-signage",
+      "price": 4333.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=496468",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "LG",
+        "model": "496468",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee7b3c6",
+      "title": "Hikvision DS-DT60P-02HI04NO 3-in-1 LED Controller",
+      "titles": {
+        "en": "Hikvision DS-DT60P-02HI04NO 3-in-1 LED Controller"
+      },
+      "category": "digital-signage",
+      "price": 987.85,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=807846",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Hikvision",
+        "model": "807846",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5eb5e83",
+      "title": "Canon LP-E12 Camera Battery, 875 mAh, for EOS M",
+      "titles": {
+        "en": "Canon LP-E12 Camera Battery, 875 mAh, for EOS M"
+      },
+      "category": "digital-camera-accessories",
+      "price": 89.45,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=453945",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Canon",
+        "model": "453945",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfcd6de",
+      "title": "Sigma 18-50mm f/2.8 DC DN Contemporary Lens, for Canon RF (Aperture Range: f/2.8 to f/22)",
+      "titles": {
+        "en": "Sigma 18-50mm f/2.8 DC DN Contemporary Lens, for Canon RF (Aperture Range: f/2.8 to f/22)"
+      },
+      "category": "digital-camera-accessories",
+      "price": 1138.39,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=763306",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Sigma",
+        "model": "763306",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee8223f",
+      "title": "OM-SYSTEM UC-92 External Battery Charger",
+      "titles": {
+        "en": "OM-SYSTEM UC-92 External Battery Charger"
+      },
+      "category": "digital-camera-accessories",
+      "price": 116.81,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=808136",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "OM-SYSTEM",
+        "model": "808136",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d82d445c",
+      "title": "Honeywell Cradle, RT10-EVC",
+      "titles": {
+        "en": "Honeywell Cradle, RT10-EVC"
+      },
+      "category": "cradles",
+      "price": 1284.69,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=541508",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Honeywell",
+        "model": "541508",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dce921f9",
+      "title": "Zebra MULTIDOCK COMM/BAT 3-BAY RFD40-RFD90/TC53/58",
+      "titles": {
+        "en": "Zebra MULTIDOCK COMM/BAT 3-BAY RFD40-RFD90/TC53/58"
+      },
+      "category": "cradles",
+      "price": 2526.69,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=750521",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "750521",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5eac9be",
+      "title": "Deepcool FH-04 4-port Fan Hub",
+      "titles": {
+        "en": "Deepcool FH-04 4-port Fan Hub"
+      },
+      "category": "cooling",
+      "price": 33.65,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=452752",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Deepcool",
+        "model": "452752",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee82b48",
+      "title": "NZXT F120 Static Pressure Case Fan , White, 120mm",
+      "titles": {
+        "en": "NZXT F120 Static Pressure Case Fan , White, 120mm"
+      },
+      "category": "cooling",
+      "price": 50.24,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=808379",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "NZXT",
+        "model": "808379",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d3bc7706",
+      "title": "Brother DK22211, Label Tape, Continuous Length, 29mm, White",
+      "titles": {
+        "en": "Brother DK22211, Label Tape, Continuous Length, 29mm, White"
+      },
+      "category": "consumables",
+      "price": 49.37,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=377196",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "377196",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5b5089c",
+      "title": "Brother PR1060B6P, Stamp, 10x60mm, Black, 6-pack",
+      "titles": {
+        "en": "Brother PR1060B6P, Stamp, 10x60mm, Black, 6-pack"
+      },
+      "category": "consumables",
+      "price": 91.3,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=423671",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "423671",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5ecf65b",
+      "title": "Epson Ink Cartridge, Cyan, C13S020130",
+      "titles": {
+        "en": "Epson Ink Cartridge, Cyan, C13S020130"
+      },
+      "category": "consumables",
+      "price": 155.96,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=456601",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Epson",
+        "model": "456601",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5ed76e0",
+      "title": "HP 826A, Toner Cartridge, Magenta, Standard yield, 31500 pages",
+      "titles": {
+        "en": "HP 826A, Toner Cartridge, Magenta, Standard yield, 31500 pages"
+      },
+      "category": "consumables",
+      "price": 706.64,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=457371",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "HP",
+        "model": "457371",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5ed8b3f",
+      "title": "Canon 039, Toner Cartridge, Black, Standard yield, 6000 pages",
+      "titles": {
+        "en": "Canon 039, Toner Cartridge, Black, Standard yield, 6000 pages"
+      },
+      "category": "consumables",
+      "price": 279.08,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=457802",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Canon",
+        "model": "457802",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5edff22",
+      "title": "Epson C13S051029, Imaging Drum, Black, 20000 pages",
+      "titles": {
+        "en": "Epson C13S051029, Imaging Drum, Black, 20000 pages"
+      },
+      "category": "consumables",
+      "price": 208.97,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=458282",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Epson",
+        "model": "458282",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d61123a2",
+      "title": "Zebra Multipurpose Label, 10015356K",
+      "titles": {
+        "en": "Zebra Multipurpose Label, 10015356K"
+      },
+      "category": "consumables",
+      "price": 799.99,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=476543",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "476543",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d82dc4ba",
+      "title": "Canon Toner Cartridge, Magenta, 2100 pages",
+      "titles": {
+        "en": "Canon Toner Cartridge, Magenta, 2100 pages"
+      },
+      "category": "consumables",
+      "price": 148.67,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=542262",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Canon",
+        "model": "542262",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3a8fb7",
+      "title": "Zebra Multipurpose Label, 10015355-2K",
+      "titles": {
+        "en": "Zebra Multipurpose Label, 10015355-2K"
+      },
+      "category": "consumables",
+      "price": 920.46,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=602370",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "602370",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da5f515c",
+      "title": "Calibor LABEL PLAIN PERM 32X24 3ACS 6000/R SML CRE",
+      "titles": {
+        "en": "Calibor LABEL PLAIN PERM 32X24 3ACS 6000/R SML CRE"
+      },
+      "category": "consumables",
+      "price": 60.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=623471",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Calibor",
+        "model": "623471",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da93f17c",
+      "title": "White box Compat CE400X #507X Black Cart",
+      "titles": {
+        "en": "White box Compat CE400X #507X Black Cart"
+      },
+      "category": "consumables",
+      "price": 118.04,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=650372",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "White box",
+        "model": "650372",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daba6504",
+      "title": "Calibor LABEL THERM PERM 40X20 2ACS 10000/R LRG CRE",
+      "titles": {
+        "en": "Calibor LABEL THERM PERM 40X20 2ACS 10000/R LRG CRE"
+      },
+      "category": "consumables",
+      "price": 88.32,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=674770",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Calibor",
+        "model": "674770",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd6f89b",
+      "title": "Brother TN258XLBK2PK High Yield Toner Black Double Pack",
+      "titles": {
+        "en": "Brother TN258XLBK2PK High Yield Toner Black Double Pack"
+      },
+      "category": "consumables",
+      "price": 262.28,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=740137",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "740137",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0d5c00",
+      "title": "Brother TN-237BK Toner (3-pack), Black",
+      "titles": {
+        "en": "Brother TN-237BK Toner (3-pack), Black"
+      },
+      "category": "consumables",
+      "price": 516.95,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=770760",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "770760",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd11c6e9",
+      "title": "White box Whitebox CT203025 Cyan Toner",
+      "titles": {
+        "en": "White box Whitebox CT203025 Cyan Toner"
+      },
+      "category": "consumables",
+      "price": 51.96,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=778914",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "White box",
+        "model": "778914",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def6ec9d",
+      "title": "Brother TN645XLM Toner, Magenta",
+      "titles": {
+        "en": "Brother TN645XLM Toner, Magenta"
+      },
+      "category": "consumables",
+      "price": 260.46,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=812067",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Brother",
+        "model": "812067",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0a4489",
+      "title": "ZEBRA 5100 05100BK11045 Ribbon, Black, Thermal Transfer",
+      "titles": {
+        "en": "ZEBRA 5100 05100BK11045 Ribbon, Black, Thermal Transfer"
+      },
+      "category": "consumables",
+      "price": 1394.56,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=824994",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "824994",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d81e8342",
+      "title": "Digitus Notebook Bag 15.6 with Carrying Strap Graphite",
+      "titles": {
+        "en": "Digitus Notebook Bag 15.6 with Carrying Strap Graphite"
+      },
+      "category": "cases-bags",
+      "price": 35.78,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=537833",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Digitus",
+        "model": "537833",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacf36c7",
+      "title": "Jabra Enterprise Jabra 14301-57 EVOLVE2 50 CARRY POUCH 10 PIECES +",
+      "titles": {
+        "en": "Jabra Enterprise Jabra 14301-57 EVOLVE2 50 CARRY POUCH 10 PIECES +"
+      },
+      "category": "cases-bags",
+      "price": 205.38,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=689641",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jabra",
+        "model": "689641",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd0e5743",
+      "title": "Urban Armor Gear Lucent Case for MacBook 14\" (2021 - 2023) - Ice / Black",
+      "titles": {
+        "en": "Urban Armor Gear Lucent Case for MacBook 14\" (2021 - 2023) - Ice / Black"
+      },
+      "category": "cases-bags",
+      "price": 126.05,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=772086",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Urban Armor Gear",
+        "model": "772086",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd2445c2",
+      "title": "Generic Flip Wallet Phone Case, Black, for Xiaomi Redmi Note 14 4G/5G",
+      "titles": {
+        "en": "Generic Flip Wallet Phone Case, Black, for Xiaomi Redmi Note 14 4G/5G"
+      },
+      "category": "cases-bags",
+      "price": 49.37,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=789032",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Generic",
+        "model": "789032",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee5691b",
+      "title": "Strike Rugged Tablet Case with Hand Strap and Lanyard , Black, for Samsung Galaxy Tab Active2",
+      "titles": {
+        "en": "Strike Rugged Tablet Case with Hand Strap and Lanyard , Black, for Samsung Galaxy Tab Active2"
+      },
+      "category": "cases-bags",
+      "price": 100.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=803272",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Strike",
+        "model": "803272",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def68680",
+      "title": "Targus SafePort Rugged Max iPad Case, Clear/Grey, for Apple iPad Pro 11\" (M5/M4)",
+      "titles": {
+        "en": "Targus SafePort Rugged Max iPad Case, Clear/Grey, for Apple iPad Pro 11\" (M5/M4)"
+      },
+      "category": "cases-bags",
+      "price": 89.02,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=811962",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Targus",
+        "model": "811962",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df07f077",
+      "title": "Valore Rugged Tablet Case, Shoulder Strap, Hand Strap, Screen Protector, Kick-Stand, for Samsung Galaxy Tab A11+",
+      "titles": {
+        "en": "Valore Rugged Tablet Case, Shoulder Strap, Hand Strap, Screen Protector, Kick-Stand, for Samsung Galaxy Tab A11+"
+      },
+      "category": "cases-bags",
+      "price": 69.41,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=820152",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Valore",
+        "model": "820152",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0a2281",
+      "title": "skinarma iPhone 18 Pro (6.3\") 2026 Saturn Case - Black - 360 rotating kickstand for multi-angle/orientation viewing - Full protection with all-round bumper - Compatible with magnet",
+      "titles": {
+        "en": "skinarma iPhone 18 Pro (6.3\") 2026 Saturn Case - Black - 360 rotating kickstand for multi-angle/orientation viewing - Full protection with all-round bumper - Compatible with magnet"
+      },
+      "category": "cases-bags",
+      "price": 78.06,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=824194",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "skinarma",
+        "model": "824194",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df08961a",
+      "title": "FSP S342 mATX Mid Tower Case - Black 6x 120mm ARGB Fans Pre-Installed - CPU Cooler Support up to 160mm - GPU Support up to 410mm - 5x PCI Slots - 360mm Radiator Support - Front I/O",
+      "titles": {
+        "en": "FSP S342 mATX Mid Tower Case - Black 6x 120mm ARGB Fans Pre-Installed - CPU Cooler Support up to 160mm - GPU Support up to 410mm - 5x PCI Slots - 360mm Radiator Support - Front I/O"
+      },
+      "category": "cases",
+      "price": 124.86,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=821730",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "FSP",
+        "model": "821730",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d58f3634",
+      "title": "Dynamix Fibre Network Cable, 1m, LC, Duplex, Single-mode",
+      "titles": {
+        "en": "Dynamix Fibre Network Cable, 1m, LC, Duplex, Single-mode"
+      },
+      "category": "cables",
+      "price": 28.07,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=400731",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "400731",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5b849a0",
+      "title": "Jackson Power Extension Cable, 3m, Black, Power Plug",
+      "titles": {
+        "en": "Jackson Power Extension Cable, 3m, Black, Power Plug"
+      },
+      "category": "cables",
+      "price": 21.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=429417",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Jackson",
+        "model": "429417",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5eb51c4",
+      "title": "Alogic Premium Series SmartConnect Video Cable, 3m, Black, DisplayPort/DVI",
+      "titles": {
+        "en": "Alogic Premium Series SmartConnect Video Cable, 3m, Black, DisplayPort/DVI"
+      },
+      "category": "cables",
+      "price": 59.26,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=453649",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Alogic",
+        "model": "453649",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5fbc5c5",
+      "title": "StarTech Data Transfer Cable, 304.8mm, Red, SATA, SATA12LA1",
+      "titles": {
+        "en": "StarTech Data Transfer Cable, 304.8mm, Red, SATA, SATA12LA1"
+      },
+      "category": "cables",
+      "price": 25.27,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=460697",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "460697",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d5fc50f9",
+      "title": "StarTech Data Transfer Cable, 2m, Black, USB, USB2C5C2M",
+      "titles": {
+        "en": "StarTech Data Transfer Cable, 2m, Black, USB, USB2C5C2M"
+      },
+      "category": "cables",
+      "price": 46.28,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=461603",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "461603",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d6210262",
+      "title": "APC Power Extension Cord, SRT002",
+      "titles": {
+        "en": "APC Power Extension Cord, SRT002"
+      },
+      "category": "cables",
+      "price": 946.88,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=482366",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "APC",
+        "model": "482366",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d831ac03",
+      "title": "Digitus DisplayPort v1.4 (M) to DisplayPort v1.4 (M) 3m Video Cable",
+      "titles": {
+        "en": "Digitus DisplayPort v1.4 (M) to DisplayPort v1.4 (M) 3m Video Cable"
+      },
+      "category": "cables",
+      "price": 30.14,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=549633",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Digitus",
+        "model": "549633",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da3a075a",
+      "title": "Alogic Data Transfer Cable, 5m, Black, Mini USB/USB",
+      "titles": {
+        "en": "Alogic Data Transfer Cable, 5m, Black, Mini USB/USB"
+      },
+      "category": "cables",
+      "price": 20.93,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=601455",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Alogic",
+        "model": "601455",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da605c9a",
+      "title": "StarTech Data Transfer Cable, 2m, Black/Grey, USB-C",
+      "titles": {
+        "en": "StarTech Data Transfer Cable, 2m, Black/Grey, USB-C"
+      },
+      "category": "cables",
+      "price": 52.75,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=625116",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "625116",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da841720",
+      "title": "Dynamix 1M 9u ST/ST Duplex Single Mode G657A1 Bend Insensitive Fibre Lead. Yellow LSZH Jacket",
+      "titles": {
+        "en": "Dynamix 1M 9u ST/ST Duplex Single Mode G657A1 Bend Insensitive Fibre Lead. Yellow LSZH Jacket"
+      },
+      "category": "cables",
+      "price": 27.29,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=644661",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "644661",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da86beff",
+      "title": "Dynamix 100M 6C 0.44mmm Bare Copper Security Cable. Supplied on Plastic Reel",
+      "titles": {
+        "en": "Dynamix 100M 6C 0.44mmm Bare Copper Security Cable. Supplied on Plastic Reel"
+      },
+      "category": "cables",
+      "price": 185.48,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=649106",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "649106",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dab94b62",
+      "title": "Ubiquiti N-Male to N-Male 25cm 11GHz Coax Cable for airFibre 11GHz",
+      "titles": {
+        "en": "Ubiquiti N-Male to N-Male 25cm 11GHz Coax Cable for airFibre 11GHz"
+      },
+      "category": "cables",
+      "price": 94.85,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=672707",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ubiquiti",
+        "model": "672707",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacf2a47",
+      "title": "Dynamix USB-C to HDMI 2.0 Cable, Black, USB-C/HDMI, 3m, 4K@60Hz",
+      "titles": {
+        "en": "Dynamix USB-C to HDMI 2.0 Cable, Black, USB-C/HDMI, 3m, 4K@60Hz"
+      },
+      "category": "cables",
+      "price": 74.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=689362",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "689362",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcd7a384",
+      "title": "Vention Flat Cat.8 Patch Cable 3M Black",
+      "titles": {
+        "en": "Vention Flat Cat.8 Patch Cable 3M Black"
+      },
+      "category": "cables",
+      "price": 26.02,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=741892",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Vention",
+        "model": "741892",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcfb3b3f",
+      "title": "PHILEX PHA-6026 Type-C/Type-C Cable 60W, 1.2M",
+      "titles": {
+        "en": "PHILEX PHA-6026 Type-C/Type-C Cable 60W, 1.2M"
+      },
+      "category": "cables",
+      "price": 26.88,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=760580",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "PHILEX",
+        "model": "760580",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcffaa04",
+      "title": "Go Wireless NZ 7.5 Metre Cat6 UTP Indoor Ethernet Cable - Grey",
+      "titles": {
+        "en": "Go Wireless NZ 7.5 Metre Cat6 UTP Indoor Ethernet Cable - Grey"
+      },
+      "category": "cables",
+      "price": 21.4,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=768802",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Go Wireless NZ",
+        "model": "768802",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd23cacd",
+      "title": "TYCAB 4CORE.44 SECURITY PCW LSZH WH/LG 300M",
+      "titles": {
+        "en": "TYCAB 4CORE.44 SECURITY PCW LSZH WH/LG 300M"
+      },
+      "category": "cables",
+      "price": 397.75,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=788467",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "TYCAB",
+        "model": "788467",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee3d101",
+      "title": "Dynamix 2m Tapon Extension Lead 10AStandard Duty 3 Core 1.0mm Cable White",
+      "titles": {
+        "en": "Dynamix 2m Tapon Extension Lead 10AStandard Duty 3 Core 1.0mm Cable White"
+      },
+      "category": "cables",
+      "price": 21.78,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=800596",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "800596",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee71a61",
+      "title": "StarTech USB4 USB-C to USB-C Cable, USB-C, 1m, Black",
+      "titles": {
+        "en": "StarTech USB4 USB-C to USB-C Cable, USB-C, 1m, Black"
+      },
+      "category": "cables",
+      "price": 67.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=806527",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech",
+        "model": "806527",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df07effa",
+      "title": "Valore AV09 USB-C to HDMI Female Adapter -20cm Durable nylon Braided Thoughtful and Durable Design Plug and play USB-C to HDMI Adaptor",
+      "titles": {
+        "en": "Valore AV09 USB-C to HDMI Female Adapter -20cm Durable nylon Braided Thoughtful and Durable Design Plug and play USB-C to HDMI Adaptor"
+      },
+      "category": "cables",
+      "price": 31.53,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=820119",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Valore",
+        "model": "820119",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-df0a3ae3",
+      "title": "StarTech.com 45PAT1MBK Cat5e Patch Cable - 1m - Black Snagless - UTP - RJ45 Connectors",
+      "titles": {
+        "en": "StarTech.com 45PAT1MBK Cat5e Patch Cable - 1m - Black Snagless - UTP - RJ45 Connectors"
+      },
+      "category": "cables",
+      "price": 21.87,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=824709",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "StarTech.com",
+        "model": "824709",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d610a8eb",
+      "title": "Dynamix 19'' 1U Fibre Tray 24C LC SM FULLY LOADED w 24x LC Elite OS2 Pigtails 12x LC Duplex Blue Coupler Splice Cassette, Cable management Sliding Tray with front face Protection l",
+      "titles": {
+        "en": "Dynamix 19'' 1U Fibre Tray 24C LC SM FULLY LOADED w 24x LC Elite OS2 Pigtails 12x LC Duplex Blue Coupler Splice Cassette, Cable management Sliding Tray with front face Protection l"
+      },
+      "category": "cable-accessories",
+      "price": 329.46,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=475994",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dynamix",
+        "model": "475994",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da863362",
+      "title": "powerforce Cable Tie 316SS Coated 200mm x 4.6mm 100pk",
+      "titles": {
+        "en": "powerforce Cable Tie 316SS Coated 200mm x 4.6mm 100pk"
+      },
+      "category": "cable-accessories",
+      "price": 45.17,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=648164",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "powerforce",
+        "model": "648164",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd100923",
+      "title": "Ideal Industries 10 to 20 AWG T-5 T-Stripper Wire Stripper and Cutter.",
+      "titles": {
+        "en": "Ideal Industries 10 to 20 AWG T-5 T-Stripper Wire Stripper and Cutter."
+      },
+      "category": "cable-accessories",
+      "price": 41.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=775380",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ideal Industries",
+        "model": "775380",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d632069f",
+      "title": "Datalogic Battery, 700 mAh",
+      "titles": {
+        "en": "Datalogic Battery, 700 mAh"
+      },
+      "category": "batteries",
+      "price": 60.52,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=490481",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Datalogic",
+        "model": "490481",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dd221cc3",
+      "title": "Zebra BTRY-ET5X-10IN3-02 Battery, for ET51/ET56",
+      "titles": {
+        "en": "Zebra BTRY-ET5X-10IN3-02 Battery, for ET51/ET56"
+      },
+      "category": "batteries",
+      "price": 271.22,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=785235",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "785235",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dc8f2b16",
+      "title": "Aten 4K HDMI HDBASET 2.0 KVM E XTENDER WITH RS232 2YR",
+      "titles": {
+        "en": "Aten 4K HDMI HDBASET 2.0 KVM E XTENDER WITH RS232 2YR"
+      },
+      "category": "av",
+      "price": 1815.63,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=701306",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Aten",
+        "model": "701306",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def5dbd6",
+      "title": "Aten Essential VS5821 2-port 8K HDMI Switch",
+      "titles": {
+        "en": "Aten Essential VS5821 2-port 8K HDMI Switch"
+      },
+      "category": "av",
+      "price": 72.57,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=810224",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Aten",
+        "model": "810224",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d7e4d655",
+      "title": "Datalogic ANTENNA ROOF 4DBI 2.4/5.9GHZ RHINO II",
+      "titles": {
+        "en": "Datalogic ANTENNA ROOF 4DBI 2.4/5.9GHZ RHINO II"
+      },
+      "category": "antennas",
+      "price": 817.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=501262",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Datalogic",
+        "model": "501262",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dabb7d28",
+      "title": "MikroTik LHG Lite60",
+      "titles": {
+        "en": "MikroTik LHG Lite60"
+      },
+      "category": "antennas",
+      "price": 133.35,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=676727",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "MikroTik",
+        "model": "676727",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d854c025",
+      "title": "Ugreen US276 USB-C Type-C Female To USB A 3.0 Male Convertor Adapter +",
+      "titles": {
+        "en": "Ugreen US276 USB-C Type-C Female To USB A 3.0 Male Convertor Adapter +"
+      },
+      "category": "adapters",
+      "price": 25.98,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=567545",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ugreen",
+        "model": "567545",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcdb6004",
+      "title": "Alogic EL2UCHD-ADP ELEMENTS USB-C TO HDMI ADAPTER -",
+      "titles": {
+        "en": "Alogic EL2UCHD-ADP ELEMENTS USB-C TO HDMI ADAPTER -"
+      },
+      "category": "adapters",
+      "price": 39.92,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=748246",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Alogic",
+        "model": "748246",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d7f65a16",
+      "title": "Zebra KEYPAD MC93 29KY NUMERIC",
+      "titles": {
+        "en": "Zebra KEYPAD MC93 29KY NUMERIC"
+      },
+      "category": "uncategorised",
+      "price": 446.34,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=510074",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "510074",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da4ee685",
+      "title": "Honeywell UNIVERSAL CUP CT40/CT45/XP N/BOOT",
+      "titles": {
+        "en": "Honeywell UNIVERSAL CUP CT40/CT45/XP N/BOOT"
+      },
+      "category": "uncategorised",
+      "price": 81.19,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=616676",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Honeywell",
+        "model": "616676",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-da8260ff",
+      "title": "Netvox WIRELESS LIGHT SENSOR (POWERED BY 2 X ER14505 3.6V LITHIUM AA BATTERY)",
+      "titles": {
+        "en": "Netvox WIRELESS LIGHT SENSOR (POWERED BY 2 X ER14505 3.6V LITHIUM AA BATTERY)"
+      },
+      "category": "uncategorised",
+      "price": 217.7,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=641267",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Netvox",
+        "model": "641267",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-daba6862",
+      "title": "Calibor LABEL GLOSS REM 44X22 1ACS 2000/R SML CRE",
+      "titles": {
+        "en": "Calibor LABEL GLOSS REM 44X22 1ACS 2000/R SML CRE"
+      },
+      "category": "uncategorised",
+      "price": 36.51,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=674804",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Calibor",
+        "model": "674804",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dacb6044",
+      "title": "embrava DESK SIGN 250-500",
+      "titles": {
+        "en": "embrava DESK SIGN 250-500"
+      },
+      "category": "uncategorised",
+      "price": 718.66,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=682654",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Embrava Pty Ltd",
+        "model": "682654",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dee7a703",
+      "title": "Zebra DOCK CHARGE/BATT 1-BAY TC22/TC27 W/BOOT",
+      "titles": {
+        "en": "Zebra DOCK CHARGE/BATT 1-BAY TC22/TC27 W/BOOT"
+      },
+      "category": "uncategorised",
+      "price": 897.18,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=807546",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zebra",
+        "model": "807546",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-def5ed82",
+      "title": "Tungsten Automation Power PDF Business with Cloud Editor Acad/Chty Subscription 1yr 100-199 user (each) # Win Unknown",
+      "titles": {
+        "en": "Tungsten Automation Power PDF Business with Cloud Editor Acad/Chty Subscription 1yr 100-199 user (each) # Win Unknown"
+      },
+      "category": "uncategorised",
+      "price": 66.01,
+      "merchant": "Ascent",
+      "url": "https://www.ascent.co.nz/productspecification.aspx?itemID=810677",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tungsten Automation",
+        "model": "810677",
+        "stock": "out of stock"
+      },
+      "capturedAt": "2026-11-24T12:31:03.381Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
       "id": "feed-d88a74a2",
       "title": "Axis TS3001, Wall Mount",
       "titles": {

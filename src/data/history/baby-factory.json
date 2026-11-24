@@ -1,458 +1,314 @@
 {
-  "feed-6a2e4d1b": [
+  "feed-ed532925": [
     {
       "date": "2026-11-24",
-      "price": 55.96
+      "price": 9.95
     }
   ],
-  "feed-29ba3e61": [
+  "feed-8b12c20d": [
     {
       "date": "2026-11-24",
-      "price": 99.95
+      "price": 9.95
     }
   ],
-  "feed-43f03950": [
+  "feed-5008d8ab": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 9.95
     }
   ],
-  "feed-e70d3f31": [
+  "feed-3e0d5b14": [
     {
       "date": "2026-11-24",
-      "price": 599
+      "price": 9.95
     }
   ],
-  "feed-7c3bfa08": [
+  "feed-56af4c0": [
     {
       "date": "2026-11-24",
-      "price": 249
+      "price": 10.36
     }
   ],
-  "feed-d49fa214": [
+  "feed-dd48f014": [
     {
       "date": "2026-11-24",
-      "price": 399
+      "price": 11.96
     }
   ],
-  "feed-f7a04ee4": [
+  "feed-f645b8fe": [
     {
       "date": "2026-11-24",
-      "price": 249
+      "price": 11.96
     }
   ],
-  "feed-2fea4ca1": [
-    {
-      "date": "2026-11-24",
-      "price": 399
-    }
-  ],
-  "feed-beed3aec": [
-    {
-      "date": "2026-11-24",
-      "price": 699
-    }
-  ],
-  "feed-303f8aa": [
-    {
-      "date": "2026-11-24",
-      "price": 299
-    }
-  ],
-  "feed-ad32d2de": [
-    {
-      "date": "2026-11-24",
-      "price": 299
-    }
-  ],
-  "feed-880e9d17": [
-    {
-      "date": "2026-11-24",
-      "price": 499
-    }
-  ],
-  "feed-a44794c0": [
-    {
-      "date": "2026-11-24",
-      "price": 499
-    }
-  ],
-  "feed-aea35eff": [
-    {
-      "date": "2026-11-24",
-      "price": 39.99
-    }
-  ],
-  "feed-e676c724": [
-    {
-      "date": "2026-11-24",
-      "price": 39.99
-    }
-  ],
-  "feed-6bc4f60": [
-    {
-      "date": "2026-11-24",
-      "price": 39.99
-    }
-  ],
-  "feed-857e0db2": [
-    {
-      "date": "2026-11-24",
-      "price": 39.99
-    }
-  ],
-  "feed-d4b2eb42": [
-    {
-      "date": "2026-11-24",
-      "price": 24.99
-    }
-  ],
-  "feed-963fbfff": [
-    {
-      "date": "2026-11-24",
-      "price": 24.99
-    }
-  ],
-  "feed-c3bd44c1": [
-    {
-      "date": "2026-11-24",
-      "price": 24.99
-    }
-  ],
-  "feed-98320abb": [
-    {
-      "date": "2026-11-24",
-      "price": 103.2
-    }
-  ],
-  "feed-90de308e": [
-    {
-      "date": "2026-11-24",
-      "price": 679.2
-    }
-  ],
-  "feed-2d18ca01": [
-    {
-      "date": "2026-11-24",
-      "price": 559.2
-    }
-  ],
-  "feed-c517b000": [
-    {
-      "date": "2026-11-24",
-      "price": 1279.2
-    }
-  ],
-  "feed-efeff4bb": [
-    {
-      "date": "2026-11-24",
-      "price": 1119.2
-    }
-  ],
-  "feed-61aafb59": [
-    {
-      "date": "2026-11-24",
-      "price": 1279.2
-    }
-  ],
-  "feed-cf1c3b2e": [
-    {
-      "date": "2026-11-24",
-      "price": 215.2
-    }
-  ],
-  "feed-2f0ccb51": [
-    {
-      "date": "2026-11-24",
-      "price": 239.2
-    }
-  ],
-  "feed-483c76b5": [
-    {
-      "date": "2026-11-24",
-      "price": 559.2
-    }
-  ],
-  "feed-348beb64": [
-    {
-      "date": "2026-11-24",
-      "price": 359.2
-    }
-  ],
-  "feed-f13f5e37": [
-    {
-      "date": "2026-11-24",
-      "price": 29.97
-    }
-  ],
-  "feed-3d95a079": [
-    {
-      "date": "2026-11-24",
-      "price": 29.97
-    }
-  ],
-  "feed-596e4a6f": [
-    {
-      "date": "2026-11-24",
-      "price": 29.97
-    }
-  ],
-  "feed-a94d5982": [
-    {
-      "date": "2026-11-24",
-      "price": 29.97
-    }
-  ],
-  "feed-4fdc8c9a": [
-    {
-      "date": "2026-11-24",
-      "price": 17.97
-    }
-  ],
-  "feed-616d7b3a": [
-    {
-      "date": "2026-11-24",
-      "price": 39.96
-    }
-  ],
-  "feed-6fcb02b4": [
-    {
-      "date": "2026-11-24",
-      "price": 79.95
-    }
-  ],
-  "feed-ae47e434": [
-    {
-      "date": "2026-11-24",
-      "price": 47.96
-    }
-  ],
-  "feed-57632938": [
-    {
-      "date": "2026-11-24",
-      "price": 63.96
-    }
-  ],
-  "feed-4d364ab1": [
-    {
-      "date": "2026-11-24",
-      "price": 63.96
-    }
-  ],
-  "feed-fc7a0df9": [
-    {
-      "date": "2026-11-24",
-      "price": 55.96
-    }
-  ],
-  "feed-61f5f63d": [
-    {
-      "date": "2026-11-24",
-      "price": 63.96
-    }
-  ],
-  "feed-f4d94fbc": [
-    {
-      "date": "2026-11-24",
-      "price": 39.96
-    }
-  ],
-  "feed-fd451acc": [
+  "feed-1ad23d49": [
     {
       "date": "2026-11-24",
       "price": 15.96
     }
   ],
-  "feed-c6c56f3b": [
+  "feed-368a5082": [
     {
       "date": "2026-11-24",
-      "price": 23.96
+      "price": 11.96
     }
   ],
-  "feed-2c37ea1": [
+  "feed-3c54207c": [
     {
       "date": "2026-11-24",
-      "price": 39.96
+      "price": 11.96
     }
   ],
-  "feed-1dab6652": [
+  "feed-c7981aa2": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 11.96
     }
   ],
-  "feed-816a4fcc": [
+  "feed-a7c2e9c8": [
     {
       "date": "2026-11-24",
-      "price": 299
+      "price": 11.96
     }
   ],
-  "feed-3f5c7e72": [
+  "feed-c0efb482": [
     {
       "date": "2026-11-24",
-      "price": 149.95
+      "price": 11.96
     }
   ],
-  "feed-ee04647d": [
+  "feed-4e313b64": [
     {
       "date": "2026-11-24",
-      "price": 149.95
+      "price": 34.97
     }
   ],
-  "feed-ebeb3373": [
+  "feed-35d0359c": [
     {
       "date": "2026-11-24",
-      "price": 149.95
+      "price": 129
     }
   ],
-  "feed-385085bd": [
+  "feed-d9b5d4f6": [
     {
       "date": "2026-11-24",
       "price": 399
     }
   ],
-  "feed-c44804bc": [
+  "feed-cbb43061": [
     {
       "date": "2026-11-24",
-      "price": 799
+      "price": 239
     }
   ],
-  "feed-cdd0fc8e": [
+  "feed-64e787c5": [
     {
       "date": "2026-11-24",
-      "price": 199
+      "price": 349.95
     }
   ],
-  "feed-5e331ec5": [
+  "feed-19b70dc4": [
     {
       "date": "2026-11-24",
-      "price": 199
+      "price": 229.95
     }
   ],
-  "feed-df677402": [
+  "feed-211bb32c": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 269.95
     }
   ],
-  "feed-481e141f": [
+  "feed-5973102b": [
     {
       "date": "2026-11-24",
-      "price": 359.4
+      "price": 179.95
     }
   ],
-  "feed-4284fce5": [
+  "feed-f9b199e4": [
     {
       "date": "2026-11-24",
-      "price": 249
+      "price": 175
     }
   ],
-  "feed-9d4f113c": [
+  "feed-2b49c483": [
+    {
+      "date": "2026-11-24",
+      "price": 99
+    }
+  ],
+  "feed-a3594571": [
+    {
+      "date": "2026-11-24",
+      "price": 99.95
+    }
+  ],
+  "feed-c92859fe": [
     {
       "date": "2026-11-24",
       "price": 349
     }
   ],
-  "feed-7dd3a92d": [
+  "feed-1d040597": [
     {
       "date": "2026-11-24",
-      "price": 229
+      "price": 49.95
     }
   ],
-  "feed-ae6a6b25": [
+  "feed-42c2d6dc": [
     {
       "date": "2026-11-24",
-      "price": 169.95
+      "price": 279
     }
   ],
-  "feed-ab6c4524": [
+  "feed-520d2b28": [
     {
       "date": "2026-11-24",
-      "price": 299
+      "price": 69
     }
   ],
-  "feed-48e35446": [
+  "feed-f9f21d54": [
     {
       "date": "2026-11-24",
-      "price": 169
+      "price": 69
     }
   ],
-  "feed-4ed522b0": [
+  "feed-393a9170": [
     {
       "date": "2026-11-24",
-      "price": 179
+      "price": 69
     }
   ],
-  "feed-3c486caa": [
+  "feed-9fe3eab8": [
     {
       "date": "2026-11-24",
-      "price": 399
+      "price": 59.95
     }
   ],
-  "feed-6f77e055": [
+  "feed-6479c3b2": [
     {
       "date": "2026-11-24",
-      "price": 7.95
+      "price": 9.99
     }
   ],
-  "feed-3d890beb": [
+  "feed-a7ed10f3": [
     {
       "date": "2026-11-24",
-      "price": 899
+      "price": 9.99
     }
   ],
-  "feed-3dc233a3": [
+  "feed-adcd8f1": [
     {
       "date": "2026-11-24",
-      "price": 899
+      "price": 13.96
     }
   ],
-  "feed-aba9924f": [
+  "feed-cf321b69": [
     {
       "date": "2026-11-24",
-      "price": 199
+      "price": 6.99
     }
   ],
-  "feed-25ce8755": [
+  "feed-648cc1c5": [
     {
       "date": "2026-11-24",
-      "price": 119.95
+      "price": 6.99
     }
   ],
-  "feed-10b9e174": [
+  "feed-bd516e16": [
     {
       "date": "2026-11-24",
-      "price": 599
+      "price": 449
     }
   ],
-  "feed-58ed4bf2": [
+  "feed-27a3cabe": [
     {
       "date": "2026-11-24",
-      "price": 399
+      "price": 10.99
     }
   ],
-  "feed-4ca2f5bf": [
+  "feed-8cd50680": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 39.95
     }
   ],
-  "feed-dc10eddf": [
+  "feed-cc0bd32b": [
     {
       "date": "2026-11-24",
-      "price": 699
+      "price": 39.95
     }
   ],
-  "feed-7325949a": [
+  "feed-bd2e0970": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 249.5
     }
   ],
-  "feed-848c8f4a": [
+  "feed-c2047c96": [
     {
       "date": "2026-11-24",
-      "price": 499
+      "price": 249.5
+    }
+  ],
+  "feed-d9aece71": [
+    {
+      "date": "2026-11-24",
+      "price": 9.99
+    }
+  ],
+  "feed-2e1f6149": [
+    {
+      "date": "2026-11-24",
+      "price": 7.49
+    }
+  ],
+  "feed-2dd08e06": [
+    {
+      "date": "2026-11-24",
+      "price": 7.49
+    }
+  ],
+  "feed-9d597a53": [
+    {
+      "date": "2026-11-24",
+      "price": 24.97
+    }
+  ],
+  "feed-74d1d6b": [
+    {
+      "date": "2026-11-24",
+      "price": 24.97
+    }
+  ],
+  "feed-bf5fe647": [
+    {
+      "date": "2026-11-24",
+      "price": 29.99
+    }
+  ],
+  "feed-f50a35ba": [
+    {
+      "date": "2026-11-24",
+      "price": 4.99
+    }
+  ],
+  "feed-32b7b39c": [
+    {
+      "date": "2026-11-24",
+      "price": 14.99
+    }
+  ],
+  "feed-5e68ad14": [
+    {
+      "date": "2026-11-24",
+      "price": 16.99
+    }
+  ],
+  "feed-6219ab02": [
+    {
+      "date": "2026-11-24",
+      "price": 9.99
     }
   ]
 }
