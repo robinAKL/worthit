@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { readdirSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { ALLOWED_LICENCE, pickImage } from '../../scripts/enrich/model-photos.mjs';
+import { ALLOWED_LICENCE, NOT_STOCK, pickImage } from '../../scripts/enrich/model-photos.mjs';
 import { carArt, productArt } from '../components/art/kind';
 import { OPEN_LICENCE } from './modelPhotos';
 import manifest from '../data/model-photos.json';
@@ -45,6 +45,12 @@ describe('model photos from Wikimedia Commons', () => {
     ];
     expect(pickImage(pages, 'Toyota', 'Aqua')).toMatchObject({ title: 'File:2nd generation Toyota Aqua Z.jpg', license: 'CC0', author: 'Someone' });
     expect(pickImage(pages.slice(0, 4), 'Toyota', 'Aqua')).toBeNull();
+  });
+
+  it('skips race, rally, concept and emergency-service cars, by whole word', () => {
+    for (const bad of ['2006 BMW 120i SE Circuit Rally 2', 'Toyota FT-86 II concept', 'fire service Toyota Hilux', 'Subaru WRX STI at the Adelaide Rally']) expect(NOT_STOCK.test(bad)).toBe(true);
+    for (const ok of ['Honda GRACE LX front', 'Toyota Vellfire, Johor Bahru', 'Toyota HiLux GR Sport']) expect(NOT_STOCK.test(ok)).toBe(false);
+    expect(Object.values(manifest).filter(Boolean).every((e) => !NOT_STOCK.test(e.title.replace(/[_-]/g, ' ')))).toBe(true);
   });
 
   it('every photo in the manifest has an open licence, an author and a source, and the file exists', () => {

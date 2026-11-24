@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
-import { countsAsSpec, excludedFrom, quartile, reasonFor } from './score';
+import { countsAsSpec, excludedFrom, laneScore, quartile, reasonFor, specPoints } from './score';
 import { comparisonKey, search } from './search';
 import { sizeBand, specFromProduct } from './specs';
 
@@ -142,31 +142,28 @@ describe('search', () => {
     for (const locale of ['en', 'zh-Hans'] as const) {
       const reason = reasonFor(product, 'value', 100, 200, locale);
       expect(reason).not.toMatch(/0 reviews|photos|反馈 0 条|图片/);
-      expect(reason).toContain(locale === 'en' ? '2 specs' : '2 项');
+      // Value says how far from the group's middle price, nothing else.
+      expect(reason).toContain(locale === 'en' ? '95% below' : '低 95%');
     }
     expect(excludedFrom(product, 'cheap', 100)).toBe(false);
     expect(excludedFrom({ ...product, condition: 'used' }, 'cheap', 100)).toBe(true);
     expect(excludedFrom({ ...product, fixture: true, imageCount: 4, reviewCount: 0 }, 'cheap', 100)).toBe(true);
   });
 
-  it('keeps a captured price that has one catalog photo', () => {
-    const captured = {
-      ...productsIn('laptop')[0],
-      fixture: false,
-      source: 'feed' as const,
-      imageCount: 1,
-      specs: { brand: 'Acer' },
-    };
-    expect(excludedFrom(captured, 'value', 1000)).toBe(false);
-    expect(excludedFrom({ ...captured, fixture: true, imageCount: 1 }, 'value', 1000)).toBe(true);
+  it('never lets the number of photos decide a lane or a score', () => {
+    const captured = { ...productsIn('laptop')[0], fixture: false, source: 'feed' as const, specs: { brand: 'Acer' } };
+    for (const lane of ['value', 'cheap', 'refined'] as const) {
+      expect(excludedFrom({ ...captured, imageCount: 0 }, lane, 1000, 1200)).toBe(excludedFrom({ ...captured, imageCount: 12 }, lane, 1000, 1200));
+      expect(laneScore({ ...captured, imageCount: 0 }, lane, 1200)).toBe(laneScore({ ...captured, imageCount: 12 }, lane, 1200));
+    }
+    expect(excludedFrom({ ...captured, fixture: true, imageCount: 1 }, 'value', 1000)).toBe(false);
   });
 
-  it('drops laptops without enough photos from the cheap lane', () => {
-    const result = search('笔记本', 'cheap');
-    expect(result.fixture).toBe(true);
-    expect(result.items.every((hit) => hit.product.imageCount >= 3)).toBe(true);
-    expect(result.items.some((hit) => hit.product.id === 'laptop-01')).toBe(false);
-    expect(result.excludedCount).toBeGreaterThan(0);
+  it('leaves out of the cheap lane anything out of stock or without specs', () => {
+    const p = { ...productsIn('laptop')[0], fixture: false, source: 'feed' as const, specs: { brand: 'Acer', stock: 'in stock' } };
+    expect(excludedFrom(p, 'cheap', 10_000)).toBe(false);
+    expect(excludedFrom({ ...p, specs: { brand: 'Acer', stock: 'out of stock' } }, 'cheap', 10_000)).toBe(true);
+    expect(excludedFrom({ ...p, specs: {} }, 'cheap', 10_000)).toBe(true);
   });
 
   it('drops products with no specs from the value lane', () => {
@@ -177,10 +174,18 @@ describe('search', () => {
     ).toBe(true);
   });
 
-  it('drops vague condition text from the refined lane', () => {
-    const result = search('手机', 'refined');
-    expect(result.items.some((hit) => hit.product.id === 'phone-10')).toBe(false);
-    expect(result.items.every((hit) => hit.product.specs.note !== '很好')).toBe(true);
+  it('ranks "Higher spec" only among similarly priced items, by measurable spec', () => {
+    const base = { ...productsIn('laptop')[0], fixture: false, source: 'feed' as const, warrantyMonths: undefined, spec: { family: 'laptop' as const, ramGb: 16, storageGb: 512, source: 'rules' as const, evidence: {} } };
+    expect(specPoints(base)).toBeGreaterThan(0);
+    expect(specPoints({ ...base, spec: undefined })).toBe(0);
+    // No measurable spec, or priced outside 25% of the median: not in this lane.
+    expect(excludedFrom({ ...base, spec: undefined }, 'refined', 0, base.price)).toBe(true);
+    expect(excludedFrom(base, 'refined', 0, base.price * 2)).toBe(true);
+    expect(excludedFrom(base, 'refined', 0, base.price)).toBe(false);
+    // More memory at the same price ranks higher.
+    const more = { ...base, spec: { ...base.spec, ramGb: 32 } };
+    expect(laneScore(more, 'refined', base.price)).toBeGreaterThan(laneScore(base, 'refined', base.price));
+    for (const hit of search('笔记本', 'refined').items.filter((h) => h.ranked !== false)) expect(hit.reason).not.toMatch(/photo|图片|quality|质量/i);
   });
 
   it('keeps reasons inside the fixture set', () => {
@@ -212,17 +217,6 @@ describe('search', () => {
     expect(desks.items.every((hit) => hit.product.category === 'furniture')).toBe(true);
   });
 
-  it('keeps sample products with fewer than three photos out of every lane', () => {
-    for (const lane of ['value', 'cheap', 'refined'] as const) {
-      const result = search('', lane);
-      const samples = result.items.filter((hit) => hit.product.fixture);
-      expect(samples.every((hit) => hit.product.imageCount >= 3)).toBe(true);
-      expect(result.items.filter((hit) => !hit.product.fixture).every((hit) => hit.product.imageCount >= 1)).toBe(true);
-      expect(result.items.some((hit) => hit.product.id === 'laptop-01')).toBe(false);
-      expect(result.items.some((hit) => hit.product.id === 'phone-01')).toBe(false);
-      expect(result.items.some((hit) => hit.product.id === 'furn-01')).toBe(false);
-    }
-  });
 
   it('uses the lower quartile as the cheap cutoff', () => {
     const group = productsIn('laptop');
@@ -236,6 +230,6 @@ describe('search', () => {
     expect(cheap.items.length).toBeGreaterThan(0);
     expect(cheap.items.every((hit) => hit.product.price <= lowerIn(bandOf(hit.product)))).toBe(true);
     expect(cheap.items.every((hit) => hit.band === 'low')).toBe(true);
-    expect(excludedFrom(group[0], 'cheap', lower)).toBe(true);
+    expect(excludedFrom({ ...group[0], specs: {} }, 'cheap', lower)).toBe(true);
   });
 });

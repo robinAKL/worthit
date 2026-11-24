@@ -6,8 +6,9 @@ const CATEGORIES: { category: string; pattern: RegExp }[] = [
   { category: 'furniture', pattern: /家具|书桌|椅子|沙发|餐桌|desk|chair|sofa/i },
 ];
 
+// A number is a budget only when it stands on its own: "120i", "CX-5", "RAV4" and "320d" are model names.
 const BUDGET =
-  /(?:预算|不超过|少于|under|below|以内)?\s*\$?\s*(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s*(?:刀|纽币|nzd|元|块)?(?:\s*(?:以内|以下|内))?/i;
+  /(?:预算|不超过|少于|under|below|以内)?\s*\$?\s*(?<![\w.-])(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)(?=\s*(?:nzd|刀|纽币|元|块)|(?![\w-]))\s*(?:刀|纽币|nzd|元|块)?(?:\s*(?:以内|以下|内))?/i;
 
 const WAN = /(\d+(?:\.\d+)?)\s*万/;
 

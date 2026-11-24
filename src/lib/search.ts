@@ -154,7 +154,7 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
     const median = quartile(rankedPrices, 0.5);
     const upperQuartile = quartile(rankedPrices, 0.75);
     for (const product of comparable) {
-      if (excludedFrom(product, lane, lowerQuartile)) {
+      if (excludedFrom(product, lane, lowerQuartile, median)) {
         excludedCount += 1;
         continue;
       }

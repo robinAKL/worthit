@@ -44,15 +44,20 @@ export function median(values: number[]): number {
 
 /** A set of comparable prices with this item's place in it. */
 export interface Cohort {
-  /** 'model' = same make and model, 'segment' = same body and nearby years, 'group' = product group. */
-  kind: 'model' | 'segment' | 'group';
+  /**
+   * 'model' = same make and model, 'segment' = same body and nearby years, 'group' = product group,
+   * 'none' = nothing close enough to compare with.
+   */
+  kind: 'model' | 'segment' | 'group' | 'none';
   /** Human label, e.g. "Toyota Aqua" or "hatchback". */
   label: string;
   /** Sorted ascending, includes this item. */
   prices: number[];
   rank: number;
-  /** Year span for a segment, e.g. [2016, 2020]. */
+  /** Year span of the comparison, e.g. [2016, 2020]. */
   years?: [number, number];
+  /** Cars: `prices` are the peers' prices adjusted to this car's age and kilometres. */
+  adjusted?: boolean;
   /** When set, `prices` are prices per unit (e.g. NZD per litre) and `size` is this item's size. */
   unit?: import('./specs').Unit;
   size?: number;

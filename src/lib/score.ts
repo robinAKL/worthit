@@ -44,27 +44,53 @@ export function bandFor(price: number, lowerQuartile: number, upperQuartile: num
   return 'high';
 }
 
-export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number): boolean {
+/** "Higher spec" compares items priced within this share of the group median, so it never favours a dearer class. */
+export const SPEC_PRICE_BAND = 0.25;
+
+/**
+ * What we can measure about a product's spec, added up. Only comparable within one group.
+ * Energy stars count one point each, warranty one point a year, capacity up to two points
+ * against the largest in the group, and laptop memory, storage and processor tier.
+ * 0 when nothing measurable is known.
+ */
+export function specPoints(product: Product, maxSize?: number): number {
+  const s = product.spec;
+  let points = 0;
+  if (s?.energyStars) points += s.energyStars;
+  if (product.warrantyMonths) points += product.warrantyMonths / 12;
+  if (s?.size && maxSize) points += (2 * s.size) / maxSize;
+  if (s?.ramGb) points += s.ramGb / 8;
+  if (s?.storageGb) points += s.storageGb / 512;
+  if (s?.cpuTier) points += { entry: 0, mid: 1, high: 2 }[s.cpuTier];
+  return points;
+}
+
+export function inSpecPriceBand(price: number, median: number): boolean {
+  return price >= median * (1 - SPEC_PRICE_BAND) && price <= median * (1 + SPEC_PRICE_BAND);
+}
+
+/** Photo counts never decide anything here: they say nothing about whether a price is fair. */
+export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number, median = Infinity): boolean {
   const reviews = product.reviewCount ?? 0;
-  if (product.fixture ? product.imageCount < 3 : product.imageCount < 1) return true;
   if (lane === 'cheap') {
+    if (/out of stock/i.test(String(product.specs.stock ?? ''))) return true;
+    if (!hasSpecs(product)) return true;
     const reviewRisk = product.fixture || product.condition === 'used';
     return reviewRisk && reviews === 0 && product.price < lowerQuartile * 0.7;
   }
   if (lane === 'value') {
     return !hasSpecs(product);
   }
-  return !conditionIsSpecific(product);
+  // Higher spec: something measurable, and priced like the rest of the group.
+  return specPoints(product) === 0 || (Number.isFinite(median) && !inSpecPriceBand(product.price, median));
 }
 
 export function laneScore(product: Product, lane: Lane, median: number): number {
-  const reviews = product.reviewCount ?? 0;
   if (lane === 'cheap') return -product.price;
-  if (lane === 'value') {
-    const belowMedian = Math.max(0, median - product.price);
-    return belowMedian + reviews * 10 + product.imageCount * 5;
-  }
-  return reviews * 10 + product.imageCount * 8 + (conditionIsSpecific(product) ? 40 : 0) + (product.warrantyMonths ?? 0);
+  // Value: how far below the group's middle price, as a share. Nothing else is mixed in.
+  if (lane === 'value') return 1 - product.price / median;
+  // Higher spec: more measurable spec first; the lower price breaks a tie.
+  return specPoints(product) - (product.price / median) * 0.001;
 }
 
 export function reasonFor(
@@ -78,7 +104,6 @@ export function reasonFor(
   const q1 = Math.round(lowerQuartile);
   const mid = Math.round(median);
   const reviews = product.reviewCount ?? 0;
-  const specCount = Object.entries(product.specs).filter(([key, value]) => countsAsSpec(product, key, value)).length;
   const sample = product.fixture;
   const facts = sample
     ? locale === 'zh-Hans'
@@ -104,12 +129,11 @@ export function reasonFor(
     }
     if (lane === 'value') {
       const midLabel = sample ? `同组示例中位是 ${mid}` : `同组中位是 ${mid}`;
-      const specs = sample ? `规格写了 ${specCount} 项，反馈 ${reviews} 条。` : `规格写了 ${specCount} 项。${facts}`;
-      return `标价 ${price} 纽币，${midLabel}。${specs}${tail}`;
+      const pct = Math.round(Math.abs(1 - price / median) * 100);
+      const cmp = pct < 1 ? '与中位基本一致' : price < median ? `低 ${pct}%` : `高 ${pct}%`;
+      return `标价 ${price} 纽币，${midLabel}，${cmp}。${facts}${tail}`;
     }
-    const note = String(product.localizedSpecs?.['zh-Hans']?.note ?? product.specs.note ?? '');
-    const lead = sample ? `反馈 ${reviews} 条，` : facts;
-    return `${lead}成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。${tail}`;
+    return `价格在同组中位 ${mid} 上下 25% 以内，${specSummary(product, 'zh-Hans')}。标价 ${price} 纽币。${tail}`;
   }
   if (lane === 'cheap') {
     const band = sample ? `the sample lower quartile of ${q1}` : `the lower quartile of ${q1} in this group`;
@@ -117,12 +141,24 @@ export function reasonFor(
   }
   if (lane === 'value') {
     const midLabel = sample ? `The sample median is ${mid}` : `The median in this group is ${mid}`;
-    const specs = sample ? `${specCount} specs filled in, ${reviews} reviews. ` : `${specCount} specs filled in. ${facts}`;
-    return `Listed at ${price} NZD. ${midLabel}. ${specs}${tail}`;
+    const pct = Math.round(Math.abs(1 - price / median) * 100);
+    const cmp = pct < 1 ? 'about the same' : price < median ? `${pct}% below` : `${pct}% above`;
+    return `Listed at ${price} NZD. ${midLabel}, so this is ${cmp}. ${facts}${tail}`;
   }
-  const group = sample ? 'this sample' : 'this group';
-  const lead = sample ? `${reviews} reviews, and the condition is written out in detail. ` : facts;
-  return `${lead}Listed at ${price} NZD, not the lowest price in ${group}. ${tail}`;
+  return `Priced within 25% of the ${mid} NZD median in this group, ${specSummary(product, 'en')}. Listed at ${price} NZD. ${tail}`;
+}
+
+/** The measurable spec behind a "Higher spec" ranking, e.g. "5 energy stars, 2-year warranty". */
+function specSummary(product: Product, locale: Locale): string {
+  const s = product.spec;
+  const parts: string[] = [];
+  if (s?.energyStars) parts.push(locale === 'zh-Hans' ? `节能 ${s.energyStars} 星` : `${s.energyStars} energy stars`);
+  if (product.warrantyMonths) parts.push(locale === 'zh-Hans' ? `保修 ${product.warrantyMonths} 个月` : `${product.warrantyMonths}-month warranty`);
+  if (s?.ramGb) parts.push(`${s.ramGb} GB ${locale === 'zh-Hans' ? '内存' : 'memory'}`);
+  if (s?.storageGb) parts.push(`${s.storageGb} GB ${locale === 'zh-Hans' ? '存储' : 'storage'}`);
+  if (s?.cpuTier) parts.push(locale === 'zh-Hans' ? `处理器档次 ${{ entry: '入门', mid: '中端', high: '高端' }[s.cpuTier]}` : `${s.cpuTier}-tier processor`);
+  if (parts.length === 0) return locale === 'zh-Hans' ? '规格有可比较的数据' : 'with measurable spec';
+  return locale === 'zh-Hans' ? `规格：${parts.join('、')}` : `with ${parts.join(', ')}`;
 }
 
 /** A captured group smaller than five has no quartile to cite. */

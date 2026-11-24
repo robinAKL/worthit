@@ -95,14 +95,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:2018_Suzuki_Swift_SZ5_Boosterjet_SHVS_1.0_Front.jpg"
   },
-  "chery tiggo": {
-    "file": "/model-photos/chery-tiggo.jpg",
-    "title": "File:Chery Tiggo Coupe Concept IMG 0926.jpg",
-    "author": "Alexander Migl",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_Coupe_Concept_IMG_0926.jpg"
-  },
   "volkswagen golf": {
     "file": "/model-photos/volkswagen-golf.jpg",
     "title": "File:2020 Volkswagen Golf Style 1.5 Front.jpg",
@@ -175,14 +167,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Subaru_Legacy_(BE)_S401_IMG_9845.jpg"
   },
-  "toyota 86": {
-    "file": "/model-photos/toyota-86.jpg",
-    "title": "File:Toyota FT-86 II concept IAA 2011.JPG",
-    "author": "Felix König",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Toyota_FT-86_II_concept_IAA_2011.JPG"
-  },
   "toyota rav4": {
     "file": "/model-photos/toyota-rav4.jpg",
     "title": "File:Toyota RAV4 (XA10) IMG 1260.jpg",
@@ -254,14 +238,6 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:MG_ZS_Facelift_1X7A6412.jpg"
-  },
-  "bmw 120i": {
-    "file": "/model-photos/bmw-120i.jpg",
-    "title": "File:2006 BMW 120i SE Circuit Rally 2.jpg",
-    "author": "Calreyn88",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:2006_BMW_120i_SE_Circuit_Rally_2.jpg"
   },
   "mazda premacy": {
     "file": "/model-photos/mazda-premacy.jpg",
@@ -705,14 +681,6 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:MG_HS_(second_generation)_DSC_7229.jpg"
   },
-  "toyota hilux": {
-    "file": "/model-photos/toyota-hilux.jpg",
-    "title": "File:Alsager Carnival - fire service Toyota Hilux - Jun 2025.jpg",
-    "author": "Dominic Nelson",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Alsager_Carnival_-_fire_service_Toyota_Hilux_-_Jun_2025.jpg"
-  },
   "mitsubishi triton": {
     "file": "/model-photos/mitsubishi-triton.jpg",
     "title": "File:Mitsubishi Triton AXCR 2022 Winner.jpg",
@@ -1022,14 +990,6 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:2006-2008_Toyota_Estima_Hybrid_rear.jpg"
   },
-  "subaru wrx": {
-    "file": "/model-photos/subaru-wrx.jpg",
-    "title": "File:Subaru WRX STI (VA) at the 2025 Shannons Adelaide Rally (028A4566).jpg",
-    "author": "Yu Chu Chin",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Subaru_WRX_STI_(VA)_at_the_2025_Shannons_Adelaide_Rally_(028A4566).jpg"
-  },
   "audi a3": {
     "file": "/model-photos/audi-a3.jpg",
     "title": "File:Audi A3 Cabriolet, Baujahr 2008 (2008-10-21).jpg",
@@ -1094,5 +1054,45 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Honda_GRACE_LX_(DBA-GM6)_front_(cropped).jpg"
+  },
+  "chery tiggo": {
+    "file": "/model-photos/chery-tiggo.jpg",
+    "title": "File:Chery Tiggo 7 Back IMG 0391.jpg",
+    "author": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_7_Back_IMG_0391.jpg"
+  },
+  "toyota 86": {
+    "file": "/model-photos/toyota-86.jpg",
+    "title": "File:TOYOTA 86 (ZN6,ZC6) China.jpg",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_86_(ZN6,ZC6)_China.jpg"
+  },
+  "bmw 120i": {
+    "file": "/model-photos/bmw-120i.jpg",
+    "title": "File:BMW F40 120i M Sport Misano Blue (5).jpg",
+    "author": "Damian B Oh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BMW_F40_120i_M_Sport_Misano_Blue_(5).jpg"
+  },
+  "toyota hilux": {
+    "file": "/model-photos/toyota-hilux.jpg",
+    "title": "File:Toyota HiLux GR Sport 1X7A7281.jpg",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_HiLux_GR_Sport_1X7A7281.jpg"
+  },
+  "subaru wrx": {
+    "file": "/model-photos/subaru-wrx.jpg",
+    "title": "File:1994 Subaru Impreza WRX STi.jpg",
+    "author": "TTTNIS",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:1994_Subaru_Impreza_WRX_STi.jpg"
   }
 }

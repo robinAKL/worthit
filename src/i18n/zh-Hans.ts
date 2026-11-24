@@ -64,9 +64,9 @@ export const zhHans: Copy = {
     meterLabelLive: (pos: number) => `在同组已采集价格里，位于 ${pos}% 的位置`,
   },
   lanes: {
-    value: { label: '性价比', hint: '价格和品质的平衡' },
+    value: { label: '性价比', hint: '比可比商品的中位价低得最多' },
     cheap: { label: '便宜', hint: '同类里价格偏低，且没有风险信号' },
-    refined: { label: '精致', hint: '关注反馈、成色描述和保修，价格不一定低' },
+    refined: { label: '规格更高', hint: '价格相近时，容量、节能星级或保修更高的靠前' },
   } satisfies Record<Lane, { label: string; hint: string }>,
   ask: {
     open: '提个问题',
@@ -99,8 +99,11 @@ export const zhHans: Copy = {
     under: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `比估价便宜 ${amount}` : `比同类中位价低 ${amount}`),
     over: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `比估价贵 ${amount}` : `比同类中位价高 ${amount}`),
     near: (ref: 'car' | 'product') => (ref === 'car' ? '价格与估价基本一致' : '价格与同类基本一致'),
-    rankModel: (rank: number, size: number, label: string) => `在售 ${size} 台 ${label} 里价格第 ${rank} 低`,
-    rankSegment: (rank: number, size: number, body: string, from: number, to: number) => `${from}–${to} 年的 ${size} 台${body}里价格第 ${rank} 低`,
+    rankModel: (rank: number, size: number, label: string, from: number, to: number) =>
+      `${from}–${to} 年的 ${size} 台 ${label}，按车龄和公里数校正后价格第 ${rank} 低`,
+    rankSegment: (rank: number, size: number, body: string, from: number, to: number) =>
+      `${from}–${to} 年的 ${size} 台同类${body}，按车龄和公里数校正后价格第 ${rank} 低`,
+    rankNone: '在售的相近车太少，暂不排名',
     rankGroup: (rank: number, size: number) => `同类 ${size} 件里价格第 ${rank} 低`,
     underForSize: (amount: string, size: string) => `按 ${size} 算，比同类便宜 ${amount}`,
     overForSize: (amount: string, size: string) => `按 ${size} 算，比同类贵 ${amount}`,
@@ -110,8 +113,8 @@ export const zhHans: Copy = {
     mixedNote: '配置差异大，暂不判断划算',
     body: { hatch: '掀背车', sedan: '轿车', wagon: '旅行车', suv: 'SUV', ute: '皮卡', van: '面包车', coupe: '双门车', other: '车' } as Record<string, string>,
     confidence: {
-      car: (level: number, group: number, total: number) =>
-        level === 3 ? `估价可靠：参考同款 ${group} 台、在售 ${total} 台` : level === 2 ? `估价参考在售 ${total} 台及同品牌` : '同类车少，估价仅供参考',
+      car: (level: number, group: number, _total: number) =>
+        level === 3 ? `估价可靠：参考同款在售 ${group} 台` : level === 2 ? (group > 0 ? `估价参考同款在售 ${group} 台` : '估价参考在售的同类车') : '同类车少，估价仅供参考',
       product: (level: number, size: number) => (level === 3 ? `比较可靠：同类 ${size} 件` : level === 2 ? `参考同类 ${size} 件` : `同类仅 ${size} 件，仅供参考`),
       label: (level: number) => `可信度 ${level}/3`,
     },
@@ -143,16 +146,16 @@ export const zhHans: Copy = {
     km: (n: string) => `${n} 公里`,
     fuel: { petrol: '汽油', diesel: '柴油', hybrid: '混动', 'plug-in-hybrid': '插电混动', electric: '纯电', lpg: 'LPG', other: '其他燃料' },
     transmission: { automatic: '自动挡', manual: '手动挡', cvt: 'CVT', other: '其他' },
-    method: '估价方法：我们用采集到的全部在售车拟合一个价格模型，考虑车龄、公里数、车身、燃料和品牌。同款车在售 5 台以上时，再按这款车的实际定价修正。比估价低 35% 以上的车不放进「性价比」栏，因为模型看不出配置、车型版本和车况，差这么多往往不是捡漏。这只是参考，不是评估报告；车况、历史记录和上路费请向车行核实。',
+    method: '合理价怎么算：每台车都和在售的最相近的车比较。首选同品牌同车型、年份相差 2 年以内、燃料相同的车；不够就放宽到 3 年，再到任意年份，最后用同车身、同档次品牌的车。每台参考车都按这台车的车龄和公里数校正，校正用的是由全部在售车拟合的价格模型（豪华品牌单独一条贬值曲线）。合理价取校正后价格的中位数，卡片上的排名用的也是同一组车。同款在售少于 3 台时只给粗略参考，不做「划算」判断。比合理价低 35% 以上的车不放进「性价比」栏，因为我们看不出配置和车况。这只是参考，不是评估报告；车况、历史记录和上路费请向车行核实。',
   },
   rank: {
     title: '我们怎么排序',
     lede: '每件商品只和同一品类的商品比较。每条推荐都写明理由，理由里的数字都能对回商品信息。',
     head: ['栏目', '怎么算', '我们不会说的话'],
     rows: [
-      { lane: 'value' as Lane, how: '按价格在同类里的位置、反馈数量和图片数量打分，并要求提供关键规格。', never: '“最优选择”“闭眼买”' },
-      { lane: 'cheap' as Lane, how: '价格落在同类的下四分位附近，并且没有缺图、缺规格这类风险信号。', never: '“全网最低”“保证最便宜”' },
-      { lane: 'refined' as Lane, how: '按反馈数量、图片数量、具体成色描述和保修打分，价格可以高于中位。', never: '“奢侈品认证”“投资级”' },
+      { lane: 'value' as Lane, how: '只看价格比可比商品的中位价低多少：同品类、同容量档；容量重要的品类按每升或每公斤价格比较。要求有关键规格，图片数量不参与评分。', never: '“最优选择”“闭眼买”' },
+      { lane: 'cheap' as Lane, how: '在可比商品价格最低的四分之一里按总价排序，排除缺货和缺关键规格的商品。', never: '“全网最低”“保证最便宜”' },
+      { lane: 'refined' as Lane, how: '只看价格在同组中位上下 25% 以内的商品，其中容量、节能星级、保修（笔记本看内存、存储和处理器）更高的靠前。图片数量不参与评分。', never: '“质量更好”“更耐用”：我们没有评价数据，不做这类判断' },
     ],
   },
   rent: {

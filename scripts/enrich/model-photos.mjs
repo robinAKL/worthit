@@ -21,6 +21,9 @@ const API = 'https://commons.wikimedia.org/w/api.php';
 export const ALLOWED_LICENCE = /^(cc0|cc[- ]?by(?:-sa)?(?:[- ]\d(?:\.\d)?)?(?:\s\w+)?|public domain|pd(?:[- ].*)?)$/i;
 // Whole words only: "toy" must not match "Toyota".
 const NOT_EXTERIOR = /\b(interior|engine|badge|logo|emblem|dashboard|steering|wheels?|rims?|seats?|cockpit|trunk|boot|tail ?lights?|headlights?|grille|detail|key|manual|model car|toy|diecast|lego|infotainment|room)\b/i;
+// Not what a buyer sees on a dealer's lot: race and rally cars, concepts, emergency or taxi liveries, wrecks.
+// Whole words, so "Grace" and "Vellfire" are not caught by "race" and "fire".
+export const NOT_STOCK = /\b(rally|rallye|racing|race ?car|motorsport|livery|circuit|concept|prototype|police|polizei|fire service|ambulance|taxi|crash|wreck|accident)\b/i;
 
 export const slugOf = (key) => key.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const words = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
@@ -34,7 +37,7 @@ export function pickImage(pages, make, model) {
     if (!info?.thumburl) continue;
     const title = String(page.title ?? '').toLowerCase().replace(/[_-]/g, ' ');
     if (!need.every((w) => title.includes(w))) continue;
-    if (NOT_EXTERIOR.test(title)) continue;
+    if (NOT_EXTERIOR.test(title) || NOT_STOCK.test(title)) continue;
     if (!(info.width > info.height)) continue;
     const meta = info.extmetadata ?? {};
     const licence = stripHtml(meta.LicenseShortName?.value);

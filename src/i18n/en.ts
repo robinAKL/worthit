@@ -67,9 +67,9 @@ export const en = {
     meterLabelLive: (pos: number) => `${pos}% of the way from the lower to the upper captured price in this group`,
   },
   lanes: {
-    value: { label: 'Value', hint: 'A balance of price and quality' },
+    value: { label: 'Value', hint: 'Furthest below the typical price of comparable items' },
     cheap: { label: 'Lower price', hint: 'Lower prices with key details checked' },
-    refined: { label: 'Quality', hint: 'Reviews, condition and warranty come first' },
+    refined: { label: 'Higher spec', hint: 'At a similar price, more capacity, energy stars or warranty' },
   },
   ask: {
     open: 'Ask a question',
@@ -102,8 +102,11 @@ export const en = {
     under: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `${amount} under our estimate` : `${amount} under the typical price`),
     over: (amount: string, ref: 'car' | 'product') => (ref === 'car' ? `${amount} over our estimate` : `${amount} over the typical price`),
     near: (ref: 'car' | 'product'): string => (ref === 'car' ? 'In line with our estimate' : 'In line with similar items'),
-    rankModel: (rank: number, size: number, label: string) => `Price #${rank} of ${size} ${label} for sale`,
-    rankSegment: (rank: number, size: number, body: string, from: number, to: number) => `Price #${rank} of ${size} ${body} from ${from}–${to}`,
+    rankModel: (rank: number, size: number, label: string, from: number, to: number) =>
+      `#${rank} of ${size} ${label} from ${from}–${to}, with prices adjusted for age and km`,
+    rankSegment: (rank: number, size: number, body: string, from: number, to: number) =>
+      `#${rank} of ${size} similar ${body} from ${from}–${to}, with prices adjusted for age and km`,
+    rankNone: 'Too few similar cars on sale to rank this one',
     rankGroup: (rank: number, size: number) => `Price #${rank} of ${size} similar items`,
     underForSize: (amount: string, size: string): string => `${amount} under the typical price for ${size}`,
     overForSize: (amount: string, size: string): string => `${amount} over the typical price for ${size}`,
@@ -113,8 +116,8 @@ export const en = {
     mixedNote: 'Specs differ a lot here, so we make no price call' as string,
     body: { hatch: 'hatchbacks', sedan: 'sedans', wagon: 'wagons', suv: 'SUVs', ute: 'utes', van: 'vans', coupe: 'coupes', other: 'cars' } as Record<string, string>,
     confidence: {
-      car: (level: number, group: number, total: number) =>
-        level === 3 ? `Firm estimate: ${group} of this model and ${total} cars` : level === 2 ? `Estimate from ${total} cars and this make` : 'Few similar cars, treat as a rough guide',
+      car: (level: number, group: number, _total: number) =>
+        level === 3 ? `Firm estimate: ${group} of this model on sale` : level === 2 ? (group > 0 ? `Estimate from ${group} of this model on sale` : 'Estimate from similar cars on sale') : 'Few similar cars, treat as a rough guide',
       product: (level: number, size: number) => (level === 3 ? `Firm: ${size} similar items` : level === 2 ? `Based on ${size} similar items` : `Only ${size} similar items, rough guide`),
       label: (level: number) => `Confidence ${level} of 3`,
     },
@@ -146,16 +149,16 @@ export const en = {
     km: (n: string) => `${n} km`,
     fuel: { petrol: 'Petrol', diesel: 'Diesel', hybrid: 'Hybrid', 'plug-in-hybrid': 'Plug-in hybrid', electric: 'Electric', lpg: 'LPG', other: 'Other fuel' },
     transmission: { automatic: 'Automatic', manual: 'Manual', cvt: 'CVT', other: 'Other' },
-    method: 'How the estimate works: we fit one price model to every car we collected, using age, kilometres, body, fuel and make. Where five or more of the same model are for sale, we adjust by how that model is priced. A car more than 35% below its estimate is left out of Value, because the model cannot see trim, cab style or condition. It is a guide, not a valuation; check the car, its history and on-road costs with the dealer.',
+    method: 'How the fair price works: we compare each car with the closest cars on sale. First choice is the same make and model within two years and on the same fuel. If there are too few, we widen to three years, then to any year, then to similar cars of the same body and brand tier. Each of those cars is adjusted to this car\'s age and kilometres, using a price model fitted to every car we collected (premium brands get their own depreciation curve). The fair price is the middle of those adjusted prices, and the rank on the card uses the same cars. With fewer than three of the same model on sale we show a rough guide and make no value claim. A car more than 35% below its fair price is left out of Value, because we cannot see trim or condition. It is a guide, not a valuation; check the car, its history and on-road costs with the dealer.',
   },
   rank: {
     title: 'How we compare',
     lede: 'We compare products within the same category. Every pick includes a reason you can check against its details.',
     head: ['Lane', 'What we consider', 'What we do not promise'],
     rows: [
-      { lane: 'value' as Lane, how: 'Price within the category, review count and photo count, with key specifications required.', never: 'One choice that suits everyone.' },
-      { lane: 'cheap' as Lane, how: 'Prices near the lower quarter of the category, with photos and key specifications.', never: 'The lowest price across every shop.' },
-      { lane: 'refined' as Lane, how: 'Review count, photos, clear condition details and warranty. Prices may be above the middle of the range.', never: 'Luxury certification or investment value.' },
+      { lane: 'value' as Lane, how: 'How far the price is below the middle of comparable items: same family and size band, or price per litre or kilogram where size matters. Key specifications required. Photo counts are never used.', never: 'One choice that suits everyone.' },
+      { lane: 'cheap' as Lane, how: 'Lowest total price in the lower quarter of comparable items, leaving out anything out of stock or missing key specifications.', never: 'The lowest price across every shop.' },
+      { lane: 'refined' as Lane, how: 'Only items priced within 25% of the middle of their group. Among those, more measurable spec first: capacity, energy stars, warranty, or for laptops memory, storage and processor. Photo counts are never used.', never: 'Quality, durability or reliability claims: we have no review data for that.' },
     ],
   },
   rent: {

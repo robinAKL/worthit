@@ -120,13 +120,19 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
   const photo = modelPhotoFor(car.make, car.model);
 
   const tier = dealTier(v.gap);
+  // Too few similar cars on sale: the estimate is a rough guide, so no under/over badge.
+  const rough = v.basis === 'pooled' || v.basis === 'model-few';
   const diff = savings(car.priceNzd, v.expected);
   const deltaText = tier === 'near' ? d.near('car') : diff > 0 ? d.under(formatNzd(diff), 'car') : d.over(formatNzd(-diff), 'car');
   const size = cohort.prices.length;
+  const from = cohort.years?.[0] ?? car.year;
+  const to = cohort.years?.[1] ?? car.year;
   const rankText =
-    cohort.kind === 'model'
-      ? d.rankModel(cohort.rank, size, cohort.label)
-      : d.rankSegment(cohort.rank, size, d.body[cohort.label] ?? d.body.other, cohort.years?.[0] ?? car.year, cohort.years?.[1] ?? car.year);
+    cohort.kind === 'none'
+      ? d.rankNone
+      : cohort.kind === 'model'
+        ? d.rankModel(cohort.rank, size, cohort.label, from, to)
+        : d.rankSegment(cohort.rank, size, d.body[cohort.label] ?? d.body.other, from, to);
 
   return (
     <article className="card car-card">
@@ -141,7 +147,7 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
         mark={car.make}
         caption={caption}
         tone={toneOf(car.make)}
-        badge={<DealBadge tier={tier} label={d.tier.car[tier]} />}
+        badge={rough ? undefined : <DealBadge tier={tier} label={d.tier.car[tier]} />}
       />
       <p className="card-flag">{t.captured(formatDate(locale, car.capturedAt, true))}</p>
       <h3 className="card-title car-title" title={car.variant ? `${title} ${car.variant}` : title}>
@@ -156,7 +162,7 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
 
       <DealPanel
         rank={cohort.rank}
-        placeMark={d.place(cohort.rank)}
+        placeMark={cohort.kind === 'none' ? undefined : d.place(cohort.rank)}
         rankText={rankText}
         confidenceText={d.confidence.car(pick.confidence, v.groupSize, v.sample)}
       />

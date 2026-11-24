@@ -4,11 +4,15 @@ import type { Fuel, Lane, Vehicle } from '../types';
 /**
  * Used-car valuation for WorthIt.
  *
- * One explainable model over every car on sale we collected:
- *   log(price) ≈ b0 + b1·age + b2·age² + b3·log(km) + body + fuel class + premium brand
- * fitted by least squares (small ridge for stability). When a make+model has at least
- * MIN_GROUP cars, the estimate is nudged by that model's median residual, leaving the
- * car itself out, so a model that holds value (Hilux, Prius) is not called "cheap".
+ * 1. One explainable model over every car on sale we collected:
+ *      log(price) ≈ b0 + b1·age + b2·age² + b3·km + body + fuel class + premium + premium·age + make
+ *    fitted by least squares (small ridge for stability). premium·age lets premium brands
+ *    lose value faster, so an old BMW is not valued like a newer one.
+ * 2. Each car is then compared with its closest set of cars on sale (see `comparableSet`):
+ *    the same make and model within two years and the same fuel, widening step by step.
+ *    Every peer's price is adjusted to this car's age and kilometres with the model's slopes.
+ *    The fair price is the median of those adjusted prices, and the card's rank is this car's
+ *    place among the same adjusted prices, so the two can never disagree.
  *
  * Nothing here invents data: a car without year, price or kilometres is not ranked.
  */
@@ -40,9 +44,20 @@ export interface Valuation {
   gap: number;
   /** Cars that fed the pooled model. */
   sample: number;
-  /** Same-model cars used for the adjustment (0 when none was used). */
+  /** Same-model cars in the comparable set, including this one (0 when the set is not same-model). */
   groupSize: number;
+  /** Which comparable set the fair price came from. */
+  basis: Basis;
 }
+
+/**
+ * model-near: same make+model, within 2 years, same fuel. model-wide: same make+model within 3 years.
+ * model-any: same make+model, any year. model-few: only 2-3 other cars of the same model within
+ * 3 years; good enough for a fair price and a rank, but too few for a value claim.
+ * segment: same body and brand tier within 2 years.
+ * pooled: nothing close enough; the pooled model alone, and the car is not ranked for value.
+ */
+export type Basis = 'model-near' | 'model-wide' | 'model-any' | 'model-few' | 'segment' | 'pooled';
 
 export interface CarPick {
   car: Car;
@@ -113,8 +128,11 @@ export function toCar(v: Vehicle, nowYear = new Date().getFullYear()): Car | nul
   const names = normaliseNames(v);
   const bc = bodyClass(v.body);
   if (/motor ?bike|motorcycle|scooter/i.test(v.body ?? '')) return null;
+  // A page that shows "2021" in the odometer field for a 2021 car is the year read twice, not 2,021 km.
+  const odometerKm = v.odometerKm === v.year ? undefined : v.odometerKm;
   return {
     ...v,
+    odometerKm,
     ...names,
     bodyClass: bc,
     fuelClass: fuelClass(v.fuel),
@@ -154,6 +172,8 @@ function features(car: Car, nowYear: number, makes: string[]): number[] {
     ...BODY_TERMS.map((b) => (car.bodyClass === b ? 1 : 0)),
     ...FUEL_TERMS.map((f) => (car.fuelClass === f ? 1 : 0)),
     car.premium ? 1 : 0,
+    car.premium ? age : 0,
+    car.premium ? age * age : 0,
     ...makes.map((m) => (make === m ? 1 : 0)),
   ];
 }
@@ -200,7 +220,7 @@ export function fitModel(cars: Car[], nowYear: number): PriceModel {
   const makes = [...counts].filter(([, n]) => n >= MIN_MAKE).map(([m]) => m).sort();
   const X = usable.map((c) => features(c, nowYear, makes));
   const y = usable.map((c) => Math.log(c.priceNzd));
-  const width = 4 + BODY_TERMS.length + FUEL_TERMS.length + 1 + makes.length;
+  const width = 4 + BODY_TERMS.length + FUEL_TERMS.length + 3 + makes.length;
   const beta = usable.length >= 20 ? ridge(X, y) : [Math.log(median(usable.map((c) => c.priceNzd)) || 1), ...new Array(width - 1).fill(0)];
   // More kilometres must never raise the estimate. If the data says otherwise, drop the term.
   if (beta[KM_INDEX] > 0) beta[KM_INDEX] = 0;
@@ -215,21 +235,60 @@ export function median(values: number[]): number {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
-/** Valuation for every car with kilometres, using leave-one-out same-model adjustment. */
-export function valueAll(cars: Car[], model: PriceModel): Map<string, Valuation> {
-  const residual = new Map<string, number>();
-  for (const c of cars) if (c.odometerKm !== undefined) residual.set(c.id, Math.log(c.priceNzd) - model.predictLog(c));
-  const groups = new Map<string, Car[]>();
-  for (const c of cars) if (residual.has(c.id)) groups.set(c.modelKey, [...(groups.get(c.modelKey) ?? []), c]);
+export interface Comparable {
+  basis: Basis;
+  /** Other cars in the set (never the car itself). */
+  peers: Car[];
+  /** Model years the set covers. */
+  years?: [number, number];
+}
 
-  const out = new Map<string, Valuation>();
-  for (const car of cars) {
-    if (!residual.has(car.id)) continue;
-    const peers = (groups.get(car.modelKey) ?? []).filter((p) => p.id !== car.id);
-    const useGroup = peers.length >= MIN_GROUP - 1;
-    const adjust = useGroup ? median(peers.map((p) => residual.get(p.id)!)) : 0;
-    const expected = Math.round(Math.exp(model.predictLog(car) + adjust) / 100) * 100;
-    out.set(car.id, { expected, gap: car.priceNzd / expected - 1, sample: model.sample, groupSize: useGroup ? peers.length + 1 : 0 });
+/** The closest set of cars on sale to compare with, widening only when there are too few. */
+export function comparableSet(car: Car, pool: Car[]): Comparable {
+  const need = MIN_GROUP - 1;
+  const others = pool.filter((p) => p.id !== car.id);
+  const same = others.filter((p) => p.modelKey === car.modelKey);
+  const near = same.filter((p) => Math.abs(p.year - car.year) <= 2 && p.fuelClass === car.fuelClass);
+  if (near.length >= need) return { basis: 'model-near', peers: near, years: [car.year - 2, car.year + 2] };
+  const wide = same.filter((p) => Math.abs(p.year - car.year) <= 3);
+  if (wide.length >= need) return { basis: 'model-wide', peers: wide, years: [car.year - 3, car.year + 3] };
+  if (same.length >= need) {
+    const years = [car.year, ...same.map((p) => p.year)];
+    return { basis: 'model-any', peers: same, years: [Math.min(...years), Math.max(...years)] };
+  }
+  if (wide.length >= 2) return { basis: 'model-few', peers: wide, years: [car.year - 3, car.year + 3] };
+  const segment = others.filter((p) => p.bodyClass === car.bodyClass && p.premium === car.premium && Math.abs(p.year - car.year) <= 2);
+  if (segment.length >= need) return { basis: 'segment', peers: segment, years: [car.year - 2, car.year + 2] };
+  return { basis: 'pooled', peers: [] };
+}
+
+/** A peer's asking price moved to this car's age and kilometres, using the model's slopes. */
+export function adjustedPrice(peer: Car, car: Car, model: PriceModel): number {
+  return peer.priceNzd * Math.exp(model.predictLog(car) - model.predictLog(peer));
+}
+
+export interface Assessment {
+  valuation: Valuation;
+  comparable: Comparable;
+  /** Peers' adjusted prices plus this car's own price, sorted. Empty when pooled. */
+  prices: number[];
+}
+
+/** Fair price and comparable set for every car with kilometres. */
+export function valueAll(cars: Car[], model: PriceModel): Map<string, Assessment> {
+  const usable = cars.filter((c) => c.odometerKm !== undefined);
+  const out = new Map<string, Assessment>();
+  for (const car of usable) {
+    const comparable = comparableSet(car, usable);
+    const adjusted = comparable.peers.map((p) => adjustedPrice(p, car, model));
+    const fair = adjusted.length > 0 ? median(adjusted) : Math.exp(model.predictLog(car));
+    const expected = Math.round(fair / 100) * 100;
+    const sameModel = comparable.basis.startsWith('model');
+    out.set(car.id, {
+      valuation: { expected, gap: car.priceNzd / expected - 1, sample: model.sample, groupSize: sameModel ? comparable.peers.length + 1 : 0, basis: comparable.basis },
+      comparable,
+      prices: adjusted.length > 0 ? [...adjusted, car.priceNzd].sort((a, b) => a - b) : [],
+    });
   }
   return out;
 }
@@ -239,33 +298,42 @@ export function valueAll(cars: Car[], model: PriceModel): Map<string, Valuation>
 export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFullYear()): CarPick[] {
   const cars = dedupe(all.map((v) => toCar(v, nowYear)).filter((c): c is Car => c !== null));
   const model = fitModel(cars, nowYear);
-  const values = valueAll(cars, model);
+  const assessed = valueAll(cars, model);
+  const values = new Map([...assessed].map(([id, a]) => [id, a.valuation]));
   const ranked = cars.filter((c) => values.has(c.id));
   const byPrice = [...ranked].sort((a, b) => a.priceNzd - b.priceNzd);
   const priceRank = new Map(byPrice.map((c, i) => [c.id, i + 1]));
 
-  const knownMakes = new Set(model.makes);
-  const byModel = new Map<string, Car[]>();
-  for (const c of ranked) byModel.set(c.modelKey, [...(byModel.get(c.modelKey) ?? []), c]);
+  // The card's rank uses the same comparable set as the fair price: peers adjusted to this car's age and km.
   const cohortOf = (c: Car): Cohort => {
-    const same = byModel.get(c.modelKey) ?? [c];
-    if (same.length >= 3) {
-      const prices = same.map((x) => x.priceNzd).sort((a, b) => a - b);
-      return { kind: 'model', label: `${c.make} ${c.model}`, prices, rank: priceRankIn(prices, c.priceNzd) };
-    }
-    const peers = ranked.filter((x) => x.bodyClass === c.bodyClass && Math.abs(x.year - c.year) <= 2);
-    const prices = peers.map((x) => x.priceNzd).sort((a, b) => a - b);
-    return { kind: 'segment', label: c.bodyClass, prices, rank: priceRankIn(prices, c.priceNzd), years: [c.year - 2, c.year + 2] };
+    const a = assessed.get(c.id)!;
+    const { basis, years } = a.comparable;
+    if (basis === 'pooled') return { kind: 'none', label: `${c.make} ${c.model}`, prices: [c.priceNzd], rank: 1 };
+    const kind = basis === 'segment' ? 'segment' : 'model';
+    return {
+      kind,
+      label: kind === 'model' ? `${c.make} ${c.model}` : c.bodyClass,
+      prices: a.prices,
+      rank: priceRankIn(a.prices, c.priceNzd),
+      years,
+      adjusted: true,
+    };
   };
   const confidenceOf = (c: Car): Confidence => {
-    const v = values.get(c.id)!;
-    if (v.groupSize > 0) return confidenceFrom(v.groupSize);
-    return knownMakes.has(c.make.toLowerCase()) ? 2 : 1;
+    const { basis, peers } = assessed.get(c.id)!.comparable;
+    if (basis === 'model-near' || basis === 'model-wide') return confidenceFrom(peers.length + 1);
+    if (basis === 'model-any' || basis === 'segment') return Math.min(2, confidenceFrom(peers.length + 1)) as Confidence;
+    if (basis === 'model-few') return 1;
+    return 1;
   };
   const score = (c: Car): number | null => {
     const v = values.get(c.id)!;
-    // A value claim needs enough cars of the same make behind the estimate.
-    if (lane === 'value') return (knownMakes.has(c.make.toLowerCase()) || v.groupSize > 0) && v.gap >= -VALUE_MAX_GAP ? -v.gap : null;
+    // A value claim needs a comparable set behind the estimate, and a gap small enough to be believable.
+    if (lane === 'value') {
+      if (v.gap < -VALUE_MAX_GAP) return null;
+      // Too few similar cars for a value claim: still listed, after every car we can judge.
+      return v.basis === 'pooled' || v.basis === 'model-few' ? -10 - v.gap : -v.gap;
+    }
     if (lane === 'cheap') {
       if ((c.odometerKm ?? Infinity) > CHEAP_MAX_KM || c.year < CHEAP_MIN_YEAR) return null;
       return -c.priceNzd;

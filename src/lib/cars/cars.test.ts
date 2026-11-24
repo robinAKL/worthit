@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Vehicle } from '../types';
-import { allVehicles, carResults, dedupe, fitModel, rankCars, toCar, type Car } from './index';
+import { allVehicles, carResults, comparableSet, dedupe, fitModel, rankCars, toCar, type Car } from './index';
 import { carReason } from './reason';
 
 /** Synthetic fleet: four makes, ages 1..12, km rising with age, Toyota Aqua as a same-model group. */
@@ -125,5 +125,91 @@ describe('used-car valuation', () => {
     const r = carResults('value');
     expect(r.valued).toBeGreaterThan(100);
     expect(r.dealers).toBeGreaterThanOrEqual(5);
+  });
+});
+
+describe('comparison rules v2 (T-38)', () => {
+  const at = (over: Partial<Vehicle>, i: number): Vehicle => ({
+    id: `x${i}`,
+    source: 'feed',
+    dealer: 'D',
+    url: `https://dealer.example/x/${i}`,
+    capturedAt: '2026-11-24T00:00:00.000Z',
+    make: 'Toyota',
+    model: 'Aqua',
+    year: 2016,
+    odometerKm: 80_000,
+    priceNzd: 12_000,
+    fuel: 'hybrid',
+    body: 'hatchback',
+    ...over,
+  });
+
+  it('compares with the closest set first: same model, two years, same fuel', () => {
+    const cars = fleet().map((v) => toCar(v, 2026)) as Car[];
+    const aqua = cars.find((c) => c.model === 'Aqua' && c.year === 2020)!;
+    const set = comparableSet(aqua, cars);
+    expect(set.basis).toBe('model-near');
+    expect(set.peers.every((p) => p.modelKey === aqua.modelKey && Math.abs(p.year - aqua.year) <= 2 && p.fuelClass === aqua.fuelClass)).toBe(true);
+    expect(set.peers.some((p) => p.id === aqua.id)).toBe(false);
+  });
+
+  it('widens step by step, and says so', () => {
+    const one = toCar(at({ id: 'solo', make: 'Rare', model: 'One' }, 0), 2026)!;
+    expect(comparableSet(one, [one]).basis).toBe('pooled');
+    const few = [0, 1, 2].map((i) => toCar(at({ make: 'Bmw', model: '120i', year: 2010 + i }, i), 2026)!);
+    expect(comparableSet(few[0], few).basis).toBe('model-few');
+  });
+
+  it('gives one consistent answer: the rank and the fair price come from the same adjusted prices', () => {
+    for (const pick of carResults('refined').picks) {
+      if (pick.cohort.kind === 'none') continue;
+      const { prices, rank } = pick.cohort;
+      // Under the fair price means in the cheaper half of the adjusted prices, and over means the dearer half.
+      if (pick.valuation.gap < -0.02) expect(rank).toBeLessThanOrEqual(Math.ceil(prices.length / 2));
+      if (pick.valuation.gap > 0.02) expect(rank).toBeGreaterThan(Math.floor(prices.length / 2));
+    }
+  });
+
+  it('keeps premium brands within 8% of their fair price at every age, on the live data', () => {
+    const picks = carResults('refined').picks.filter((p) => p.car.premium);
+    for (const [lo, hi] of [[0, 5], [6, 10], [11, 99]]) {
+      const gaps = picks.filter((p) => 2026 - p.car.year >= lo && 2026 - p.car.year <= hi).map((p) => p.valuation.gap).sort((a, b) => a - b);
+      if (gaps.length < 5) continue;
+      expect(Math.abs(gaps[Math.floor(gaps.length / 2)])).toBeLessThan(0.08);
+    }
+  });
+
+  it('makes no value claim from too few cars: such cars are listed after every car we can judge', () => {
+    const picks = carResults('value').picks;
+    const rough = (b: string) => b === 'pooled' || b === 'model-few';
+    const firstRough = picks.findIndex((p) => rough(p.valuation.basis));
+    expect(firstRough).toBeGreaterThan(0);
+    expect(picks.slice(firstRough).every((p) => rough(p.valuation.basis))).toBe(true);
+  });
+
+  it('reads an odometer equal to the model year as unknown, not 2,021 km', () => {
+    expect(toCar(at({ year: 2021, odometerKm: 2021 }, 9), 2026)!.odometerKm).toBeUndefined();
+    expect(toCar(at({ year: 2021, odometerKm: 2022 }, 9), 2026)!.odometerKm).toBe(2022);
+  });
+});
+
+describe('car search (T-38)', () => {
+  it('reads digits inside a model name as part of the name, not a budget', async () => {
+    const { parseQuery } = await import('../parseQuery');
+    expect(parseQuery('BMW 120i')).toMatchObject({ keywords: ['bmw', '120i'] });
+    expect(parseQuery('BMW 120i').budgetMax).toBeUndefined();
+    expect(parseQuery('Mazda CX-5').budgetMax).toBeUndefined();
+    expect(parseQuery('Toyota Aqua under 10000').budgetMax).toBe(10000);
+    expect(parseQuery('1500nzd phone').budgetMax).toBe(1500);
+  });
+
+  it('values searched cars against the whole fleet, not only the matches', async () => {
+    const { vehiclesForQuery } = await import('./query');
+    const fleet = vehiclesForQuery('Toyota Aqua', allVehicles())!;
+    const searched = carResults('refined', fleet).picks;
+    const everywhere = new Map(carResults('refined').picks.map((p) => [p.car.id, p.valuation.expected]));
+    expect(searched.length).toBeGreaterThan(0);
+    for (const p of searched) expect(p.valuation.expected).toBe(everywhere.get(p.car.id));
   });
 });

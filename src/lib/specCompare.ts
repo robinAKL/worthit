@@ -1,4 +1,4 @@
-import { assertReasonAllowed, quartile } from './score';
+import { assertReasonAllowed, inSpecPriceBand, quartile, specPoints } from './score';
 import { FAMILY_UNIT, sizeBand, unitPrice, type ProductSpec, type Unit } from './specs';
 import type { Band, Lane, Locale, Product, Recommendation } from './types';
 
@@ -71,11 +71,11 @@ function reasonFor(product: Product, lane: Lane, perUnit: number, medianPerUnit:
   const price = money(Math.round(product.price));
   if (locale === 'zh-Hans') {
     const base = `${size}，标价 ${price}，每${UNIT_NAME['zh-Hans'][unit]} ${money(perUnit)}；同类${fam}每${UNIT_NAME['zh-Hans'][unit]}中位 ${money(medianPerUnit)}。`;
-    if (lane === 'refined') return `${base}容量在同类里排在前面。这是采集到的商家标价。`;
+    if (lane === 'refined') return `${base}价格和同类相近，容量和其他可比较的规格更高。这是采集到的商家标价。`;
     return `${base}这是采集到的商家标价。`;
   }
   const base = `${size} for ${price}, ${money(perUnit)} per ${UNIT_NAME.en[unit]}. Similar ${fam}: ${money(medianPerUnit)} per ${UNIT_NAME.en[unit]} at the median.`;
-  if (lane === 'refined') return `${base} One of the larger ones in this group. Price captured from the merchant.`;
+  if (lane === 'refined') return `${base} Priced like the others, with more capacity or measurable spec. Price captured from the merchant.`;
   return `${base} Price captured from the merchant.`;
 }
 
@@ -83,7 +83,7 @@ function reasonFor(product: Product, lane: Lane, perUnit: number, medianPerUnit:
  * Rank one family of sized products by price per unit.
  * value: furthest below the family's median price per unit.
  * cheap: lower total price, within the lower quarter of total prices.
- * refined: larger capacity first, then lower price per unit.
+ * refined ("Higher spec"): items priced within 25% of the group's median total price, more measurable spec first.
  */
 export function rankUnitGroup(group: Product[], lane: Lane, locale: Locale): Recommendation[] {
   const per = new Map(group.map((p) => [p, unitPrice(p.price, p.spec)!]));
@@ -100,8 +100,16 @@ export function rankUnitGroup(group: Product[], lane: Lane, locale: Locale): Rec
     const maxSize = Math.max(...peers.map((p) => p.spec!.size!));
     const v = per.get(product)!;
     if (lane === 'cheap' && product.price > lowerTotal) continue;
+    if (lane === 'cheap' && /out of stock/i.test(String(product.specs.stock ?? ''))) continue;
+    // Higher spec: only against items priced like this one, then more measurable spec first.
+    const peerMedianTotal = quartile(peers.map((p) => p.price).sort((a, b) => a - b), 0.5);
+    if (lane === 'refined' && !inSpecPriceBand(product.price, peerMedianTotal)) continue;
     const score =
-      lane === 'value' ? 1 - v / medianUnit : lane === 'cheap' ? -product.price : product.spec!.size! / maxSize - (v / medianUnit) * 0.3;
+      lane === 'value'
+        ? 1 - v / medianUnit
+        : lane === 'cheap'
+          ? -product.price
+          : specPoints(product, maxSize) - (v / medianUnit) * 0.001;
     const reason = reasonFor(product, lane, v, medianUnit, locale, band);
     assertReasonAllowed(reason);
     const bandOf = (x: number): Band => (x <= lowerUnit ? 'low' : x <= upperUnit ? 'mid' : 'high');

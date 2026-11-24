@@ -19,14 +19,21 @@ export interface CarResult {
   capturedAt?: string;
 }
 
-export function carResults(lane: Lane, vehicles: Vehicle[] = allVehicles(), nowYear?: number): CarResult {
-  const picks = rankCars(vehicles, lane, nowYear);
+/**
+ * Ranked cars for one lane. `vehicles` narrows the list (a search); every car is still valued
+ * against the whole fleet, so a search for one model never re-fits the price model on that model alone.
+ */
+export function carResults(lane: Lane, vehicles?: Vehicle[], nowYear?: number): CarResult {
+  const universe = allVehicles();
+  const only = vehicles && vehicles !== universe ? new Set(vehicles.map((v) => v.id)) : null;
+  const keep = (p: CarPick) => !only || only.has(p.car.id);
+  const picks = rankCars(universe, lane, nowYear).filter(keep);
   // The refined lane keeps every valued car, so it gives the full count and dealer list.
-  const all = lane === 'refined' ? picks : rankCars(vehicles, 'refined', nowYear);
+  const all = lane === 'refined' ? picks : rankCars(universe, 'refined', nowYear).filter(keep);
   return {
     picks,
-    valued: all[0]?.valued ?? 0,
+    valued: only ? all.length : (all[0]?.valued ?? 0),
     dealers: new Set(all.map((p) => p.car.dealer)).size,
-    capturedAt: vehicles.map((v) => v.capturedAt).sort().at(-1),
+    capturedAt: (vehicles ?? universe).map((v) => v.capturedAt).sort().at(-1),
   };
 }
