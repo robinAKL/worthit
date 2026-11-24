@@ -135,6 +135,8 @@ export const zhHans: Copy = {
     empty: '暂时没有可显示的车。',
     emptyQuery: '没有符合的车。可以换一个品牌、车型，或者把预算放宽。',
     viewAt: (dealer: string) => `去 ${dealer} 查看`,
+    photoLabel: '车型示意图',
+    photoCredit: (model: string, author: string, license: string) => `${model} 车型示意照片，不是这台车。作者 ${author}，${license}，来自 Wikimedia Commons`,
     estimate: (price: string) => `我们的估价 ${price}`,
     captured: (date: string) => `读取于 ${date}`,
     km: (n: string) => `${n} 公里`,

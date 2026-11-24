@@ -138,6 +138,8 @@ export const en = {
     empty: 'No cars to show yet.',
     emptyQuery: 'No cars match this search. Try a make, a model, or a higher budget.',
     viewAt: (dealer: string) => `View at ${dealer}`,
+    photoLabel: 'Illustrative photo' as string,
+    photoCredit: (model: string, author: string, license: string): string => `Photo of a ${model}, not this car. ${author}, ${license}, via Wikimedia Commons`,
     estimate: (price: string) => `Our estimate ${price}`,
     captured: (date: string) => `Listing read ${date}`,
     km: (n: string) => `${n} km`,

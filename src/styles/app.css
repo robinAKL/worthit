@@ -405,25 +405,77 @@
   height: 100%;
   object-fit: cover;
 }
-.card-media-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2xs);
+/* Our own illustration, tinted per brand or category. */
+.card-media-art {
+  --art-fill: oklch(97% 0.01 160);
+  --art-line: oklch(32% 0.03 160);
+  --art-glass: oklch(80% 0.04 220);
+  --art-accent: oklch(55% 0.1 158);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-items: center;
+  align-items: end;
+  padding: var(--space-sm) var(--space-sm) var(--space-xs);
   text-align: center;
 }
-.card-media-empty[data-tone='0'] {
-  background: linear-gradient(135deg, oklch(93% 0.035 158), oklch(88% 0.05 165));
+.card-media-art[data-tone='0'] {
+  background: linear-gradient(160deg, oklch(94% 0.03 158), oklch(88% 0.05 165));
+  --art-accent: oklch(50% 0.11 158);
 }
-.card-media-empty[data-tone='1'] {
-  background: linear-gradient(135deg, oklch(93% 0.03 95), oklch(88% 0.045 85));
+.card-media-art[data-tone='1'] {
+  background: linear-gradient(160deg, oklch(95% 0.03 90), oklch(89% 0.05 80));
+  --art-accent: oklch(55% 0.1 70);
 }
-.card-media-empty[data-tone='2'] {
-  background: linear-gradient(135deg, oklch(93% 0.03 220), oklch(88% 0.045 230));
+.card-media-art[data-tone='2'] {
+  background: linear-gradient(160deg, oklch(94% 0.03 225), oklch(88% 0.045 235));
+  --art-accent: oklch(50% 0.1 240);
 }
-.card-media-empty[data-tone='3'] {
-  background: linear-gradient(135deg, oklch(93% 0.03 30), oklch(88% 0.045 40));
+.card-media-art[data-tone='3'] {
+  background: linear-gradient(160deg, oklch(95% 0.025 30), oklch(89% 0.045 38));
+  --art-accent: oklch(55% 0.12 35);
+}
+.art {
+  width: 74%;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+.art-body {
+  fill: var(--art-fill);
+  stroke: var(--art-line);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.art-glass {
+  fill: var(--art-glass);
+  stroke: var(--art-line);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.art-line {
+  fill: none;
+  stroke: var(--art-line);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+.art-line-fill {
+  fill: var(--art-fill);
+  stroke: var(--art-line);
+  stroke-width: 1.6;
+}
+.art-accent {
+  fill: var(--art-accent);
+}
+.art-tyre {
+  fill: var(--art-line);
+}
+.art-hub {
+  fill: var(--art-fill);
+}
+.art-ground {
+  stroke: oklch(30% 0.03 160 / 0.18);
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 .card-media-mark {
   max-width: 90%;
@@ -432,15 +484,29 @@
   white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--text-2xl);
-  letter-spacing: var(--tracking-display);
-  line-height: 1;
-  color: oklch(30% 0.03 160 / 0.78);
+  font-size: var(--text-md);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: oklch(28% 0.03 160);
 }
 .card-media-caption {
   font-size: var(--text-xs);
   color: var(--color-ink-2);
   text-transform: capitalize;
+}
+/* An openly licensed photo of the model, labelled so nobody takes it for the car on sale. */
+.card-media-photo {
+  margin: 0;
+}
+.card-media-tag {
+  position: absolute;
+  inset-block-end: var(--space-xs);
+  inset-inline-end: var(--space-xs);
+  padding: 2px var(--space-xs);
+  border-radius: var(--radius-pill);
+  background: oklch(20% 0.02 160 / 0.62);
+  color: oklch(97% 0.005 160);
+  font-size: var(--text-xs);
 }
 
 .card-title {

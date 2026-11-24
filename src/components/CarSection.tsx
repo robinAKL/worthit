@@ -6,6 +6,8 @@ import { carReason } from '../lib/cars/reason';
 import type { Lane } from '../lib/types';
 import { dealTier, savings } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
+import { carArt } from './art/kind';
+import { modelPhotoFor } from '../lib/modelPhotos';
 import { DealBadge, DealDelta, DealPanel, formatNzd } from './DealPanel';
 import { LaneTabs } from './LaneTabs';
 import type { AskContext } from './AskDialog';
@@ -115,6 +117,7 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
   ].filter((f): f is string => Boolean(f));
   const caption = [car.model, car.body ? titleCase(car.body) : null, car.fuel ? t.fuel[car.fuel] : null].filter(Boolean).join(' · ');
   const title = `${car.year} ${car.make} ${car.model}`;
+  const photo = modelPhotoFor(car.make, car.model);
 
   const tier = dealTier(v.gap);
   const diff = savings(car.priceNzd, v.expected);
@@ -129,6 +132,12 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
     <article className="card car-card">
       <CardMedia
         src={car.imageUrl}
+        photo={
+          photo
+            ? { src: photo.file, label: t.photoLabel, credit: t.photoCredit(`${car.make} ${car.model}`, photo.author, photo.license) }
+            : undefined
+        }
+        art={carArt(car.bodyClass)}
         mark={car.make}
         caption={caption}
         tone={toneOf(car.make)}
