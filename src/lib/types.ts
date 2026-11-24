@@ -66,6 +66,59 @@ export interface Product {
   fixture: boolean;
 }
 
+export type Fuel = 'petrol' | 'diesel' | 'hybrid' | 'plug-in-hybrid' | 'electric' | 'lpg' | 'other';
+export type Transmission = 'automatic' | 'manual' | 'cvt' | 'other';
+
+/**
+ * One used vehicle captured from a dealer page. Facts only.
+ *
+ * A field the page does not state stays undefined; collectors never guess.
+ * No seller personal details, no description text. `imageUrl` stays unset until
+ * the dealer gives written permission to show one cover image.
+ */
+export interface Vehicle {
+  /** Stable id derived from the detail URL. */
+  id: string;
+  source: 'feed';
+  /** Dealer display name. */
+  dealer: string;
+  /** The dealer's own detail page. Cards link here. */
+  url: string;
+  /** ISO time the page was read. */
+  capturedAt: string;
+
+  make: string;
+  model: string;
+  /** Generation code or range, e.g. `NHP10` or `2017-2021`. Used for comparison groups. */
+  generation?: string;
+  /** Trim or engine variant, e.g. `G Hybrid`. */
+  variant?: string;
+  year: number;
+  odometerKm?: number;
+
+  /** Advertised price in NZD, GST inclusive. */
+  priceNzd: number;
+  /** True when the price includes on-road costs; undefined when the page does not say. */
+  orcIncluded?: boolean;
+
+  fuel?: Fuel;
+  transmission?: Transmission;
+  /** Lowercase body style, e.g. `hatchback`, `suv`, `ute`. */
+  body?: string;
+  engineCc?: number;
+  /** True for NZ-new, false for an import, undefined when not stated. */
+  nzNew?: boolean;
+  /** ISO dates. */
+  wofExpiry?: string;
+  regoExpiry?: string;
+  /** NZ region of the yard, e.g. `Auckland`. */
+  region?: string;
+
+  /** One-way hash of VIN or plate for cross-site de-duplication. The raw value is never stored. */
+  dedupeKey?: string;
+  imageUrl?: string;
+}
+
 export interface ParsedQuery {
   raw: string;
   keywords: string[];

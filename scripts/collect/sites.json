@@ -2,19 +2,5 @@
   "userAgent": "WorthItBot/0.1 (+https://github.com/robinAKL/worthit)",
   "minIntervalMs": 2000,
   "maxPerRun": 200,
-  "pilotLimit": 50,
-  "sites": [
-    {
-      "id": "ascent",
-      "name": "Ascent",
-      "origin": "https://www.ascent.co.nz",
-      "enabled": true
-    },
-    {
-      "id": "baby-factory",
-      "name": "Baby Factory",
-      "origin": "https://www.babyfactory.co.nz",
-      "enabled": true
-    }
-  ]
+  "pilotLimit": 50
 }
