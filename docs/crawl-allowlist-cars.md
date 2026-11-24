@@ -124,6 +124,8 @@
 
 **结论：不确定。** 类型：聚合平台；[站点](https://cars.cari.co.nz/)。
 
+- **采集状态（T-23，2026-11-24）：停用。** 适配器 `cari-cars` 设为 `enabled:false`。robots.txt 禁止访问 `/motor/view/*` 和 `/mobil/view/*`，这两个正是车辆详情页。
+
 - **robots【已核实】**：[官方](https://cars.cari.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -354,6 +356,8 @@
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.brendanfoot.co.nz/)。
 
+- **采集状态（T-22，2026-11-24）：已启用。** 适配器 `brendan-foot`。读取 `/cars/?new=false&demo=false&used=true` 二手车列表，再读取详情页的 Specifications 表。试采 26 次请求，跳过 0，错误 0，保存 24 台（列表页只有这些）。车牌只用于生成单向 `dedupeKey`，不存原文。按 Robin 的规则，这家找不到网站条款即视为可以采集。
+
 - **robots【已核实】**：[官方](https://www.brendanfoot.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -393,6 +397,8 @@
 ### 19. Cooke Howlison
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.cookehowlison.co.nz/)。
+
+- **采集状态（T-22，2026-11-24）：已启用。** 适配器 `cooke-howlison`。从 `/stock/sitemap` 发现车辆，只读 `-used` 结尾的二手车详情页，数据来自 schema.org Car JSON-LD。试采 32 次请求，跳过 0，错误 0，保存 30 台。JSON-LD 里的 `url` 指向测试服务器域名，已改用实际读取的页面地址。VIN 只存哈希值。
 
 - **robots【已核实】**：[官方](https://www.cookehowlison.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
@@ -539,6 +545,8 @@
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.4guys.co.nz/)。
 
+- **采集状态（T-23，2026-11-24）：停用。** 适配器 `four-guys` 设为 `enabled:false`。网站用 Squarespace 搭建，库存由第三方脚本组件（vdp.autoplayauto.com）渲染，本站 HTML 里没有车辆数据。
+
 - **robots【已核实】**：[官方](https://www.4guys.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -558,6 +566,8 @@
 ### 28. Auto Court Dunedin
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.autocourt.net.nz/)。
+
+- **采集状态（T-22，2026-11-24）：已启用。** 适配器 `auto-court`，使用 Motorcentral 模板，sitemap 中列有全部 `/vehicle/` 页面。之前请求头的 Accept 缺少 `text/xml`，服务器返回 406，已改成常规的浏览器 Accept 列表。试采 32 次请求，跳过 0，错误 0，保存 30 台。
 
 - **robots【已核实】**：[官方](https://www.autocourt.net.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
@@ -594,6 +604,8 @@
 ### 31. Brian Scott Motors
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.brianscottmotors.co.nz/)。
+
+- **采集状态（T-22，2026-11-24）：已启用。** 适配器 `brian-scott`，使用 Motorcentral 模板。网站没有 sitemap，读取 `/vehicles` 两页；robots.txt 带 BOM，情况和 Croydons 相同。燃料信息来自政府的油耗标签（Motive Power）。试采 33 次请求，跳过 0，错误 0，保存 30 台。
 
 - **robots【已核实】**：[官方](https://www.brianscottmotors.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
@@ -635,6 +647,8 @@
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.croydons.co.nz/)。
 
+- **采集状态（T-22，2026-11-24）：已启用。** 适配器 `croydons`，使用 Motorcentral 模板。网站没有 sitemap（返回 404），改为读取 `/vehicles` 和 `/vehicles?Page=2`。robots.txt 开头带 BOM，由于 T-22 已修好对应的解析问题，`/Motorcentral/` 和后台路径都能正确识别为禁止访问。试采 33 次请求，跳过 0，错误 0，保存 30 台。
+
 - **robots【已核实】**：[官方](https://www.croydons.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -655,6 +669,8 @@
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.daveallenmotors.co.nz/)。
 
+- **采集状态（T-23，2026-11-24）：停用。** 适配器 `dave-allen` 设为 `enabled:false`。robots.txt 禁止访问 `/sitemap/`；`/used-cars/` 和 `/vehicles/` 是同一个由脚本渲染的页面，HTML 里没有车辆详情链接。
+
 - **robots【已核实】**：[官方](https://www.daveallenmotors.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -672,6 +688,8 @@
 ### 35. Genuine Vehicle Imports
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.gvi.kiwi/)。
+
+- **采集状态（T-23，2026-11-24）：已启用。** 适配器 `gvi`，使用 Motorcentral 模板，sitemap 列出了全部 `/vehicle/` 页面。这家站的 itemprop name 和 `<title>` 都是空的，车名改从 og:title 或 `<h2>` 读取。试采 32 次请求，跳过 0，错误 2（sitemap 里还留着已经下架的车，访问返回 404），保存 28 台。页面上同时出现了多个城市，无法确定在哪个地区，所以不填 region。
 
 - **robots【已核实】**：[官方](https://www.gvi.kiwi/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
@@ -700,6 +718,8 @@
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://www.motorco.co.nz/)。
 
+- **采集状态（T-23，2026-11-24）：已启用。** 适配器 `motorco`。robots.txt 声明的 sitemap 返回 404，改为读取 `/inventory/` 前三页（每页 12 台）。详情页的 Car JSON-LD 提供品牌、年份、价格、车身和排量，标签面板提供车型、配置、里程和变速箱。试采 34 次请求，跳过 0，错误 0，保存 30 台。
+
 - **robots【已核实】**：[官方](https://www.motorco.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
   ```text
@@ -727,6 +747,8 @@
 ### 39. NZC Cars
 
 **结论：不确定。** 类型：拍卖与进口商及独立车行；[站点](https://nzc.kiwi/)。
+
+- **采集状态（T-23，2026-11-24）：停用。** 适配器 `nzc` 设为 `enabled:false`。robots.txt 允许访问 `/car/`，但页面是客户端渲染的：HTML 里只有一个空的 `#root`，车辆数据由脚本从 API 拉取。核心不执行脚本，所以读不到数据。等以后加上浏览器抓取（见 docs/collector-adr.md 的"When to revisit"）再处理。
 
 - **robots【已核实】**：[官方](https://nzc.kiwi/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
 
