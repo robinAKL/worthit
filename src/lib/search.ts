@@ -228,13 +228,15 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
     const before = items.length;
     let kept = items.filter((item) => !failsCheapFloor(item.product));
     // A price far below the middle of its comparable group is usually another product or an error.
+    // The middle comes from the whole group the search selected, before stock or any lane filter,
+    // so removing other items can never make an outlier look normal.
     const groupPrices = new Map<string, number[]>();
-    for (const item of kept) {
-      const key = comparisonKey(item.product);
-      groupPrices.set(key, [...(groupPrices.get(key) ?? []), item.product.price]);
+    for (const product of matched) {
+      const key = comparisonKey(product);
+      groupPrices.set(key, [...(groupPrices.get(key) ?? []), product.price]);
     }
     kept = kept.filter((item) => {
-      const prices = groupPrices.get(comparisonKey(item.product))!;
+      const prices = groupPrices.get(comparisonKey(item.product)) ?? [];
       if (prices.length < 3) return true;
       return item.product.price >= quartile([...prices].sort((x, y) => x - y), 0.5) * (1 - CHEAP_FLOOR);
     });

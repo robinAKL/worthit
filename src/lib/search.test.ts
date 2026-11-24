@@ -318,3 +318,19 @@ describe('samples never fill a gap left by a budget (T-37 review)', () => {
     expect(search('desk under $100', 'value', 'en', [sample, realFridge]).items.map((h) => h.product.id)).toContain('sample-desk');
   });
 });
+
+describe('Lower price: the outlier floor uses the whole group (T-42 review 3)', () => {
+  it("Codex's case: [1, 100, 200, 300, 400, 500] with 100 and 200 out of stock returns no $1", () => {
+    const base = { ...productsIn('laptop')[0], category: 'desks', fixture: false, source: 'feed' as const, imageCount: 1 };
+    const prices = [1, 100, 200, 300, 400, 500];
+    const items = prices.map((price, i) => ({
+      ...base,
+      id: `d${i}`,
+      title: `Example Desk ${i}`,
+      price,
+      specs: { brand: 'Test', stock: price === 100 || price === 200 ? 'out of stock' : 'in stock' },
+    }));
+    const out = search('', 'cheap', 'en', items).items.map((h) => h.product.price);
+    expect(out).not.toContain(1);
+  });
+});
