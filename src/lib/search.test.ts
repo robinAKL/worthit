@@ -303,3 +303,18 @@ describe('Lower price: group floor and order on the unranked path (T-42 review 2
     }
   });
 });
+
+describe('samples never fill a gap left by a budget (T-37 review)', () => {
+  it("Codex's case: real $500 desk and $50 sample desk, 'under $100' returns nothing", () => {
+    const real = { ...productsIn('furniture')[0], id: 'real-desk', fixture: false, source: 'feed' as const, price: 500, imageCount: 1, specs: { brand: 'Real' } };
+    const sample = { ...productsIn('furniture')[0], id: 'sample-desk', fixture: true, price: 50 };
+    expect(search('under $100', 'value', 'en', [sample, real]).items).toHaveLength(0);
+    expect(search('under $1000', 'value', 'en', [sample, real]).items.map((h) => h.product.id)).toEqual(['real-desk']);
+  });
+
+  it('a category with no real data still shows its samples', () => {
+    const sample = { ...productsIn('furniture')[0], id: 'sample-desk', fixture: true, price: 50 };
+    const realFridge = { ...productsIn('furniture')[0], id: 'real-fridge', category: 'whiteware', fixture: false, source: 'feed' as const, price: 900, specs: { brand: 'Real' } };
+    expect(search('desk under $100', 'value', 'en', [sample, realFridge]).items.map((h) => h.product.id)).toContain('sample-desk');
+  });
+});

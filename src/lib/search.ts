@@ -81,11 +81,13 @@ function matchesKeyword(product: Product, keyword: string): boolean {
  * Sample products only fill a gap. With no search, any real product hides every sample.
  * With a search, a sample stays only when its category has no real product in the results.
  */
-export function withoutNeedlessSamples(products: Product[], browsing: boolean): Product[] {
-  const real = products.filter((p) => !p.fixture);
-  if (real.length === 0) return products;
-  if (browsing) return real;
-  const realCategories = new Set(real.map((p) => p.category));
+export function withoutNeedlessSamples(products: Product[], browsing: boolean, everything: Product[] = products): Product[] {
+  // Which categories have real data is decided on the whole catalogue, before any budget or keyword,
+  // so a budget that leaves only a sample never turns that sample into a recommendation.
+  const realAnywhere = everything.filter((p) => !p.fixture);
+  if (realAnywhere.length === 0) return products;
+  if (browsing) return products.filter((p) => !p.fixture);
+  const realCategories = new Set(realAnywhere.map((p) => p.category));
   return products.filter((p) => !p.fixture || !realCategories.has(p.category));
 }
 
@@ -121,7 +123,8 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   const parsed = parseQuery(query);
   // A search that names a car we list ("Toyota Aqua") is a car search: no baby wipes called Aqua.
   if (parsed.kind === 'car' || (!source && querySelectsCars(query, allVehicles()))) return noMatches(parsed, lane);
-  const pool = (source ?? [...catalog.map(withSpec), ...liveProducts()]).filter((product) => {
+  const everything = source ?? [...catalog.map(withSpec), ...liveProducts()];
+  const pool = everything.filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
     return true;
@@ -131,7 +134,7 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   // no category, show nothing instead of the whole catalogue.
   if (parsed.keywords.length > 0 && activeKeywords.length === 0 && !parsed.category) return noMatches(parsed, lane);
   const found = pool.filter((product) => activeKeywords.every((keyword) => matchesKeyword(product, keyword)));
-  const matched = withoutNeedlessSamples(found, !parsed.category && activeKeywords.length === 0);
+  const matched = withoutNeedlessSamples(found, !parsed.category && activeKeywords.length === 0, everything);
 
   const byCategory = new Map<string, Product[]>();
   for (const product of matched) {
