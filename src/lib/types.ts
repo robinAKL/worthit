@@ -49,6 +49,11 @@ export interface Product {
   condition: Condition;
   /** Free-form spec map, e.g. { ram: '16 GB', storage: '512 GB' }. */
   specs: Record<string, string | number>;
+  /**
+   * Optional per-locale spec values. `specs` holds the default-locale (English) values;
+   * UI shows `localizedSpecs[locale]?.[key] ?? specs[key]`. A `note` key is free text, not a spec chip.
+   */
+  localizedSpecs?: Partial<Record<Locale, Record<string, string | number>>>;
   /** Average rating 0 to 5, if known. */
   rating?: number;
   reviewCount?: number;
