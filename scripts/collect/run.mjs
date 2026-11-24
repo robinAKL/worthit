@@ -57,10 +57,20 @@ async function fetchImpl(url, { userAgent: agent }) {
   return { status: response.status, body: await response.text(), url: response.url };
 }
 
+/** URLs already stored for a site, oldest capture first, so a run reaches new items before refreshing old ones. */
+function knownUrls(adapter) {
+  const path = adapter.kind === 'product'
+    ? join(root, 'src', 'data', 'feeds', `${adapter.id}.json`)
+    : join(root, 'src', 'data', 'feeds', 'cars', `${adapter.id}.json`);
+  const feed = readJson(path, {});
+  const items = feed.products ?? feed.vehicles ?? [];
+  return [...items].sort((a, b) => String(a.capturedAt).localeCompare(String(b.capturedAt))).map((item) => item.url).filter(Boolean);
+}
+
 const summary = [];
 for (const adapter of ADAPTERS) {
   if (onlySite && adapter.id !== onlySite) continue;
-  const result = await runAdapter({ adapter, limit: requested, minIntervalMs: config.minIntervalMs, maxPerRun: config.maxPerRun, userAgent, fetchImpl });
+  const result = await runAdapter({ adapter, limit: requested, minIntervalMs: config.minIntervalMs, maxPerRun: config.maxPerRun, userAgent, fetchImpl, known: knownUrls(adapter) });
   const { rows, ...stats } = result;
   const stopped = Boolean(stats.stopped);
   const capped = Boolean(stats.capped);

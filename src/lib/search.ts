@@ -56,6 +56,18 @@ function matchesKeyword(product: Product, keyword: string): boolean {
   return (ALIASES[keyword] ?? [keyword]).some((term) => hay.includes(term));
 }
 
+/**
+ * Sample products only fill a gap. With no search, any real product hides every sample.
+ * With a search, a sample stays only when its category has no real product in the results.
+ */
+export function withoutNeedlessSamples(products: Product[], browsing: boolean): Product[] {
+  const real = products.filter((p) => !p.fixture);
+  if (real.length === 0) return products;
+  if (browsing) return real;
+  const realCategories = new Set(real.map((p) => p.category));
+  return products.filter((p) => !p.fixture || !realCategories.has(p.category));
+}
+
 function noMatches(parsed: ReturnType<typeof parseQuery>, lane: Lane): SearchResult {
   return { query: parsed, lane, items: [], excludedCount: 0, fixture: false };
 }
@@ -91,7 +103,8 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   // A word that no product uses is ignored ("for my mum"). If every word misses, and there is
   // no category, show nothing instead of the whole catalogue.
   if (parsed.keywords.length > 0 && activeKeywords.length === 0 && !parsed.category) return noMatches(parsed, lane);
-  const matched = pool.filter((product) => activeKeywords.every((keyword) => matchesKeyword(product, keyword)));
+  const found = pool.filter((product) => activeKeywords.every((keyword) => matchesKeyword(product, keyword)));
+  const matched = withoutNeedlessSamples(found, !parsed.category && activeKeywords.length === 0);
 
   const byCategory = new Map<string, Product[]>();
   for (const product of matched) {

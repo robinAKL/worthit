@@ -41,6 +41,8 @@ export async function runAdapter({
   now,
   sleep,
   capturedAt = new Date().toISOString(),
+  /** Detail URLs already in the feed, oldest first: new URLs are collected before these are refreshed. */
+  known = [],
 }) {
   checkAdapter(adapter);
   const session = createSession({ origin: adapter.origin, userAgent, fetchImpl, minIntervalMs, now, sleep });
@@ -51,7 +53,7 @@ export async function runAdapter({
   if (!(await session.loadRobots())) return result([]);
 
   const cap = runCap(limit, Math.min(maxPerRun, MAX_PRODUCTS_PER_RUN));
-  const urls = await discover(adapter, session, cap);
+  const urls = await discover(adapter, session, cap, { known });
   const extract = adapter.extract ?? defaultExtract(adapter.kind);
   const keep = adapter.kind === 'vehicle'
     ? (row) => keepVehicleFacts(row, { imagePermission: adapter.imagePermission === true })

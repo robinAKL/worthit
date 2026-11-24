@@ -229,3 +229,35 @@ describe('adapters', () => {
     expect(files.sort()).toEqual([...ids].sort());
   });
 });
+
+describe('collector core: each run reaches further into the catalogue (T-37)', () => {
+  const site = () =>
+    fakeSite({
+      '/robots.txt': [200, ROBOTS],
+      '/sitemap.xml': [200, sitemap(['/vehicle/1', '/vehicle/2', '/vehicle/3', '/vehicle/4', '/vehicle/5'])],
+      ...Object.fromEntries([1, 2, 3, 4, 5].map((n) => [`/vehicle/${n}`, [200, page(car(n))]])),
+    });
+
+  it('collects URLs not yet in the feed before refreshing known ones', async () => {
+    const { fetchImpl } = site();
+    const c = clock();
+    const known = [`${ORIGIN}/vehicle/1`, `${ORIGIN}/vehicle/2`];
+    const out = await runAdapter({ adapter: carAdapter, limit: 2, userAgent: 'u', fetchImpl, now: c.now, sleep: c.sleep, capturedAt: 'T', known });
+    expect(out.rows.map((r) => r.url)).toEqual([`${ORIGIN}/vehicle/3`, `${ORIGIN}/vehicle/4`]);
+  });
+
+  it('once everything is known, refreshes the oldest first', async () => {
+    const { fetchImpl } = site();
+    const c = clock();
+    const known = [5, 3, 1, 2, 4].map((n) => `${ORIGIN}/vehicle/${n}`);
+    const out = await runAdapter({ adapter: carAdapter, limit: 2, userAgent: 'u', fetchImpl, now: c.now, sleep: c.sleep, capturedAt: 'T', known });
+    expect(out.rows.map((r) => r.url)).toEqual([`${ORIGIN}/vehicle/5`, `${ORIGIN}/vehicle/3`]);
+  });
+
+  it('still never requests a disallowed known URL', async () => {
+    const { fetchImpl, requested } = site();
+    const c = clock();
+    await runAdapter({ adapter: carAdapter, limit: 10, userAgent: 'u', fetchImpl, now: c.now, sleep: c.sleep, capturedAt: 'T', known: [`${ORIGIN}/private/9`] });
+    expect(requested.some((u) => u.includes('/private/'))).toBe(false);
+  });
+});

@@ -13,7 +13,22 @@ export const DISCOVERY_DEFAULTS = {
   minListingsForFallback: 21,
 };
 
-export async function discover(adapter, session, cap) {
+/**
+ * `known` lists detail URLs already in the feed, oldest capture first. They are skipped while
+ * new URLs are found, so each run reaches further into the catalogue; any room left at the end
+ * goes to the oldest known URLs, so prices keep being refreshed once the whole site is collected.
+ */
+export async function discover(adapter, session, cap, { known = [] } = {}) {
+  const pages = await discoverNew(adapter, session, cap, new Set(known));
+  if (session.stopped) return pages;
+  for (const url of known) {
+    if (pages.length >= cap) break;
+    if (!pages.includes(url) && session.permits(url)) pages.push(url);
+  }
+  return pages;
+}
+
+async function discoverNew(adapter, session, cap, known) {
   const origin = new URL(adapter.origin).origin;
   const opts = { ...DISCOVERY_DEFAULTS, ...(adapter.discovery ?? {}) };
   const isDetail = adapter.isDetailUrl ?? isProductUrl;
@@ -49,6 +64,10 @@ export async function discover(adapter, session, cap) {
     let added = 0;
     for (const loc of locs) {
       if (!loc.startsWith(origin) || !isDetail(loc)) continue;
+      if (known.has(loc)) {
+        added += 1;
+        continue;
+      }
       if (!session.permits(loc)) {
         session.stats.skipped += 1;
         continue;
@@ -69,7 +88,7 @@ export async function discover(adapter, session, cap) {
         if (session.stopped) return pages;
         if (!page) continue;
         for (const url of linksFrom(page.body, origin)) {
-          if (pages.includes(url)) continue;
+          if (pages.includes(url) || known.has(url)) continue;
           if (!session.permits(url)) {
             session.stats.skipped += 1;
             continue;
@@ -90,7 +109,7 @@ export async function discover(adapter, session, cap) {
     if (session.stopped) return pages;
     if (!page) continue;
     for (const url of linksFrom(page.body, origin)) {
-      if (pages.includes(url) || !isDetail(url)) continue;
+      if (pages.includes(url) || known.has(url) || !isDetail(url)) continue;
       if (!session.permits(url)) {
         session.stats.skipped += 1;
         continue;

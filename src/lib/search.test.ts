@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
 import { countsAsSpec, excludedFrom, laneScore, quartile, reasonFor, specPoints } from './score';
-import { comparisonKey, search } from './search';
+import { comparisonKey, search, withoutNeedlessSamples } from './search';
 import { sizeBand, specFromProduct } from './specs';
 
 describe('parseQuery', () => {
@@ -231,5 +231,24 @@ describe('search', () => {
     expect(cheap.items.every((hit) => hit.product.price <= lowerIn(bandOf(hit.product)))).toBe(true);
     expect(cheap.items.every((hit) => hit.band === 'low')).toBe(true);
     expect(excludedFrom({ ...group[0], specs: {} }, 'cheap', lower)).toBe(true);
+  });
+});
+
+describe('sample products only fill a gap (T-37)', () => {
+  const live = { id: 'r1', fixture: false, category: 'whiteware' } as never;
+  const sampleSame = { id: 's1', fixture: true, category: 'whiteware' } as never;
+  const sampleOther = { id: 's2', fixture: true, category: 'laptop' } as never;
+
+  it('hides every sample on the start page once any real product exists', () => {
+    expect(withoutNeedlessSamples([live, sampleSame, sampleOther], true).map((p: { id: string }) => p.id)).toEqual(['r1']);
+  });
+
+  it('in a search, keeps samples only for categories with no real product', () => {
+    expect(withoutNeedlessSamples([live, sampleSame, sampleOther], false).map((p: { id: string }) => p.id)).toEqual(['r1', 's2']);
+    expect(withoutNeedlessSamples([sampleSame, sampleOther], true).map((p: { id: string }) => p.id)).toEqual(['s1', 's2']);
+  });
+
+  it('shows real products on the start page', () => {
+    expect(search('', 'value').items.every((hit) => !hit.product.fixture)).toBe(true);
   });
 });
