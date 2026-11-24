@@ -1,0 +1,101 @@
+# Block all crawlers from indexing image and admin directories
+
+User-agent: *
+
+Disallow: /images/
+
+Disallow: /admin
+
+Disallow: /Scripting.asmx/*
+
+Disallow: /search.aspx
+
+Disallow: /shoppingcart.aspx
+
+Disallow: /signin.aspx
+
+Disallow: /myaccount.aspx
+
+Disallow: /wishlist.aspx
+
+Disallow: /comparison.aspx
+
+Disallow: /pcbuilder.aspx
+
+Disallow: /*search.aspx
+
+Disallow: /*?*search*
+
+Disallow: /orders.aspx
+
+Disallow: /orderconfirmation.aspx
+
+Disallow: /orderpayment.aspx
+
+Disallow: /paymentconfirmation.aspx
+
+Disallow: /orderapproval.aspx
+
+Disallow: /createaccount.aspx
+
+Disallow: /accountmaintenance.aspx
+
+Disallow: /changepassword.aspx
+
+Disallow: /unsubscribe.aspx
+
+Disallow: /mailinglist-confirm.aspx
+
+Disallow: /supplierorderstatus.aspx
+
+Disallow: /pcbuilderconfig.aspx
+
+
+# Bot-specific exclusions
+
+User-agent: Slurp
+
+Disallow: /
+
+
+User-agent: linkdex.com
+
+Disallow: /
+
+
+User-agent: Yandex
+
+Disallow: /
+
+
+User-agent: moget
+
+Disallow: /
+
+
+User-agent: NaverBot
+
+Disallow: /
+
+
+User-agent: Baiduspider
+
+Disallow: /
+
+
+User-agent: sogou spider
+
+Disallow: /
+
+
+User-agent: AhrefsBot
+
+Disallow: /
+
+
+User-agent: MJ12bot
+
+Disallow: /
+
+
+Sitemap: https://www.ascent.co.nz/sitemap.xml

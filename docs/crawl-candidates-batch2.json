@@ -1,0 +1,41 @@
+{
+  "task": "T-12",
+  "checkedAt": "2026-11-24",
+  "timezone": "Pacific/Auckland",
+  "basis": "user-directed no-express-restriction screening; not affirmative merchant permission",
+  "activeCollector": false,
+  "scope": [
+    "price facts",
+    "specification facts"
+  ],
+  "excluded": [
+    "images",
+    "original descriptions",
+    "reviews",
+    "trademarks"
+  ],
+  "candidates": [
+    {
+      "name": "Ascent",
+      "origin": "https://www.ascent.co.nz",
+      "conclusion": "允许",
+      "status": "screened_candidate",
+      "robotsUrl": "https://www.ascent.co.nz/robots.txt",
+      "termsUrl": "https://www.ascent.co.nz/conditions.aspx",
+      "affirmativePermissionVerified": false,
+      "productUrlsTested": false,
+      "requiresCurrentPolicyCheck": true
+    },
+    {
+      "name": "Baby Factory NZ",
+      "origin": "https://www.babyfactory.co.nz",
+      "conclusion": "允许",
+      "status": "screened_candidate",
+      "robotsUrl": "https://www.babyfactory.co.nz/robots.txt",
+      "termsUrl": "https://www.babyfactory.co.nz/terms",
+      "affirmativePermissionVerified": false,
+      "productUrlsTested": false,
+      "requiresCurrentPolicyCheck": true
+    }
+  ]
+}

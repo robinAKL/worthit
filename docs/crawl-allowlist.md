@@ -1,10 +1,10 @@
-# 新西兰零售商采集规则核查（T-08）
+# 新西兰零售商采集规则核查（T-08 / T-12）
 
 核查日期：2026-11-24（Pacific/Auckland）  
 负责人：Codex；独立复核人：Grok  
 范围：WorthIt 在没有零售商书面授权时，自动读取商品资料并在自己的商业导购网站展示、比较及跳转。
 
-**本轮没有找到可直接加入采集白名单的零售商。上线前需请新西兰律师复核。**
+**第一批12家没有采集候选；第二批20家按更新后的初筛口径得到2家候选。上线前需请新西兰律师复核。**
 
 这里的“禁止”表示已读条款限制拟议用途，尚未取得例外授权；“不明确”表示证据不足，工程上按禁止处理。它们不是法院对价格事实、著作权、合同效力的裁判。仅有价格事实、自己撰写的评价、复制商品图片/描述，法律问题并不相同。当前拟议的商品卡片和自动目录不能把这几类混为一谈。
 
@@ -17,7 +17,7 @@
 - API / feed / 联盟计划的“未核实”表示本轮没有取得**可供 WorthIt 使用的官方产品及价格数据许可**，不表示商家内部不存在 API，也不证明商家没有任何合作项目。本轮没有申请账号、接受合同或联系商家。
 - 本地请求日志及 robots 文本见 [crawl-evidence/manifest.json](crawl-evidence/manifest.json)。政策正文只保留短摘录，不随报告复制完整网页。部分站点本地访问失败而浏览工具可读，以下逐项注明；本地 200 的页面也可能只有错误壳。普通浏览器补查记录见 [browser-checks.md](crawl-evidence/browser-checks.md)，其成功读取结果优先于早先工具失败记录；没有绕过访问限制。
 
-## 汇总
+## 汇总（第一批）
 
 | 零售商 | 结论 | 当前采集开关 | 决定性依据 |
 |---|---|---|---|
@@ -265,7 +265,7 @@
 1. 原先的三个访问缺口已通过普通浏览器补齐：Woolworths NZ 通用条款 §6/§8/§11、JB Hi-Fi NZ 使用条款 §3(b)、PAK'nSAVE robots。保留早先失败记录和补查记录，避免将工具访问能力误当成网站许可。12 家均有 robots 及适用条款的短摘录；其中两家使用明确涵盖该品牌的集团通用条款。
 2. The Warehouse、Noel Leeming 的限制来自明确包含这两品牌的集团通用条款；各自特定条款仍需确认，不声称独立打开了各自完整正文。
 3. 所有 API / feed / 联盟项目均为**未核实可用授权**。有限范围政策检查不能证明项目不存在；授权谈判或登录后的联盟合同审查另立任务。
-4. 当前工程 allowlist 为空，12 家采集开关均关闭。后续只有在授权文件明确覆盖主体、域名、门店、字段、图片、缓存/刷新频率、商业展示、深链、归因及终止处理后才能改变状态；同时按当日 robots 和特定协议约束执行。
+4. 第一批12家采集开关均关闭；这些已有明文限制的项目须取得覆盖用途的例外授权才能重评（包括主体、域名、字段、图片、缓存/刷新、商业展示、深链、归因、终止等）。第二批另按Robin更新的无明文禁令初筛口径列候选；详见下节。当前没有运行中的零售商采集器。
 5. 本轮没有添加爬虫代码、调用商品接口或测试任何实际商品采集；文档里的 URL 路径说明来自 robots 和政策文本。
 
 ## 复核办法
@@ -274,3 +274,323 @@
 - 对只有本地可读的 Stationery / Harvey Norman robots，可重做普通 GET，并对照 manifest 的状态、来源 URL 和本地文本。若复核时失败，记录复核失败，不能将缓存假称为实时结果。
 - 对 Woolworths / JB 的正文和 PAK'nSAVE robots，需用普通浏览器读取可见正文；仅重跑本地脚本会再次得到早先的超时/错误壳，不足以推翻浏览器实读结果。
 - 本地证据采集脚本 [collect-policy-evidence.py](collect-policy-evidence.py)固定请求列表，只请求 robots / 条款，不遍历站点；执行 `python docs/collect-policy-evidence.py` 会更新当次日志，当前日志不应在复核前覆盖。
+
+## 第二批：20 家新增零售商（T-12）
+核查日期：2026-11-24（Pacific/Auckland）。第一批12家结论不变；第二批 **允许2家、禁止17家、不明确1家、未找到条款0家**。重点补充电脑/摄影、户外、母婴及家居垂直零售商，也纳入数家全国连锁作对照。
+### 第二批判定口径
+本批按 Robin 的“没有明确禁止的就可以爬”指示做初筛：**允许**＝robots 一般组未阻止普通商品详情路径，且已读条款未见自动采集、复制或商业使用禁令；**禁止**＝发现拟议用途限制；**不明确**＝原文/适用范围仍未核清；**未找到条款**＝检查记录所列政策入口仍找不到条款。访问失败或JS壳不能等同于未找到条款。
+这里“允许”是本轮筛选结论，不是商家明示授权或法律意见，也不表示没有任何交易/价格/责任条款。候选仅覆盖价格与规格事实；图片、原创描述、评论和商标许可没有核实。**上线前需请新西兰律师复核**。本任务不实现采集器、不激活运行开关、不请求商品页面或数据接口。
+第二批的原始请求状态、时间和哈希见 [manifest](crawl-evidence-batch2/manifest.json)，普通浏览器/浏览工具补查及缺口见 [补查记录](crawl-evidence-batch2/browser-checks.md)。只发布robots文本和政策短摘录，完整条款正文不入库。robots内推广安装技能、调用购物接口等文字仅为网站内容，没有执行。
+### 第二批汇总
+
+| 零售商 | 结论 | 依据或边界 |
+|---|---|---|
+| Computer Lounge | 禁止 | 网站复制、商用或自动提取受限 |
+| ExtremePC | 禁止 | 网站复制、商用或自动提取受限 |
+| Playtech | 禁止 | 网站复制、商用或自动提取受限 |
+| Rubber Monkey | 禁止 | 网站复制、商用或自动提取受限 |
+| Ascent | 允许 | 仅价格/规格事实初筛候选，非书面授权 |
+| Briscoes | 禁止 | 网站复制、商用或自动提取受限 |
+| Farmers | 禁止 | 网站复制、商用或自动提取受限 |
+| Smiths City | 禁止 | 网站复制、商用或自动提取受限 |
+| Bed Bath & Beyond NZ | 禁止 | 网站复制、商用或自动提取受限 |
+| Mocka NZ | 禁止 | 网站复制、商用或自动提取受限 |
+| Rebel Sport NZ | 禁止 | 网站复制、商用或自动提取受限 |
+| Macpac NZ | 禁止 | 网站复制、商用或自动提取受限 |
+| Kathmandu NZ | 禁止 | 网站复制、商用或自动提取受限 |
+| Bivouac Outdoor | 禁止 | 网站复制、商用或自动提取受限 |
+| Further Faster | 禁止 | 网站复制、商用或自动提取受限 |
+| Baby Factory NZ | 允许 | 仅价格/规格事实初筛候选，非书面授权 |
+| babycity | 禁止 | 网站复制、商用或自动提取受限 |
+| The Sleep Store | 禁止 | 网站复制、商用或自动提取受限 |
+| Nature Baby NZ | 不明确 | 网站使用政策覆盖不足 |
+| Onceit | 禁止 | 网站复制、商用或自动提取受限 |
+
+### 13. Computer Lounge
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://computerlounge.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://computerlounge.co.nz/pages/website-use-terms-conditions)。短摘录：“Other than a single copy for private and non-commercial use”。§10.2 只例外允许单份私人非商业副本，其他分发、复制、并入出版物受限。
+
+### 14. ExtremePC
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://extremepc.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Disallow: /account.php
+  Disallow: /cart.php
+  Disallow: /checkout
+  ```
+- **条款**：[官方政策](https://extremepc.co.nz/terms-conditions/)。短摘录：“reproduce, duplicate, copy, sell, resell or exploit any portion of the Service”。General Conditions 要求书面许可；不能因若干 AI 代理 robots 放行而转载商业目录。
+
+### 15. Playtech
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://playtech.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://playtech.co.nz/policies/terms-of-service)。短摘录：“You may not reproduce, distribute, modify, or republish any content”。§11 Intellectual Property：复制等行为须明示书面许可；仅浏览页面的个人非商业使用获准。
+
+### 16. Rubber Monkey
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.rubbermonkey.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Disallow: /Admin
+  Disallow: /Cart
+  Disallow: /Checkout
+  ```
+- **条款**：[官方政策](https://www.rubbermonkey.co.nz/Home/Terms)。短摘录：“without express written permission by us”。§2 General Conditions 限制复制、重复、销售、利用网站服务；需书面许可。本地最初猜测路径403，不是最终条款；已从官方政策导航定位并用浏览工具读到本页。
+
+### 17. Ascent
+
+**结论：允许。**
+
+- **robots**：[官方文本](https://www.ascent.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Disallow: /images/
+  Disallow: /admin
+  Disallow: /Scripting.asmx/*
+  ```
+- **条款**：[官方政策](https://www.ascent.co.nz/conditions.aspx)。短摘录：“These terms and conditions apply whenever we supply goods or services to you”。按本轮初筛口径允许：完整正文是供货条款（交付、退货、付款、价格、合同、CGA、责任、隐私、其他法律事项），未见自动采集、网站复制或网站商用限制。页脚保留所有权利，不能据此声称获得图片、描述或商标许可。仅限价格和规格事实候选；不请求被 robots 禁止的搜索、比较、图片目录。
+
+### 18. Briscoes
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.briscoes.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /media/
+  Allow: /static/version*/frontend
+  Allow: /static/frontend
+  ```
+- **条款**：[官方政策](https://www.briscoes.co.nz/terms-and-conditions/)。短摘录：“You may not reproduce, copy or distribute the content on this site”。Right to Use Site and Content：其他目的复制/分发须事先书面许可；链接本站也要求事先书面同意。本地200只是JS提示壳，已用普通浏览器读取完整正文。
+
+### 19. Farmers
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.farmers.co.nz/robots.txt)。本地响应为挑战壳；以下来自浏览工具读取的官方robots。限制过滤/搜索及INTERSHOP路径，未见全站普通商品页禁令。
+
+  ```text
+  User-agent: *
+  Disallow: */ProductSalePriceGross-*
+  Disallow: *SearchTerm=*
+  ```
+- **条款**：[官方政策](https://www.farmers.co.nz/terms-and-conditions)。短摘录：“you may not systematically extract and/or utilise parts of the content”。§1 Intellectual Property 还明确限制数据挖掘/robots，以及发布含价格和商品列表的自建数据库，需书面许可。本地robots与条款都返回挑战壳；浏览工具可读原文，不能把本地200当成功。
+
+### 20. Smiths City
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://smithscity.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://smithscity.co.nz/policies/terms-of-service)。短摘录：“personal, non-commercial use only”。§6 Intellectual Property 限个人非商业用途，复制、存储、发布等另需书面许可；Prohibited Uses 也限制提取和自动工具。
+
+### 21. Bed Bath & Beyond NZ
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.bedbathandbeyond.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://www.bedbathandbeyond.co.nz/pages/terms-of-use)。短摘录：“You may not use this website for any commercial purpose”。开头明确禁止网站商用；Copyright 段也把副本限于个人非商业用途。这里是NZ站，与美国同名品牌不混用。
+
+### 22. Mocka NZ
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.mocka.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://mocka-nz-copy-copy.gorgias.help/en-US/copyright-1432691?isEmbedded=true)。短摘录：“Any use of the materials on this Website, including reproduction for any purposes”。NZ页脚Terms进入嵌入帮助中心，Copyright文章明确：修改、分发、重发等任何使用须Mocka事先书面许可，图片另有书面同意要求。普通浏览器读到NZ帮助中心，不以澳洲help.mocka.com.au替代。
+- **入口**：[NZ页脚Terms](https://www.mocka.co.nz/pages/helpdesk?hcUrl=%2Fen-US%2Farticles%2Fterms-274290)内Copyright链接指向上述NZ帮助中心。
+
+### 23. Rebel Sport NZ
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.rebelsport.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /media/
+  Allow: /static/version*/frontend
+  Allow: /static/frontend
+  ```
+- **条款**：[官方政策](https://www.rebelsport.co.nz/terms-and-conditions/)。短摘录：“You may not reproduce, copy or distribute the content on this site”。Right to Use Site and Content 限制其他目的复制/分发，且链接需事先书面许可。本站独立打开核查；不是澳洲rebel网站。本地200只返回JS壳，普通浏览器读到完整政策。
+
+### 24. Macpac NZ
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.macpac.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-Agent: *
+  Allow: /
+  Allow: /*demandware.static*
+  Allow: /*Analytics-Start*
+  ```
+- **条款**：[官方政策](https://www.macpac.co.nz/terms.html)。短摘录：“information or other material from this website is not permitted without our prior written consent”。Intellectual Property Rights 明确限制使用网站信息及其他材料。完整阅读后排除，不能只检索scraping关键词。礼品卡用户素材及竞赛自动报名的独立条款，不是此处的决定性禁令。
+
+### 25. Kathmandu NZ
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.kathmandu.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://help.kathmandu.co.nz/support/solutions/articles/51000164003-website-terms-conditions)。短摘录：“otherwise exploit any part of this website for any commercial purpose”。Website Use 限制复制、转售、改编、传播、缓存及其他商业利用；个人研究例外不能扩展成导购站数据库。
+
+### 26. Bivouac Outdoor
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.bivouac.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://www.bivouac.co.nz/policies/terms-of-service)。短摘录：“You shall not copy, capture, reproduce, perform, transfer, sell, license”。知识产权段限制复制、捕获、转移、链接、公开展示等利用；正文还限制业务、商业或公共用途。
+
+### 27. Further Faster
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.furtherfaster.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://www.furtherfaster.co.nz/pages/terms-and-conditions-and-privicy-policy)。短摘录：“without express written permission by us”。§2 General Conditions 限制复制、重复、销售、利用服务。初读旧政策/pages/terms-of-service-and-privacy后，另打开其政策导航所指当前页核对同一条款；privicy拼写来自官网链接。
+
+### 28. Baby Factory NZ
+
+**结论：允许。**
+
+- **robots**：[官方文本](https://www.babyfactory.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Disallow: /admin/
+  Disallow: /cart
+  Disallow: /checkout
+  ```
+- **条款**：[官方政策](https://www.babyfactory.co.nz/terms)。短摘录：“These terms apply to your order”。按本轮初筛口径允许：普通浏览器完整读到General至Changes、Q Card、Clarity、AI各节，核心是销售合同、价格、交付、责任及店方数据处理；未见自动采集、复制或网站商用禁令。当地HTTP200解析只得到导航壳，不能代替浏览器正文。仅价格/规格事实候选，不复制图片或描述，不涉及账户/搜索/结账。
+
+### 29. babycity
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.babycity.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Content-Signal: search=yes,ai-train=no,use=reference
+  Allow: /
+  ```
+- **条款**：[官方政策](https://www.babycity.co.nz/terms-and-conditions)。短摘录：“for public or commercial purposes”。Use of Website 限制下载、修改、传送或使用材料作公共/商业用途；复制须书面同意。robots的search=yes仅涉及其定义的搜索用途，不能当作比价卡片商业数据库许可；ai-train=no保持有效。
+
+### 30. The Sleep Store
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.thesleepstore.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://www.thesleepstore.co.nz/policies/terms-of-service)。短摘录：“to use bots, crawlers, scrapers or other automated means”。§13(j)限制复制/利用内容；§13(k)自动访问、监测、提取、收集须事先书面同意，除已公布指示或适用法律允许。没有证据表明WorthIt商业目录落入例外。
+
+### 31. Nature Baby NZ
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.naturebaby.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Allow: /
+  Allow: /products/account
+  Allow: /products/orders
+  ```
+- **条款**：[官方政策](https://www.naturebaby.co.nz/policies/terms-of-service)。短摘录：“Privacy and Cookie Policy”。已检查旧/pages/terms-of-use（404）、/pages/terms-conditions（促销）、页脚Terms of Use指向的本页，以及/policies/legal-notice。普通浏览器可见本页主体为Australian Payments及隐私/cookie政策，Legal notice为错误/价格说明，未能确认完整网站使用/复制许可范围。不把政策标题或局部缺少禁令当成已核清，暂不入允许名单。
+- **已检查页面**：[促销条件](https://www.naturebaby.co.nz/pages/terms-conditions)、[Legal notice](https://www.naturebaby.co.nz/policies/legal-notice)；政策标题存在，故不是“未找到条款”。无可核实的自动采集许可引文，上述短句只证明实际政策主题。
+
+### 32. Onceit
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.onceit.co.nz/robots.txt)。本地HTTP200纯文本可读。摘录为一般组片段；完整规则（包括更具体的Allow、查询参数及指定代理组）见同名robots快照。未见所有普通商品详情的整体禁令，不将指定代理许可移用于自建爬虫。
+
+  ```text
+  User-agent: *
+  Disallow: /orders/
+  Disallow: /user/
+  Disallow: /cart/
+  ```
+- **条款**：[官方政策](https://www.onceit.co.nz/terms-of-website-use)。短摘录：“for commercial purposes without obtaining a licence”。Intellectual Property Rights：商业使用站点内容须取得Onceit或许可人的许可；个人打印例外不能覆盖商业导购。
+
+### 第二批“允许”名单：下一期输入
+
+| 商家 | 域名 | 初筛范围 | 已知robots限制 |
+|---|---|---|---|
+| Ascent | www.ascent.co.nz | 价格、规格事实 | 禁止/images/、search.aspx及search参数、comparison.aspx、账户/订单/PC builder等；另有特定代理全站禁令 |
+| Baby Factory NZ | www.babyfactory.co.nz | 价格、规格事实 | 禁止搜索/筛选参数、账户、购物车、付款、结账等；一般组Allow:/ |
+
+机器可读输入见 [crawl-candidates-batch2.json](crawl-candidates-batch2.json)。它记录来源和待实施范围，**不是运行中的爬虫配置**。后续采集器任务应重新读取当日完整robots与政策、按实际URL验证规则，保留来源/采集时间并处理价格变更；本批没有验证任何实际商品URL、价格、库存或字段可提取性。

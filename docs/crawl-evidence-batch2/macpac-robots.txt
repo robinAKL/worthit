@@ -1,0 +1,138 @@
+User-Agent: *
+
+Allow: /
+
+Allow: /*demandware.static*
+
+Allow: /*Analytics-Start*
+
+
+# Sitemap
+
+Sitemap: https://www.macpac.co.nz/sitemap_index.xml
+
+Sitemap: https://www.macpac.co.nz/sitemap_0-image.xml
+
+
+# Disallowed Domains
+
+Disallow: *demandware.net*
+
+
+# Disallowed Query Parameters
+
+Disallow: /*CAWELAID=
+
+Disallow: /*cb=*
+
+Disallow: /*cid=*
+
+Disallow: /*cm_vc=*
+
+Disallow: /*gclid=*
+
+Disallow: /*istBid=*
+
+Disallow: /*istCompanyId=*
+
+Disallow: /*istItemId=*
+
+Disallow: /*maxfilter*
+
+Disallow: /*mid=*
+
+Disallow: /*original=*
+
+Disallow: /*vgid=*
+
+Disallow: /*cookie=*
+
+
+# Disallowed Functional Paths
+
+Disallow: /cgi-bin
+
+Disallow: /edm/
+
+Disallow: /Page-Include/
+
+Disallow: /Page-Show
+
+Disallow: /Compare-*
+
+Disallow: /SpeedFlex-*
+
+Disallow: /StoreInventory-*
+
+Disallow: /SharedBasket-*
+
+Disallow: /Cart-AddProduct/
+
+Disallow: /Site-RedirectToRecommendedSite
+
+Disallow: /Address-GetAddressDetails?addressID=
+
+Disallow: /Stores-FindStores/
+
+Disallow: /Resources-Load/
+
+
+# Additional Disallowed Patterns
+
+Disallow: /on/demandware.store/Sites-MacpacNZ-Site/
+
+Disallow: /*show-variation*
+
+
+# Crawl Delays
+
+User-Agent: msnbot
+
+Crawl-delay: 30
+
+
+User-Agent: bingbot
+
+Crawl-delay: 30
+
+
+# Blocked Crawlers
+
+User-Agent: MJ12bot
+
+Disallow: /
+
+
+User-Agent: trendictionbot
+
+Disallow: /
+
+
+User-Agent: MegaIndex.ru
+
+Disallow: /
+
+
+User-Agent: dotbot
+
+Disallow: /
+
+
+User-Agent: 360Spider
+
+Disallow: /
+
+
+User-Agent: HaosouSpider
+
+Disallow: /
+
+
+User-Agent: YandexBot
+
+Disallow: /
+
+
+User-Agent: Baiduspider
+
+Disallow: /

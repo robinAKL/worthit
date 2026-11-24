@@ -1,0 +1,82 @@
+User-agent: *
+Sitemap: https://www.onceit.co.nz/sitemap.xml
+Disallow: /orders/
+Disallow: /user/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /payment/
+Disallow: /invite/
+Disallow: /i/
+Disallow: /e/
+Disallow: /t/
+Disallow: /f/
+Disallow: /j/
+Disallow: /sales/12427/sleep-and-co-mattresses-and-bed-bases
+Disallow: /*?brand=
+Disallow: /*&brand=
+Disallow: /*?colour=
+Disallow: /*&colour=
+Disallow: /*?age=
+Disallow: /*&age=
+Disallow: /*?deliveryOptions=
+Disallow: /*&deliveryOptions=
+Disallow: /*?maxPrice=
+Disallow: /*&maxPrice=
+Disallow: /*?size=
+Disallow: /*&size=
+Disallow: /search/
+Disallow: /products/*/competitions
+Disallow: /sales/*/competitions
+Disallow: /collection/*/competitions
+Disallow: /brand/*/competitions
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: Sogou spider
+Disallow: /
+
+User-agent: MegaIndex Crawler
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: barkrowler
+Disallow: /
+
+User-agent: DataForSEOBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /products/*/competitions
+Disallow: /sales/*/competitions
+Disallow: /collection/*/competitions
+Disallow: /brand/*/competitions
+
+User-agent: Googlebot-image
+Disallow: /products/*/competitions
+Disallow: /sales/*/competitions
+Disallow: /collection/*/competitions
+Disallow: /brand/*/competitions

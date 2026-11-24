@@ -1,0 +1,306 @@
+User-agent: Pinterestbot
+
+Disallow: /
+
+
+User-agent: Bytespider
+
+Disallow: /
+
+
+User-agent: *
+
+
+# Allow essential assets
+
+Allow: /media/
+
+Allow: /static/version*/frontend
+
+Allow: /static/frontend
+
+Allow: /registerSW
+
+Allow: /static-assets
+
+Allow: /graphql
+
+Allow: /cart_page
+
+
+# Disallow core Magento backend paths
+
+Disallow: /portal
+
+Disallow: /downloader
+
+Disallow: /errors
+
+Disallow: /cgi-bin
+
+Disallow: /cron.php
+
+Disallow: /cron.sh
+
+Disallow: /setup
+
+Disallow: /update
+
+Disallow: /index.php
+
+Disallow: /static
+
+Disallow: /var
+
+Disallow: /report
+
+Disallow: /shell
+
+Disallow: /dev
+
+Disallow: /phpinfo.php
+
+
+# Disallow customer-related paths
+
+Disallow: /customer
+
+Disallow: /login
+
+Disallow: /register
+
+Disallow: /wishlist
+
+Disallow: /review
+
+Disallow: /sendfriend
+
+
+# Disallow checkout paths
+
+Disallow: /cart
+
+Allow: /checkout_page
+
+Disallow: /checkout
+
+Disallow: /multishipping
+
+Disallow: /onestepcheckout
+
+Disallow: /paypal
+
+Disallow: /braintree
+
+
+# Disallow search results
+
+Disallow: /catalogsearch
+
+Disallow: /search
+
+
+# Disallow custom Backend paths
+
+Disallow: /shipping
+
+Disallow: /stores
+
+Disallow: /mospsaml
+
+Disallow: /googleproductfeed
+
+Disallow: /googleproducthistoricalfeed
+
+Disallow: /pdf
+
+
+# Disallow PWA Studio internal routes
+
+Disallow: /__sw.js
+
+Disallow: /service-worker.js
+
+Disallow: /loader.js
+
+
+# Disallow paths from Opti
+
+Disallow: /EPiServer/CMS/
+
+Disallow: /Util/
+
+Disallow: /*aspect=
+
+Disallow: /*Type=
+
+
+# ------------------------------------------------------------
+
+# AI / LLM Crawlers
+
+# Allow AI crawlers to access public catalogue and content pages
+
+# while keeping account, cart, checkout, search, backend and internal
+
+# application routes out of crawl scope.
+
+# ------------------------------------------------------------
+
+
+User-agent: GPTBot
+
+User-agent: OAI-SearchBot
+
+User-agent: ChatGPT-User
+
+User-agent: ClaudeBot
+
+User-agent: anthropic-ai
+
+User-agent: Claude-SearchBot
+
+User-agent: Claude-User
+
+User-agent: Google-Extended
+
+User-agent: PerplexityBot
+
+User-agent: Applebot
+
+User-agent: Applebot-Extended
+
+User-agent: Meta-ExternalAgent
+
+User-agent: CCBot
+
+User-agent: DuckAssistBot
+
+
+# Allow essential assets
+
+Allow: /media/
+
+Allow: /static/version*/frontend
+
+Allow: /static/frontend
+
+Allow: /registerSW
+
+Allow: /static-assets
+
+Allow: /graphql
+
+Allow: /cart_page
+
+
+# Disallow core Magento backend paths
+
+Disallow: /portal
+
+Disallow: /downloader
+
+Disallow: /errors
+
+Disallow: /cgi-bin
+
+Disallow: /cron.php
+
+Disallow: /cron.sh
+
+Disallow: /setup
+
+Disallow: /update
+
+Disallow: /index.php
+
+Disallow: /static
+
+Disallow: /var
+
+Disallow: /report
+
+Disallow: /shell
+
+Disallow: /dev
+
+Disallow: /phpinfo.php
+
+
+# Disallow customer-related paths
+
+Disallow: /customer
+
+Disallow: /login
+
+Disallow: /register
+
+Disallow: /wishlist
+
+Disallow: /review
+
+Disallow: /sendfriend
+
+
+# Disallow checkout paths
+
+Disallow: /cart
+
+Allow: /checkout_page
+
+Disallow: /checkout
+
+Disallow: /multishipping
+
+Disallow: /onestepcheckout
+
+Disallow: /paypal
+
+Disallow: /braintree
+
+
+# Disallow search results
+
+Disallow: /catalogsearch
+
+Disallow: /search
+
+
+# Disallow custom Backend paths
+
+Disallow: /shipping
+
+Disallow: /stores
+
+Disallow: /mospsaml
+
+Disallow: /googleproductfeed
+
+Disallow: /googleproducthistoricalfeed
+
+Disallow: /pdf
+
+
+# Disallow PWA Studio internal routes
+
+Disallow: /__sw.js
+
+Disallow: /service-worker.js
+
+Disallow: /loader.js
+
+
+# Disallow paths from Opti
+
+Disallow: /EPiServer/CMS/
+
+Disallow: /Util/
+
+Disallow: /*aspect=
+
+Disallow: /*Type=
+
+
+# Sitemap
+
+Sitemap: https://www.rebelsport.co.nz/sitemap.xml

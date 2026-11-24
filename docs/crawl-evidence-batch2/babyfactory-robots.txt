@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /confirmation?*
+Disallow: /*search?*
+Disallow: /log-in
+Disallow: /log-out
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /*?s=*
+Disallow: /*?f=*
+Disallow: /payment
+Disallow: /my-account
+Disallow: /*/my-account
+Allow: /
+Sitemap: https://www.babyfactory.co.nz/content/sitemaps/sitemap.xml
