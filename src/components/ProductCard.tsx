@@ -1,6 +1,7 @@
 import { DICTIONARIES, type Copy, type Locale } from '../i18n';
 import { countsAsSpec } from '../lib/score';
 import type { Recommendation } from '../lib/types';
+import { CardMedia, toneOf } from './CardMedia';
 
 const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
 
@@ -9,7 +10,7 @@ function formatCaptured(locale: Locale, iso?: string) {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return iso;
   return new Intl.DateTimeFormat(DICTIONARIES[locale].language.intlLocale, {
-    dateStyle: 'long',
+    dateStyle: 'medium',
     timeStyle: 'short',
     timeZone: 'Pacific/Auckland',
   }).format(date);
@@ -34,8 +35,16 @@ export function ProductCard({ rec, position, copy, locale }: Props) {
 
   return (
     <article className="card">
+      <CardMedia
+        src={p.imageUrl}
+        mark={String(p.specs.brand ?? p.title).slice(0, 2).toUpperCase()}
+        caption={p.category.replace(/-/g, ' ')}
+        tone={toneOf(p.category)}
+      />
       <p className="card-flag">{p.fixture ? copy.results.sampleFlag : copy.results.capturedPrice(captured)}</p>
-      <h3 className="card-title">{p.titles?.[locale] ?? p.title}</h3>
+      <h3 className="card-title" title={p.titles?.[locale] ?? p.title}>
+        {p.titles?.[locale] ?? p.title}
+      </h3>
 
       <p className="card-price">
         <span className="price">{nzd.format(p.price)}</span>
@@ -46,7 +55,9 @@ export function ProductCard({ rec, position, copy, locale }: Props) {
         ) : null}
       </p>
 
-      {rec.ranked === false ? null : (
+      {rec.ranked === false ? (
+        <div className="meter meter-empty" aria-hidden="true" />
+      ) : (
         <div className="meter" data-band={band}>
           <div className="meter-track" role="img" aria-label={(p.fixture ? copy.results.meterLabel : copy.results.meterLabelLive)(Math.round(position))}>
             <span className="meter-mark" style={{ insetInlineStart: `${position}%` }} />

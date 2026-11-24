@@ -69,6 +69,7 @@ export const en = {
     more: (n: number) => `Show ${n} more`,
     empty: 'No cars to show yet.',
     viewAt: (dealer: string) => `View at ${dealer}`,
+    estimate: (price: string) => `Our estimate ${price}`,
     captured: (date: string) => `Listing read ${date}`,
     km: (n: string) => `${n} km`,
     fuel: { petrol: 'Petrol', diesel: 'Diesel', hybrid: 'Hybrid', 'plug-in-hybrid': 'Plug-in hybrid', electric: 'Electric', lpg: 'LPG', other: 'Other fuel' },

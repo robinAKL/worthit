@@ -9,7 +9,8 @@ import { RentCheck } from './components/RentCheck';
 import { CarSection } from './components/CarSection';
 
 const PANEL_ID = 'results-panel';
-const PAGE_SIZE = 8;
+/** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
+const PAGE_SIZE = 12;
 
 function formatDate(locale: Locale, iso?: string) {
   if (!iso) return '';
@@ -36,26 +37,26 @@ export default function App() {
   const [draft, setDraft] = useState('');
   const [query, setQuery] = useState('');
   const [lane, setLane] = useState<Lane>('value');
-  const [expanded, setExpanded] = useState(false);
+  const [shown, setShown] = useState(PAGE_SIZE);
   const deferredQuery = useDeferredValue(query);
 
   const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
   const pos = useMemo(() => positions(result.items), [result.items]);
-  const visible = expanded ? result.items : result.items.slice(0, PAGE_SIZE);
+  const visible = result.items.slice(0, shown);
   const hidden = result.items.length - visible.length;
   const captured = formatDate(locale, result.items[0]?.product.capturedAt);
 
   function submit(e: FormEvent) {
     e.preventDefault();
     setQuery(draft.trim());
-    setExpanded(false);
+    setShown(PAGE_SIZE);
     document.getElementById('results')?.scrollIntoView({ block: 'start' });
   }
 
   function pickExample(text: string) {
     setDraft(text);
     setQuery(text);
-    setExpanded(false);
+    setShown(PAGE_SIZE);
   }
 
   return (
@@ -161,7 +162,7 @@ export default function App() {
               lane={lane}
               onChange={(l) => {
                 setLane(l);
-                setExpanded(false);
+                setShown(PAGE_SIZE);
               }}
               panelId={PANEL_ID}
             />
@@ -186,8 +187,8 @@ export default function App() {
 
               {hidden > 0 ? (
                 <div className="more">
-                  <button type="button" className="more-button" onClick={() => setExpanded(true)}>
-                    {copy.results.more(hidden)}
+                  <button type="button" className="more-button" onClick={() => setShown((n) => n + PAGE_SIZE)}>
+                    {copy.results.more(Math.min(hidden, PAGE_SIZE))}
                   </button>
                 </div>
               ) : null}

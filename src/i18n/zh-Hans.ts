@@ -69,6 +69,7 @@ export const zhHans: Copy = {
     more: (n: number) => `再看 ${n} 台`,
     empty: '暂时没有可显示的车。',
     viewAt: (dealer: string) => `去 ${dealer} 查看`,
+    estimate: (price: string) => `我们的估价 ${price}`,
     captured: (date: string) => `读取于 ${date}`,
     km: (n: string) => `${n} 公里`,
     fuel: { petrol: '汽油', diesel: '柴油', hybrid: '混动', 'plug-in-hybrid': '插电混动', electric: '纯电', lpg: 'LPG', other: '其他燃料' },

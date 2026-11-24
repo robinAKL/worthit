@@ -3,10 +3,12 @@ import { DICTIONARIES, type Copy, type Locale } from '../i18n';
 import { carResults, type CarPick } from '../lib/cars';
 import { carReason } from '../lib/cars/reason';
 import type { Lane } from '../lib/types';
+import { CardMedia, toneOf } from './CardMedia';
 import { LaneTabs } from './LaneTabs';
 
 const PANEL_ID = 'cars-panel';
-const PAGE_SIZE = 6;
+/** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
+const PAGE_SIZE = 12;
 const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
 
 function formatDate(locale: Locale, iso?: string, withTime = false) {
@@ -14,7 +16,7 @@ function formatDate(locale: Locale, iso?: string, withTime = false) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
   return new Intl.DateTimeFormat(DICTIONARIES[locale].language.intlLocale, {
-    dateStyle: 'long',
+    dateStyle: withTime ? 'medium' : 'long',
     ...(withTime ? { timeStyle: 'short' } : {}),
     timeZone: 'Pacific/Auckland',
   }).format(d);
@@ -27,10 +29,10 @@ interface Props {
 
 export function CarSection({ copy, locale }: Props) {
   const [lane, setLane] = useState<Lane>('value');
-  const [expanded, setExpanded] = useState(false);
+  const [shown, setShown] = useState(PAGE_SIZE);
   const result = useMemo(() => carResults(lane), [lane]);
   const t = copy.cars;
-  const visible = expanded ? result.picks : result.picks.slice(0, PAGE_SIZE);
+  const visible = result.picks.slice(0, shown);
   const hidden = result.picks.length - visible.length;
 
   return (
@@ -57,7 +59,7 @@ export function CarSection({ copy, locale }: Props) {
           panelId={PANEL_ID}
           onChange={(l) => {
             setLane(l);
-            setExpanded(false);
+            setShown(PAGE_SIZE);
           }}
         />
 
@@ -78,8 +80,8 @@ export function CarSection({ copy, locale }: Props) {
           )}
           {hidden > 0 ? (
             <div className="more">
-              <button type="button" className="more-button" onClick={() => setExpanded(true)}>
-                {t.more(hidden)}
+              <button type="button" className="more-button" onClick={() => setShown((n) => n + PAGE_SIZE)}>
+                {t.more(Math.min(hidden, PAGE_SIZE))}
               </button>
             </div>
           ) : null}
@@ -99,25 +101,23 @@ function CarCard({ pick, copy, locale }: { pick: CarPick; copy: Copy; locale: Lo
     car.transmission ? t.transmission[car.transmission] : null,
     car.region ?? null,
   ].filter((f): f is string => Boolean(f));
-  const initials = `${car.make[0] ?? ''}${car.model[0] ?? ''}`.toUpperCase();
+  const caption = [car.model, car.body ? car.body.replace(/w/g, (c) => c.toUpperCase()) : null, car.fuel ? t.fuel[car.fuel] : null].filter(Boolean).join(' · ');
+  const title = `${car.year} ${car.make} ${car.model}`;
 
   return (
     <article className="card car-card">
-      <div className="car-head">
-        <span className="car-mark" aria-hidden="true">
-          {initials}
-        </span>
-        <div>
-          <h3 className="card-title">
-            {car.year} {car.make} {car.model}
-          </h3>
-          {car.variant ? <p className="car-variant">{car.variant}</p> : null}
-        </div>
-      </div>
+      <CardMedia src={car.imageUrl} mark={car.make} caption={caption} tone={toneOf(car.make)} />
+      <p className="card-flag">{t.captured(formatDate(locale, car.capturedAt, true))}</p>
+      <h3 className="card-title car-title" title={car.variant ? `${title} ${car.variant}` : title}>
+        <span className="car-name">{title}</span>
+        <span className="car-variant">{car.variant ?? ''}</span>
+      </h3>
 
       <p className="card-price">
         <span className="price">{nzd.format(car.priceNzd)}</span>
       </p>
+
+      <p className="car-estimate">{t.estimate(nzd.format(pick.valuation.expected))}</p>
 
       <p className="card-reason">{carReason(pick, locale)}</p>
 
@@ -126,8 +126,6 @@ function CarCard({ pick, copy, locale }: { pick: CarPick; copy: Copy; locale: Lo
           <li key={f}>{f}</li>
         ))}
       </ul>
-
-      <p className="card-flag">{t.captured(formatDate(locale, car.capturedAt, true))}</p>
 
       <a className="card-link" href={car.url} target="_blank" rel="noopener noreferrer nofollow">
         {t.viewAt(car.dealer)}
