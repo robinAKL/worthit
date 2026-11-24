@@ -103,11 +103,8 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
 
       {comparable || mixed ? (
         <DealPanel
-          cohort={cohort}
-          price={own}
-          reference={typical}
-          referenceLabel={`${d.typicalMark} ${format(typical)}`}
-          format={format}
+          rank={cohort.rank}
+          placeMark={d.place(cohort.rank)}
           rankText={
             mixed
               ? d.mixed(format(cohort.prices[0]), format(cohort.prices[size - 1]))
@@ -122,10 +119,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
                   )
                 : d.rankGroup(cohort.rank, size)
           }
-          stripLabel={d.strip(cohort.rank, size)}
-          confidence={confidence}
           confidenceText={mixed ? d.mixedNote : d.confidence.product(confidence, size)}
-          confidenceLabel={d.confidence.label(confidence)}
         />
       ) : (
         <div className="deal-panel deal-panel-empty">

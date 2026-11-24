@@ -1,4 +1,4 @@
-import type { Cohort, Confidence, DealTier } from '../lib/deal';
+import type { DealTier } from '../lib/deal';
 
 const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
 export const formatNzd = (n: number) => nzd.format(n);
@@ -25,66 +25,20 @@ export function DealDelta({ tier, text }: { tier: DealTier; text: string }) {
 }
 
 interface PanelProps {
-  cohort: Cohort;
-  price: number;
-  /** Our estimate (cars) or the group median (products), drawn as a tick on the strip. */
-  reference: number;
-  referenceLabel: string;
+  /** 1-based place in this comparison group. The first three get a visible mark. */
+  rank: number;
+  placeMark?: string;
   rankText: string;
-  stripLabel: string;
-  confidence: Confidence;
   confidenceText: string;
-  confidenceLabel: string;
-  /** Formats strip values; defaults to whole dollars. Per-unit groups pass e.g. "$3.05/L". */
-  format?: (n: number) => string;
 }
 
-const W = 240;
-const H = 30;
-const PAD = 8;
-
-/**
- * One dot per comparable listing on a price line, this one highlighted, the reference as a tick.
- * Below it: where this one ranks, and how firm the comparison is.
- */
-export function DealPanel({ cohort, price, reference, referenceLabel, rankText, stripLabel, confidence, confidenceText, confidenceLabel, format = formatNzd }: PanelProps) {
-  const values = [...cohort.prices, reference];
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const x = (v: number) => (max === min ? W / 2 : PAD + ((v - min) / (max - min)) * (W - 2 * PAD));
-  // Thin the dots on big cohorts so the strip stays readable.
-  const step = Math.max(1, Math.ceil(cohort.prices.length / 60));
-  const dots = cohort.prices.filter((_, i) => i % step === 0);
-  const refX = x(reference);
-
+/** Where this price sits in its group, in words. The first three places are marked. */
+export function DealPanel({ rank, placeMark, rankText, confidenceText }: PanelProps) {
   return (
     <div className="deal-panel">
-      <svg className="deal-strip" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={stripLabel} preserveAspectRatio="none">
-        <line x1={PAD} x2={W - PAD} y1={H / 2} y2={H / 2} className="deal-strip-axis" />
-        {dots.map((p, i) => (
-          <circle key={i} cx={x(p)} cy={H / 2} r={3} className="deal-strip-dot" />
-        ))}
-        <line x1={refX} x2={refX} y1={4} y2={H - 4} className="deal-strip-ref" />
-        <circle cx={x(price)} cy={H / 2} r={6.5} className="deal-strip-this" />
-      </svg>
-      <div className="deal-strip-scale" aria-hidden="true">
-        <span>{format(min)}</span>
-        <span className="deal-legend">
-          <span className="deal-legend-this" />
-          <span className="deal-legend-ref" />
-          {referenceLabel}
-        </span>
-        <span>{format(max)}</span>
-      </div>
+      {rank <= 3 && placeMark ? <p className="rank-mark">{placeMark}</p> : null}
       <p className="deal-rank">{rankText}</p>
-      <p className="deal-confidence">
-        <span className="deal-dots" role="img" aria-label={confidenceLabel} data-level={confidence}>
-          <span />
-          <span />
-          <span />
-        </span>
-        {confidenceText}
-      </p>
+      {confidenceText ? <p className="deal-confidence">{confidenceText}</p> : null}
     </div>
   );
 }

@@ -17,6 +17,7 @@ import { querySelectsCars } from './lib/cars/query';
 const PANEL_ID = 'results-panel';
 /** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
 const PAGE_SIZE = 12;
+type ResultView = 'products' | 'cars' | 'all';
 
 function formatDate(locale: Locale, iso?: string) {
   if (!iso) return '';
@@ -50,6 +51,7 @@ export default function App() {
   const [lane, setLane] = useState<Lane>('value');
   const [shown, setShown] = useState(PAGE_SIZE);
   const [ask, setAsk] = useState<AskContext | null>(null);
+  const [view, setView] = useState<ResultView>('products');
   const deferredQuery = useDeferredValue(query);
 
   const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
@@ -59,8 +61,8 @@ export default function App() {
   const captured = formatDate(locale, result.items[0]?.product.capturedAt);
 
   function reveal(text: string) {
-    const id = querySelectsCars(text, allVehicles()) ? 'cars' : 'results';
-    document.getElementById(id)?.scrollIntoView({ block: 'start' });
+    setView(querySelectsCars(text, allVehicles()) ? 'cars' : 'products');
+    document.getElementById('results')?.scrollIntoView({ block: 'start' });
   }
 
   function submit(e: FormEvent) {
@@ -92,11 +94,24 @@ export default function App() {
           </a>
           <nav aria-label={copy.a11y.navigation}>
             <ul className="nav-links">
-              {copy.nav.map((n) => (
-                <li key={n.href}>
-                  <a href={n.href}>{n.label}</a>
-                </li>
-              ))}
+                {copy.nav.map((n) => (
+                  <li key={n.href}>
+                    {n.href === '#cars' ? (
+                      <a
+                        href="#results"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setView('cars');
+                          document.getElementById('results')?.scrollIntoView({ block: 'start' });
+                        }}
+                      >
+                        {n.label}
+                      </a>
+                    ) : (
+                      <a href={n.href}>{n.label}</a>
+                    )}
+                  </li>
+                ))}
             </ul>
           </nav>
           <LanguageSelect locale={locale} label={copy.a11y.language} onChange={changeLocale} />
@@ -162,6 +177,7 @@ export default function App() {
                     onClick={() => {
                       setDraft('');
                       setQuery('');
+                      setView('products');
                     }}
                   >
                     {copy.results.clear}
@@ -179,6 +195,18 @@ export default function App() {
               </p>
             </div>
 
+            <div className="scope" role="group" aria-label={copy.results.scopeLabel}>
+              {(['products', 'cars', 'all'] as const).map((id) => (
+                <button key={id} type="button" className="scope-button" aria-pressed={view === id} onClick={() => setView(id)}>
+                  {copy.results.scope[id]}
+                </button>
+              ))}
+            </div>
+
+            {view !== 'products' ? <CarSection copy={copy} locale={locale} query={query} onAsk={setAsk} /> : null}
+
+            {view !== 'cars' ? (
+            <>
             <LaneTabs
               copy={copy}
               lane={lane}
@@ -207,9 +235,9 @@ export default function App() {
                 <div className="empty">
                   <p>{result.query.kind === 'car' ? copy.results.emptyCars : copy.results.empty}</p>
                   {result.query.kind === 'car' ? (
-                    <a className="text-button" href="#cars">
+                    <button type="button" className="text-button" onClick={() => setView('cars')}>
                       {copy.results.showCars}
-                    </a>
+                    </button>
                   ) : (
                     <ul className="examples-list">
                       {copy.hero.examples.map((ex) => (
@@ -232,10 +260,10 @@ export default function App() {
                 </div>
               ) : null}
             </div>
+            </>
+            ) : null}
           </div>
         </section>
-
-        <CarSection copy={copy} locale={locale} query={query} onAsk={setAsk} />
 
         <section id="rank" className="rank" aria-labelledby="rank-title">
           <div className="wrap split">

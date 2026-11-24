@@ -146,15 +146,10 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
       </div>
 
       <DealPanel
-        cohort={cohort}
-        price={car.priceNzd}
-        reference={v.expected}
-        referenceLabel={`${d.estimateMark} ${formatNzd(v.expected)}`}
+        rank={cohort.rank}
+        placeMark={d.place(cohort.rank)}
         rankText={rankText}
-        stripLabel={d.strip(cohort.rank, size)}
-        confidence={pick.confidence}
         confidenceText={d.confidence.car(pick.confidence, v.groupSize, v.sample)}
-        confidenceLabel={d.confidence.label(pick.confidence)}
       />
 
       <p className="card-reason">{carReason(pick, locale)}</p>
