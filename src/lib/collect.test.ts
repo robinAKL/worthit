@@ -28,6 +28,17 @@ const PRODUCT = `<html><head>
 </script></head></html>`;
 
 describe('robots and limits', () => {
+  it('merges consecutive user-agents, every star group, and prefers WorthItBot', () => {
+    const shared = parseRobots('User-agent: *\nUser-agent: Googlebot\nDisallow: /p/');
+    expect(isAllowed('https://shop.example/p/x', shared)).toBe(false);
+    const merged = parseRobots('User-agent: *\nDisallow: /a\n\nUser-agent: *\nDisallow: /b');
+    expect(isAllowed('https://shop.example/a', merged)).toBe(false);
+    expect(isAllowed('https://shop.example/b', merged)).toBe(false);
+    const own = parseRobots('User-agent: *\nDisallow: /\n\nUser-agent: WorthItBot\nAllow: /products/\nDisallow: /private');
+    expect(isAllowed('https://shop.example/products/oak', own)).toBe(true);
+    expect(isAllowed('https://shop.example/private', own)).toBe(false);
+  });
+
   it('uses only the * group and skips disallowed paths', () => {
     const robots = parseRobots(ROBOTS);
     expect(isAllowed('https://shop.example/products/oak-desk', robots)).toBe(true);
@@ -71,6 +82,20 @@ describe('json-ld facts', () => {
     expect(parsed.products[0].source).toBe('feed');
     expect(parsed.products[0].fixture).toBe(false);
     expect(parsed.products[0].imageUrl).toBeUndefined();
+  });
+
+  it('keeps a fridge and a car seat in different categories', () => {
+    const html = `<script type="application/ld+json">
+      {"@type":"Product","name":"Cold box","category":"Appliances > Fridges","offers":{"price":"900","priceCurrency":"NZD"}}
+      </script>
+      <script type="application/ld+json">
+      {"@graph":[
+        {"@type":"BreadcrumbList","itemListElement":[{"name":"Home"},{"name":"Car seats"}]},
+        {"@type":"Product","name":"Booster","offers":{"price":"80","priceCurrency":"NZD"}}
+      ]}
+      </script>`;
+    const rows = productsFromHtml(html, 'https://shop.example/p', 'Shop', '2026-11-24T00:00:00.000Z');
+    expect(rows.map((row) => row.category).sort()).toEqual(['car-seats', 'fridges']);
   });
 });
 

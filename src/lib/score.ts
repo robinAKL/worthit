@@ -104,3 +104,10 @@ export function reasonFor(
   const group = sample ? 'this sample' : 'this group';
   return `${reviews} reviews, and the condition is written out in detail. Listed at ${price} NZD, not the lowest price in ${group}. ${tail}`;
 }
+
+/** A captured group smaller than five has no quartile to cite. */
+export function unrankedReason(product: Product, locale: Locale): string {
+  const price = Math.round(product.price);
+  if (locale === 'zh-Hans') return `标价 ${price} 纽币。这是采集到的商家标价。`;
+  return `Listed at ${price} NZD. Price captured from the merchant.`;
+}

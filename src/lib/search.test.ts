@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { catalog, productsIn } from './catalog';
 import { parseQuery } from './parseQuery';
 import { excludedFrom, quartile, reasonFor } from './score';
-import { search } from './search';
+import { comparisonKey, search } from './search';
 
 describe('parseQuery', () => {
   it('reads a budget and a laptop category', () => {
@@ -66,6 +66,19 @@ describe('search', () => {
     for (const hit of result.items) {
       expect(hit.reason).toContain('示例');
       expect(hit.reason).not.toMatch(/最便宜|最精致|全市场/);
+    }
+  });
+
+  it('does not compare a fridge with a car seat, or cite a quartile for a tiny group', () => {
+    const fridge = { ...productsIn('laptop')[0], id: 'fridge', fixture: false, source: 'feed' as const, category: 'fridges', title: 'Fridge', price: 900, imageCount: 1, specs: { brand: 'Samsung' } };
+    const seat = { ...productsIn('phone')[0], id: 'seat', fixture: false, source: 'feed' as const, category: 'car-seats', title: 'Booster', price: 80, imageCount: 1, specs: { brand: 'Cozy' } };
+    expect(comparisonKey(fridge)).not.toBe(comparisonKey(seat));
+    const result = search('', 'value', 'en', [fridge, seat]);
+    expect(result.items).toHaveLength(2);
+    for (const hit of result.items) {
+      expect(hit.ranked).toBe(false);
+      expect(hit.reason).not.toMatch(/quartile|median|四分位|中位/);
+      expect(hit.reason).toContain('Price captured from the merchant');
     }
   });
 

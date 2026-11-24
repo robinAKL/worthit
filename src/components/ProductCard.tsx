@@ -45,16 +45,14 @@ export function ProductCard({ rec, position, copy, locale }: Props) {
         ) : null}
       </p>
 
-      <div className="meter" data-band={band}>
-        <div
-          className="meter-track"
-          role="img"
-          aria-label={(p.fixture ? copy.results.meterLabel : copy.results.meterLabelLive)(Math.round(position))}
-        >
-          <span className="meter-mark" style={{ insetInlineStart: `${position}%` }} />
+      {rec.ranked === false ? null : (
+        <div className="meter" data-band={band}>
+          <div className="meter-track" role="img" aria-label={(p.fixture ? copy.results.meterLabel : copy.results.meterLabelLive)(Math.round(position))}>
+            <span className="meter-mark" style={{ insetInlineStart: `${position}%` }} />
+          </div>
+          <p className="meter-caption">{copy.results.band[band]}</p>
         </div>
-        <p className="meter-caption">{copy.results.band[band]}</p>
-      </div>
+      )}
 
       <p className="card-reason">{reason}</p>
 

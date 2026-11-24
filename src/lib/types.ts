@@ -82,6 +82,8 @@ export interface Recommendation {
   band: Band;
   /** One plain sentence explaining why this item is in this lane. */
   reason: string;
+  /** False when a captured category has fewer than five prices, so no quartile is cited. */
+  ranked?: boolean;
 }
 
 export interface SearchResult {

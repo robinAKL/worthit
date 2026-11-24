@@ -2,20 +2,15 @@ const DROPPED = new Set(['description', 'review', 'reviews', 'image', 'images', 
 
 export function productsFromHtml(html, pageUrl, merchant, capturedAt) {
   const blocks = [...String(html ?? '').matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
-  const found = [];
+  const nodes = [];
   for (const block of blocks) {
-    let data;
     try {
-      data = JSON.parse(block[1].trim());
+      nodes.push(...flatten(JSON.parse(block[1].trim())));
     } catch {
-      continue;
-    }
-    for (const node of flatten(data)) {
-      const row = toRow(node, pageUrl, merchant, capturedAt);
-      if (row) found.push(row);
+      /* A broken script does not discard the other blocks. */
     }
   }
-  return found;
+  return nodes.map((node) => toRow(node, pageUrl, merchant, capturedAt, nodes)).filter(Boolean);
 }
 
 function flatten(data) {
@@ -25,7 +20,7 @@ function flatten(data) {
   return [data, ...graph];
 }
 
-function toRow(node, pageUrl, merchant, capturedAt) {
+function toRow(node, pageUrl, merchant, capturedAt, nodes) {
   const type = node['@type'];
   const types = Array.isArray(type) ? type : [type];
   if (!types.some((item) => String(item).toLowerCase() === 'product')) return null;
@@ -51,7 +46,7 @@ function toRow(node, pageUrl, merchant, capturedAt) {
   return {
     id: idFor(url),
     title: title.slice(0, 180),
-    category: categoryFor(title),
+    category: categoryFor(node, nodes, title),
     price,
     currency: 'NZD',
     merchant,
@@ -85,12 +80,46 @@ function availability(value) {
   return '';
 }
 
-function categoryFor(title) {
+function categoryFor(node, nodes, title) {
+  const named = categoryText(node.category);
+  if (named) return slug(named);
+  for (const other of nodes) {
+    if (!hasType(other, 'breadcrumblist')) continue;
+    const names = (other.itemListElement ?? [])
+      .map((item) => text(item?.name ?? item?.item?.name))
+      .filter((name) => name && !/^(home|ascent|baby factory)$/i.test(name));
+    const leaf = names.at(-1);
+    if (leaf) return slug(leaf);
+  }
   const value = title.toLowerCase();
   if (/laptop|notebook|macbook/.test(value)) return 'laptop';
   if (/phone|iphone|smartphone/.test(value)) return 'phone';
   if (/desk|chair|sofa|table/.test(value)) return 'furniture';
-  return 'other';
+  return 'uncategorised';
+}
+
+function categoryText(category) {
+  if (!category) return '';
+  if (Array.isArray(category)) return categoryText(category.at(-1));
+  if (typeof category === 'object') return text(category.name);
+  return text(category);
+}
+
+function slug(value) {
+  const leaf = value.split(/[>/|]/).pop() ?? value;
+  const slugText = leaf
+    .toLowerCase()
+    .replace(/&amp;/g, ' ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 48);
+  return slugText || 'uncategorised';
+}
+
+function hasType(node, type) {
+  const value = node?.['@type'];
+  const types = Array.isArray(value) ? value : [value];
+  return types.some((item) => String(item).toLowerCase() === type);
 }
 
 function idFor(url) {

@@ -1,4 +1,4 @@
-/** Parse the User-agent: * group. A named-bot group is not reused. */
+/** Consecutive User-agent lines share one rule group (RFC 9309). */
 export function parseRobots(text) {
   const lines = String(text ?? '').split(/\r?\n/);
   const groups = [];
@@ -16,8 +16,12 @@ export function parseRobots(text) {
       continue;
     }
     if (key === 'user-agent') {
-      current = { agents: [value.toLowerCase()], rules: [] };
-      groups.push(current);
+      if (current && current.rules.length === 0) {
+        current.agents.push(value.toLowerCase());
+      } else {
+        current = { agents: [value.toLowerCase()], rules: [] };
+        groups.push(current);
+      }
       continue;
     }
     if (!current) continue;
@@ -25,8 +29,9 @@ export function parseRobots(text) {
       current.rules.push({ allow: key === 'allow', path: value });
     }
   }
-  const star = groups.find((group) => group.agents.includes('*'));
-  return { rules: star?.rules ?? [], sitemaps };
+  const own = groups.filter((group) => group.agents.some((agent) => agent.split('/')[0] === 'worthitbot'));
+  const chosen = own.length > 0 ? own : groups.filter((group) => group.agents.includes('*'));
+  return { rules: chosen.flatMap((group) => group.rules), sitemaps };
 }
 
 export function isAllowed(target, robots) {

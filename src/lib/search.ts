@@ -9,6 +9,7 @@ import {
   laneScore,
   quartile,
   reasonFor,
+  unrankedReason,
 } from './score';
 import type { Lane, Locale, Product, SearchResult } from './types';
 import { DEFAULT_LOCALE } from './types';
@@ -31,9 +32,13 @@ function liveProducts(): Product[] {
   return [...ascentFeed.products, ...babyFeed.products] as Product[];
 }
 
-export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE): SearchResult {
+export function comparisonKey(product: Product): string {
+  return `${product.fixture ? 'sample' : 'live'}:${product.category}`;
+}
+
+export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE, source?: Product[]): SearchResult {
   const parsed = parseQuery(query);
-  const pool = [...catalog, ...liveProducts()].filter((product) => {
+  const pool = (source ?? [...catalog, ...liveProducts()]).filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
     return true;
@@ -47,7 +52,7 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
 
   const byCategory = new Map<string, Product[]>();
   for (const product of matched) {
-    const key = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
+    const key = comparisonKey(product);
     const group = byCategory.get(key) ?? [];
     group.push(product);
     byCategory.set(key, group);
@@ -56,6 +61,18 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   const items: SearchResult['items'] = [];
   let excludedCount = 0;
   for (const group of byCategory.values()) {
+    if (!group[0].fixture && group.length < 5) {
+      for (const product of group) {
+        if (product.imageCount < 1) {
+          excludedCount += 1;
+          continue;
+        }
+        const reason = unrankedReason(product, locale);
+        assertReasonAllowed(reason);
+        items.push({ product, lane, score: 0, band: 'mid', reason, ranked: false });
+      }
+      continue;
+    }
     const prices = group.map((product) => product.price).sort((a, b) => a - b);
     const lowerQuartile = quartile(prices, 0.25);
     const median = quartile(prices, 0.5);
@@ -74,11 +91,12 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
         score: laneScore(product, lane, median),
         band: bandFor(product.price, lowerQuartile, upperQuartile),
         reason,
+        ranked: true,
       });
     }
   }
 
-  items.sort((a, b) => b.score - a.score);
+  items.sort((a, b) => Number(b.ranked !== false) - Number(a.ranked !== false) || b.score - a.score);
   return {
     query: parsed,
     lane,
