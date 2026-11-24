@@ -218,6 +218,7 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
         band: bandFor(product.price, lowerQuartile, upperQuartile),
         reason,
         ranked: true,
+        cohortPrices: rankedPrices,
       });
     }
   }

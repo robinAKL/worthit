@@ -127,6 +127,8 @@ export const en = {
     strip: (rank: number, size: number) => `This item is number ${rank} by price of ${size} comparable listings`,
     axisLow: (amount: string) => `Lowest ${amount}`,
     axisHigh: (amount: string) => `${amount} highest`,
+    axisSentence: (low: string, high: string, own: string, rest: string) =>
+      rest ? `Lowest in this group ${low}, highest ${high}, this one ${own}. ${rest}` : `Lowest in this group ${low}, highest ${high}, this one ${own}`,
     line: (how: 'under' | 'over' | 'near', amount: string, rank: number, size: number, ref: 'fair' | 'typical') => {
       const name = ref === 'fair' ? 'the fair price' : 'the typical price';
       const gap = how === 'near' ? `In line with ${name}` : how === 'under' ? `${amount} under ${name}` : `${amount} over ${name}`;

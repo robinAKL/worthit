@@ -1,7 +1,7 @@
 import { DICTIONARIES, type Copy, type Locale } from '../i18n';
-import { countsAsSpec, unrankedReason } from '../lib/score';
+import { countsAsSpec, quartile, unrankedReason } from '../lib/score';
 import type { Recommendation } from '../lib/types';
-import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/deal';
+import { confidenceFrom, dealTier, savings, type Cohort } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
 import { productArt } from './art/kind';
 import { specTile } from '../lib/specTile';
@@ -45,7 +45,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
   const p90 = cohort.prices[Math.ceil((size - 1) * 0.9)] ?? 0;
   const mixed = size >= 3 && p10 > 0 && p90 / p10 > MAX_SPREAD;
   const comparable = isComparableGroup(cohort.prices);
-  const typical = median(cohort.prices);
+  const typical = quartile(cohort.prices, 0.5);
   // Sized families (fridges per litre, washers per kg) compare price per unit, then show the
   // difference in dollars for this item's own size.
   const perUnit = cohort.unit && cohort.size ? { unit: cohort.unit, size: cohort.size } : null;
@@ -134,6 +134,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
             lowLabel={d.axisLow}
             highLabel={d.axisHigh}
             format={format}
+            sentence={d.axisSentence}
             caption={mixed ? undefined : d.line(lineHow, nzd.format(Math.abs(diff)), cohort.rank, size, 'typical')}
             note={mixed ? d.mixedNote : undefined}
           />

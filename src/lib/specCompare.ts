@@ -114,7 +114,7 @@ export function rankUnitGroup(group: Product[], lane: Lane, locale: Locale): Rec
     const reason = reasonFor(product, lane, v, medianUnit, locale, band);
     assertReasonAllowed(reason);
     const bandOf = (x: number): Band => (x <= lowerUnit ? 'low' : x <= upperUnit ? 'mid' : 'high');
-    items.push({ product, lane, score, band: bandOf(v), reason, ranked: true });
+    items.push({ product, lane, score, band: bandOf(v), reason, ranked: true, cohortPrices: unitSorted, cohortBand: band });
   }
   return items;
 }

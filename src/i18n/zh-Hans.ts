@@ -124,6 +124,8 @@ export const zhHans: Copy = {
     strip: (rank: number, size: number) => `在 ${size} 个可比价格里排第 ${rank} 低`,
     axisLow: (amount: string) => `最低 ${amount}`,
     axisHigh: (amount: string) => `${amount} 最高`,
+    axisSentence: (low: string, high: string, own: string, rest: string) =>
+      rest ? `同类最低 ${low}，最高 ${high}，这一件 ${own}。${rest}` : `同类最低 ${low}，最高 ${high}，这一件 ${own}`,
     line: (how: 'under' | 'over' | 'near', amount: string, rank: number, size: number, ref: 'fair' | 'typical') => {
       const name = ref === 'fair' ? '合理价' : '中位价';
       const gap = how === 'near' ? `和${name}基本一致` : how === 'under' ? `比${name}低 ${amount}` : `比${name}高 ${amount}`;

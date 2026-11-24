@@ -2,6 +2,7 @@ import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
 import { comparisonKey, search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
 import { priceRankIn, type Cohort } from './lib/deal';
+import { isComparableGroup } from './lib/cohort';
 import { isUnitComparable, peersFor } from './lib/specCompare';
 import { unitPrice } from './lib/specs';
 import { DICTIONARIES, useLocale, type Locale } from './i18n';
@@ -25,21 +26,28 @@ function formatDate(locale: Locale, iso?: string) {
   return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat(DICTIONARIES[locale].language.intlLocale, { dateStyle: 'long', timeZone: 'Pacific/Auckland' }).format(d);
 }
 
-/** Each item's comparable prices: the other items in its comparison group in this result set. */
+/** Each item's comparable prices: the same set the reason's median came from. */
 function cohorts(items: Recommendation[]): Cohort[] {
   // Sized families (fridges, washers...) compare price per unit; everything else compares price.
   const valueOf = (p: Recommendation['product']) => (isUnitComparable(p) ? unitPrice(p.price, p.spec)! : p.price);
   const groups = new Map<string, Recommendation['product'][]>();
-  for (const { product: p } of items) {
+  for (const { product: p, cohortPrices } of items) {
+    if (cohortPrices) continue;
     const key = comparisonKey(p);
     groups.set(key, [...(groups.get(key) ?? []), p]);
   }
-  return items.map(({ product: p }) => {
-    const group = groups.get(comparisonKey(p))!;
-    // Same rule as the ranking: a sized item is compared within its size band when that band is big enough.
-    const { peers, band } = isUnitComparable(p) ? peersFor(p, group) : { peers: group, band: undefined };
-    const prices = peers.map(valueOf).sort((x, y) => x - y);
-    const base: Cohort = { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, valueOf(p)) };
+  return items.map((item) => {
+    const p = item.product;
+    const value = valueOf(p);
+    let prices = item.cohortPrices;
+    let band = item.cohortBand;
+    if (!prices) {
+      const group = groups.get(comparisonKey(p)) ?? [p];
+      const peers = isUnitComparable(p) ? peersFor(p, group) : { peers: group, band: undefined };
+      prices = peers.peers.map(valueOf).sort((x, y) => x - y);
+      band = peers.band;
+    }
+    const base: Cohort = { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, value) };
     return isUnitComparable(p) ? { ...base, unit: p.spec.unit, size: p.spec.size, family: p.spec.family, band } : base;
   });
 }
@@ -56,8 +64,16 @@ export default function App() {
 
   const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
   const groups = useMemo(() => cohorts(result.items), [result.items]);
-  const visible = result.items.slice(0, shown);
-  const hidden = result.items.length - visible.length;
+  // A group we can actually rank comes before a mixed one, so the first screen is not all "no price call".
+  const ordered = useMemo(
+    () =>
+      result.items
+        .map((rec, i) => ({ rec, cohort: groups[i] }))
+        .sort((a, b) => Number(isComparableGroup(b.cohort.prices)) - Number(isComparableGroup(a.cohort.prices))),
+    [result.items, groups],
+  );
+  const visible = ordered.slice(0, shown);
+  const hidden = ordered.length - visible.length;
   const captured = formatDate(locale, result.items[0]?.product.capturedAt);
 
   function reveal(text: string) {
@@ -225,9 +241,9 @@ export default function App() {
 
               {result.items.length > 0 ? (
                 <ul className="grid">
-                  {visible.map((rec, i) => (
+                  {visible.map(({ rec, cohort }) => (
                     <li key={rec.product.id}>
-                      <ProductCard rec={rec} cohort={groups[i]} locale={locale} copy={copy} onAsk={setAsk} />
+                      <ProductCard rec={rec} cohort={cohort} locale={locale} copy={copy} onAsk={setAsk} />
                     </li>
                   ))}
                 </ul>

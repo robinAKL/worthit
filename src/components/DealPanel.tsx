@@ -55,6 +55,7 @@ export function PriceStrip({
   lowLabel,
   highLabel,
   format,
+  sentence,
   caption,
   note,
 }: {
@@ -65,6 +66,8 @@ export function PriceStrip({
   lowLabel: (amount: string) => string;
   highLabel: (amount: string) => string;
   format: (n: number) => string;
+  /** The accessible sentence for the line, including the caption when there is one. */
+  sentence: (low: string, high: string, own: string, rest: string) => string;
   /** Rank sentence under the line. Omitted when the group is too mixed to rank. */
   caption?: string;
   /** Spoken when there is no rank sentence, e.g. a mixed group. */
@@ -74,7 +77,7 @@ export function PriceStrip({
   if (!layout) return null;
   const lowText = lowLabel(format(layout.low));
   const highText = highLabel(format(layout.high));
-  const spoken = [lowText, highText, caption ?? note].filter(Boolean).join('. ');
+  const spoken = sentence(format(layout.low), format(layout.high), format(value), caption ?? note ?? '');
   return (
     <div className="price-line">
       <div className="price-line-track" role="img" aria-label={spoken}>

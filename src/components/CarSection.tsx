@@ -175,6 +175,7 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
             lowLabel={d.axisLow}
             highLabel={d.axisHigh}
             format={formatNzd}
+            sentence={d.axisSentence}
             caption={d.line(lineHow, formatNzd(Math.abs(diff)), cohort.rank, size, 'fair')}
           />
         ) : null}

@@ -143,6 +143,13 @@ export interface Recommendation {
   reason: string;
   /** False when a captured category has fewer than five prices, so no quartile is cited. */
   ranked?: boolean;
+  /**
+   * The prices the reason's median was taken from, including this item.
+   * Per-unit families store price per unit; everything else stores the item price.
+   */
+  cohortPrices?: number[];
+  /** Size band those prices were limited to, when the family was split. */
+  cohortBand?: string;
 }
 
 export interface SearchResult {

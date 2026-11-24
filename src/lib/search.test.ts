@@ -334,3 +334,16 @@ describe('Lower price: the outlier floor uses the whole group (T-42 review 3)', 
     expect(out).not.toContain(1);
   });
 });
+
+describe('the card group is the group the reason quotes (T-41)', () => {
+  it('keeps a higher-spec fridge on the size-band prices named in its reason', () => {
+    const hit = search('fridge', 'refined', 'zh-Hans').items.find((item) => /706/.test(item.product.title));
+    expect(hit?.cohortPrices && hit.cohortPrices.length > 5).toBe(true);
+    const median = quartile(hit!.cohortPrices!, 0.5);
+    const shown = median.toLocaleString('en-NZ', { minimumFractionDigits: median < 100 ? 2 : 0, maximumFractionDigits: median < 100 ? 2 : 0 });
+    expect(hit!.reason).toContain(shown);
+    const own = hit!.product.price / hit!.product.spec!.size!;
+    const gap = Math.round((median - own) * hit!.product.spec!.size! / 10) * 10;
+    expect(Math.abs(gap - 810)).toBeLessThanOrEqual(20);
+  });
+});
