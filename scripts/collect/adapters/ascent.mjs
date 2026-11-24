@@ -5,5 +5,7 @@ export default {
   origin: 'https://www.ascent.co.nz',
   kind: 'product',
   enabled: true,
+  // The sitemaps are sorted by product id, which runs category by category: sample evenly instead.
+  discovery: { spread: true },
   // Defaults cover this site: robots sitemaps, product sitemap first, JSON-LD Product.
 };

@@ -261,3 +261,19 @@ describe('collector core: each run reaches further into the catalogue (T-37)', (
     expect(requested.some((u) => u.includes('/private/'))).toBe(false);
   });
 });
+
+describe('collector core: spread sampling (T-37)', () => {
+  it('takes new URLs evenly across the sitemap when the adapter asks for it', async () => {
+    const paths = Array.from({ length: 12 }, (_, i) => `/vehicle/${i + 1}`);
+    const { fetchImpl, requested } = fakeSite({
+      '/robots.txt': [200, ROBOTS],
+      '/sitemap.xml': [200, sitemap(paths)],
+      ...Object.fromEntries(paths.map((p, i) => [p, [200, page(car(i + 1))]])),
+    });
+    const c = clock();
+    const adapter = { ...carAdapter, discovery: { spread: true } };
+    const out = await runAdapter({ adapter, limit: 3, userAgent: 'u', fetchImpl, now: c.now, sleep: c.sleep, capturedAt: 'T' });
+    expect(out.rows.map((r) => r.url)).toEqual([`${ORIGIN}/vehicle/1`, `${ORIGIN}/vehicle/5`, `${ORIGIN}/vehicle/9`]);
+    expect(requested.filter((u) => /\/vehicle\//.test(u))).toHaveLength(3);
+  });
+});

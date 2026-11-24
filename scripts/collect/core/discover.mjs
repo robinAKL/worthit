@@ -11,6 +11,11 @@ export const DISCOVERY_DEFAULTS = {
   maxListings: 8,
   /** A sitemap with this many listing URLs and no detail URLs is treated as a category map. */
   minListingsForFallback: 21,
+  /**
+   * Take new detail URLs evenly across all sitemaps instead of in order. For shops whose sitemap
+   * is sorted by product id, so a run is not 200 items of whichever category comes first.
+   */
+  spread: false,
 };
 
 /**
@@ -43,6 +48,7 @@ async function discoverNew(adapter, session, cap, known) {
       : [new URL('/sitemap.xml', origin).href];
 
   const pages = [];
+  const spread = [];
   const seen = new Set();
   const queue = adapter.useSitemaps === false ? [] : seeds.slice(0, opts.maxSeeds);
   while (queue.length > 0 && pages.length < cap * 3 && seen.size < opts.maxSitemaps) {
@@ -72,8 +78,12 @@ async function discoverNew(adapter, session, cap, known) {
         session.stats.skipped += 1;
         continue;
       }
-      pages.push(loc);
       added += 1;
+      if (opts.spread) {
+        spread.push(loc);
+        continue;
+      }
+      pages.push(loc);
       if (pages.length >= cap) break;
     }
     if (pages.length >= cap) return pages;
@@ -98,6 +108,13 @@ async function discoverNew(adapter, session, cap, known) {
         }
       }
     }
+  }
+
+  // Evenly spaced picks across every new URL the sitemaps listed.
+  if (spread.length > 0) {
+    const room = cap - pages.length;
+    const step = spread.length / Math.min(room, spread.length);
+    for (let i = 0; pages.length < cap && Math.floor(i * step) < spread.length; i++) pages.push(spread[Math.floor(i * step)]);
   }
 
   // Sites with no useful sitemap name their stock pages directly (e.g. /vehicles, /vehicles?Page=2).
