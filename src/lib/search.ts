@@ -33,7 +33,19 @@ function liveProducts(): Product[] {
 }
 
 export function comparisonKey(product: Product): string {
-  return `${product.fixture ? 'sample' : 'live'}:${product.category}`;
+  const base = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
+  if (product.fixture) return base;
+  const kind = titleKind(product.title);
+  return kind ? `${base}:${kind}` : base;
+}
+
+function titleKind(title: string): string {
+  const value = title.toLowerCase();
+  if (/\b(filter|filters|accessory|accessories|kit|cover)\b/.test(value)) return 'accessory';
+  if (/refrigerator|\bfridge\b|\bfreezer\b/.test(value)) return 'refrigerator';
+  if (/\bmicrowave\b/.test(value)) return 'microwave';
+  if (/washing machine|\bdishwasher\b|\bwasher\b/.test(value)) return 'laundry';
+  return '';
 }
 
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE, source?: Product[]): SearchResult {
@@ -74,10 +86,38 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
       continue;
     }
     const prices = group.map((product) => product.price).sort((a, b) => a - b);
-    const lowerQuartile = quartile(prices, 0.25);
-    const median = quartile(prices, 0.5);
-    const upperQuartile = quartile(prices, 0.75);
+    const groupMedian = quartile(prices, 0.5);
+    const comparable = group.filter((product) => {
+      if (product.fixture) return true;
+      return product.price >= groupMedian * 0.15 && product.price <= groupMedian * 6;
+    });
     for (const product of group) {
+      if (comparable.includes(product)) continue;
+      if (product.imageCount < 1) {
+        excludedCount += 1;
+        continue;
+      }
+      const reason = unrankedReason(product, locale);
+      assertReasonAllowed(reason);
+      items.push({ product, lane, score: 0, band: 'mid', reason, ranked: false });
+    }
+    if (!group[0].fixture && comparable.length < 5) {
+      for (const product of comparable) {
+        if (product.imageCount < 1) {
+          excludedCount += 1;
+          continue;
+        }
+        const reason = unrankedReason(product, locale);
+        assertReasonAllowed(reason);
+        items.push({ product, lane, score: 0, band: 'mid', reason, ranked: false });
+      }
+      continue;
+    }
+    const rankedPrices = comparable.map((product) => product.price).sort((a, b) => a - b);
+    const lowerQuartile = quartile(rankedPrices, 0.25);
+    const median = quartile(rankedPrices, 0.5);
+    const upperQuartile = quartile(rankedPrices, 0.75);
+    for (const product of comparable) {
       if (excludedFrom(product, lane, lowerQuartile)) {
         excludedCount += 1;
         continue;

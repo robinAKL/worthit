@@ -69,6 +69,32 @@ describe('search', () => {
     }
   });
 
+  it('keeps a water filter out of the fridge quartile', () => {
+    const make = (id: string, title: string, price: number) => ({
+      ...productsIn('laptop')[0],
+      id,
+      title,
+      fixture: false,
+      source: 'feed' as const,
+      category: 'whiteware',
+      price,
+      imageCount: 1,
+      reviewCount: undefined,
+      specs: { brand: 'Samsung', stock: 'in stock' },
+      url: 'https://www.ascent.co.nz/productspecification.aspx?itemID=1',
+    });
+    const filter = make('filter', 'Refrigerator Water Filter', 72);
+    const fridges = [1000, 1200, 1400, 1600, 1800, 2000].map((price, index) => make(`fridge-${index}`, 'Bar Fridge', price));
+    expect(comparisonKey(filter)).not.toBe(comparisonKey(fridges[0]));
+    const result = search('', 'value', 'en', [filter, ...fridges]);
+    const cheap = result.items.find((hit) => hit.product.id === 'filter');
+    expect(cheap?.ranked).toBe(false);
+    expect(cheap?.reason).not.toMatch(/1580|median|quartile/);
+    const ranked = result.items.find((hit) => hit.product.id === 'fridge-2');
+    expect(ranked?.ranked).toBe(true);
+    expect(ranked?.reason).not.toContain('72');
+  });
+
   it('does not compare a fridge with a car seat, or cite a quartile for a tiny group', () => {
     const fridge = { ...productsIn('laptop')[0], id: 'fridge', fixture: false, source: 'feed' as const, category: 'fridges', title: 'Fridge', price: 900, imageCount: 1, specs: { brand: 'Samsung' } };
     const seat = { ...productsIn('phone')[0], id: 'seat', fixture: false, source: 'feed' as const, category: 'car-seats', title: 'Booster', price: 80, imageCount: 1, specs: { brand: 'Cozy' } };

@@ -1,5 +1,5 @@
 import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
-import { search } from './lib/search';
+import { comparisonKey, search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
 import { DICTIONARIES, useLocale, type Locale } from './i18n';
 import { LanguageSelect } from './components/LanguageSelect';
@@ -20,12 +20,12 @@ function formatDate(locale: Locale, iso?: string) {
 function positions(items: Recommendation[]) {
   const range = new Map<string, { min: number; max: number }>();
   for (const { product: p } of items) {
-    const key = `${p.fixture ? 'sample' : 'live'}:${p.category}`;
+    const key = comparisonKey(p);
     const r = range.get(key) ?? { min: p.price, max: p.price };
     range.set(key, { min: Math.min(r.min, p.price), max: Math.max(r.max, p.price) });
   }
   return items.map(({ product: p }) => {
-    const r = range.get(`${p.fixture ? 'sample' : 'live'}:${p.category}`)!;
+    const r = range.get(comparisonKey(p))!;
     return r.max === r.min ? 50 : ((p.price - r.min) / (r.max - r.min)) * 100;
   });
 }
