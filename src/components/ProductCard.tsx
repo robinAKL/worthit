@@ -1,23 +1,26 @@
 import type { Recommendation } from '../lib/types';
-import { copy } from '../copy';
+import type { Copy, Locale } from '../i18n';
 
 const nzd = new Intl.NumberFormat('en-NZ', { style: 'currency', currency: 'NZD', maximumFractionDigits: 0 });
 
 interface Props {
+  copy: Copy;
+  locale: Locale;
   rec: Recommendation;
   /** Where the price sits between the lowest and highest comparable price, 0 to 100. */
   position: number;
 }
 
-export function ProductCard({ rec, position }: Props) {
+export function ProductCard({ rec, position, copy, locale }: Props) {
   const { product: p, band, reason } = rec;
   const specs = Object.entries(p.specs)
-    .filter(([, v]) => String(v).length <= 14)
+    .map(([key, value]) => [key, p.localizedSpecs?.[locale]?.[key] ?? value] as const)
+    .filter(([key, value]) => key !== 'note' && String(value).length <= 14)
     .slice(0, 3);
 
   return (
     <article className="card">
-      <h3 className="card-title">{p.title}</h3>
+      <h3 className="card-title">{p.titles?.[locale] ?? p.title}</h3>
 
       <p className="card-price">
         <span className="price">{nzd.format(p.price)}</span>
@@ -48,7 +51,7 @@ export function ProductCard({ rec, position }: Props) {
 
       <a className="card-link" href={p.url} target="_blank" rel="noopener noreferrer nofollow">
         {copy.results.viewAt(p.merchant)}
-        <span className="visually-hidden">（在新窗口打开）</span>
+        <span className="visually-hidden">{copy.a11y.newWindow}</span>
       </a>
     </article>
   );

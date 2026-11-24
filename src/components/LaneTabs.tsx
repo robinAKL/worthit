@@ -1,15 +1,16 @@
 import { useRef, type KeyboardEvent } from 'react';
 import { LANES, type Lane } from '../lib/types';
-import { copy } from '../copy';
+import type { Copy } from '../i18n';
 
 interface Props {
+  copy: Copy;
   lane: Lane;
   onChange: (lane: Lane) => void;
   panelId: string;
 }
 
 /** WAI-ARIA tabs with roving focus: arrows, Home and End move between lanes. */
-export function LaneTabs({ lane, onChange, panelId }: Props) {
+export function LaneTabs({ lane, onChange, panelId, copy }: Props) {
   const refs = useRef<Record<Lane, HTMLButtonElement | null>>({ value: null, cheap: null, refined: null });
 
   function onKeyDown(e: KeyboardEvent<HTMLButtonElement>) {
@@ -26,7 +27,7 @@ export function LaneTabs({ lane, onChange, panelId }: Props) {
   }
 
   return (
-    <div className="lanes" role="tablist" aria-label="排序方式">
+    <div className="lanes" role="tablist" aria-label={copy.a11y.sort}>
       {LANES.map((l) => {
         const selected = l === lane;
         return (

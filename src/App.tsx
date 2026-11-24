@@ -1,17 +1,18 @@
 import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
 import { search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
-import { copy } from './copy';
+import { DICTIONARIES, useLocale, type Locale } from './i18n';
+import { LanguageSelect } from './components/LanguageSelect';
 import { LaneTabs } from './components/LaneTabs';
 import { ProductCard } from './components/ProductCard';
 
 const PANEL_ID = 'results-panel';
 const PAGE_SIZE = 8;
 
-function formatDate(iso?: string) {
+function formatDate(locale: Locale, iso?: string) {
   if (!iso) return '';
   const d = new Date(iso);
-  return Number.isNaN(d.getTime()) ? iso : `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+  return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat(DICTIONARIES[locale].language.intlLocale, { dateStyle: 'long', timeZone: 'Pacific/Auckland' }).format(d);
 }
 
 /** Price position (0 to 100) of each item within its own category in this result set. */
@@ -28,17 +29,18 @@ function positions(items: Recommendation[]) {
 }
 
 export default function App() {
+  const { locale, copy, changeLocale } = useLocale();
   const [draft, setDraft] = useState('');
   const [query, setQuery] = useState('');
   const [lane, setLane] = useState<Lane>('value');
   const [expanded, setExpanded] = useState(false);
   const deferredQuery = useDeferredValue(query);
 
-  const result = useMemo(() => search(deferredQuery, lane), [deferredQuery, lane]);
+  const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
   const pos = useMemo(() => positions(result.items), [result.items]);
   const visible = expanded ? result.items : result.items.slice(0, PAGE_SIZE);
   const hidden = result.items.length - visible.length;
-  const captured = formatDate(result.items[0]?.product.capturedAt);
+  const captured = formatDate(locale, result.items[0]?.product.capturedAt);
 
   function submit(e: FormEvent) {
     e.preventDefault();
@@ -56,16 +58,16 @@ export default function App() {
   return (
     <>
       <a className="skip" href="#results">
-        跳到推荐结果
+        {copy.a11y.skip}
       </a>
 
       <header className="nav">
         <div className="wrap nav-inner">
-          <a className="wordmark" href="#top" aria-label={`${copy.brand} 首页`}>
+          <a className="wordmark" href="#top" aria-label={copy.a11y.home}>
             {copy.brand}
-            <span className="wordmark-local">{copy.brandLocal}</span>
+            {copy.brandLocal ? <span className="wordmark-local">{copy.brandLocal}</span> : null}
           </a>
-          <nav aria-label="页面导航">
+          <nav aria-label={copy.a11y.navigation}>
             <ul className="nav-links">
               {copy.nav.map((n) => (
                 <li key={n.href}>
@@ -74,6 +76,7 @@ export default function App() {
               ))}
             </ul>
           </nav>
+          <LanguageSelect locale={locale} label={copy.a11y.language} onChange={changeLocale} />
         </div>
       </header>
 
@@ -145,6 +148,7 @@ export default function App() {
             </div>
 
             <LaneTabs
+              copy={copy}
               lane={lane}
               onChange={(l) => {
                 setLane(l);
@@ -163,7 +167,7 @@ export default function App() {
                 <ul className="grid">
                   {visible.map((rec, i) => (
                     <li key={rec.product.id}>
-                      <ProductCard rec={rec} position={pos[i]} />
+                      <ProductCard rec={rec} position={pos[i]} locale={locale} copy={copy} />
                     </li>
                   ))}
                 </ul>
@@ -225,7 +229,7 @@ export default function App() {
               <p className="rent-note">{copy.rent.note}</p>
               <a className="rent-link" href={copy.rent.href} target="_blank" rel="noopener noreferrer">
                 {copy.rent.link}
-                <span className="visually-hidden">（在新窗口打开）</span>
+                <span className="visually-hidden">{copy.a11y.newWindow}</span>
               </a>
             </div>
           </div>

@@ -4,6 +4,10 @@
 
 > v0.1 只用**示例数据**：商品、商家和价格都是虚构的，页面上会一直显示提示。
 
+v0.2 默认英语，支持简体中文。导航栏可随时切换，保留搜索和栏目；语言选择顺序为有效的 `?lang=`、本地保存的选择、浏览器语言、英语。
+
+新增语言：在 `src/lib/types.ts` 的 `Locale` 和 `LOCALES` 登记 ID，新增一个以 `Copy` 为类型的字典文件，在 `src/i18n/registry.ts` 的 `DICTIONARIES` 登记，并补齐商品标题和理由的翻译。类型检查会检测缺失的字典和文案键。详见 [语言维护说明](src/i18n/README.md)。
+
 ## 开发
 
 ```bash
@@ -15,7 +19,7 @@ npm run build    # 类型检查 + 生产构建
 
 ## 结构
 
-- `src/lib/types.ts`：数据契约（Product、Lane、Recommendation、SearchResult、`search(query, lane)`）。
+- `src/lib/types.ts`：数据契约（Product、Lane、Recommendation、SearchResult、`search(query, lane, locale?)`）。
 - `src/lib/`：示例目录、查询解析、三栏打分和推荐理由。
 - `src/App.tsx`、`src/components/`：落地页。
 - `src/styles/tokens.css`：设计 token（OKLCH 颜色、字号、间距），遵循 hallmark 设计规则。
