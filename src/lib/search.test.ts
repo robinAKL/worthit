@@ -61,6 +61,7 @@ describe('search', () => {
     expect(fridge.items.length).toBeLessThan(all.items.length);
     expect(fridge.items.every((hit) => /fridge|refrigerator|freezer/i.test(hit.product.title))).toBe(true);
     expect(chinese.items.map((hit) => hit.product.id)).toEqual(fridge.items.map((hit) => hit.product.id));
+    // Naming a car we list is a car search, even when a product shares a word ("Aqua" wipes).
     expect(search('Toyota Aqua', 'value', 'en').items).toHaveLength(0);
     expect(search('car under $15000', 'value', 'en').items).toHaveLength(0);
     expect(search('phone for my mum', 'value', 'en').items.length).toBeGreaterThan(0);

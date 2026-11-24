@@ -1,6 +1,2398 @@
 {
   "products": [
     {
+      "id": "feed-c53922b3",
+      "title": "Twinkle & Twirl Twinkle Plush Toy Multi",
+      "titles": {
+        "en": "Twinkle & Twirl Twinkle Plush Toy Multi"
+      },
+      "category": "accessories",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-twinkle-plush-toy-5021739-multi",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021739|Multi",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-8152d454",
+      "title": "Twinkle & Twirl Sunglasses & Clip Set Lilac Heart Lilac Heart",
+      "titles": {
+        "en": "Twinkle & Twirl Sunglasses & Clip Set Lilac Heart Lilac Heart"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208648-sunglasses-clip-set-lilac-heart-5021737-lilac-heart",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021737|Lilac Heart",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f956c405",
+      "title": "Twinkle & Twirl Sunglasses & Clip Set Gradient Heart Gradient Heart",
+      "titles": {
+        "en": "Twinkle & Twirl Sunglasses & Clip Set Gradient Heart Gradient Heart"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-sunglasses-clip-set-gradient-heart-5021735-gradient-heart",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021735|Gradient Heart",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c2b14fba",
+      "title": "208646 Sunglasses & Clip Set Pink Gradie Pink Gradient",
+      "titles": {
+        "en": "208646 Sunglasses & Clip Set Pink Gradie Pink Gradient"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208646-sunglasses-clip-set-pink-gradie-5021733-pink-gradient",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021733|Pink Gradient",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7a7872ae",
+      "title": "Twinkle & Twirl Princess Cape Set Blue",
+      "titles": {
+        "en": "Twinkle & Twirl Princess Cape Set Blue"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-princess-cape-set-5021731-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021731|Blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-414e70ea",
+      "title": "Twinkle & Twirl Butterfly Wing Set White",
+      "titles": {
+        "en": "Twinkle & Twirl Butterfly Wing Set White"
+      },
+      "category": "accessories",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208643-butterfly-wing-set-white-5021727-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021727|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-de9247cb",
+      "title": "Twinkle & Twirl Butterfly Wing Set Pink Pink Gradient",
+      "titles": {
+        "en": "Twinkle & Twirl Butterfly Wing Set Pink Pink Gradient"
+      },
+      "category": "accessories",
+      "price": 24.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-butterfly-wing-set-pink-5021725-pink-gradient",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021725|Pink Gradient",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-41f07791",
+      "title": "Twinkle & Twirl Flower Shoulder Bag Lilac Lilac",
+      "titles": {
+        "en": "Twinkle & Twirl Flower Shoulder Bag Lilac Lilac"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-flower-shoulder-bag-lilac-5021723-lilac",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021723|Lilac",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7250c67f",
+      "title": "Twinkle & Twirl Push Pop Unicorn Bag Purple Purple",
+      "titles": {
+        "en": "Twinkle & Twirl Push Pop Unicorn Bag Purple Purple"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-push-pop-unicorn-bag-purple-5021717-purple",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021717|Purple",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ca581e61",
+      "title": "Twinkle & Twirl Push Pop Handbag Rainbow Rainbow",
+      "titles": {
+        "en": "Twinkle & Twirl Push Pop Handbag Rainbow Rainbow"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-push-pop-handbag-rainbow-5021715-rainbow",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021715|Rainbow",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7e8f294b",
+      "title": "Twinkle & Twirl Jelly Mimi Micro Handbag Mint",
+      "titles": {
+        "en": "Twinkle & Twirl Jelly Mimi Micro Handbag Mint"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208636-jelly-mimi-micro-handbag-mint-5021713-mint",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021713|Mint",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-24b03317",
+      "title": "Twinkle & Twirl Jelly Shopping Micro Tote Bag Purple Purple",
+      "titles": {
+        "en": "Twinkle & Twirl Jelly Shopping Micro Tote Bag Purple Purple"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208634-jelly-shopping-micro-tote-bag-pur-5021709-purple",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021709|Purple",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cd04cc69",
+      "title": "Twinkle & Twirl Jelly Flap Micro Handbag Dark Pink Dark Pink",
+      "titles": {
+        "en": "Twinkle & Twirl Jelly Flap Micro Handbag Dark Pink Dark Pink"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208633-jelly-flap-micro-handbag-dark-pin-5021707-dark-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021707|Dark Pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-521bc859",
+      "title": "Twinkle & Twirl Jelly Kelly Micro Handbag Pink Pink",
+      "titles": {
+        "en": "Twinkle & Twirl Jelly Kelly Micro Handbag Pink Pink"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-jelly-kelly-micro-handbag-pink-5021705-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021705|Pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-84b98768",
+      "title": "Twinkle & Twirl Flower Coin Purse Pink Pink",
+      "titles": {
+        "en": "Twinkle & Twirl Flower Coin Purse Pink Pink"
+      },
+      "category": "accessories",
+      "price": 14.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208631-flower-coin-purse-pink-5021703-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021703|Pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c8730f4c",
+      "title": "Twinkle & Twirl Unicorn Coin Purse White White",
+      "titles": {
+        "en": "Twinkle & Twirl Unicorn Coin Purse White White"
+      },
+      "category": "accessories",
+      "price": 14.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/twinkle-twirl-unicorn-coin-purse-white-5021699-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021699|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7fd9819a",
+      "title": "Twinkle & Twirl Bubble Heart Key Ring Rainbow Rainbow",
+      "titles": {
+        "en": "Twinkle & Twirl Bubble Heart Key Ring Rainbow Rainbow"
+      },
+      "category": "accessories",
+      "price": 9.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208629-bubble-heart-key-ring-rainbow-5021697-rainbow",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021697|Rainbow",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-8fb5f69",
+      "title": "Twinkle & Twirl Flower Nl & Ring Set Lilac Lilac",
+      "titles": {
+        "en": "Twinkle & Twirl Flower Nl & Ring Set Lilac Lilac"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208628-flower-nl-ring-set-lilac-5021695-lilac",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021695|Lilac",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6158268",
+      "title": "Twinkle & Twirl Flower Bl & Ring Set Yellow Yellow",
+      "titles": {
+        "en": "Twinkle & Twirl Flower Bl & Ring Set Yellow Yellow"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208627-flower-bl-ring-set-yellow-5021693-yellow",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021693|Yellow",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c3d6d203",
+      "title": "Twinkle & Twirl Butterfly Multi Set Pink Pink",
+      "titles": {
+        "en": "Twinkle & Twirl Butterfly Multi Set Pink Pink"
+      },
+      "category": "accessories",
+      "price": 19.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/208626-butterfly-multi-set-pink-5021691-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Twinkle & Twirl",
+        "model": "5021691|Pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7075a8",
+      "title": "Bluey Bookcase",
+      "titles": {
+        "en": "Bluey Bookcase"
+      },
+      "category": "children-s-furniture",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/bluey-bookcase-4023875",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Bluey",
+        "model": "4023875",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9582714d",
+      "title": "Protect-a-bed Baby Cotton Quilted Universal Large Fitted Bassinet/co-sleeper Mattress Protector",
+      "titles": {
+        "en": "Protect-a-bed Baby Cotton Quilted Universal Large Fitted Bassinet/co-sleeper Mattress Protector"
+      },
+      "category": "mattress-protectors",
+      "price": 36.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/protect-a-bed-baby-cotton-quilted-universal-large-fitted-bassinet-co-sleeper-mattress-protector-4023797",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Protect A Bed",
+        "model": "4023797",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-af4d4624",
+      "title": "Disney Winnie The Pooh Swaddle & Beanie Set 1 Tog 3-6m",
+      "titles": {
+        "en": "Disney Winnie The Pooh Swaddle & Beanie Set 1 Tog 3-6m"
+      },
+      "category": "wraps",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-winnie-the-pooh-swaddle-beanie-set-1-tog-3-6m-4023791",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Winnie the Pooh",
+        "model": "4023791",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-10537a85",
+      "title": "Disney Winnie The Pooh Swaddle & Beanie Set 1 Tog 0-3m",
+      "titles": {
+        "en": "Disney Winnie The Pooh Swaddle & Beanie Set 1 Tog 0-3m"
+      },
+      "category": "wraps",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-winnie-the-pooh-swaddle-beanie-set-1-tog-0-3m-4023789",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Winnie the Pooh",
+        "model": "4023789",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-dcf7c401",
+      "title": "Disney Winnie The Pooh 100 Years 1 Tog Sleeping Bag 18-36m",
+      "titles": {
+        "en": "Disney Winnie The Pooh 100 Years 1 Tog Sleeping Bag 18-36m"
+      },
+      "category": "sleeping-bags",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-winnie-the-pooh-100-years-1-tog-sleeping-bag-18-36m-4023787",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Winnie the Pooh",
+        "model": "4023787",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7c62dcc",
+      "title": "Disney Winnie The Pooh 100 Years 1 Tog Sleeping Bag 6-18m",
+      "titles": {
+        "en": "Disney Winnie The Pooh 100 Years 1 Tog Sleeping Bag 6-18m"
+      },
+      "category": "sleeping-bags",
+      "price": 24.97,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-winnie-the-pooh-100-years-1-tog-sleeping-bag-6-18m-4023785",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Winnie the Pooh",
+        "model": "4023785",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5212b9ae",
+      "title": "Star Wars Velour Pram Blanket",
+      "titles": {
+        "en": "Star Wars Velour Pram Blanket"
+      },
+      "category": "blankets",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-velour-pram-blanket-4023769",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023769",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-53e40f91",
+      "title": "Toy Story Velour Pram Blanket",
+      "titles": {
+        "en": "Toy Story Velour Pram Blanket"
+      },
+      "category": "blankets",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-story-velour-pram-blanket-4023757",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023757",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-168027f9",
+      "title": "Star Wars Grogu Velour Pram Blanket",
+      "titles": {
+        "en": "Star Wars Grogu Velour Pram Blanket"
+      },
+      "category": "blankets",
+      "price": 31.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-velour-pram-blanket-4023745",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023745",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-8d684594",
+      "title": "Little Haven Reversible Printed Blanket Puppy",
+      "titles": {
+        "en": "Little Haven Reversible Printed Blanket Puppy"
+      },
+      "category": "blankets",
+      "price": 29.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/little-haven-reversible-printed-blanket-puppy-4023741",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Little Haven",
+        "model": "4023741",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-bfdcd13a",
+      "title": "Little Haven Reversible Printed Blanket Dinos",
+      "titles": {
+        "en": "Little Haven Reversible Printed Blanket Dinos"
+      },
+      "category": "blankets",
+      "price": 29.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/little-haven-reversible-printed-blanket-dinos-4023739",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Little Haven",
+        "model": "4023739",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-68874675",
+      "title": "Little Haven Reversible Printed Blanket Daisy",
+      "titles": {
+        "en": "Little Haven Reversible Printed Blanket Daisy"
+      },
+      "category": "blankets",
+      "price": 29.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/little-haven-reversible-printed-blanket-daisy-4023737",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Little Haven",
+        "model": "4023737",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e912b96f",
+      "title": "Little Haven Reversible Printed Blanket Safari",
+      "titles": {
+        "en": "Little Haven Reversible Printed Blanket Safari"
+      },
+      "category": "blankets",
+      "price": 29.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/little-haven-reversible-printed-blanket-safari-4023735",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Little Haven",
+        "model": "4023735",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d1d53a4c",
+      "title": "Infancie Muslin Blanket 2-pack Brown Teddy",
+      "titles": {
+        "en": "Infancie Muslin Blanket 2-pack Brown Teddy"
+      },
+      "category": "wraps",
+      "price": 24.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infancie-muslin-blanket-2-pack-brown-teddy-4023589",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infancie",
+        "model": "4023589",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b066866c",
+      "title": "Infancie Muslin Blankets 2-pack Beige Sheep",
+      "titles": {
+        "en": "Infancie Muslin Blankets 2-pack Beige Sheep"
+      },
+      "category": "wraps",
+      "price": 24.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infancie-muslin-blankets-2-pack-beige-sheep-4023587",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infancie",
+        "model": "4023587",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-316af389",
+      "title": "Replacement Paper Roll For Table & 2 Chairs Heart/star",
+      "titles": {
+        "en": "Replacement Paper Roll For Table & 2 Chairs Heart/star"
+      },
+      "category": "activity-toys",
+      "price": 4.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/replacement-paper-roll-for-table-2-chairs-heart-star-4023879",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023879",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-70c7479b",
+      "title": "My First Kiwi Abc Book",
+      "titles": {
+        "en": "My First Kiwi Abc Book"
+      },
+      "category": "books",
+      "price": 8.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/my-first-kiwi-abc-book-4023849",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023849",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-217a6691",
+      "title": "My First Kiwi 123 Tactile Board Book",
+      "titles": {
+        "en": "My First Kiwi 123 Tactile Board Book"
+      },
+      "category": "books",
+      "price": 8.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/my-first-kiwi-123-tactile-board-book-4023847",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023847",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ad25e430",
+      "title": "Disney Stitch 17\" Trolley Case",
+      "titles": {
+        "en": "Disney Stitch 17\" Trolley Case"
+      },
+      "category": "backpacks",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-stitch-17-trolley-case-4023829",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Stitch",
+        "model": "4023829",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6749011a",
+      "title": "Disney Winnie The Pooh 100 Years Playmat",
+      "titles": {
+        "en": "Disney Winnie The Pooh 100 Years Playmat"
+      },
+      "category": "activity-toys",
+      "price": 55.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-winnie-the-pooh-100-years-playmat-4023793",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Winnie the Pooh",
+        "model": "4023793",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f86d1c29",
+      "title": "Who's Here? - On The Farm Fold-out Flap Book",
+      "titles": {
+        "en": "Who's Here? - On The Farm Fold-out Flap Book"
+      },
+      "category": "books",
+      "price": 8.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/whos-here-on-the-farm-fold-out-flap-book-4023725",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023725",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7566d1bd",
+      "title": "My First Facts - Animals Lift-the-flap Board Book",
+      "titles": {
+        "en": "My First Facts - Animals Lift-the-flap Board Book"
+      },
+      "category": "books",
+      "price": 7.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/my-first-facts-animals-lift-the-flap-board-book-4023723",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023723",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ea35e33d",
+      "title": "My Cut-out Book - On The Farm Board Book",
+      "titles": {
+        "en": "My Cut-out Book - On The Farm Board Book"
+      },
+      "category": "books",
+      "price": 8.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/my-cut-out-book-on-the-farm-board-book-4023721",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "model": "4023721",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-23042c32",
+      "title": "Infantino Giraffe's Fun Station",
+      "titles": {
+        "en": "Infantino Giraffe's Fun Station"
+      },
+      "category": "activity-toys",
+      "price": 87.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-giraffes-fun-station-4023677",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4023677",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e4607440",
+      "title": "Kalo Boo Farm Shape Sorter",
+      "titles": {
+        "en": "Kalo Boo Farm Shape Sorter"
+      },
+      "category": "wooden-toys",
+      "price": 47.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/kalo-boo-farm-shape-sorter-4023673",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Kalo Boo",
+        "model": "4023673",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-85d611d9",
+      "title": "Step2 Putt & Splash Adventure Centre",
+      "titles": {
+        "en": "Step2 Putt & Splash Adventure Centre"
+      },
+      "category": "out-door-toys",
+      "price": 399.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-putt-splash-adventure-centre-4023647",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023647",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-bb94a6d5",
+      "title": "Step2 Rain Showers & Flow Water Table",
+      "titles": {
+        "en": "Step2 Rain Showers & Flow Water Table"
+      },
+      "category": "out-door-toys",
+      "price": 319.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-rain-showers-flow-water-table-4023645",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023645",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b83b34b4",
+      "title": "Step2 Water Bug Splash Pad",
+      "titles": {
+        "en": "Step2 Water Bug Splash Pad"
+      },
+      "category": "out-door-toys",
+      "price": 159.19,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-water-bug-splash-pad-4023639",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023639",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e233836a",
+      "title": "Step2 Unicorn Foot-to-floor Ride-on Car",
+      "titles": {
+        "en": "Step2 Unicorn Foot-to-floor Ride-on Car"
+      },
+      "category": "ride-on-toys",
+      "price": 159.19,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-unicorn-foot-to-floor-ride-on-car-4023637",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023637",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ebf52dd2",
+      "title": "Step2 Rapid Ride & Hide Foot-to-floor Ride-on Car",
+      "titles": {
+        "en": "Step2 Rapid Ride & Hide Foot-to-floor Ride-on Car"
+      },
+      "category": "ride-on-toys",
+      "price": 159.19,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-rapid-ride-hide-foot-to-floor-ride-on-car-4023635",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023635",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1b39fd8f",
+      "title": "Step2 Dino Dash Up & Down Roller Coaster",
+      "titles": {
+        "en": "Step2 Dino Dash Up & Down Roller Coaster"
+      },
+      "category": "ride-on-toys",
+      "price": 559.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-dino-dash-up-down-roller-coaster-4023633",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023633",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1394755d",
+      "title": "Step2 Dino Dash Foot-to-floor Ride-on Car",
+      "titles": {
+        "en": "Step2 Dino Dash Foot-to-floor Ride-on Car"
+      },
+      "category": "ride-on-toys",
+      "price": 159.19,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-dino-dash-foot-to-floor-ride-on-car-4023631",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023631",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b31a6d47",
+      "title": "Step2 Sky Rider Foot-to-floor Ride-on Car",
+      "titles": {
+        "en": "Step2 Sky Rider Foot-to-floor Ride-on Car"
+      },
+      "category": "ride-on-toys",
+      "price": 159.19,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-sky-rider-foot-to-floor-ride-on-car-4023629",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023629",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-8d8d9bfe",
+      "title": "Step2 Toddler Corner House",
+      "titles": {
+        "en": "Step2 Toddler Corner House"
+      },
+      "category": "activity-toys",
+      "price": 399.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-toddler-corner-house-4023627",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023627",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-a29f0687",
+      "title": "Step2 Kids Seashell Flip Seat Mint",
+      "titles": {
+        "en": "Step2 Kids Seashell Flip Seat Mint"
+      },
+      "category": "out-door-toys",
+      "price": 103.2,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/step2-kids-seashell-flip-seat-mint-4023625",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Step2",
+        "model": "4023625",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e78a3282",
+      "title": "Tommee Tippee Perfect Prep Formula Feed Make Chalk",
+      "titles": {
+        "en": "Tommee Tippee Perfect Prep Formula Feed Make Chalk"
+      },
+      "category": "feeding-favourites",
+      "price": 369,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-perfect-prep-formula-feed-make-chalk-4023843",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023843",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4caa5047",
+      "title": "Tommee Tippee Electric Steriliser V2",
+      "titles": {
+        "en": "Tommee Tippee Electric Steriliser V2"
+      },
+      "category": "sterilisers",
+      "price": 179,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-electric-steriliser-v2-4023841",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023841",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e50927f1",
+      "title": "Tommee Tippee 2-in-1 Microwave Steriliser V2",
+      "titles": {
+        "en": "Tommee Tippee 2-in-1 Microwave Steriliser V2"
+      },
+      "category": "feeding-favourites",
+      "price": 79.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-2-in-1-microwave-steriliser-v2-4023839",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023839",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e09d1f85",
+      "title": "Tommee Tippee Naturalstart Glass Newborn Bottle + Soother Set - 7-piece",
+      "titles": {
+        "en": "Tommee Tippee Naturalstart Glass Newborn Bottle + Soother Set - 7-piece"
+      },
+      "category": "feeding-favourites",
+      "price": 89.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-naturalstart-glass-newborn-bottle-soother-set-7-piece-4023837",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023837",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-13ee41ba",
+      "title": "Tommee Tippee Classic Start Teat Medium Flow 2-pack 3m+",
+      "titles": {
+        "en": "Tommee Tippee Classic Start Teat Medium Flow 2-pack 3m+"
+      },
+      "category": "feeding-favourites",
+      "price": 12.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-classic-start-teat-medium-flow-2-pack-3m-4023835",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023835",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f4093165",
+      "title": "Tommee Tippee Classic Start Bottles 3-pack 250ml",
+      "titles": {
+        "en": "Tommee Tippee Classic Start Bottles 3-pack 250ml"
+      },
+      "category": "baby-bottles",
+      "price": 21.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/tommee-tippee-classic-start-bottles-3-pack-250ml-4023833",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Tommee Tippee",
+        "model": "4023833",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ad72c68a",
+      "title": "Star Wars Bibs 2-pack",
+      "titles": {
+        "en": "Star Wars Bibs 2-pack"
+      },
+      "category": "bibs",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-bibs-2-pack-4023771",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023771",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-90a97656",
+      "title": "Toy Story Bibs 2-pack",
+      "titles": {
+        "en": "Toy Story Bibs 2-pack"
+      },
+      "category": "bibs",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/toy-story-bibs-2-pack-4023759",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Toy Story",
+        "model": "4023759",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e74733be",
+      "title": "Star Wars Grogu Bibs 2-pack",
+      "titles": {
+        "en": "Star Wars Grogu Bibs 2-pack"
+      },
+      "category": "bibs",
+      "price": 19.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/star-wars-grogu-bibs-2-pack-4023747",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Star Wars",
+        "model": "4023747",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1a6801dc",
+      "title": "Safety First Refrigerator Door Lock",
+      "titles": {
+        "en": "Safety First Refrigerator Door Lock"
+      },
+      "category": "home-safety-safety-locks",
+      "price": 1.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-refrigerator-door-lock-94530",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "94530",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f42b9bfa",
+      "title": "Zazu 2-in-1 Earmuffs Pink",
+      "titles": {
+        "en": "Zazu 2-in-1 Earmuffs Pink"
+      },
+      "category": "accessories",
+      "price": 59.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/zazu-2-in-1-earmuffs-pink-4023731",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zazu",
+        "model": "4023731",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ec4a9040",
+      "title": "Zazu 2-in-1 Earmuffs Green",
+      "titles": {
+        "en": "Zazu 2-in-1 Earmuffs Green"
+      },
+      "category": "accessories",
+      "price": 59.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/zazu-2-in-1-earmuffs-green-4023729",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Zazu",
+        "model": "4023729",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2efff829",
+      "title": "Love To Dream Sleep Machine",
+      "titles": {
+        "en": "Love To Dream Sleep Machine"
+      },
+      "category": "sleep-trainers",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/love-to-dream-sleep-machine-4023501",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Love to Dream",
+        "model": "4023501",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-31d393e3",
+      "title": "Dreambaby Cabinet Sliding Lock",
+      "titles": {
+        "en": "Dreambaby Cabinet Sliding Lock"
+      },
+      "category": "home-safety-safety-locks",
+      "price": 8.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-cabinet-sliding-lock-4023463",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4023463",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e8bf16a9",
+      "title": "Dreambaby Multi-purpose Latch 3-pack",
+      "titles": {
+        "en": "Dreambaby Multi-purpose Latch 3-pack"
+      },
+      "category": "home-safety-safety-locks",
+      "price": 22.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-multi-purpose-latch-3-pack-4023461",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4023461",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-e60b7681",
+      "title": "Dreambaby® Foam Corner Bumper 4-pack",
+      "titles": {
+        "en": "Dreambaby® Foam Corner Bumper 4-pack"
+      },
+      "category": "home-safety-safety-locks",
+      "price": 17.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-foam-corner-bumper-4-pack-4023457",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4023457",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-408b941d",
+      "title": "Oricom 5\" Smart Hd Nursery Pal Glow+ Baby Monitor",
+      "titles": {
+        "en": "Oricom 5\" Smart Hd Nursery Pal Glow+ Baby Monitor"
+      },
+      "category": "baby-monitors",
+      "price": 419,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/oricom-5-smart-hd-nursery-pal-glow-baby-monitor-4023377",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Oricom",
+        "model": "4023377",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ddda66dc",
+      "title": "Oricom Skyview Ai 5\" Smart Hd Baby Monitor",
+      "titles": {
+        "en": "Oricom Skyview Ai 5\" Smart Hd Baby Monitor"
+      },
+      "category": "baby-monitors",
+      "price": 499,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/oricom-skyview-ai-5-smart-hd-baby-monitor-4023375",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Oricom",
+        "model": "4023375",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1d49980e",
+      "title": "Neilmed Battery Operated Nasal Aspirator",
+      "titles": {
+        "en": "Neilmed Battery Operated Nasal Aspirator"
+      },
+      "category": "toiletries",
+      "price": 44.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/neilmed-battery-operated-nasal-aspirator-4023361",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "NeilMed",
+        "model": "4023361",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c09d7b40",
+      "title": "Infantino 3-in-1 Projector Musical Mobile",
+      "titles": {
+        "en": "Infantino 3-in-1 Projector Musical Mobile"
+      },
+      "category": "mobiles",
+      "price": 79.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-3-in-1-projector-musical-mobile-4022957",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4022957",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-5dc734a1",
+      "title": "Infantino 3-in-1 Musical Mobile Projector Mint Green",
+      "titles": {
+        "en": "Infantino 3-in-1 Musical Mobile Projector Mint Green"
+      },
+      "category": "mobiles",
+      "price": 79.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-3-in-1-musical-mobile-projector-mint-green-4022955",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4022955",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d699b3d1",
+      "title": "Maia Mum Wooden Labour Comb + Bag",
+      "titles": {
+        "en": "Maia Mum Wooden Labour Comb + Bag"
+      },
+      "category": "accessories",
+      "price": 15,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maia-mum-wooden-labour-comb-bag-4022753",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maia Mum",
+        "model": "4022753",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b1513464",
+      "title": "Maia Mum Belly Bestie All-in-one Pregnancy & C-section Relief Belt",
+      "titles": {
+        "en": "Maia Mum Belly Bestie All-in-one Pregnancy & C-section Relief Belt"
+      },
+      "category": "accessories",
+      "price": 42,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maia-mum-belly-bestie-all-in-one-pregnancy-c-section-relief-belt-4022751",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maia Mum",
+        "model": "4022751",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-62e4dd59",
+      "title": "Maia Mum C-smooth Premium Silicone Scar Tape",
+      "titles": {
+        "en": "Maia Mum C-smooth Premium Silicone Scar Tape"
+      },
+      "category": "accessories",
+      "price": 52,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maia-mum-c-smooth-premium-silicone-scar-tape-4022749",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maia Mum",
+        "model": "4022749",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-1ad50602",
+      "title": "Maia Mum Revive-it C-section Scar And Stretch Mark Cream 30g",
+      "titles": {
+        "en": "Maia Mum Revive-it C-section Scar And Stretch Mark Cream 30g"
+      },
+      "category": "breast-pads-breast-shells-nipple-shields",
+      "price": 30,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maia-mum-revive-it-c-section-scar-and-stretch-mark-cream-30g-4022747",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maia Mum",
+        "model": "4022747",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f620909d",
+      "title": "Maia Mum Heal-it Nipple Cream",
+      "titles": {
+        "en": "Maia Mum Heal-it Nipple Cream"
+      },
+      "category": "breast-pads-breast-shells-nipple-shields",
+      "price": 25,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/maia-mum-heal-it-nipple-cream-4022745",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Maia Mum",
+        "model": "4022745",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6319ea0b",
+      "title": "Dreambaby® Discovery 6 Converta Play-yard Gate White",
+      "titles": {
+        "en": "Dreambaby® Discovery 6 Converta Play-yard Gate White"
+      },
+      "category": "safety-gates-barriers",
+      "price": 249.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-discovery-6-converta-play-yard-gate-white-4022595",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4022595",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cf4e1fba",
+      "title": "Dreambaby Nicole Xtra-wide Bed Rail White",
+      "titles": {
+        "en": "Dreambaby Nicole Xtra-wide Bed Rail White"
+      },
+      "category": "safety-gates-barriers",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-nicole-xtra-wide-bed-rail-white-4022593",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4022593",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-c512a762",
+      "title": "Dreambaby Ava Xtra-wide Hallway Security Gate White",
+      "titles": {
+        "en": "Dreambaby Ava Xtra-wide Hallway Security Gate White"
+      },
+      "category": "safety-gates-barriers",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/dreambaby-ava-xtra-wide-hallway-security-gate-white-4022589",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Dreambaby",
+        "model": "4022589",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-7c0ffd6",
+      "title": "Lullaby Dreams Waterproof Mattress Protector Bassinette White",
+      "titles": {
+        "en": "Lullaby Dreams Waterproof Mattress Protector Bassinette White"
+      },
+      "category": "mattress-protectors",
+      "price": 11.86,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-waterproof-mattress-protector-bassinette-4020451-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020451|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4c74d0b0",
+      "title": "Lullaby Dreams Waterproof Mattress Protector Portable Cot White",
+      "titles": {
+        "en": "Lullaby Dreams Waterproof Mattress Protector Portable Cot White"
+      },
+      "category": "mattress-protectors",
+      "price": 17.46,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-waterproof-mattress-protector-portable-cot-4020433-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020433|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-75f3279c",
+      "title": "Lullaby Dreams Waterproof Mattress Protector Cot Fitted White",
+      "titles": {
+        "en": "Lullaby Dreams Waterproof Mattress Protector Cot Fitted White"
+      },
+      "category": "mattress-protectors",
+      "price": 20.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-waterproof-mattress-protector-cot-fitted-4020429-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020429|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-2922391c",
+      "title": "Lullaby Dreams Waterproof Mattress Protector Cot Single White",
+      "titles": {
+        "en": "Lullaby Dreams Waterproof Mattress Protector Cot Single White"
+      },
+      "category": "mattress-protectors",
+      "price": 17.46,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-waterproof-mattress-protector-cot-single-4020427-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "4020427|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d2e27ccb",
+      "title": "Safety First Onboard Slide 6-in-1 Travel System With Safetyslide Base",
+      "titles": {
+        "en": "Safety First Onboard Slide 6-in-1 Travel System With Safetyslide Base"
+      },
+      "category": "4-wheel-strollers",
+      "price": 999,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-onboard-slide-6-in-1-travel-system-with-safetyslide-base-4022159",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "4022159",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-97e3cc8e",
+      "title": "Safety First Turn And Go 360° Rotating Modular Travel System",
+      "titles": {
+        "en": "Safety First Turn And Go 360° Rotating Modular Travel System"
+      },
+      "category": "4-wheel-strollers",
+      "price": 799,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/safety-first-turn-and-go-360-rotating-modular-travel-system-4022157",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Safety First",
+        "model": "4022157",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-63bc1531",
+      "title": "Leclercbaby Bassinette Uk Army Green",
+      "titles": {
+        "en": "Leclercbaby Bassinette Uk Army Green"
+      },
+      "category": "stroller-accessories",
+      "price": 99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/leclercbaby-bassinette-uk-army-green-4022065",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Leclercbaby",
+        "model": "4022065",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-fa994d2d",
+      "title": "Ingenuity 3dquickclose Cs+ Compact Fold Stroller",
+      "titles": {
+        "en": "Ingenuity 3dquickclose Cs+ Compact Fold Stroller"
+      },
+      "category": "4-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3dquickclose-cs-compact-fold-stroller-4021853",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4021853",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-d75bed7f",
+      "title": "Ingenuity 3dlite Double Convenience Stroller",
+      "titles": {
+        "en": "Ingenuity 3dlite Double Convenience Stroller"
+      },
+      "category": "twin-strollers",
+      "price": 399,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/ingenuity-3dlite-double-convenience-stroller-4021851",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Ingenuity",
+        "model": "4021851",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-31ccdeb6",
+      "title": "Babylo Flume Travel System Fog One",
+      "titles": {
+        "en": "Babylo Flume Travel System Fog One"
+      },
+      "category": "4-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babylo-flume-travel-system-fog-4021579-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babylo",
+        "model": "4021579|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-aadb4607",
+      "title": "Baby Jogger City Mini Gt2 Stroller Stone Grey",
+      "titles": {
+        "en": "Baby Jogger City Mini Gt2 Stroller Stone Grey"
+      },
+      "category": "3-wheel-strollers",
+      "price": 699,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/baby-jogger-city-mini-gt2-stroller-4021513-stone-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Baby Jogger",
+        "model": "4021513|stone grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f4b3703d",
+      "title": "Edinburgh Auto Fold Stroller",
+      "titles": {
+        "en": "Edinburgh Auto Fold Stroller"
+      },
+      "category": "4-wheel-strollers",
+      "price": 299,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/edinburgh-auto-fold-stroller-4021327",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Edinburgh",
+        "model": "4021327",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-ffc35d6",
+      "title": "Disney Baby Simple Fold Lx Travel System Minnie Dot Party One",
+      "titles": {
+        "en": "Disney Baby Simple Fold Lx Travel System Minnie Dot Party One"
+      },
+      "category": "4-wheel-strollers",
+      "price": 449,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/disney-baby-simple-fold-lx-travel-system-minnie-dot-party-4020573-one",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Disney Baby",
+        "model": "4020573|one",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4942dd3e",
+      "title": "Purely Baby Aqua+ Water Wipes 70-pack White",
+      "titles": {
+        "en": "Purely Baby Aqua+ Water Wipes 70-pack White"
+      },
+      "category": "baby-wipes",
+      "price": 3.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/purely-baby-aqua-water-wipes-70-pack-4010807-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Purely Baby",
+        "model": "4010807|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-b66b5ee5",
+      "title": "Purely Baby Dry Wipes Skinsafe Baby Wipes 50-pack White",
+      "titles": {
+        "en": "Purely Baby Dry Wipes Skinsafe Baby Wipes 50-pack White"
+      },
+      "category": "baby-wipes",
+      "price": 5.99,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/purely-baby-dry-wipes-skinsafe-baby-wipes-50-pack-105555-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Purely Baby",
+        "model": "105555|white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-57ec1f94",
+      "title": "Babyco Star Carillon Pullstring Musical Toy Pink Star Pink",
+      "titles": {
+        "en": "Babyco Star Carillon Pullstring Musical Toy Pink Star Pink"
+      },
+      "category": "soft-toys",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-star-carillon-pullstring-musical-toy-pink-4019545-star-pink",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4019545|star pink",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-6ad9cf3e",
+      "title": "Babyco Star Carillon Pullstring Musical Toy Blue Star Blue",
+      "titles": {
+        "en": "Babyco Star Carillon Pullstring Musical Toy Blue Star Blue"
+      },
+      "category": "soft-toys",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-star-carillon-pullstring-musical-toy-blue-4019543-star-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4019543|star blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-f08d6dae",
+      "title": "Babyco Star Carillon Pullstring Musical Toy White Star White",
+      "titles": {
+        "en": "Babyco Star Carillon Pullstring Musical Toy White Star White"
+      },
+      "category": "soft-toys",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-star-carillon-pullstring-musical-toy-white-4019541-star-white",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4019541|star white",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-9c6f45c5",
+      "title": "Babyco Bunny Carillon Pullstring Musical Toy Blue Bunny Blue",
+      "titles": {
+        "en": "Babyco Bunny Carillon Pullstring Musical Toy Blue Bunny Blue"
+      },
+      "category": "soft-toys",
+      "price": 15.96,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/babyco-bunny-carillon-pullstring-musical-toy-blue-4019537-bunny-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Babyco",
+        "model": "4019537|bunny blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-cc7ced98",
+      "title": "Lullaby Dreams Embossed Flannel With Sherpa Back Blanket Blue",
+      "titles": {
+        "en": "Lullaby Dreams Embossed Flannel With Sherpa Back Blanket Blue"
+      },
+      "category": "blankets",
+      "price": 19.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/lullaby-dreams-embossed-flannel-with-sherpa-back-blanket-5009826-blue",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Lullaby Dreams",
+        "model": "5009826|blue",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-52d80948",
+      "title": "Infantino Swift Classic Carrier With Pocket Grey",
+      "titles": {
+        "en": "Infantino Swift Classic Carrier With Pocket Grey"
+      },
+      "category": "front-back-packs",
+      "price": 69.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-swift-classic-carrier-with-pocket-grey-4022303",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4022303",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-4948db6f",
+      "title": "Infantino Flip 4-in-1 Convertible Carrier Camo",
+      "titles": {
+        "en": "Infantino Flip 4-in-1 Convertible Carrier Camo"
+      },
+      "category": "front-back-packs",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-flip-4-in-1-convertible-carrier-camo-4022301",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4022301",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-261c10a5",
+      "title": "Infantino Flip 4-in-1 Light & Airy Convertible Carrier Grey/teal",
+      "titles": {
+        "en": "Infantino Flip 4-in-1 Light & Airy Convertible Carrier Grey/teal"
+      },
+      "category": "front-back-packs",
+      "price": 119.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-flip-4-in-1-light-airy-convertible-carrier-4020731-grey-teal",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4020731|grey/teal",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-77dbbead",
+      "title": "Infantino Hug & Cuddle Adjustable Hybrid Wrap Carrier Dark Grey",
+      "titles": {
+        "en": "Infantino Hug & Cuddle Adjustable Hybrid Wrap Carrier Dark Grey"
+      },
+      "category": "front-back-packs",
+      "price": 149.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-hug-cuddle-adjustable-hybrid-wrap-carrier-4019271-dark-grey",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4019271|dark grey",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
+      "id": "feed-591d60b4",
+      "title": "Infantino Flip 4-in-1 Convertible Carrier Black Denim",
+      "titles": {
+        "en": "Infantino Flip 4-in-1 Convertible Carrier Black Denim"
+      },
+      "category": "front-back-packs",
+      "price": 99.95,
+      "merchant": "Baby Factory",
+      "url": "https://www.babyfactory.co.nz/infantino-flip-4-in-1-convertible-carrier-4018193-black-denim",
+      "imageCount": 1,
+      "condition": "new",
+      "specs": {
+        "brand": "Infantino",
+        "model": "4018193|black denim",
+        "stock": "in stock"
+      },
+      "capturedAt": "2026-11-24T12:04:23.122Z",
+      "source": "feed",
+      "fixture": false,
+      "currency": "NZD"
+    },
+    {
       "id": "feed-70bea078",
       "title": "Cozy N Safe Kea Plus I-size Half Booster Seat",
       "titles": {

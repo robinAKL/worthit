@@ -5,6 +5,8 @@ import aiSpecs from '../data/specs/ai.json';
 import { sizeBand, specFromProduct, UNRANKED, type ProductSpec } from './specs';
 import { isUnitComparable, MIN_UNIT_GROUP, rankUnitGroup } from './specCompare';
 import { parseQuery } from './parseQuery';
+import { allVehicles } from './cars';
+import { querySelectsCars } from './cars/query';
 import {
   assertReasonAllowed,
   bandFor,
@@ -109,7 +111,8 @@ function titleKind(title: string): string {
 
 export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE, source?: Product[]): SearchResult {
   const parsed = parseQuery(query);
-  if (parsed.kind === 'car') return noMatches(parsed, lane);
+  // A search that names a car we list ("Toyota Aqua") is a car search: no baby wipes called Aqua.
+  if (parsed.kind === 'car' || (!source && querySelectsCars(query, allVehicles()))) return noMatches(parsed, lane);
   const pool = (source ?? [...catalog.map(withSpec), ...liveProducts()]).filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
     if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
@@ -134,8 +137,15 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   let excludedCount = 0;
   for (const group of byCategory.values()) {
     const sized = group.filter(isUnitComparable);
-    if (sized.length >= MIN_UNIT_GROUP && sized.length === group.length) {
-      items.push(...rankUnitGroup(group, lane, locale));
+    // Enough items with a stated size: compare those per litre or kilogram. One item without a
+    // size must not push a whole group onto total price, where a bar fridge looks "80% below".
+    if (sized.length >= MIN_UNIT_GROUP) {
+      items.push(...rankUnitGroup(sized, lane, locale));
+      for (const product of group.filter((p) => !isUnitComparable(p))) {
+        const reason = unrankedReason(product, locale);
+        assertReasonAllowed(reason);
+        items.push({ product, lane, score: 0, band: 'mid', reason, ranked: false });
+      }
       continue;
     }
     if (!group[0].fixture && group.length < 5) {
