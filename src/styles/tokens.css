@@ -1,0 +1,87 @@
+/* Hallmark tokens · WorthIt · theme: custom "fern ledger" · posture: Restrained */
+:root {
+  /* Colour: OKLCH only. Paper is a faint green-grey, ink is a deep fern-black. */
+  --color-paper: oklch(97.4% 0.007 150);
+  --color-paper-2: oklch(94.6% 0.010 150);
+  --color-paper-3: oklch(91.2% 0.013 150);
+  --color-ink: oklch(21% 0.018 160);
+  --color-ink-2: oklch(34% 0.016 160);
+  --color-muted: oklch(47% 0.014 160);
+  --color-rule: oklch(86% 0.012 150);
+  --color-rule-2: oklch(79% 0.014 150);
+  --color-accent: oklch(47% 0.125 158);
+  --color-accent-ink: oklch(98.5% 0.006 150);
+  --color-accent-soft: oklch(92% 0.045 158);
+  --color-focus: oklch(55% 0.19 158);
+  --color-error: oklch(52% 0.17 28);
+  --color-success: oklch(50% 0.12 158);
+  --color-band-low: oklch(52% 0.12 158);
+  --color-band-mid: oklch(62% 0.10 90);
+  --color-band-high: oklch(56% 0.13 40);
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-outlier: 'Instrument Sans', system-ui, sans-serif;
+  --text-xs: 0.8rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-title: clamp(1.25rem, 1.1rem + 0.5vw, 1.5625rem);
+  --text-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-section: clamp(2.5rem, 1.9rem + 1.9vw, 3.25rem);
+  --text-display-s: clamp(2.75rem, 2rem + 2.6vw, 3.75rem);
+  --text-display: clamp(3rem, 1.9rem + 4vw, 5.25rem);
+  --tracking-display: -0.032em;
+
+  /* Space */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+  --container: 1440px;
+  --gutter: clamp(20px, 4.4vw, 64px);
+  --gap-columns: clamp(16px, 2.2vw, 32px);
+  --section-gap-s: clamp(72px, 8vw, 120px);
+  --section-gap: clamp(88px, 10vw, 144px);
+  --section-gap-l: clamp(104px, 12vw, 176px);
+
+  /* Shape */
+  --radius-card: 14px;
+  --radius-inner: 8px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --shadow-card: 0 1px 2px oklch(20% 0.01 160 / 0.06);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  /* Layers */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* Controls */
+  --control-h: 52px;
+  --control-h-s: 44px;
+}

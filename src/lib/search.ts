@@ -1,0 +1,74 @@
+import { catalog } from './catalog';
+import { parseQuery } from './parseQuery';
+import {
+  assertReasonAllowed,
+  bandFor,
+  excludedFrom,
+  laneScore,
+  quartile,
+  reasonFor,
+} from './score';
+import type { Lane, Product, SearchResult } from './types';
+
+function haystack(product: Product): string {
+  return [product.title, product.category, ...Object.values(product.specs).map(String)].join(' ').toLowerCase();
+}
+
+export function search(query: string, lane: Lane): SearchResult {
+  const parsed = parseQuery(query);
+  const pool = catalog.filter((product) => {
+    if (parsed.category && product.category !== parsed.category) return false;
+    if (parsed.budgetMax !== undefined && product.price > parsed.budgetMax) return false;
+    return true;
+  });
+  const activeKeywords = parsed.keywords.filter((keyword) =>
+    pool.some((product) => haystack(product).includes(keyword)),
+  );
+  const matched = pool.filter((product) =>
+    activeKeywords.every((keyword) => haystack(product).includes(keyword)),
+  );
+
+  const byCategory = new Map<string, Product[]>();
+  for (const product of matched) {
+    const group = byCategory.get(product.category) ?? [];
+    group.push(product);
+    byCategory.set(product.category, group);
+  }
+
+  const items: SearchResult['items'] = [];
+  let excludedCount = 0;
+  for (const group of byCategory.values()) {
+    const prices = group.map((product) => product.price).sort((a, b) => a - b);
+    const lowerQuartile = quartile(prices, 0.25);
+    const median = quartile(prices, 0.5);
+    const upperQuartile = quartile(prices, 0.75);
+    for (const product of group) {
+      if (excludedFrom(product, lane, lowerQuartile)) {
+        excludedCount += 1;
+        continue;
+      }
+      if (lane === 'cheap' && product.price > lowerQuartile) continue;
+      const reason = reasonFor(product, lane, lowerQuartile, median);
+      assertReasonAllowed(reason);
+      items.push({
+        product,
+        lane,
+        score: laneScore(product, lane, median),
+        band: bandFor(product.price, lowerQuartile, upperQuartile),
+        reason,
+      });
+    }
+  }
+
+  items.sort((a, b) => b.score - a.score);
+  return {
+    query: parsed,
+    lane,
+    items,
+    excludedCount,
+    fixture: items.every((item) => item.product.fixture),
+  };
+}
+
+export { parseQuery } from './parseQuery';
+export { catalog } from './catalog';
