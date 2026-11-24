@@ -7,10 +7,16 @@ interface Props {
   lane: Lane;
   onChange: (lane: Lane) => void;
   panelId: string;
+  /** Tab ids are `${idPrefix}-${lane}`; use a different prefix for each tab set on the page. */
+  idPrefix?: string;
+  /** Labels and hints; defaults to the product lanes. */
+  labels?: Record<Lane, { label: string; hint: string }>;
+  /** Accessible name of the tab list; defaults to the product sort label. */
+  label?: string;
 }
 
 /** WAI-ARIA tabs with roving focus: arrows, Home and End move between lanes. */
-export function LaneTabs({ lane, onChange, panelId, copy }: Props) {
+export function LaneTabs({ lane, onChange, panelId, copy, idPrefix = 'lane', labels = copy.lanes, label = copy.a11y.sort }: Props) {
   const refs = useRef<Record<Lane, HTMLButtonElement | null>>({ value: null, cheap: null, refined: null });
 
   function onKeyDown(e: KeyboardEvent<HTMLButtonElement>) {
@@ -27,7 +33,7 @@ export function LaneTabs({ lane, onChange, panelId, copy }: Props) {
   }
 
   return (
-    <div className="lanes" role="tablist" aria-label={copy.a11y.sort}>
+    <div className="lanes" role="tablist" aria-label={label}>
       {LANES.map((l) => {
         const selected = l === lane;
         return (
@@ -38,7 +44,7 @@ export function LaneTabs({ lane, onChange, panelId, copy }: Props) {
             }}
             type="button"
             role="tab"
-            id={`lane-${l}`}
+            id={`${idPrefix}-${l}`}
             aria-selected={selected}
             aria-controls={panelId}
             tabIndex={selected ? 0 : -1}
@@ -46,8 +52,8 @@ export function LaneTabs({ lane, onChange, panelId, copy }: Props) {
             onClick={() => onChange(l)}
             onKeyDown={onKeyDown}
           >
-            <span className="lane-label">{copy.lanes[l].label}</span>
-            <span className="lane-hint">{copy.lanes[l].hint}</span>
+            <span className="lane-label">{labels[l].label}</span>
+            <span className="lane-hint">{labels[l].hint}</span>
           </button>
         );
       })}

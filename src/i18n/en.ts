@@ -14,6 +14,7 @@ export const en = {
     language: 'Choose language', sort: 'Sort recommendations', newWindow: ' (opens in a new tab)',
   },
   nav: [
+    { href: '#cars', label: 'Used cars' },
     { href: '#rank', label: 'How we compare' },
     { href: '#rent', label: 'Rent check' },
     { href: '#data', label: 'Our sources' },
@@ -53,6 +54,26 @@ export const en = {
     value: { label: 'Value', hint: 'A balance of price and quality' },
     cheap: { label: 'Lower price', hint: 'Lower prices with key details checked' },
     refined: { label: 'Quality', hint: 'Reviews, condition and warranty come first' },
+  },
+  cars: {
+    title: 'Used cars worth a look',
+    lede: 'Cars for sale at New Zealand dealers whose sites allow collection. Each card says how its estimate was made, so you can check it.',
+    notice: (n: number, dealers: number, date: string) => `${n} cars from ${dealers} dealers, read ${date}. Prices are the dealer's asking price; ask about on-road costs.`,
+    sort: 'Sort used cars',
+    lanes: {
+      value: { label: 'Value', hint: 'Furthest below our estimate' },
+      cheap: { label: 'Lower price', hint: 'Cheapest, leaving out very old or high-kilometre cars' },
+      refined: { label: 'Newer', hint: 'Newest and lowest kilometres, hybrids and EVs first' },
+    },
+    count: (n: number) => `${n} ${n === 1 ? 'car' : 'cars'}`,
+    more: (n: number) => `Show ${n} more`,
+    empty: 'No cars to show yet.',
+    viewAt: (dealer: string) => `View at ${dealer}`,
+    captured: (date: string) => `Listing read ${date}`,
+    km: (n: string) => `${n} km`,
+    fuel: { petrol: 'Petrol', diesel: 'Diesel', hybrid: 'Hybrid', 'plug-in-hybrid': 'Plug-in hybrid', electric: 'Electric', lpg: 'LPG', other: 'Other fuel' },
+    transmission: { automatic: 'Automatic', manual: 'Manual', cvt: 'CVT', other: 'Other' },
+    method: 'How the estimate works: we fit one price model to every car we collected, using age, kilometres, body, fuel and make. Where five or more of the same model are for sale, we adjust by how that model is priced. It is a guide, not a valuation; check the car, its history and on-road costs with the dealer.',
   },
   rank: {
     title: 'How we compare',
@@ -149,6 +170,7 @@ export const en = {
     rows: [
       ['Sample products', 'In use', 'Products, merchants and prices on this page are fictional examples of how ranking works.'],
       ['Merchant product data', 'Planned', 'Merchants provide product data. We show its date and link to their website.'],
+      ['Dealer car listings', 'In use', 'Facts only (make, model, year, kilometres, price, fuel, body, region) from dealer sites with no rule against collection. No photos, descriptions or seller details. Each card links to the dealer.'],
       ['Public rental data', 'In use', 'MBIE bonds lodged by suburb for the quarter starting 1 July 2026, plus September 2026 territorial figures. CC BY 3.0 NZ, attribute MBIE. Suburb names: Stats NZ SA2 2019, CC BY 4.0.'],
       ['Sites that restrict collection', 'Excluded', 'We do not collect data where site terms or robots.txt prohibit it.'],
     ],

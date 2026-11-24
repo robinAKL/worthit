@@ -14,6 +14,7 @@ export const zhHans: Copy = {
   brand: 'WorthIt',
   brandLocal: '值不值',
   nav: [
+    { href: '#cars', label: '二手车' },
     { href: '#rank', label: '怎么排序' },
     { href: '#rent', label: '租金对照' },
     { href: '#data', label: '数据来源' },
@@ -54,6 +55,26 @@ export const zhHans: Copy = {
     cheap: { label: '便宜', hint: '同类里价格偏低，且没有风险信号' },
     refined: { label: '精致', hint: '关注反馈、成色描述和保修，价格不一定低' },
   } satisfies Record<Lane, { label: string; hint: string }>,
+  cars: {
+    title: '值得看的二手车',
+    lede: '来自允许采集的新西兰车行的在售车辆。每张卡片都写明估价怎么算的，你可以自己核对。',
+    notice: (n: number, dealers: number, date: string) => `${dealers} 家车行共 ${n} 台车，读取于 ${date}。价格是车行标价，上路费请向车行确认。`,
+    sort: '二手车排序方式',
+    lanes: {
+      value: { label: '性价比', hint: '比我们的估价低得最多' },
+      cheap: { label: '便宜', hint: '总价最低，排除车龄太老或里程太高的' },
+      refined: { label: '较新', hint: '车龄新、里程少，混动和电动优先' },
+    },
+    count: (n: number) => `${n} 台车`,
+    more: (n: number) => `再看 ${n} 台`,
+    empty: '暂时没有可显示的车。',
+    viewAt: (dealer: string) => `去 ${dealer} 查看`,
+    captured: (date: string) => `读取于 ${date}`,
+    km: (n: string) => `${n} 公里`,
+    fuel: { petrol: '汽油', diesel: '柴油', hybrid: '混动', 'plug-in-hybrid': '插电混动', electric: '纯电', lpg: 'LPG', other: '其他燃料' },
+    transmission: { automatic: '自动挡', manual: '手动挡', cvt: 'CVT', other: '其他' },
+    method: '估价方法：我们用采集到的全部在售车拟合一个价格模型，考虑车龄、公里数、车身、燃料和品牌。同款车在售 5 台以上时，再按这款车的实际定价修正。这只是参考，不是评估报告；车况、历史记录和上路费请向车行核实。',
+  },
   rank: {
     title: '我们怎么排序',
     lede: '每件商品只和同一品类的商品比较。每条推荐都写明理由，理由里的数字都能对回商品信息。',
@@ -149,6 +170,7 @@ export const zhHans: Copy = {
     rows: [
       ['示例数据', '正在使用', '当前页面上的商品、商家和价格都是示例，用来演示排序方式。'],
       ['商家主动提供的商品数据', '计划接入', '商家提交商品数据，我们标明采集时间，点击跳转到商家页面。'],
+      ['车行在售车辆', '正在使用', '只采事实字段（品牌、车型、年份、公里数、价格、燃料、车身、地区），来源是没有禁止采集的车行网站。不采图片、描述和卖家信息。每张卡片链接到车行页面。'],
       ['政府公开租金数据', '正在使用', 'MBIE 2026 年 7 月 1 日起这个季度的郊区新登记押金，以及 2026 年 9 月的地区数字。CC BY 3.0 NZ，署名 MBIE。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。'],
       ['明确禁止抓取的网站', '不收录', '对方条款或 robots.txt 禁止的，我们不抓取。'],
     ],

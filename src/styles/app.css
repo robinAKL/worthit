@@ -447,6 +447,43 @@
   color: var(--color-paper);
 }
 
+/* Used cars */
+.cars {
+  padding-block: var(--section-gap-s);
+  border-block-start: var(--rule-hair) solid var(--color-rule);
+  scroll-margin-top: 64px;
+}
+.car-head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+.car-mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-inner);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.car-variant {
+  margin-block-start: var(--space-2xs);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+.cars-method {
+  margin-block-start: var(--space-xl);
+  max-width: 72ch;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  line-height: 1.6;
+}
+
 /* Split + table sections */
 .rank,
 .data {

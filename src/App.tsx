@@ -6,6 +6,7 @@ import { LanguageSelect } from './components/LanguageSelect';
 import { LaneTabs } from './components/LaneTabs';
 import { ProductCard } from './components/ProductCard';
 import { RentCheck } from './components/RentCheck';
+import { CarSection } from './components/CarSection';
 
 const PANEL_ID = 'results-panel';
 const PAGE_SIZE = 8;
@@ -193,6 +194,8 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        <CarSection copy={copy} locale={locale} />
 
         <section id="rank" className="rank" aria-labelledby="rank-title">
           <div className="wrap split">
