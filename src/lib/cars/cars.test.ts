@@ -242,3 +242,16 @@ describe('lanes v3 (T-42): "lower price" is not the worst, "good condition" is n
     }
   });
 });
+
+describe('one rank per card (T-38 review)', () => {
+  it('no reason sentence states a rank of its own; the panel rank is the only one', () => {
+    for (const lane of ['value', 'cheap', 'refined'] as const) {
+      for (const pick of carResults(lane).picks) {
+        for (const locale of ['en', 'zh-Hans'] as const) {
+          const text = carReason(pick, locale);
+          expect(text).not.toMatch(/number \d+ by price|#\d+ of|第 \d+ 便宜|第 \d+ 低|里第 \d+/);
+        }
+      }
+    }
+  });
+});
