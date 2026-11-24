@@ -287,3 +287,19 @@ describe('Lower price: the floor holds on every path (T-42 review)', () => {
     }
   });
 });
+
+describe('Lower price: group floor and order on the unranked path (T-42 review 2)', () => {
+  it("Codex's five desks: drops the $1 outlier and lists the rest cheapest first", () => {
+    const base = { ...productsIn('laptop')[0], category: 'desks', fixture: false, source: 'feed' as const, imageCount: 1, specs: { brand: 'Test', stock: 'in stock' } };
+    const desks = [130, 120, 110, 100, 1].map((price, i) => ({ ...base, id: `desk-${i}`, title: `Example Desk ${i}`, price }));
+    expect(search('', 'cheap', 'en', desks).items.map((h) => h.product.price)).toEqual([100, 110, 120, 130]);
+  });
+
+  it('the live cheap lane is in price order within ranked and within unranked items', () => {
+    const items = search('', 'cheap', 'en').items;
+    for (const ranked of [true, false]) {
+      const prices = items.filter((h) => (h.ranked !== false) === ranked).map((h) => h.product.price);
+      expect(prices).toEqual([...prices].sort((a, b) => a - b));
+    }
+  });
+});

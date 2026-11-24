@@ -10,6 +10,7 @@ import { querySelectsCars } from './cars/query';
 import {
   assertReasonAllowed,
   bandFor,
+  CHEAP_FLOOR,
   excludedFrom,
   hasSpecs,
   isAccessory,
@@ -222,13 +223,26 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   // whichever path above it came through (ranked, unranked, outlier or unsized).
   if (lane === 'cheap') {
     const before = items.length;
-    const kept = items.filter((item) => !failsCheapFloor(item.product));
+    let kept = items.filter((item) => !failsCheapFloor(item.product));
+    // A price far below the middle of its comparable group is usually another product or an error.
+    const groupPrices = new Map<string, number[]>();
+    for (const item of kept) {
+      const key = comparisonKey(item.product);
+      groupPrices.set(key, [...(groupPrices.get(key) ?? []), item.product.price]);
+    }
+    kept = kept.filter((item) => {
+      const prices = groupPrices.get(comparisonKey(item.product))!;
+      if (prices.length < 3) return true;
+      return item.product.price >= quartile([...prices].sort((x, y) => x - y), 0.5) * (1 - CHEAP_FLOOR);
+    });
     excludedCount += before - kept.length;
     items.length = 0;
     items.push(...kept);
+    // Lower price is lowest total price first, ranked items before unranked ones.
+    items.sort((a, b) => Number(b.ranked !== false) - Number(a.ranked !== false) || a.product.price - b.product.price);
+  } else {
+    items.sort((a, b) => Number(b.ranked !== false) - Number(a.ranked !== false) || b.score - a.score);
   }
-
-  items.sort((a, b) => Number(b.ranked !== false) - Number(a.ranked !== false) || b.score - a.score);
   return {
     query: parsed,
     lane,
