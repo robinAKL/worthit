@@ -74,6 +74,14 @@ describe('used-car valuation', () => {
     expect(zh).toMatch(/低 \d+%/);
   });
 
+  it('leaves a car far below its estimate out of the value lane, but still lists it by price', () => {
+    const cars = fleet();
+    const odd = cars.find((c) => c.make === 'Honda' && c.year === 2021)!;
+    odd.priceNzd = Math.round(odd.priceNzd * 0.4);
+    expect(rankCars(cars, 'value', 2026).some((p) => p.car.id === odd.id)).toBe(false);
+    expect(rankCars(cars, 'cheap', 2026).some((p) => p.car.id === odd.id)).toBe(true);
+  });
+
   it('keeps the cheap lane to sensible cars and the refined lane to newer, lower-kilometre ones', () => {
     const cars = fleet();
     cars.push({ ...cars[0], id: 'tired', year: 2004, odometerKm: 310_000, priceNzd: 2_000 });

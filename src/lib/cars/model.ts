@@ -15,6 +15,11 @@ import type { Fuel, Lane, Vehicle } from '../types';
 export const MIN_GROUP = 5;
 export const CHEAP_MAX_KM = 250_000;
 export const CHEAP_MIN_YEAR = 2005;
+/**
+ * A car priced more than this far below its estimate is left out of the Value lane: the model
+ * cannot see trim, cab style or condition, so a gap that large is more often a mismatch than a bargain.
+ */
+export const VALUE_MAX_GAP = 0.35;
 
 export type BodyClass = 'hatch' | 'sedan' | 'wagon' | 'suv' | 'ute' | 'van' | 'coupe' | 'other';
 export type FuelClass = 'petrol' | 'diesel' | 'hybrid' | 'plugin' | 'electric';
@@ -238,7 +243,7 @@ export function rankCars(all: Vehicle[], lane: Lane, nowYear = new Date().getFul
   const score = (c: Car): number | null => {
     const v = values.get(c.id)!;
     // A value claim needs enough cars of the same make behind the estimate.
-    if (lane === 'value') return knownMakes.has(c.make.toLowerCase()) || v.groupSize > 0 ? -v.gap : null;
+    if (lane === 'value') return (knownMakes.has(c.make.toLowerCase()) || v.groupSize > 0) && v.gap >= -VALUE_MAX_GAP ? -v.gap : null;
     if (lane === 'cheap') {
       if ((c.odometerKm ?? Infinity) > CHEAP_MAX_KM || c.year < CHEAP_MIN_YEAR) return null;
       return -c.priceNzd;

@@ -62,7 +62,7 @@ export const en = {
     sort: 'Sort used cars',
     lanes: {
       value: { label: 'Value', hint: 'Furthest below our estimate' },
-      cheap: { label: 'Lower price', hint: 'Cheapest, leaving out very old or high-kilometre cars' },
+      cheap: { label: 'Lower price', hint: 'Lower asking prices first, leaving out very old or high-kilometre cars' },
       refined: { label: 'Newer', hint: 'Newest and lowest kilometres, hybrids and EVs first' },
     },
     count: (n: number) => `${n} ${n === 1 ? 'car' : 'cars'}`,
@@ -73,7 +73,7 @@ export const en = {
     km: (n: string) => `${n} km`,
     fuel: { petrol: 'Petrol', diesel: 'Diesel', hybrid: 'Hybrid', 'plug-in-hybrid': 'Plug-in hybrid', electric: 'Electric', lpg: 'LPG', other: 'Other fuel' },
     transmission: { automatic: 'Automatic', manual: 'Manual', cvt: 'CVT', other: 'Other' },
-    method: 'How the estimate works: we fit one price model to every car we collected, using age, kilometres, body, fuel and make. Where five or more of the same model are for sale, we adjust by how that model is priced. It is a guide, not a valuation; check the car, its history and on-road costs with the dealer.',
+    method: 'How the estimate works: we fit one price model to every car we collected, using age, kilometres, body, fuel and make. Where five or more of the same model are for sale, we adjust by how that model is priced. A car more than 35% below its estimate is left out of Value, because the model cannot see trim, cab style or condition. It is a guide, not a valuation; check the car, its history and on-road costs with the dealer.',
   },
   rank: {
     title: 'How we compare',

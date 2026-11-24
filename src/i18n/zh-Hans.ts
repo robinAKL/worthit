@@ -62,7 +62,7 @@ export const zhHans: Copy = {
     sort: '二手车排序方式',
     lanes: {
       value: { label: '性价比', hint: '比我们的估价低得最多' },
-      cheap: { label: '便宜', hint: '总价最低，排除车龄太老或里程太高的' },
+      cheap: { label: '便宜', hint: '按标价从低到高，排除车龄太老或里程太高的' },
       refined: { label: '较新', hint: '车龄新、里程少，混动和电动优先' },
     },
     count: (n: number) => `${n} 台车`,
@@ -73,7 +73,7 @@ export const zhHans: Copy = {
     km: (n: string) => `${n} 公里`,
     fuel: { petrol: '汽油', diesel: '柴油', hybrid: '混动', 'plug-in-hybrid': '插电混动', electric: '纯电', lpg: 'LPG', other: '其他燃料' },
     transmission: { automatic: '自动挡', manual: '手动挡', cvt: 'CVT', other: '其他' },
-    method: '估价方法：我们用采集到的全部在售车拟合一个价格模型，考虑车龄、公里数、车身、燃料和品牌。同款车在售 5 台以上时，再按这款车的实际定价修正。这只是参考，不是评估报告；车况、历史记录和上路费请向车行核实。',
+    method: '估价方法：我们用采集到的全部在售车拟合一个价格模型，考虑车龄、公里数、车身、燃料和品牌。同款车在售 5 台以上时，再按这款车的实际定价修正。比估价低 35% 以上的车不放进「性价比」栏，因为模型看不出配置、车型版本和车况，差这么多往往不是捡漏。这只是参考，不是评估报告；车况、历史记录和上路费请向车行核实。',
   },
   rank: {
     title: '我们怎么排序',
