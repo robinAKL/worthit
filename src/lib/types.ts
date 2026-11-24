@@ -1,3 +1,5 @@
+import type { ProductSpec } from './specs';
+
 /**
  * WorthIt shared contract.
  *
@@ -60,6 +62,8 @@ export interface Product {
   warrantyMonths?: number;
   /** ISO date the price was captured. */
   capturedAt: string;
+  /** Family, style and size read from the title, for like-for-like comparison. */
+  spec?: ProductSpec;
   /** Where the record came from. */
   source: 'fixture' | 'feed';
   /** True for sample data. Captured merchant rows are false. */

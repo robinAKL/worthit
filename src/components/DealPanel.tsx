@@ -35,6 +35,8 @@ interface PanelProps {
   confidence: Confidence;
   confidenceText: string;
   confidenceLabel: string;
+  /** Formats strip values; defaults to whole dollars. Per-unit groups pass e.g. "$3.05/L". */
+  format?: (n: number) => string;
 }
 
 const W = 240;
@@ -45,7 +47,7 @@ const PAD = 8;
  * One dot per comparable listing on a price line, this one highlighted, the reference as a tick.
  * Below it: where this one ranks, and how firm the comparison is.
  */
-export function DealPanel({ cohort, price, reference, referenceLabel, rankText, stripLabel, confidence, confidenceText, confidenceLabel }: PanelProps) {
+export function DealPanel({ cohort, price, reference, referenceLabel, rankText, stripLabel, confidence, confidenceText, confidenceLabel, format = formatNzd }: PanelProps) {
   const values = [...cohort.prices, reference];
   const min = Math.min(...values);
   const max = Math.max(...values);
@@ -66,13 +68,13 @@ export function DealPanel({ cohort, price, reference, referenceLabel, rankText, 
         <circle cx={x(price)} cy={H / 2} r={6.5} className="deal-strip-this" />
       </svg>
       <div className="deal-strip-scale" aria-hidden="true">
-        <span>{formatNzd(min)}</span>
+        <span>{format(min)}</span>
         <span className="deal-legend">
           <span className="deal-legend-this" />
           <span className="deal-legend-ref" />
           {referenceLabel}
         </span>
-        <span>{formatNzd(max)}</span>
+        <span>{format(max)}</span>
       </div>
       <p className="deal-rank">{rankText}</p>
       <p className="deal-confidence">

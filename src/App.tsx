@@ -2,6 +2,8 @@ import { useDeferredValue, useMemo, useState, type FormEvent } from 'react';
 import { comparisonKey, search } from './lib/search';
 import type { Lane, Recommendation } from './lib/types';
 import { priceRankIn, type Cohort } from './lib/deal';
+import { isUnitComparable } from './lib/specCompare';
+import { unitPrice } from './lib/specs';
 import { DICTIONARIES, useLocale, type Locale } from './i18n';
 import { LanguageSelect } from './components/LanguageSelect';
 import { LaneTabs } from './components/LaneTabs';
@@ -23,15 +25,18 @@ function formatDate(locale: Locale, iso?: string) {
 
 /** Each item's comparable prices: the other items in its comparison group in this result set. */
 function cohorts(items: Recommendation[]): Cohort[] {
+  // Sized families (fridges, washers...) compare price per unit; everything else compares price.
+  const valueOf = (p: Recommendation['product']) => (isUnitComparable(p) ? unitPrice(p.price, p.spec)! : p.price);
   const groups = new Map<string, number[]>();
   for (const { product: p } of items) {
     const key = comparisonKey(p);
-    groups.set(key, [...(groups.get(key) ?? []), p.price]);
+    groups.set(key, [...(groups.get(key) ?? []), valueOf(p)]);
   }
-  for (const prices of groups.values()) prices.sort((x, y) => x - y);
+  for (const values of groups.values()) values.sort((x, y) => x - y);
   return items.map(({ product: p }) => {
     const prices = groups.get(comparisonKey(p))!;
-    return { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, p.price) };
+    const base: Cohort = { kind: 'group', label: p.category, prices, rank: priceRankIn(prices, valueOf(p)) };
+    return isUnitComparable(p) ? { ...base, unit: p.spec.unit, size: p.spec.size, family: p.spec.family } : base;
   });
 }
 

@@ -4,6 +4,7 @@ import type { Recommendation } from '../lib/types';
 import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
+import { familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
 
 /** Above this p90/p10 price ratio a group is too mixed to call one price typical. */
 const MAX_SPREAD = 3;
@@ -39,9 +40,26 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
   const mixed = size >= 3 && p10 > 0 && p90 / p10 > MAX_SPREAD;
   const comparable = size >= 3 && !mixed;
   const typical = median(cohort.prices);
-  const tier = dealTier(p.price / typical - 1);
-  const diff = savings(p.price, typical);
-  const deltaText = tier === 'near' ? d.near('product') : diff > 0 ? d.under(nzd.format(diff), 'product') : d.over(nzd.format(-diff), 'product');
+  // Sized families (fridges per litre, washers per kg) compare price per unit, then show the
+  // difference in dollars for this item's own size.
+  const perUnit = cohort.unit && cohort.size ? { unit: cohort.unit, size: cohort.size } : null;
+  const own = perUnit ? p.price / perUnit.size : p.price;
+  const tier = dealTier(own / typical - 1);
+  const diff = savings(p.price, perUnit ? typical * perUnit.size : typical);
+  const sizeText = perUnit ? sizeLabel(perUnit.size, perUnit.unit, locale) : '';
+  const deltaText = perUnit
+    ? tier === 'near'
+      ? d.nearForSize(sizeText)
+      : diff > 0
+        ? d.underForSize(nzd.format(diff), sizeText)
+        : d.overForSize(nzd.format(-diff), sizeText)
+    : tier === 'near'
+      ? d.near('product')
+      : diff > 0
+        ? d.under(nzd.format(diff), 'product')
+        : d.over(nzd.format(-diff), 'product');
+  const unitShort = perUnit ? (perUnit.unit === 'place' ? 'set' : perUnit.unit) : '';
+  const format = perUnit ? (n: number) => `$${n.toFixed(n < 100 ? 2 : 0)}/${unitShort}` : (n: number) => nzd.format(n);
   const confidence = mixed ? 1 : confidenceFrom(size);
   const specs = Object.entries(p.specs)
     .map(([key, value]) => [key, p.localizedSpecs?.[locale]?.[key] ?? value] as const)
@@ -55,7 +73,11 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
       <CardMedia
         src={p.imageUrl}
         mark={String(p.specs.brand ?? p.category.replace(/-/g, ' '))}
-        caption={p.category.replace(/-/g, ' ')}
+        caption={
+          p.spec?.size && p.spec.unit
+            ? [p.spec.style?.replace(/-/g, ' '), sizeLabel(p.spec.size, p.spec.unit, locale)].filter(Boolean).join(' · ')
+            : p.category.replace(/-/g, ' ')
+        }
         tone={toneOf(p.category)}
         badge={comparable ? <DealBadge tier={tier} label={d.tier.product[tier]} /> : undefined}
       />
@@ -77,10 +99,17 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
       {comparable || mixed ? (
         <DealPanel
           cohort={cohort}
-          price={p.price}
+          price={own}
           reference={typical}
-          referenceLabel={`${d.typicalMark} ${nzd.format(typical)}`}
-          rankText={mixed ? d.mixed(nzd.format(cohort.prices[0]), nzd.format(cohort.prices[size - 1])) : d.rankGroup(cohort.rank, size)}
+          referenceLabel={`${d.typicalMark} ${format(typical)}`}
+          format={format}
+          rankText={
+            mixed
+              ? d.mixed(format(cohort.prices[0]), format(cohort.prices[size - 1]))
+              : perUnit
+                ? d.rankUnit(cohort.rank, size, familyName(cohort.family ?? '', locale), UNIT_NAME[locale][perUnit.unit])
+                : d.rankGroup(cohort.rank, size)
+          }
           stripLabel={d.strip(cohort.rank, size)}
           confidence={confidence}
           confidenceText={mixed ? d.mixedNote : d.confidence.product(confidence, size)}

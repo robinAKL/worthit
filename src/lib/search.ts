@@ -1,6 +1,9 @@
 import { catalog } from './catalog';
 import ascentFeed from '../data/feeds/ascent.json';
 import babyFeed from '../data/feeds/baby-factory.json';
+import aiSpecs from '../data/specs/ai.json';
+import { specFromTitle, UNRANKED, type ProductSpec } from './specs';
+import { isUnitComparable, MIN_UNIT_GROUP, rankUnitGroup } from './specCompare';
 import { parseQuery } from './parseQuery';
 import {
   assertReasonAllowed,
@@ -28,8 +31,16 @@ function haystack(product: Product): string {
     .toLowerCase();
 }
 
+/** Rules first; a cached AI reading (verified against the title at collection time) only fills a gap. */
+function withSpec(product: Product): Product {
+  const fromRules = specFromTitle(product.title);
+  const fromAi = (aiSpecs as Record<string, ProductSpec | false>)[product.id] || undefined;
+  const spec = fromRules?.size || !fromAi ? (fromRules ?? undefined) : fromAi;
+  return spec ? { ...product, spec } : product;
+}
+
 function liveProducts(): Product[] {
-  return [...ascentFeed.products, ...babyFeed.products] as Product[];
+  return ([...ascentFeed.products, ...babyFeed.products] as Product[]).map(withSpec);
 }
 
 /** Words that should hit the English titles we actually stored. */
@@ -52,6 +63,8 @@ function noMatches(parsed: ReturnType<typeof parseQuery>, lane: Lane): SearchRes
 export function comparisonKey(product: Product): string {
   const base = `${product.fixture ? 'sample' : 'live'}:${product.category}`;
   if (product.fixture) return base;
+  // Known product families compare like with like: fridges with fridges, per litre.
+  if (product.spec) return UNRANKED.has(product.spec.family) ? `live:${product.spec.family}:${product.id}` : `spec:${product.spec.family}`;
   const kind = titleKind(product.title);
   return kind ? `${base}:${kind}` : base;
 }
@@ -90,6 +103,11 @@ export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCAL
   const items: SearchResult['items'] = [];
   let excludedCount = 0;
   for (const group of byCategory.values()) {
+    const sized = group.filter(isUnitComparable);
+    if (sized.length >= MIN_UNIT_GROUP && sized.length === group.length) {
+      items.push(...rankUnitGroup(group, lane, locale));
+      continue;
+    }
     if (!group[0].fixture && group.length < 5) {
       for (const product of group) {
         if (product.imageCount < 1) {

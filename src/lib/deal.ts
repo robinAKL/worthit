@@ -53,4 +53,9 @@ export interface Cohort {
   rank: number;
   /** Year span for a segment, e.g. [2016, 2020]. */
   years?: [number, number];
+  /** When set, `prices` are prices per unit (e.g. NZD per litre) and `size` is this item's size. */
+  unit?: import('./specs').Unit;
+  size?: number;
+  /** Product family for per-unit groups, e.g. "fridge". */
+  family?: string;
 }
