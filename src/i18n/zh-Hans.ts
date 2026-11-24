@@ -66,7 +66,7 @@ export const zhHans: Copy = {
   lanes: {
     value: { label: '性价比', hint: '比可比商品的中位价低得最多' },
     cheap: { label: '便宜', hint: '先排除配件、缺货、缺规格和低得反常的价格，再按价格从低到高' },
-    refined: { label: '优质', hint: '价格相近时，容量、节能星级或保修更高的靠前' },
+    refined: { label: '优质（规格更高）', hint: '价格相近时，容量、节能星级或保修更高的靠前' },
   } satisfies Record<Lane, { label: string; hint: string }>,
   ask: {
     open: '提个问题',
