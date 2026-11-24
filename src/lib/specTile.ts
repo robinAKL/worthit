@@ -29,6 +29,7 @@ const CATEGORY_NAME: Record<Locale, Record<string, string>> = {
     laptop: 'Laptop',
     phone: 'Phone',
     furniture: 'Furniture',
+    'web-ip-cameras': 'Web & IP camera',
   },
   'zh-Hans': {
     whiteware: '家电',
@@ -43,6 +44,7 @@ const CATEGORY_NAME: Record<Locale, Record<string, string>> = {
     laptop: '笔记本电脑',
     phone: '手机',
     furniture: '家具',
+    'web-ip-cameras': '网络摄像头',
   },
 };
 

@@ -252,3 +252,12 @@ describe('sample products only fill a gap (T-37)', () => {
     expect(search('', 'value').items.every((hit) => !hit.product.fixture)).toBe(true);
   });
 });
+
+describe('Chinese words find English listings', () => {
+  it('finds strollers for 婴儿车 and fridges for 冰箱', () => {
+    const strollers = search('婴儿车', 'value', 'zh-Hans').items;
+    expect(strollers.length).toBeGreaterThan(0);
+    expect(strollers.every((hit) => /stroller|pram|pushchair|buggy/i.test(`${hit.product.title} ${hit.product.category}`))).toBe(true);
+    expect(search('冰箱', 'value', 'zh-Hans').items.length).toBeGreaterThan(0);
+  });
+});

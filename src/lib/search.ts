@@ -49,6 +49,22 @@ const ALIASES: Record<string, readonly string[]> = {
   refrigerator: ['refrigerator', 'fridge', 'freezer'],
   freezer: ['freezer', 'fridge'],
   冰箱: ['fridge', 'refrigerator', 'freezer'],
+  // Chinese words for the categories we collect, so a search in Chinese finds English listings.
+  冷柜: ['freezer'],
+  冰柜: ['freezer'],
+  洗衣机: ['washing machine', 'washer', 'front load', 'top load'],
+  干衣机: ['dryer'],
+  微波炉: ['microwave'],
+  洗碗机: ['dishwasher'],
+  烤箱: ['oven'],
+  婴儿车: ['stroller', 'pram', 'pushchair', 'buggy'],
+  推车: ['stroller', 'pram', 'pushchair', 'buggy'],
+  安全座椅: ['car seat', 'carseat', 'booster'],
+  增高座椅: ['booster'],
+  毛巾: ['towel', 'washer'],
+  襁褓: ['wrap', 'swaddle'],
+  摄像头: ['camera', 'webcam'],
+  监控: ['camera', 'security'],
 };
 
 function matchesKeyword(product: Product, keyword: string): boolean {
@@ -84,7 +100,7 @@ export function comparisonKey(product: Product): string {
 
 function titleKind(title: string): string {
   const value = title.toLowerCase();
-  if (/\b(filter|filters|accessory|accessories|kit|cover)\b/.test(value)) return 'accessory';
+  if (/\b(filter|filters|accessory|accessories|kit|cover|mount|mounting|bracket|housing|adapter|cable|injector|power supply)\b/.test(value)) return 'accessory';
   if (/refrigerator|\bfridge\b|\bfreezer\b/.test(value)) return 'refrigerator';
   if (/\bmicrowave\b/.test(value)) return 'microwave';
   if (/washing machine|\bdishwasher\b|\bwasher\b/.test(value)) return 'laundry';
