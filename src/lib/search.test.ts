@@ -89,6 +89,16 @@ describe('search', () => {
     expect(desks.items.every((hit) => hit.product.category === 'furniture')).toBe(true);
   });
 
+  it('keeps products with fewer than three photos out of every lane', () => {
+    for (const lane of ['value', 'cheap', 'refined'] as const) {
+      const result = search('', lane);
+      expect(result.items.every((hit) => hit.product.imageCount >= 3)).toBe(true);
+      expect(result.items.some((hit) => hit.product.id === 'laptop-01')).toBe(false);
+      expect(result.items.some((hit) => hit.product.id === 'phone-01')).toBe(false);
+      expect(result.items.some((hit) => hit.product.id === 'furn-01')).toBe(false);
+    }
+  });
+
   it('uses the lower quartile as the cheap cutoff', () => {
     const group = productsIn('laptop');
     const prices = group.map((product) => product.price).sort((a, b) => a - b);

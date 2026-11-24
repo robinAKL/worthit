@@ -36,10 +36,9 @@ export function bandFor(price: number, lowerQuartile: number, upperQuartile: num
 
 export function excludedFrom(product: Product, lane: Lane, lowerQuartile: number): boolean {
   const reviews = product.reviewCount ?? 0;
+  if (product.imageCount < 3) return true;
   if (lane === 'cheap') {
-    if (product.imageCount < 3) return true;
-    if (reviews === 0 && product.price < lowerQuartile * 0.7) return true;
-    return false;
+    return reviews === 0 && product.price < lowerQuartile * 0.7;
   }
   if (lane === 'value') {
     return !hasSpecs(product);
