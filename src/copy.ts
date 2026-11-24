@@ -13,7 +13,7 @@ export const copy = {
     title: '买之前，先看值不值',
     lede: '说出你想要的东西，我们按性价比、价格或做工替你排好。',
     inputLabel: '你想要什么？',
-    placeholder: '比如：1500 刀以内、适合学生的笔记本',
+    placeholder: '比如：1500 刀以内的学生笔记本',
     submit: '帮我比一比',
     examplesLabel: '试试这些',
     examples: ['1500 刀以内的笔记本', '适合老人用的手机', '小公寓用的书桌'],
