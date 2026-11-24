@@ -9,6 +9,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ADAPTERS } from './adapters/index.mjs';
 import { USER_AGENT } from './core/policy.mjs';
+import { recordHistory } from './history.mjs';
 import { runAdapter } from './core/runner.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -59,6 +60,7 @@ for (const adapter of ADAPTERS) {
         return { ...rest, currency: 'NZD' };
       });
       writeFileSync(join(root, 'src', 'data', 'feeds', `${adapter.id}.json`), `${JSON.stringify({ products: clean }, null, 2)}\n`);
+      recordHistory(root, adapter.id, clean);
       stats.saved = clean.length;
     } else {
       const dir = join(root, 'src', 'data', 'feeds', 'cars');

@@ -3,6 +3,7 @@ import { countsAsSpec, unrankedReason } from '../lib/score';
 import type { Recommendation } from '../lib/types';
 import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
+import { historySentence } from '../lib/historyView';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
 import { familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
 
@@ -67,6 +68,7 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
     .slice(0, 3);
 
   const captured = formatCaptured(locale, p.capturedAt);
+  const history = historySentence(p, copy.results.history, (n) => nzd.format(n));
 
   return (
     <article className="card">
@@ -95,6 +97,7 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
           </span>
         ) : null}
       </div>
+      {history ? <p className="card-history">{history}</p> : null}
 
       {comparable || mixed ? (
         <DealPanel

@@ -508,6 +508,12 @@
   color: var(--color-ink-2);
 }
 
+.card-history {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-ink-2);
+}
 .card-flag {
   margin: 0;
   font-size: var(--text-xs);
