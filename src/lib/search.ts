@@ -8,13 +8,14 @@ import {
   quartile,
   reasonFor,
 } from './score';
-import type { Lane, Product, SearchResult } from './types';
+import type { Lane, Locale, Product, SearchResult } from './types';
+import { DEFAULT_LOCALE } from './types';
 
 function haystack(product: Product): string {
   return [product.title, product.category, ...Object.values(product.specs).map(String)].join(' ').toLowerCase();
 }
 
-export function search(query: string, lane: Lane): SearchResult {
+export function search(query: string, lane: Lane, locale: Locale = DEFAULT_LOCALE): SearchResult {
   const parsed = parseQuery(query);
   const pool = catalog.filter((product) => {
     if (parsed.category && product.category !== parsed.category) return false;
@@ -48,7 +49,7 @@ export function search(query: string, lane: Lane): SearchResult {
         continue;
       }
       if (lane === 'cheap' && product.price > lowerQuartile) continue;
-      const reason = reasonFor(product, lane, lowerQuartile, median);
+      const reason = reasonFor(product, lane, lowerQuartile, median, locale);
       assertReasonAllowed(reason);
       items.push({
         product,

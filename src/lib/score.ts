@@ -1,12 +1,16 @@
-import type { Band, Lane, Product } from './types';
+import type { Band, Lane, Locale, Product } from './types';
 
-const BANNED = ['最便宜', '最精致', '全市场', '保证便宜', '最优'];
+const BANNED = ['最便宜', '最精致', '全市场', '保证便宜', '最优', 'cheapest', 'lowest in market'];
 
 export function assertReasonAllowed(reason: string): void {
+  const lower = reason.toLowerCase();
   for (const phrase of BANNED) {
-    if (reason.includes(phrase)) {
+    if (lower.includes(phrase.toLowerCase())) {
       throw new Error(`reason contains banned phrase: ${phrase}`);
     }
+  }
+  if (/\bbest\b/i.test(reason)) {
+    throw new Error('reason contains banned phrase: best');
   }
 }
 
@@ -56,18 +60,33 @@ export function laneScore(product: Product, lane: Lane, median: number): number 
   return reviews * 10 + product.imageCount * 8 + (conditionIsSpecific(product) ? 40 : 0) + (product.warrantyMonths ?? 0);
 }
 
-export function reasonFor(product: Product, lane: Lane, lowerQuartile: number, median: number): string {
+export function reasonFor(
+  product: Product,
+  lane: Lane,
+  lowerQuartile: number,
+  median: number,
+  locale: Locale,
+): string {
   const price = Math.round(product.price);
   const q1 = Math.round(lowerQuartile);
   const mid = Math.round(median);
   const reviews = product.reviewCount ?? 0;
+  const specCount = Object.keys(product.specs).filter((key) => key !== 'note').length;
+  if (locale === 'zh-Hans') {
+    if (lane === 'cheap') {
+      return `标价 ${price} 纽币，低于同组示例价的下四分位 ${q1}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+    }
+    if (lane === 'value') {
+      return `标价 ${price} 纽币，同组示例中位是 ${mid}。规格写了 ${specCount} 项，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+    }
+    const note = String(product.specs.note ?? '');
+    return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。这是示例价，不是在售价。`;
+  }
   if (lane === 'cheap') {
-    return `标价 ${price} 纽币，低于同组示例价的下四分位 ${q1}。图片 ${product.imageCount} 张，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+    return `Listed at ${price} NZD, under the sample lower quartile of ${q1}. ${product.imageCount} photos, ${reviews} reviews. Sample price, not a live price.`;
   }
   if (lane === 'value') {
-    const specCount = Object.keys(product.specs).filter((key) => key !== 'note').length;
-    return `标价 ${price} 纽币，同组示例中位是 ${mid}。规格写了 ${specCount} 项，反馈 ${reviews} 条。这是示例价，不是在售价。`;
+    return `Listed at ${price} NZD. The sample median is ${mid}. ${specCount} specs filled in, ${reviews} reviews. Sample price, not a live price.`;
   }
-  const note = String(product.specs.note ?? '');
-  return `反馈 ${reviews} 条，成色写明：${note} 标价 ${price} 纽币，不是同组里最低的。这是示例价，不是在售价。`;
+  return `${reviews} reviews, and the condition is written out in detail. Listed at ${price} NZD, not the lowest price in this sample. Sample price, not a live price.`;
 }

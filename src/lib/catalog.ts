@@ -1,7 +1,13 @@
 import type { Product } from './types';
 
 const capturedAt = '2026-11-24';
-const shops = ['示例商家甲', '示例商家乙', '示例商家丙'] as const;
+const shops = ['Sample Store A', 'Sample Store B', 'Sample Store C'] as const;
+
+export const merchantZh: Record<string, string> = {
+  'Sample Store A': '示例商家甲',
+  'Sample Store B': '示例商家乙',
+  'Sample Store C': '示例商家丙',
+};
 
 function item(
   partial: Omit<Product, 'fixture' | 'source' | 'capturedAt' | 'merchant' | 'url' | 'condition'> & {
@@ -337,6 +343,44 @@ export const catalog: Product[] = [
     rating: 5,
   }),
 ];
+
+const englishTitles: Record<string, string> = {
+  'laptop-01': '14-inch sample laptop, 8GB memory',
+  'laptop-02': '14-inch sample laptop, 16GB memory',
+  'laptop-03': '14-inch sample laptop, 16GB, thin',
+  'laptop-04': '15-inch sample laptop, 16GB memory',
+  'laptop-05': '14-inch sample laptop, 32GB memory',
+  'laptop-06': '14-inch sample laptop, specs left blank',
+  'laptop-07': '16-inch sample laptop, 32GB memory',
+  'laptop-08': '14-inch sample laptop, higher spec',
+  'laptop-09': '16-inch sample laptop for creative work',
+  'laptop-10': '16-inch sample laptop, vague condition',
+  'phone-01': 'Sample phone, 128GB, no photos',
+  'phone-02': 'Sample phone, 128GB',
+  'phone-03': 'Sample phone, 256GB',
+  'phone-04': 'Sample phone, 256GB, specs left blank',
+  'phone-05': 'Sample phone, 256GB, everyday use',
+  'phone-06': 'Sample phone, 512GB',
+  'phone-07': 'Sample phone, 512GB, large screen',
+  'phone-08': 'Sample phone, 512GB, nearly new',
+  'phone-09': 'Sample phone, 1TB',
+  'phone-10': 'Sample phone, 1TB, vague condition',
+  'furn-01': 'Sample desk, no photos',
+  'furn-02': 'Sample desk, 100cm',
+  'furn-03': 'Sample chair',
+  'furn-04': 'Sample sofa, two seats',
+  'furn-05': 'Sample desk, specs left blank',
+  'furn-06': 'Sample sofa, three seats',
+  'furn-07': 'Sample desk, solid wood',
+  'furn-08': 'Sample sofa, nearly new',
+  'furn-09': 'Sample dining set, table and four chairs',
+  'furn-10': 'Sample sofa, vague condition',
+};
+
+for (const product of catalog) {
+  product.titles = { 'zh-Hans': product.title, en: englishTitles[product.id] ?? product.title };
+  product.title = englishTitles[product.id] ?? product.title;
+}
 
 export function productsIn(category: string): Product[] {
   return catalog.filter((product) => product.category === category);

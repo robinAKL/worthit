@@ -28,7 +28,9 @@ describe('catalog', () => {
       for (const product of products) {
         expect(product.fixture).toBe(true);
         expect(product.source).toBe('fixture');
-        expect(product.merchant.startsWith('示例商家')).toBe(true);
+        expect(product.merchant.startsWith('Sample Store')).toBe(true);
+        expect(product.titles?.['zh-Hans']).toBeTruthy();
+        expect(product.title).not.toMatch(/[\u4e00-\u9fff]/);
         expect(product.url.startsWith('https://example.com/')).toBe(true);
         expect(product.title).not.toMatch(/Trade Me|Warehouse|Noel Leeming|PB Tech|Mighty Ape/i);
       }
@@ -38,6 +40,21 @@ describe('catalog', () => {
 });
 
 describe('search', () => {
+  it('reads the English sample prompts', () => {
+    expect(parseQuery('laptop under $1500')).toMatchObject({ category: 'laptop', budgetMax: 1500 });
+    expect(parseQuery('phone for my mum').category).toBe('phone');
+    expect(parseQuery('desk for a small flat').category).toBe('furniture');
+  });
+
+  it('writes Chinese reasons when asked', () => {
+    const result = search('笔记本', 'value', 'zh-Hans');
+    expect(result.items.length).toBeGreaterThan(0);
+    for (const hit of result.items) {
+      expect(hit.reason).toContain('示例');
+      expect(hit.reason).not.toMatch(/最便宜|最精致|全市场/);
+    }
+  });
+
   it('drops laptops without enough photos from the cheap lane', () => {
     const result = search('笔记本', 'cheap');
     expect(result.fixture).toBe(true);
@@ -68,8 +85,8 @@ describe('search', () => {
       expect(hit.product.category).toBe('laptop');
       expect(hit.reason).not.toMatch(/最便宜|最精致|全市场/);
       expect(hit.reason).toContain(String(hit.product.price));
-      expect(hit.reason).toContain('示例');
-      expect(hit.lane).toBe('value');
+      expect(hit.reason).toContain('Sample price');
+      expect(hit.reason).not.toMatch(/cheapest|lowest in market|\bbest\b/i);
     }
   });
 
