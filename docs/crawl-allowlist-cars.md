@@ -239,6 +239,8 @@
 
 ### 10. 2 Cheap Cars
 
+采集状态：2026-11-24 实时 robots 允许 /car/，仍禁止 /admin/、/account/、/s/ 和带 vehicle 参数的地址。试采请求 32、跳过 4、错误 0、保存 26。未存图片、描述或卖家信息。
+
 **结论：不确定。** 类型：经销商集团；[站点](https://www.2cheapcars.co.nz/)。
 
 - **robots【已核实】**：[官方](https://www.2cheapcars.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
@@ -259,6 +261,8 @@
 
 ### 11. AJ Motors
 
+采集状态：2026-11-24 实时 robots 的一般组是空 Disallow（文件带 BOM）。试采请求 32、跳过 1、错误 0、保存 29。一台车页面没有价格，已跳过。
+
 **结论：不确定。** 类型：经销商集团；[站点](https://www.ajmotors.co.nz/)。
 
 - **robots【已核实】**：[官方](https://www.ajmotors.co.nz/robots.txt)，本地200文本；一般组片段如下；指定代理组和其他禁区以完整文本为准。
@@ -276,6 +280,8 @@
 - **封面图/详情摘要【未核实】**：未取得图片展示或原描述再发布许可；本结论只针对上述事实字段，热链不构成许可证明。
 
 ### 12. Andrew Simms
+
+采集状态：2026-11-24 实时 robots 禁止 administrator、bin、cache 等目录，/stock/details/ 未禁止。试采请求 32、跳过 0、错误 0、保存 30。标价另加 ORC 的记为 orcIncluded false。
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.andrewsimms.co.nz/)。
 
@@ -314,6 +320,8 @@
 - **封面图/详情摘要【未核实】**：未取得图片展示或原描述再发布许可；本结论只针对上述事实字段，热链不构成许可证明。
 
 ### 15. Blackwells
+
+采集状态：2026-11-24 实时 robots 在第一条 User-agent 之前禁止 /i/files、/i/images、/i/pumedia，/vehicle/ 未禁止。试采请求 23、跳过 11、错误 0、保存 10。
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.blackwells.co.nz/)。
 
@@ -624,6 +632,8 @@
 - **封面图/详情摘要【未核实】**：未取得图片展示或原描述再发布许可；本结论只针对上述事实字段，热链不构成许可证明。
 
 ### 32. Budget Car Sales
+
+采集状态：2026-11-24 实时 robots 仍只禁止 /email/*、/feedds/*、/appreciation_email/*。试采请求 32、跳过 0、错误 0、保存 30。未存图片或车辆识别号原文。
 
 **结论：可采集。** 类型：拍卖与进口商及独立车行；[站点](https://www.budgetcarsales.co.nz/)。
 
