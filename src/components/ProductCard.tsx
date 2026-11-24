@@ -8,6 +8,7 @@ import { historySentence } from '../lib/historyView';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
 import type { AskContext } from './AskDialog';
 import { bandLabel, familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
+import { isComparableGroup, placeMarkFor } from '../lib/cohort';
 
 /** Above this p90/p10 price ratio a group is too mixed to call one price typical. */
 const MAX_SPREAD = 3;
@@ -42,7 +43,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
   const p10 = cohort.prices[Math.floor((size - 1) * 0.1)] ?? 0;
   const p90 = cohort.prices[Math.ceil((size - 1) * 0.9)] ?? 0;
   const mixed = size >= 3 && p10 > 0 && p90 / p10 > MAX_SPREAD;
-  const comparable = size >= 3 && !mixed;
+  const comparable = isComparableGroup(cohort.prices);
   const typical = median(cohort.prices);
   // Sized families (fridges per litre, washers per kg) compare price per unit, then show the
   // difference in dollars for this item's own size.
@@ -106,7 +107,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
       {comparable || mixed ? (
         <DealPanel
           rank={cohort.rank}
-          placeMark={d.place(cohort.rank)}
+          placeMark={placeMarkFor(comparable, cohort.rank, d.place)}
           rankText={
             mixed
               ? d.mixed(format(cohort.prices[0]), format(cohort.prices[size - 1]))
