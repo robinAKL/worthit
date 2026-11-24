@@ -10,6 +10,7 @@ import { LaneTabs } from './components/LaneTabs';
 import { ProductCard } from './components/ProductCard';
 import { RentCheck } from './components/RentCheck';
 import { CarSection } from './components/CarSection';
+import { AskDialog, type AskContext } from './components/AskDialog';
 import { allVehicles } from './lib/cars';
 import { querySelectsCars } from './lib/cars/query';
 
@@ -48,6 +49,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [lane, setLane] = useState<Lane>('value');
   const [shown, setShown] = useState(PAGE_SIZE);
+  const [ask, setAsk] = useState<AskContext | null>(null);
   const deferredQuery = useDeferredValue(query);
 
   const result = useMemo(() => search(deferredQuery, lane, locale), [deferredQuery, lane, locale]);
@@ -140,6 +142,9 @@ export default function App() {
                 ))}
               </ul>
             </div>
+            <button type="button" className="hero-ask" onClick={() => setAsk({})}>
+              {copy.ask.open}
+            </button>
           </div>
         </section>
 
@@ -194,7 +199,7 @@ export default function App() {
                 <ul className="grid">
                   {visible.map((rec, i) => (
                     <li key={rec.product.id}>
-                      <ProductCard rec={rec} cohort={groups[i]} locale={locale} copy={copy} />
+                      <ProductCard rec={rec} cohort={groups[i]} locale={locale} copy={copy} onAsk={setAsk} />
                     </li>
                   ))}
                 </ul>
@@ -230,7 +235,7 @@ export default function App() {
           </div>
         </section>
 
-        <CarSection copy={copy} locale={locale} query={query} />
+        <CarSection copy={copy} locale={locale} query={query} onAsk={setAsk} />
 
         <section id="rank" className="rank" aria-labelledby="rank-title">
           <div className="wrap split">
@@ -302,6 +307,8 @@ export default function App() {
           </div>
         </section>
       </main>
+
+      <AskDialog context={ask} onClose={() => setAsk(null)} copy={copy} locale={locale} />
 
       <footer className="footer">
         <div className="wrap">

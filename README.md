@@ -60,3 +60,20 @@ Robin 要做两件事：
 2. 要每天新西兰时间凌晨自动跑，去掉 `refresh.yml` 里 `schedule` 两行的注释。`0 11 * * *` 在夏令时（UTC+13）是午夜，在标准时间是凌晨 1 点。
 
 采集遇到 403、429 或空结果时，不覆盖已有 feed。一件商品或一辆车连续 3 次完整采集都没有出现，才从 feed 里删除。价格历史保留。运行日志会写出每个站的请求数、跳过数和错误数。
+
+## 部署到 Vercel
+
+1. 在 Vercel 上 **Add New → Project**，导入 GitHub 仓库 `robinAKL/worthit`，框架会自动识别为 Vite，构建命令保持 `npm run build`，输出目录为 `dist`。
+2. **Settings → Environment Variables** 添加 `AI_GATEWAY_API_KEY`（Vercel AI Gateway 的 key）。部署在 Vercel 上时也可以不加 key，改用 OIDC。不要把 key 提交到仓库。
+3. 可选：`WORTHIT_ASK_MODEL`，默认是 `anthropic/claude-sonnet-5.5`。
+4. 部署。`npm run build` 会同时把 `src/lib/ask` 和站内数据打包到 `api-build/server.js`，`api/ask.js` 作为 `POST /api/ask` 的 Vercel 函数运行。
+
+没有配置 key 时网站照常运行，只是"问 WorthIt"会提示功能未开通（接口返回 503）。
+
+## 问 WorthIt
+
+- 卡片上的"问问这件"和首页的"提个问题"都会调用 `POST /api/ask`，请求体为 `{ question, locale, productId?, carId? }`。
+- 服务端先从站内数据里挑出相关事实（编号 F1、F2……），只把这些事实交给 Claude。回答必须标注引用的编号。
+- 回答里的每个数字都会和这些事实逐一核对，有对不上的就整条不显示，改为列出找到的事实。
+- 问题最长 300 字；每个 IP 每分钟最多 10 次。
+- 本地预览：`npm run dev` 也带这个接口。设置 `WORTHIT_ASK_MOCK=1` 时返回预览回答，不调用 AI；设置 `AI_GATEWAY_API_KEY` 时走真实的 AI Gateway。

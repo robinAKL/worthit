@@ -8,6 +8,7 @@ import { dealTier, savings } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
 import { DealBadge, DealDelta, DealPanel, formatNzd } from './DealPanel';
 import { LaneTabs } from './LaneTabs';
+import type { AskContext } from './AskDialog';
 
 const PANEL_ID = 'cars-panel';
 /** Divisible by 4, 3, 2 and 1 columns, so the last row is never a lone card. */
@@ -27,10 +28,11 @@ function formatDate(locale: Locale, iso?: string, withTime = false) {
 interface Props {
   copy: Copy;
   locale: Locale;
+  onAsk?: (context: AskContext) => void;
   query?: string;
 }
 
-export function CarSection({ copy, locale, query = '' }: Props) {
+export function CarSection({ copy, locale, query = '', onAsk }: Props) {
   const [lane, setLane] = useState<Lane>('value');
   const [shown, setShown] = useState(PAGE_SIZE);
   const fleet = useMemo(() => vehiclesForQuery(query, allVehicles()) ?? undefined, [query]);
@@ -76,7 +78,7 @@ export function CarSection({ copy, locale, query = '' }: Props) {
             <ul className="grid">
               {visible.map((pick) => (
                 <li key={pick.car.id}>
-                  <CarCard pick={pick} copy={copy} locale={locale} />
+                  <CarCard pick={pick} copy={copy} locale={locale} onAsk={onAsk} />
                 </li>
               ))}
             </ul>
@@ -101,7 +103,7 @@ function titleCase(text: string) {
   return text.replace(/(^|[\s/-])(\p{L})/gu, (_, sep: string, ch: string) => sep + ch.toUpperCase());
 }
 
-function CarCard({ pick, copy, locale }: { pick: CarPick; copy: Copy; locale: Locale }) {
+function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; locale: Locale; onAsk?: (context: AskContext) => void }) {
   const { car, valuation: v, cohort } = pick;
   const t = copy.cars;
   const d = copy.deal;
@@ -163,10 +165,17 @@ function CarCard({ pick, copy, locale }: { pick: CarPick; copy: Copy; locale: Lo
         ))}
       </ul>
 
-      <a className="card-link" href={car.url} target="_blank" rel="noopener noreferrer nofollow">
-        {t.viewAt(car.dealer)}
-        <span className="visually-hidden">{copy.a11y.newWindow}</span>
-      </a>
+      <div className="card-actions">
+        <a className="card-link" href={car.url} target="_blank" rel="noopener noreferrer nofollow">
+          {t.viewAt(car.dealer)}
+          <span className="visually-hidden">{copy.a11y.newWindow}</span>
+        </a>
+        {onAsk ? (
+          <button type="button" className="card-ask" onClick={() => onAsk({ carId: car.id, title })} aria-label={copy.ask.aboutLabel(title)}>
+            {copy.ask.about}
+          </button>
+        ) : null}
+      </div>
     </article>
   );
 }

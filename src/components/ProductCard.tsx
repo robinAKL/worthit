@@ -5,6 +5,7 @@ import { confidenceFrom, dealTier, median, savings, type Cohort } from '../lib/d
 import { CardMedia, toneOf } from './CardMedia';
 import { historySentence } from '../lib/historyView';
 import { DealBadge, DealDelta, DealPanel } from './DealPanel';
+import type { AskContext } from './AskDialog';
 import { bandLabel, familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
 
 /** Above this p90/p10 price ratio a group is too mixed to call one price typical. */
@@ -28,9 +29,10 @@ interface Props {
   rec: Recommendation;
   /** Comparable prices in this item's group, with its rank. */
   cohort: Cohort;
+  onAsk?: (context: AskContext) => void;
 }
 
-export function ProductCard({ rec, cohort, copy, locale }: Props) {
+export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
   const { product: p, reason } = rec;
   const d = copy.deal;
   const size = cohort.prices.length;
@@ -142,10 +144,17 @@ export function ProductCard({ rec, cohort, copy, locale }: Props) {
         {p.rating ? <li>{copy.results.rating(p.rating, p.reviewCount)}</li> : null}
       </ul>
 
-      <a className="card-link" href={p.url} target="_blank" rel="noopener noreferrer nofollow">
-        {copy.results.viewAt(p.merchant)}
-        <span className="visually-hidden">{copy.a11y.newWindow}</span>
-      </a>
+      <div className="card-actions">
+        <a className="card-link" href={p.url} target="_blank" rel="noopener noreferrer nofollow">
+          {copy.results.viewAt(p.merchant)}
+          <span className="visually-hidden">{copy.a11y.newWindow}</span>
+        </a>
+        {onAsk ? (
+          <button type="button" className="card-ask" onClick={() => onAsk({ productId: p.id, title: p.titles?.[locale] ?? p.title })} aria-label={copy.ask.aboutLabel(p.titles?.[locale] ?? p.title)}>
+            {copy.ask.about}
+          </button>
+        ) : null}
+      </div>
     </article>
   );
 }

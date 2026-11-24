@@ -66,6 +66,28 @@ export const zhHans: Copy = {
     cheap: { label: '便宜', hint: '同类里价格偏低，且没有风险信号' },
     refined: { label: '精致', hint: '关注反馈、成色描述和保修，价格不一定低' },
   } satisfies Record<Lane, { label: string; hint: string }>,
+  ask: {
+    open: '提个问题',
+    about: '问问这件',
+    aboutLabel: (title: string) => `问问：${title}`,
+    title: '问 WorthIt',
+    titleAbout: (title: string) => `问问：${title}`,
+    lede: '回答只依据本页的商品和价格数据，每个数字在显示前都会和我们的数据核对。',
+    label: '你的问题',
+    placeholder: '比如：按车龄和公里数，这个价格合理吗？',
+    submit: '提问',
+    asking: '正在查我们的数据…',
+    close: '关闭',
+    factsUsed: '引用的数据',
+    factsFound: '我们找到的数据',
+    open_listing: '查看原页面',
+    errors: {
+      off: '"问 WorthIt"还没有开通，需要站长配置 AI key。',
+      busy: '一分钟内提问太多了，请稍后再试。',
+      tooLong: '问题请控制在 300 字以内。',
+      failed: '出错了，请再试一次。',
+    },
+  },
   deal: {
     tier: {
       car: { 'well-below': '明显低于估价', below: '低于估价', near: '接近估价', above: '高于估价', 'well-above': '明显高于估价' },

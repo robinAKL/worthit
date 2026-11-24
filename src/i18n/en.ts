@@ -69,6 +69,28 @@ export const en = {
     cheap: { label: 'Lower price', hint: 'Lower prices with key details checked' },
     refined: { label: 'Quality', hint: 'Reviews, condition and warranty come first' },
   },
+  ask: {
+    open: 'Ask a question',
+    about: 'Ask about this',
+    aboutLabel: (title: string) => `Ask about ${title}`,
+    title: 'Ask WorthIt',
+    titleAbout: (title: string) => `Ask about ${title}`,
+    lede: 'Answers come only from listings and prices on this page. Every figure is checked against our data before you see it.',
+    label: 'Your question',
+    placeholder: 'e.g. Is this a fair price for its age and kilometres?',
+    submit: 'Ask',
+    asking: 'Checking our data…',
+    close: 'Close',
+    factsUsed: 'From our data',
+    factsFound: 'What we found',
+    open_listing: 'Open listing',
+    errors: {
+      off: 'Ask WorthIt is not switched on yet. The site owner needs to add an AI key.',
+      busy: 'Too many questions in a minute. Please try again shortly.',
+      tooLong: 'Please keep your question under 300 characters.',
+      failed: 'Something went wrong. Please try again.',
+    },
+  },
   deal: {
     tier: {
       car: { 'well-below': 'Well under estimate', below: 'Under estimate', near: 'Close to estimate', above: 'Over estimate', 'well-above': 'Well over estimate' },
