@@ -43,7 +43,7 @@ const fixture = {
       code: '2',
       name: 'Quiet Suburb',
       ta: 'Quiet District',
-      cells: { 'House|1': [100, 200, 300, 4] },
+      cells: { 'House|1': [100, 200, 300, 4] }, // Total Bonds is 4. Active Bonds would be 108 and must not keep the cell.
     },
   ],
 } as unknown as Sa2Dataset;
@@ -63,6 +63,15 @@ describe('checkSuburbRent', () => {
     expect(checkSuburbRent('1', 'House', '2', 651, fixture, areas)).toMatchObject({ status: 'band', band: 'above' });
   });
 
+  it('returns insufficient when lodged bonds are under 5, even if the active stock is large', () => {
+    const lodged = checkSuburbRent('2', 'House', '1', 450, fixture, areas);
+    expect(lodged).toMatchObject({
+      status: 'insufficient',
+      fallback: { status: 'insufficient', area: 'Quiet District' },
+    });
+    expect(lodged.status === 'insufficient' ? lodged.fallback.status : '').not.toBe('band');
+  });
+
   it('returns insufficient and falls back to the territorial all-bedroom row', () => {
     const missing = checkSuburbRent('1', 'House', '1', 450, fixture, areas);
     expect(missing).toMatchObject({
@@ -80,8 +89,8 @@ describe('checkSuburbRent', () => {
   it('keeps the July 2026 Berhampore and Karori Park rows separate', () => {
     const berhampore = sa2.suburbs.find((suburb) => suburb.code === '253300');
     const karori = sa2.suburbs.find((suburb) => suburb.code === '249400');
-    expect(berhampore?.cells['House|2']).toEqual([585, 630, 630, 57]);
-    expect(karori?.cells['House|2']).toEqual([620, 620, 625, 78]);
+    expect(berhampore?.cells['House|2']).toEqual([585, 630, 630, 6]);
+    expect(karori?.cells['House|2']).toEqual([620, 620, 625, 6]);
     expect(checkSuburbRent('253300', 'House', '2', 584)).toMatchObject({
       status: 'band',
       band: 'below',
@@ -89,7 +98,7 @@ describe('checkSuburbRent', () => {
       ta: 'Wellington City',
       lower: 585,
       median: 630,
-      count: 57,
+      count: 6,
     });
     expect(checkSuburbRent('253300', 'House', '2', 630)).toMatchObject({ status: 'band', band: 'lower-to-median' });
     expect(checkSuburbRent('249400', 'House', '2', 620).status === 'band' && checkSuburbRent('249400', 'House', '2', 620)).toMatchObject({
@@ -103,7 +112,7 @@ describe('checkSuburbRent', () => {
     expect(checkSuburbRent('253300', 'ALL', '1', 500).oneBedroomCaution).toBe(true);
     expect(checkSuburbRent('253300', 'House', '2', 600).oneBedroomCaution).toBe(false);
     expect(sa2.quarter).toBe('2026-07-01');
-    expect(sa2.countField).toBe('Active Bonds');
+    expect(sa2.countField).toBe('Total Bonds');
     expect(sa2.licence).toBe('CC BY 3.0 NZ');
     expect(sa2.geographyLicence).toBe('CC BY 4.0');
     expect(sa2.geographyAttribution).toBe('Stats NZ');

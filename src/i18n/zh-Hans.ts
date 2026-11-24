@@ -63,7 +63,7 @@ export const zhHans: Copy = {
   rent: {
     title: '房租贵不贵？',
     lede: '选择郊区、房型和卧室数。每周租金只对照公布的那一行，不会把几个郊区合在一起算。',
-    note: '郊区数字是一个统计区、一种房型、一种卧室数下仍在登记的押金，不是广告价。格子太小、没有公布时，回退到所属地区全部卧室的月度结果。那一份按新登记押金计算，没有按卧室拆开。发布有滞后。押金数据来自 MBIE，CC BY 3.0 NZ。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。',
+    note: '郊区数字是一个统计区、一种房型、一种卧室数下当季新登记的押金，不是广告价。格子太小、没有公布时，回退到所属地区全部卧室的月度结果。那一份也按新登记押金计算，没有按卧室拆开。发布有滞后。押金数据来自 MBIE，CC BY 3.0 NZ。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。',
     link: '查看数据原始页面',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
     licence: 'CC BY 3.0 NZ',
@@ -129,13 +129,13 @@ export const zhHans: Copy = {
     },
     suburbBands: {
       below: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
-        `每周 ${rent} 纽币，低于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币。`,
+        `每周 ${rent} 纽币，低于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）当季新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币。`,
       'lower-to-median': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
-        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币到中位 ${median} 纽币之间。`,
+        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）当季新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的下四分位 ${lower} 纽币到中位 ${median} 纽币之间。`,
       'median-to-upper': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
-        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的中位 ${median} 纽币到上四分位 ${upper} 纽币之间。`,
+        `每周 ${rent} 纽币，落在 ${suburb}（${ta}，${period}，${dwelling}，${beds}）当季新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的中位 ${median} 纽币到上四分位 ${upper} 纽币之间。`,
       above: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
-        `每周 ${rent} 纽币，高于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）仍在登记的 ${count.toLocaleString('zh-Hans')} 笔押金的上四分位 ${upper} 纽币。`,
+        `每周 ${rent} 纽币，高于 ${suburb}（${ta}，${period}，${dwelling}，${beds}）当季新登记的 ${count.toLocaleString('zh-Hans')} 笔押金的上四分位 ${upper} 纽币。`,
     },
   },
   data: {
@@ -145,7 +145,7 @@ export const zhHans: Copy = {
     rows: [
       ['示例数据', '正在使用', '当前页面上的商品、商家和价格都是示例，用来演示排序方式。'],
       ['商家主动提供的商品数据', '计划接入', '商家提交商品数据，我们标明采集时间，点击跳转到商家页面。'],
-      ['政府公开租金数据', '正在使用', 'MBIE 2026 年 7 月 1 日起这个季度的郊区存续押金，以及 2026 年 9 月的地区数字。CC BY 3.0 NZ，署名 MBIE。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。'],
+      ['政府公开租金数据', '正在使用', 'MBIE 2026 年 7 月 1 日起这个季度的郊区新登记押金，以及 2026 年 9 月的地区数字。CC BY 3.0 NZ，署名 MBIE。郊区名称来自 Stats NZ 2019 SA2，CC BY 4.0。'],
       ['明确禁止抓取的网站', '不收录', '对方条款或 robots.txt 禁止的，我们不抓取。'],
     ],
   },

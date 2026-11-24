@@ -63,7 +63,7 @@ export const en = {
   rent: {
     title: 'Is your rent in range?',
     lede: 'Choose a suburb, a dwelling type and a bedroom count. We compare your weekly rent with that single published row.',
-    note: 'A suburb figure counts active bonds for one statistical area, one dwelling type and one bedroom count. It is not an advertised rent. When that cell is too small to publish, the fallback is the territorial-authority figure for all bedrooms, which counts newly lodged bonds and is not split by bedroom. Publication lags. Sources: MBIE, CC BY 3.0 NZ, and Stats NZ Statistical Area 2 2019 names, CC BY 4.0.',
+    note: 'A suburb figure counts new bonds lodged in that quarter for one statistical area, one dwelling type and one bedroom count. It is not an advertised rent. When that cell is too small to publish, the fallback is the territorial-authority figure for all bedrooms, which is also newly lodged bonds and is not split by bedroom. Publication lags. Sources: MBIE, CC BY 3.0 NZ, and Stats NZ Statistical Area 2 2019 names, CC BY 4.0.',
     link: 'View the rental bond data',
     href: 'https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/',
     licence: 'CC BY 3.0 NZ',
@@ -129,13 +129,13 @@ export const en = {
     },
     suburbBands: {
       below: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, _median: number, _upper: number, count: number) =>
-        `$${rent} a week is under the lower quartile of $${lower} for ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+        `$${rent} a week is under the lower quartile of $${lower} for ${count.toLocaleString('en-NZ')} new bonds lodged in the quarter in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
       'lower-to-median': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, lower: number, median: number, _upper: number, count: number) =>
-        `$${rent} a week sits from the lower quartile ($${lower}) to the median ($${median}) of ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+        `$${rent} a week sits from the lower quartile ($${lower}) to the median ($${median}) of ${count.toLocaleString('en-NZ')} new bonds lodged in the quarter in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
       'median-to-upper': (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, median: number, upper: number, count: number) =>
-        `$${rent} a week sits from the median ($${median}) to the upper quartile ($${upper}) of ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+        `$${rent} a week sits from the median ($${median}) to the upper quartile ($${upper}) of ${count.toLocaleString('en-NZ')} new bonds lodged in the quarter in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
       above: (suburb: string, ta: string, period: string, dwelling: string, beds: string, rent: number, _lower: number, _median: number, upper: number, count: number) =>
-        `$${rent} a week is above the upper quartile of $${upper} for ${count.toLocaleString('en-NZ')} active bonds in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
+        `$${rent} a week is above the upper quartile of $${upper} for ${count.toLocaleString('en-NZ')} new bonds lodged in the quarter in ${suburb}, ${ta} (${period}, ${dwelling}, ${beds}).`,
     },
   },
   data: {
@@ -145,7 +145,7 @@ export const en = {
     rows: [
       ['Sample products', 'In use', 'Products, merchants and prices on this page are fictional examples of how ranking works.'],
       ['Merchant product data', 'Planned', 'Merchants provide product data. We show its date and link to their website.'],
-      ['Public rental data', 'In use', 'MBIE active bonds by suburb for the quarter starting 1 July 2026, plus September 2026 territorial figures. CC BY 3.0 NZ, attribute MBIE. Suburb names: Stats NZ SA2 2019, CC BY 4.0.'],
+      ['Public rental data', 'In use', 'MBIE bonds lodged by suburb for the quarter starting 1 July 2026, plus September 2026 territorial figures. CC BY 3.0 NZ, attribute MBIE. Suburb names: Stats NZ SA2 2019, CC BY 4.0.'],
       ['Sites that restrict collection', 'Excluded', 'We do not collect data where site terms or robots.txt prohibit it.'],
     ],
   },

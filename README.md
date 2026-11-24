@@ -10,7 +10,7 @@ v0.2 默认英语，支持简体中文。导航栏可随时切换，保留搜索
 
 租金对照有两层，都在 2026-11-24 下载：
 
-- 郊区：Tenancy Services 季度押金文件的最新季度（2026-07-01 起），按 SA2、房型、卧室数各取一行。样本是 Active Bonds。少于 5 笔，或四分位数被抑制时，页面写明数据不足，并回退到下面的地区结果。不跨 SA2 合并四分位数。
+- 郊区：Tenancy Services 季度押金文件的最新季度（2026-07-01 起），按 SA2、房型、卧室数各取一行。样本是当季新登记押金（Total Bonds），不是全部在册押金。少于 5 笔新登记，或四分位数被抑制时，页面写明数据不足，并回退到下面的地区结果。不跨 SA2 合并四分位数。
 - 地区：月度 territorial authority 文件，数据月份 2026-09，没有卧室列，只作为全部卧室的回退。
 
 郊区名称和所属地区来自 Stats NZ「Statistical Area 2 Higher Geographies 2019 (generalised)」，datafinder layer 98779，CC BY 4.0，署名 Stats NZ。押金数据 CC BY 3.0 NZ，署名 MBIE。

@@ -28,7 +28,7 @@ for (const name of [
   'Location Id',
   'Dwelling Type',
   'Number Of Beds',
-  'Active Bonds',
+  'Total Bonds',
   'Median Rent',
   'Upper Quartile Rent',
   'Lower Quartile Rent',
@@ -86,7 +86,7 @@ for (const cells of quarterly.slice(1)) {
   const lower = number(cells[qIndex['Lower Quartile Rent']]);
   const median = number(cells[qIndex['Median Rent']]);
   const upper = number(cells[qIndex['Upper Quartile Rent']]);
-  const count = number(cells[qIndex['Active Bonds']]);
+  const count = number(cells[qIndex['Total Bonds']]);
   const key = `${dwelling}|${bed}`;
   const bucket = byCode.get(code) ?? {};
   if (bucket[key]) throw new Error(`Duplicate cell ${code} ${key}. Refusing to merge rows.`);
@@ -124,7 +124,7 @@ const dataset = {
   licence: 'CC BY 3.0 NZ',
   licenceUrl: 'https://creativecommons.org/licenses/by/3.0/nz/',
   attribution: 'MBIE',
-  countField: 'Active Bonds',
+  countField: 'Total Bonds',
   geographyName: 'Statistical Area 2 Higher Geographies 2019 (generalised)',
   geographyLayer: '98779',
   geographyUrl: 'https://datafinder.stats.govt.nz/layer/98779-statistical-area-2-higher-geographies-2019-generalised/',
@@ -132,7 +132,7 @@ const dataset = {
   geographyLicenceUrl: 'https://creativecommons.org/licenses/by/4.0/',
   geographyAttribution: 'Stats NZ',
   downloadedAt: '2026-11-24',
-  note: 'Each cell is one published SA2, dwelling type and bedroom row. Quartiles are never averaged across areas. A cell with fewer than 5 active bonds, or with suppressed quartiles, is omitted and the lookup reports insufficient data.',
+  note: 'Each cell is one published SA2, dwelling type and bedroom row. Quartiles are never averaged across areas. The sample is Total Bonds, the bonds lodged in the quarter. A cell with fewer than 5 lodged bonds, or with suppressed quartiles, is omitted and the lookup reports insufficient data.',
   dwellings: order(dwellings, DWELLING_ORDER),
   beds: order(beds, BED_ORDER),
   suburbs,
