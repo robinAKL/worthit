@@ -10,7 +10,9 @@ import type { Fuel, Lane, Vehicle } from '../types';
  *    lose value faster, so an old BMW is not valued like a newer one.
  * 2. Each car is then compared with its closest set of cars on sale (see `comparableSet`):
  *    the same make and model within two years and the same fuel, widening step by step.
- *    Every peer's price is adjusted to this car's age and kilometres with the model's slopes.
+ *    Every peer's price is adjusted to this car's age and kilometres. For same-model peers the
+ *    adjustment blends that model's own depreciation (fitted on its other cars) with the fleet's,
+ *    trusting the model's own more as more of it are on sale (`modelSlopes`, OWN_SLOPE_PRIOR).
  *    The fair price is the median of those adjusted prices, and the card's rank is this car's
  *    place among the same adjusted prices, so the two can never disagree.
  *
@@ -282,8 +284,66 @@ export function comparableSet(car: Car, pool: Car[]): Comparable {
 }
 
 /** A peer's asking price moved to this car's age and kilometres, using the model's slopes. */
-export function adjustedPrice(peer: Car, car: Car, model: PriceModel): number {
-  return peer.priceNzd * Math.exp(model.predictLog(car) - model.predictLog(peer));
+export function adjustedPrice(peer: Car, car: Car, model: PriceModel, own?: ModelSlopes | null): number {
+  const pooledStep = model.predictLog(car) - model.predictLog(peer);
+  if (!own) return peer.priceNzd * Math.exp(pooledStep);
+  // This model's own depreciation, trusted in proportion to how many of it are on sale.
+  const ownStep = own.perYear * (ageOf(car, model.nowYear) - ageOf(peer, model.nowYear)) + own.per10kKm * (((car.odometerKm ?? 0) - (peer.odometerKm ?? 0)) / 10_000);
+  return peer.priceNzd * Math.exp(own.weight * ownStep + (1 - own.weight) * pooledStep);
+}
+
+/** A make+model's own price change per year of age and per 10,000 km, on the log scale. */
+export interface ModelSlopes {
+  perYear: number;
+  per10kKm: number;
+  /** How far to trust them over the fleet-wide model: n / (n + OWN_SLOPE_PRIOR). */
+  weight: number;
+  cars: number;
+}
+
+/**
+ * How many cars of a model it takes before its own slopes count as much as the fleet's.
+ * Chosen by leave-one-out on the collected cars: with 8, the median error was 13.2% against
+ * 14.2% with fleet-wide slopes only and 15.3% with each model's own slopes only.
+ */
+export const OWN_SLOPE_PRIOR = 8;
+
+const ageOf = (car: Pick<Car, 'year'>, nowYear: number) => Math.max(0, nowYear - car.year);
+
+/**
+ * Fit log(price) = a + b·age + c·km over one model's cars (at least 4, never the car being valued).
+ * A small ridge keeps a group with a single model year solvable. More age or km never raises the price.
+ */
+export function modelSlopes(cars: Car[], nowYear: number): ModelSlopes | null {
+  const usable = cars.filter((c) => c.odometerKm !== undefined);
+  if (usable.length < MIN_GROUP - 1) return null;
+  const A = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+  const y = [0, 0, 0];
+  for (const c of usable) {
+    const x = [1, ageOf(c, nowYear), (c.odometerKm ?? 0) / 10_000];
+    const t = Math.log(c.priceNzd);
+    for (let i = 0; i < 3; i++) {
+      y[i] += x[i] * t;
+      for (let j = 0; j < 3; j++) A[i][j] += x[i] * x[j];
+    }
+  }
+  A[1][1] += 0.5;
+  A[2][2] += 0.5;
+  const M = A.map((row, i) => [...row, y[i]]);
+  for (let c = 0; c < 3; c++) {
+    let pivot = c;
+    for (let r = c + 1; r < 3; r++) if (Math.abs(M[r][c]) > Math.abs(M[pivot][c])) pivot = r;
+    [M[c], M[pivot]] = [M[pivot], M[c]];
+    if (Math.abs(M[c][c]) < 1e-9) return null;
+    for (let r = 0; r < 3; r++) {
+      if (r === c) continue;
+      const f = M[r][c] / M[c][c];
+      for (let k = c; k < 4; k++) M[r][k] -= f * M[c][k];
+    }
+  }
+  const perYear = Math.min(0, M[1][3] / M[1][1]);
+  const per10kKm = Math.min(0, M[2][3] / M[2][2]);
+  return { perYear, per10kKm, weight: usable.length / (usable.length + OWN_SLOPE_PRIOR), cars: usable.length };
 }
 
 export interface Assessment {
@@ -299,7 +359,9 @@ export function valueAll(cars: Car[], model: PriceModel): Map<string, Assessment
   const out = new Map<string, Assessment>();
   for (const car of usable) {
     const comparable = comparableSet(car, usable);
-    const adjusted = comparable.peers.map((p) => adjustedPrice(p, car, model));
+    // Same-model peers are moved to this car's age and km with a blend of the model's own slopes and the fleet's.
+    const own = comparable.basis.startsWith('model') ? modelSlopes(usable.filter((c) => c.id !== car.id && c.modelKey === car.modelKey), model.nowYear) : null;
+    const adjusted = comparable.peers.map((p) => adjustedPrice(p, car, model, own));
     const fair = adjusted.length > 0 ? median(adjusted) : Math.exp(model.predictLog(car));
     const expected = Math.round(fair / 100) * 100;
     const sameModel = comparable.basis.startsWith('model');

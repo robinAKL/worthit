@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Vehicle } from '../types';
-import { allCarPicks, allVehicles, carResults, isRough, CHEAP_MAX_KM, CHEAP_MIN_YEAR, comparableSet, conditionScore, MAX_OVER_FAIR, dedupe, fitModel, rankCars, toCar, type Car } from './index';
+import { adjustedPrice, allCarPicks, allVehicles, carResults, isRough, modelSlopes, OWN_SLOPE_PRIOR, CHEAP_MAX_KM, CHEAP_MIN_YEAR, comparableSet, conditionScore, MAX_OVER_FAIR, dedupe, fitModel, rankCars, toCar, type Car } from './index';
 import { carReason } from './reason';
 
 /** Synthetic fleet: four makes, ages 1..12, km rising with age, Toyota Aqua as a same-model group. */
@@ -253,5 +253,28 @@ describe('one rank per card (T-38 review)', () => {
         }
       }
     }
+  });
+});
+
+describe("each model's own depreciation (T-43)", () => {
+  it('fits a model\'s own price change per year and per 10,000 km, never upward', () => {
+    const aquas = (fleet().map((v) => toCar(v, 2026)) as Car[]).filter((c) => c.model === 'Aqua');
+    const own = modelSlopes(aquas, 2026)!;
+    expect(own.perYear).toBeLessThan(0);
+    expect(own.per10kKm).toBeLessThanOrEqual(0);
+    expect(own.weight).toBeCloseTo(aquas.length / (aquas.length + OWN_SLOPE_PRIOR));
+    expect(modelSlopes(aquas.slice(0, 3), 2026)).toBeNull();
+  });
+
+  it('moves an older peer up and a newer peer down to this car\'s age', () => {
+    const cars = fleet().map((v) => toCar(v, 2026)) as Car[];
+    const model = fitModel(cars, 2026);
+    const aquas = cars.filter((c) => c.model === 'Aqua');
+    const own = modelSlopes(aquas, 2026);
+    const mid = aquas.find((c) => c.year === 2020)!;
+    const older = aquas.find((c) => c.year === 2016)!;
+    const newer = aquas.find((c) => c.year === 2024)!;
+    expect(adjustedPrice(older, mid, model, own)).toBeGreaterThan(older.priceNzd);
+    expect(adjustedPrice(newer, mid, model, own)).toBeLessThan(newer.priceNzd);
   });
 });
