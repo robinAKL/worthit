@@ -79,6 +79,8 @@ describe('car batch A', () => {
     expect(row.vin).toBeUndefined();
     expect(row.dedupeKey).toMatch(/^v-[0-9a-f]{16}$/);
     expect(JSON.stringify(row)).not.toContain('TESTVIN');
+    expect(andrewSimms.isDetailUrl('https://www.andrewsimms.co.nz/stock/details/3199776/2026-mitsubishi-pajero-sport-new')).toBe(false);
+    expect(andrewSimms.isDetailUrl(url.replace(/$/, '-used'))).toBe(true);
   });
 
   it('reads Blackwells columns and listing data-link urls', () => {

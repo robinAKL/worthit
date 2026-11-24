@@ -5,7 +5,8 @@
 import { vehiclesFromHtml } from '../core/extract/jsonld.mjs';
 import { priceOf, textOf } from '../core/extract/specs.mjs';
 
-const DETAIL = /^\/stock\/details\/\d+\//i;
+/** Used stock only. New cars on this site end in `-new` and are not part of the used-car contract. */
+const DETAIL = /^\/stock\/details\/\d+\/[^/?#]*-used\/?$/i;
 
 export default {
   id: 'andrew-simms',

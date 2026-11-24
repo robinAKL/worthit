@@ -281,7 +281,7 @@
 
 ### 12. Andrew Simms
 
-采集状态：2026-11-24 实时 robots 禁止 administrator、bin、cache 等目录，/stock/details/ 未禁止。试采请求 32、跳过 0、错误 0、保存 30。标价另加 ORC 的记为 orcIncluded false。
+采集状态：2026-11-24 实时 robots 禁止 administrator、bin、cache 等目录。第二次试采只收 URL 以 -used 结尾的车，请求 32、跳过 0、错误 0、保存 30。其中 4 台是 2026 年、里程不到 500 公里，但车行 URL 标成 used，先保留。标价另加 ORC 的记为 orcIncluded false。
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.andrewsimms.co.nz/)。
 
@@ -321,7 +321,7 @@
 
 ### 15. Blackwells
 
-采集状态：2026-11-24 实时 robots 在第一条 User-agent 之前禁止 /i/files、/i/images、/i/pumedia，/vehicle/ 未禁止。试采请求 23、跳过 11、错误 0、保存 10。
+采集状态：2026-11-24 实时 robots 在第一条 User-agent 之前禁止 /i/files、/i/images、/i/pumedia，/vehicle/ 未禁止。第二次试采去掉当年且里程不到 500 公里的车（2026 款 Chery，50 到 200 公里，当作新车或展车）。请求 23、跳过 14、错误 0、保存 7。
 
 **结论：不确定。** 类型：经销商集团；[站点](https://www.blackwells.co.nz/)。
 

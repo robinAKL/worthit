@@ -34,6 +34,9 @@ export default {
     if (!head.make || !head.model || !head.year || !priceNzd) return [];
     const id = new URL(url).pathname.split('/').filter(Boolean).pop();
     const engine = specs.get('engine');
+    const odometerKm = kmOf(specs.get('kilometres'));
+    // A current-year car with delivery kilometres is a new or demonstrator car, not used stock.
+    if (head.year >= new Date().getFullYear() && (odometerKm === undefined || odometerKm < 500)) return [];
     return [
       {
         id: `car-blackwells-${id}`,
@@ -44,7 +47,7 @@ export default {
         model: head.model,
         variant: textOf(html.match(/class="variant">([^<]+)/i)?.[1]) || head.variant,
         year: head.year,
-        odometerKm: kmOf(specs.get('kilometres')),
+        odometerKm,
         priceNzd,
         fuel: fuelOf(specs.get('fuel type')),
         transmission: transmissionOf(specs.get('transmission')),
