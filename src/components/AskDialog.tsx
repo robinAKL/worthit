@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import type { Copy, Locale } from '../i18n';
 import type { Fact } from '../lib/ask/facts';
+import { splitVerdict } from '../lib/ask/format';
 
 /** What the question is about: nothing in particular, a product card, or a car card. */
 export interface AskContext {
@@ -33,6 +34,17 @@ function withCitations(text: string) {
     ) : (
       <span key={i}>{part}</span>
     ),
+  );
+}
+
+/** Line one is the verdict, shown in bold; the rest is the short explanation. */
+function AnswerText({ text }: { text: string }) {
+  const { verdict, rest } = splitVerdict(text);
+  return (
+    <div className="ask-answer">
+      <p className="ask-verdict">{withCitations(verdict)}</p>
+      {rest ? <p className="ask-explain">{withCitations(rest)}</p> : null}
+    </div>
   );
 }
 
@@ -122,26 +134,58 @@ export function AskDialog({ context, onClose, copy, locale }: Props) {
         {state.status === 'error' ? <p className="ask-status ask-error">{state.error}</p> : null}
         {a ? (
           <>
-            <p className="ask-answer">{withCitations(a.answer)}</p>
+            <AnswerText text={a.answer} />
             {shown.length > 0 ? (
               <div className="ask-facts">
                 <p className="ask-facts-title">{a.withheld || a.cited.length === 0 ? t.factsFound : t.factsUsed}</p>
-                <ol>
-                  {shown.map((f) => (
-                    <li key={f.id}>
-                      <span className="ask-cite">{f.id}</span> {f.text.split('; our note:')[0]}
-                      {f.url ? (
-                        <>
-                          {' '}
-                          <a href={f.url} target="_blank" rel="noopener noreferrer nofollow">
-                            {t.open_listing}
-                            <span className="visually-hidden">{copy.a11y.newWindow}</span>
-                          </a>
-                        </>
-                      ) : null}
-                    </li>
-                  ))}
-                </ol>
+                {(['car', 'product', 'note'] as const).map((kind) => {
+                  const rows = shown.filter((f) => f.kind === kind);
+                  if (rows.length === 0) return null;
+                  const columns = rows[0].cells?.map((c) => c.label) ?? [];
+                  return (
+                    <div className="ask-table-wrap" key={kind}>
+                      <table className="ask-table">
+                        <thead>
+                          <tr>
+                            <th scope="col">
+                              <span className="visually-hidden">{t.item}</span>
+                            </th>
+                            {columns.map((label) => (
+                              <th scope="col" key={label}>
+                                {label}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {rows.map((f) => (
+                            <tr key={f.id}>
+                              <th scope="row">
+                                <span className="ask-cite">{f.id}</span>{' '}
+                                {f.url ? (
+                                  <a href={f.url} target="_blank" rel="noopener noreferrer nofollow">
+                                    {f.title ?? f.text.split(';')[0]}
+                                    <span className="visually-hidden">{copy.a11y.newWindow}</span>
+                                  </a>
+                                ) : (
+                                  (f.title ?? f.text.split(';')[0])
+                                )}
+                              </th>
+                              {columns.map((label) => {
+                                const cell = f.cells?.find((c) => c.label === label);
+                                return (
+                                  <td key={label} data-label={label} className={cell?.tone ? `ask-${cell.tone}` : undefined}>
+                                    {cell?.value ?? '–'}
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                })}
               </div>
             ) : null}
           </>

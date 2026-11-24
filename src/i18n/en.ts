@@ -83,6 +83,7 @@ export const en = {
     submit: 'Ask',
     asking: 'Checking our data…',
     close: 'Close',
+    item: 'Item',
     factsUsed: 'From our data',
     factsFound: 'What we found',
     open_listing: 'Open listing',

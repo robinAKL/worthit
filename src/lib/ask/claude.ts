@@ -51,6 +51,6 @@ export const mockModel: Model = async (system, user) => {
   const ids = [...user.matchAll(/^\[(F\d+)\]/gm)].map((m) => m[1]).slice(0, 2);
   if (ids.length === 0) return zh ? '暂时没有相关数据。' : 'We have nothing on this yet.';
   return zh
-    ? `（预览模式，未调用 AI）最接近你问题的是下面这条 [${ids[0]}]。${ids[1] ? `也可以对比 [${ids[1]}]。` : ''}下单前请向卖家核实车况或配置。`
-    : `(Preview mode, no AI call.) The closest match to your question is this one [${ids[0]}].${ids[1] ? ` You could also compare it with [${ids[1]}].` : ''} Check condition and specs with the seller before you buy.`;
+    ? `最接近你问题的是 [${ids[0]}]，价格和差额见下表。\n\n（预览模式，未调用 AI。）${ids[1] ? `可以和 [${ids[1]}] 对比。` : ''}下单前请向卖家核实车况或配置。`
+    : `The closest match is [${ids[0]}]; its price and difference are in the table below.\n\n(Preview mode, no AI call.)${ids[1] ? ` Compare it with [${ids[1]}].` : ''} Check condition and specs with the seller before you buy.`;
 };

@@ -22,7 +22,9 @@ const SYSTEM: Record<Locale, string> = {
     'Use only the numbered facts you are given. Cite each fact you use as [F1], [F2] and so on, right after the sentence that uses it.',
     'Copy prices, kilometres and sizes exactly as written in the facts. Do not round, convert or add up numbers, and do not mention any number that is not in the facts.',
     'If the facts do not answer the question, say so plainly and suggest what to check with the seller.',
-    'No superlatives such as best or cheapest, no pressure to buy. Two to four short sentences.',
+    'If the question is short or vague (for example "why" or "worth it?"), answer whether the price looks fair against the facts.',
+    'Format: line 1 is a one-sentence verdict of at most 25 words. Then a blank line, then at most three short sentences. No headings, no lists, no preamble about the question.',
+    'No superlatives such as best or cheapest, no pressure to buy.',
     'Facts marked SAMPLE DATA are not real listings; say so if you use one.',
   ].join('\n'),
   'zh-Hans': [
@@ -30,7 +32,9 @@ const SYSTEM: Record<Locale, string> = {
     '只能使用给你的编号事实。每用到一条，就在那句话后面标注 [F1]、[F2] 这样的编号。',
     '价格、公里数、尺寸必须照抄事实里的写法，不要四舍五入、换算或相加，也不要写事实里没有的数字。',
     '如果事实回答不了这个问题，就直接说明，并建议向卖家核实什么。',
-    '不要用"最好""最便宜"这类说法，不要催促购买。用两到四句简短的中文回答。',
+    '如果问题很短或很笼统（比如"为什么""值吗"），就回答这个价格和事实相比是否合理。',
+    '格式：第一行是一句结论，不超过 40 个字。然后空一行，再写最多三句简短说明。不要标题、不要列表、不要复述问题。全部用中文。',
+    '不要用"最好""最便宜"这类说法，不要催促购买。',
     '标有 SAMPLE DATA 的是示例数据，不是真实在售，如果用到要说明。',
   ].join('\n'),
 };

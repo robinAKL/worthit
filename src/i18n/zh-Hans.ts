@@ -80,6 +80,7 @@ export const zhHans: Copy = {
     submit: '提问',
     asking: '正在查我们的数据…',
     close: '关闭',
+    item: '项目',
     factsUsed: '引用的数据',
     factsFound: '我们找到的数据',
     open_listing: '查看原页面',

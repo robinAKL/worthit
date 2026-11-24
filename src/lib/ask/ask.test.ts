@@ -3,6 +3,7 @@ import { mockModel } from './claude';
 import { factsFor } from './facts';
 import { answer, buildUserMessage, makeHandler, rateLimiter, type Model } from './handler';
 import { citedFacts, unsupportedNumbers } from './verify';
+import { splitVerdict } from './format';
 
 const post = (body: unknown) => new Request('http://x/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
 
@@ -20,7 +21,46 @@ describe('Ask WorthIt: facts', () => {
     expect(anyCar).toBeDefined();
     const facts = factsFor({ question: 'is this worth it?', locale: 'en', carId: anyCar.ref });
     expect(facts[0].ref).toBe(anyCar.ref);
-    expect(facts[0].text).toMatch(/asking \$[\d,]+ at .*our estimate \$[\d,]+/);
+    expect(facts[0].text).toMatch(/Asking \$[\d,]+; .*Our estimate \$[\d,]+; Difference \$[\d,]+ (under|over) \(\d+%\)/);
+  });
+
+  it('gives each car a table row: asking, km, estimate, difference, seller — in the reader language', () => {
+    const anyCar = factsFor({ question: 'Toyota Aqua', locale: 'en' }).find((f) => f.kind === 'car')!;
+    const en = factsFor({ question: 'x', locale: 'en', carId: anyCar.ref })[0];
+    expect(en.cells?.map((c) => c.label)).toEqual(['Asking', 'Kilometres', 'Our estimate', 'Difference', 'Seller']);
+    expect(en.title).toMatch(/^\d{4} Toyota Aqua$/);
+    const zh = factsFor({ question: 'x', locale: 'zh-Hans', carId: anyCar.ref })[0];
+    expect(zh.cells?.map((c) => c.label)).toEqual(['标价', '公里数', '我们的估价', '差额', '卖家']);
+    expect(zh.text).toContain('我们的估价');
+    // Every figure in the table is also in what the model reads, so the number check covers it.
+    for (const f of [en, zh]) for (const c of f.cells ?? []) expect(f.text).toContain(c.value);
+  });
+
+  it('gives fridges a per-litre row against the group', () => {
+    const fridge = factsFor({ question: 'fridge', locale: 'en' }).find((f) => f.cells?.some((c) => c.label === 'Per unit'));
+    expect(fridge?.cells?.map((c) => c.label)).toEqual(expect.arrayContaining(['Price', 'Size', 'Per unit', 'Seller']));
+    expect(fridge?.cells?.find((c) => c.label === 'Per unit')?.value).toMatch(/^\$\d+(\.\d\d)?\/L$/);
+  });
+});
+
+describe('Ask WorthIt: answer layout', () => {
+  it('takes line one as the verdict, or else the first sentence', () => {
+    expect(splitVerdict('Fair price for its age [F1].\n\nIt has low km [F1]. Check the WOF.')).toEqual({
+      verdict: 'Fair price for its age [F1].',
+      rest: 'It has low km [F1]. Check the WOF.',
+    });
+    expect(splitVerdict('价格合理 [F1]。公里数低 [F1]。')).toEqual({ verdict: '价格合理 [F1]。', rest: '公里数低 [F1]。' });
+    expect(splitVerdict('Just one line')).toEqual({ verdict: 'Just one line', rest: '' });
+  });
+
+  it('asks the model for a verdict line, and for Chinese in the Chinese UI', async () => {
+    let seen = '';
+    const spy: Model = async (system) => ((seen = system), 'ok');
+    await answer({ question: 'fridge', locale: 'zh-Hans' }, spy);
+    expect(seen).toContain('第一行是一句结论');
+    expect(seen).toContain('全部用中文');
+    await answer({ question: 'fridge', locale: 'en' }, spy);
+    expect(seen).toContain('line 1 is a one-sentence verdict');
   });
 });
 
