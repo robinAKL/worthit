@@ -27,10 +27,10 @@ describe('Ask WorthIt: facts', () => {
   it('gives each car a table row: asking, km, estimate, difference, seller — in the reader language', () => {
     const anyCar = factsFor({ question: 'Toyota Aqua', locale: 'en' }).find((f) => f.kind === 'car')!;
     const en = factsFor({ question: 'x', locale: 'en', carId: anyCar.ref })[0];
-    expect(en.cells?.map((c) => c.label)).toEqual(['Asking', 'Kilometres', 'Our estimate', 'Difference', 'Seller']);
+    expect(en.cells?.map((c) => c.label)).toEqual(['Asking', 'Kilometres', 'Our estimate', 'Difference', 'Compared with', 'Seller']);
     expect(en.title).toMatch(/^\d{4} Toyota Aqua$/);
     const zh = factsFor({ question: 'x', locale: 'zh-Hans', carId: anyCar.ref })[0];
-    expect(zh.cells?.map((c) => c.label)).toEqual(['标价', '公里数', '我们的估价', '差额', '卖家']);
+    expect(zh.cells?.map((c) => c.label)).toEqual(['标价', '公里数', '我们的估价', '差额', '比较对象', '卖家']);
     expect(zh.text).toContain('我们的估价');
     // Every figure in the table is also in what the model reads, so the number check covers it.
     for (const f of [en, zh]) for (const c of f.cells ?? []) expect(f.text).toContain(c.value);
@@ -137,5 +137,16 @@ describe('Ask WorthIt: context', () => {
     const facts = factsFor({ question: 'Is the price fair?', locale: 'en', productId: fridge.ref });
     expect(facts[0].ref).toBe(fridge.ref);
     expect(facts.every((f) => f.kind === 'product' && !/SAMPLE DATA/.test(f.text))).toBe(true);
+  });
+});
+
+describe('Ask WorthIt: says what a car was compared with', () => {
+  it('marks a car compared only with other models as a rough guide', async () => {
+    const { allCarPicks } = await import('../cars');
+    const segment = allCarPicks().find((p) => p.valuation.basis === 'segment')!;
+    const zh = factsFor({ question: 'x', locale: 'zh-Hans', carId: segment.car.id })[0];
+    expect(zh.text).toContain('仅供参考');
+    const en = factsFor({ question: 'x', locale: 'en', carId: segment.car.id })[0];
+    expect(en.text).toContain('rough guide only');
   });
 });

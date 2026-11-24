@@ -43,11 +43,19 @@ const LABEL = {
     asking: 'Asking', price: 'Price', km: 'Kilometres', estimate: 'Our estimate', diff: 'Difference', seller: 'Seller', size: 'Size',
     perUnit: 'Per unit', typical: 'Typical in group', sample: 'SAMPLE DATA, not a live price', captured: 'Price read', read: 'Listing read', note: 'Our note',
     rank: 'Price rank', rankOf: (r: number, n: number) => `${r} of ${n} comparable`, under: 'under', over: 'over', was: 'was',
+    basis: 'Compared with',
+    sameModel: (n: number) => `${n} of the same model`,
+    otherModels: (n: number) => `${n} other models of the same type (rough guide only)`,
+    tooFew: 'too few similar cars (rough guide only)',
   },
   'zh-Hans': {
     asking: '标价', price: '价格', km: '公里数', estimate: '我们的估价', diff: '差额', seller: '卖家', size: '规格',
     perUnit: '每单位价', typical: '同组中位价', sample: '示例数据（SAMPLE DATA），不是在售价格', captured: '价格读取于', read: '信息读取于', note: '我们的说明',
     rank: '价格排名', rankOf: (r: number, n: number) => `可比 ${n} 个里第 ${r}`, under: '低于', over: '高于', was: '原价',
+    basis: '比较对象',
+    sameModel: (n: number) => `同款 ${n} 台`,
+    otherModels: (n: number) => `其他车型的同类车 ${n} 台（仅供参考）`,
+    tooFew: '相近的车太少（仅供参考）',
   },
 } as const;
 
@@ -97,6 +105,12 @@ function carFact(pick: CarPick, locale: Locale): Omit<Fact, 'id'> {
   if (c.odometerKm !== undefined) cells.push({ label: L.km, value: `${Math.round(c.odometerKm).toLocaleString('en-NZ')} km` });
   cells.push({ label: L.estimate, value: money(pick.valuation.expected) });
   cells.push(difference(c.priceNzd, pick.valuation.expected, locale));
+  const peers = pick.cohort.prices.length - 1;
+  const basis = pick.valuation.basis;
+  cells.push({
+    label: L.basis,
+    value: basis === 'segment' ? L.otherModels(peers) : basis === 'pooled' || peers < 2 ? L.tooFew : L.sameModel(peers),
+  });
   cells.push({ label: L.seller, value: `${c.dealer}${c.region ? ` (${c.region})` : ''}` });
   const title = `${c.year} ${c.make} ${c.model}${c.variant ? ` ${c.variant}` : ''}`;
   const text = [
