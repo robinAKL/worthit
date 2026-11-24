@@ -6,7 +6,7 @@ import { CardMedia, toneOf } from './CardMedia';
 import { productArt } from './art/kind';
 import { specTile } from '../lib/specTile';
 import { historySentence } from '../lib/historyView';
-import { DealBadge, DealDelta, DealPanel } from './DealPanel';
+import { DealBadge, DealDelta, DealPanel, PriceStrip } from './DealPanel';
 import type { AskContext } from './AskDialog';
 import { bandLabel, familyName, sizeLabel, UNIT_NAME } from '../lib/specCompare';
 import { isComparableGroup, placeMarkFor } from '../lib/cohort';
@@ -67,6 +67,7 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
   const unitShort = perUnit ? (perUnit.unit === 'place' ? 'set' : perUnit.unit) : '';
   const format = perUnit ? (n: number) => `$${n.toFixed(n < 100 ? 2 : 0)}/${unitShort}` : (n: number) => nzd.format(n);
   const confidence = mixed ? 1 : confidenceFrom(size);
+  const lineHow = tier === 'near' ? 'near' : diff > 0 ? 'under' : 'over';
   const specs = Object.entries(p.specs)
     .map(([key, value]) => [key, p.localizedSpecs?.[locale]?.[key] ?? value] as const)
     .filter(([key, value]) => countsAsSpec(p, key, value) && String(value).length <= 14)
@@ -125,7 +126,18 @@ export function ProductCard({ rec, cohort, copy, locale, onAsk }: Props) {
                 : d.rankGroup(cohort.rank, size)
           }
           confidenceText={mixed ? d.mixedNote : d.confidence.product(confidence, size)}
-        />
+        >
+          <PriceStrip
+            prices={cohort.prices}
+            value={own}
+            marker={mixed ? undefined : typical}
+            lowLabel={d.axisLow}
+            highLabel={d.axisHigh}
+            format={format}
+            caption={mixed ? undefined : d.line(lineHow, nzd.format(Math.abs(diff)), cohort.rank, size, 'typical')}
+            note={mixed ? d.mixedNote : undefined}
+          />
+        </DealPanel>
       ) : (
         <div className="deal-panel deal-panel-empty">
           <p className="deal-rank">{d.notEnough(size)}</p>

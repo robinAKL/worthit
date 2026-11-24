@@ -122,6 +122,13 @@ export const zhHans: Copy = {
     typicalMark: '中位价',
     place: (rank: number) => `第 ${rank}`,
     strip: (rank: number, size: number) => `在 ${size} 个可比价格里排第 ${rank} 低`,
+    axisLow: (amount: string) => `最低 ${amount}`,
+    axisHigh: (amount: string) => `${amount} 最高`,
+    line: (how: 'under' | 'over' | 'near', amount: string, rank: number, size: number, ref: 'fair' | 'typical') => {
+      const name = ref === 'fair' ? '合理价' : '中位价';
+      const gap = how === 'near' ? `和${name}基本一致` : how === 'under' ? `比${name}低 ${amount}` : `比${name}高 ${amount}`;
+      return `${gap}，在 ${size} 个相近的里排第 ${rank}`;
+    },
     notEnough: (n: number) => `同类只有 ${n} 件，暂不比较`,
   },
   cars: {

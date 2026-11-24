@@ -8,7 +8,7 @@ import { dealTier, savings } from '../lib/deal';
 import { CardMedia, toneOf } from './CardMedia';
 import { carArt } from './art/kind';
 import { modelPhotoFor } from '../lib/modelPhotos';
-import { DealBadge, DealDelta, DealPanel, formatNzd } from './DealPanel';
+import { DealBadge, DealDelta, DealPanel, PriceStrip, formatNzd } from './DealPanel';
 import { LaneTabs } from './LaneTabs';
 import type { AskContext } from './AskDialog';
 
@@ -124,6 +124,7 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
   const rough = isRough(v.basis);
   const diff = savings(car.priceNzd, v.expected);
   const deltaText = tier === 'near' ? d.near('car') : diff > 0 ? d.under(formatNzd(diff), 'car') : d.over(formatNzd(-diff), 'car');
+  const lineHow = tier === 'near' ? 'near' : diff > 0 ? 'under' : 'over';
   const size = cohort.prices.length;
   const from = cohort.years?.[0] ?? car.year;
   const to = cohort.years?.[1] ?? car.year;
@@ -165,7 +166,19 @@ function CarCard({ pick, copy, locale, onAsk }: { pick: CarPick; copy: Copy; loc
         placeMark={cohort.kind === 'none' ? undefined : d.place(cohort.rank)}
         rankText={rankText}
         confidenceText={d.confidence.car(pick.confidence, v.groupSize, v.sample)}
-      />
+      >
+        {cohort.kind !== 'none' ? (
+          <PriceStrip
+            prices={cohort.prices}
+            value={car.priceNzd}
+            marker={v.expected}
+            lowLabel={d.axisLow}
+            highLabel={d.axisHigh}
+            format={formatNzd}
+            caption={d.line(lineHow, formatNzd(Math.abs(diff)), cohort.rank, size, 'fair')}
+          />
+        ) : null}
+      </DealPanel>
 
       <p className="card-reason">{carReason(pick, locale)}</p>
 

@@ -125,6 +125,13 @@ export const en = {
     typicalMark: 'Typical' as string,
     place: (rank: number) => `No. ${rank}`,
     strip: (rank: number, size: number) => `This item is number ${rank} by price of ${size} comparable listings`,
+    axisLow: (amount: string) => `Lowest ${amount}`,
+    axisHigh: (amount: string) => `${amount} highest`,
+    line: (how: 'under' | 'over' | 'near', amount: string, rank: number, size: number, ref: 'fair' | 'typical') => {
+      const name = ref === 'fair' ? 'the fair price' : 'the typical price';
+      const gap = how === 'near' ? `In line with ${name}` : how === 'under' ? `${amount} under ${name}` : `${amount} over ${name}`;
+      return `${gap}, number ${rank} of ${size} similar`;
+    },
     notEnough: (n: number) => `Only ${n} similar ${n === 1 ? 'item' : 'items'}, not enough to compare`,
   },
   cars: {
