@@ -1,0 +1,42 @@
+Sitemap: https://www.100percent.co.nz/sitemap.xml
+User-agent: *
+
+# Directories
+
+# Paths
+Disallow: /cp
+Disallow: /account
+Disallow: /password
+Disallow: /wishlists
+Disallow: /setup
+Disallow: /stores/googleauth
+Disallow: /stores/current
+Disallow: /inventory
+Disallow: /payments
+Disallow: /shipping
+Disallow: /price-rules
+Disallow: /cart
+Disallow: /checkout
+Disallow: /api
+Disallow: /feeds
+Disallow: /search?
+
+# Files
+Disallow: /*.php$
+Disallow: /*?SID=
+Disallow: /*?queryID=
+Disallow: /*?algoliaQueryID=
+
+#Baiduspider
+User-agent: Baiduspider
+User-agent: Baiduspider-video
+User-agent: Baiduspider-image
+Disallow: /
+
+#Yandex
+User-agent: Yandex
+Disallow: /
+
+#Facebook
+User-agent: meta-externalagent
+Disallow: /checkout

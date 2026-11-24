@@ -1,0 +1,52 @@
+{
+  "task": "T-40",
+  "checkedAt": "2026-11-25",
+  "timezone": "Pacific/Auckland",
+  "basis": "user-directed no-express-restriction screening; not affirmative merchant permission",
+  "activeCollector": false,
+  "scope": [
+    "price facts",
+    "specification facts"
+  ],
+  "excluded": [
+    "images",
+    "original descriptions",
+    "reviews",
+    "trademarks"
+  ],
+  "candidates": [
+    {
+      "name": "Heathcotes",
+      "origin": "https://www.heathcotes.co.nz",
+      "conclusion": "允许",
+      "status": "screened_candidate",
+      "robotsUrl": "https://www.heathcotes.co.nz/robots.txt",
+      "termsUrl": "https://www.heathcotes.co.nz/terms-and-conditions",
+      "affirmativePermissionVerified": false,
+      "productUrlsTested": true,
+      "requiresCurrentPolicyCheck": true
+    },
+    {
+      "name": "Early Settler",
+      "origin": "https://earlysettler.co.nz",
+      "conclusion": "允许",
+      "status": "screened_candidate",
+      "robotsUrl": "https://earlysettler.co.nz/robots.txt",
+      "termsUrl": "https://earlysettler.co.nz/pages/terms-conditions",
+      "affirmativePermissionVerified": false,
+      "productUrlsTested": true,
+      "requiresCurrentPolicyCheck": true
+    },
+    {
+      "name": "Target Furniture",
+      "origin": "https://www.targetfurniture.co.nz",
+      "conclusion": "允许",
+      "status": "screened_candidate",
+      "robotsUrl": "https://www.targetfurniture.co.nz/robots.txt",
+      "termsUrl": "https://www.targetfurniture.co.nz/terms-conditions",
+      "affirmativePermissionVerified": false,
+      "productUrlsTested": false,
+      "requiresCurrentPolicyCheck": true
+    }
+  ]
+}

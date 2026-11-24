@@ -1,0 +1,101 @@
+User-agent: *
+# =========================
+# Rules for all crawlers
+# =========================
+User-agent: *
+
+Disallow: /admin/
+Disallow: /checkout
+Disallow: /confirmation
+Disallow: /my-account
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /register
+
+Disallow: /search?*
+Disallow: /*?*q=*
+Disallow: /*?*f=
+Disallow: /*?*f%5B
+Disallow: /*?*f[
+Disallow: /*?*s=
+Disallow: /*?*s%5B
+Disallow: /*?*s[
+
+Allow: /*?*s%5Brelevance%5D=desc
+Allow: /*?*s[relevance]=desc
+
+
+# =========================
+# AI + social policy
+# =========================
+
+# Allow user-prompted browsing/search agents
+User-agent: ChatGPT-User
+Disallow:
+User-agent: PerplexityBot
+Disallow:
+User-agent: Perplexity-User
+Disallow:
+
+User-agent: Google-Extended
+Disallow:
+
+# Allow social previews
+User-agent: facebookexternalhit
+Disallow:
+User-agent: Facebot
+Disallow:
+
+# Block training / bulk dataset crawlers
+User-agent: GPTBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+
+# Block other AI crawlers
+User-agent: MetaAI
+Disallow: /
+User-agent: MistralAI
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: CohereAI
+Disallow: /
+User-agent: xAI-Grok
+Disallow: /
+User-agent: QwenBot
+Disallow: /
+User-agent: YouBot
+Disallow: /
+
+# =========================
+# Regional/high-volume crawlers
+# =========================
+User-agent: Baiduspider
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: SogouSpider
+Disallow: /
+User-agent: Sogou spider
+Disallow: /
+User-agent: 360Spider
+Disallow: /
+User-agent: HaosouSpider
+Disallow: /
+User-agent: YisouSpider
+Disallow: /
+User-agent: PetalBot
+Disallow: /
+User-agent: AmazonBot
+Disallow: /
+User-agent: YandexBot
+Disallow: /
+
+# =========================
+# Sitemap
+# =========================
+
+Sitemap: https://www.torpedo7.co.nz/content/sitemaps/sitemap.xml

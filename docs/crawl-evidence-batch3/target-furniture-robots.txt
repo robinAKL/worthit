@@ -1,0 +1,22 @@
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: magibot
+Disallow: /
+
+User-agent: matarael
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: *
+Disallow:
+
+Sitemap: https://www.targetfurniture.co.nz/sitemap.xml

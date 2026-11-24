@@ -634,3 +634,177 @@
 | 卖家CSV feed | [官方卖家集成说明](https://help.kogansellers.com/s/article/Supported-Integration-Methods)的公开索引说明CSV用于创建/管理卖家自己的listing，feed绑定卖家账户；直接打开当前仅得CSS错误壳 | 已有官方索引证据，当前完整正文访问不完整；**未核实为导购发布商提供商品feed**。不能把向Kogan上传商品当成从Kogan取得目录许可 |
 
 本地条款/affiliate GET均403，但浏览工具可读官方正文，故保留两种读取结果。状态、原始响应哈希、补查URL与证据渠道见 [manifest](crawl-evidence-kogan/manifest.json)。仅发布robots，完整条款和API说明正文不入库；未绕过访问限制。
+
+## 第三批：18 家新增零售商（T-40）
+
+核查日期：2026-11-25（Pacific/Auckland）。第一批、第二批和 Kogan 的结论不变。本批不在前两批名单里，优先电器、电脑、母婴、户外、家居。只请求了 robots.txt、首页（用来找条款链接）和条款页，没有请求商品详情、搜索接口或购物车。User-Agent 为 `WorthItBot/0.1 (+https://github.com/robinAKL/worthit)`。访问失败不当成“没有条款”。口径与第二批相同：允许＝一般组没有挡住普通商品详情，且已读条款里没有自动采集、复制或商用禁令；禁止＝读到了拟议用途的限制；不明确＝条款正文没读到，或商品路径是否被挡还没核清。允许只覆盖价格和规格事实，不是书面授权。上线前仍需新西兰律师复核。
+
+本批 **允许 3 家、禁止 9 家、不明确 6 家**。候选见 [crawl-candidates-batch3.json](crawl-candidates-batch3.json)。robots 快照见 [crawl-evidence-batch3](crawl-evidence-batch3/)。完整条款正文不入库。
+
+| 零售商 | 类别 | 结论 | 依据 |
+|---|---|---|---|
+| Heathcotes | 电器 | 允许 | 条款是买卖与网站信息准确性，未见采集/复制/商用禁令 |
+| Kitchen Things | 电器 | 不明确 | 条款链接打开的是接管通知，不是条款正文 |
+| Trade Tested | 电器 | 禁止 | 复制、发表、分发需事先书面许可；仅限个人非商用 |
+| 100% | 家居 | 不明确 | 首页和条款入口返回验证页，条款没读到 |
+| Mitre 10 | 家居 | 禁止 | 条款写明未经书面同意不得抓取或复制 |
+| Freedom Furniture | 家居 | 禁止 | 不得复制内容用于线上或纸面转载 |
+| nood | 家居 | 禁止 | 不得把网站材料复制或分发给第三方 |
+| Early Settler | 家居 | 允许 | 已读条款是货物买卖，未见采集/复制/商用禁令 |
+| Hunting & Fishing | 户外 | 不明确 | 声明网站文字归其所有，且 robots 禁止 /catalog/ |
+| Torpedo7 | 户外 | 禁止 | 不得为商业目的使用网站材料，也不得复制内容 |
+| Stirling Sports | 户外 | 禁止 | 复制仅限信息性非商用，其他用途需书面同意 |
+| Baby Bunting | 母婴 | 不明确 | 首页没有条款链接，试过的条款路径都是 404 |
+| Baby on the Move | 母婴 | 禁止 | 仅允许个人非商用的浏览、复制和打印 |
+| Just Laptops | 电脑 | 不明确 | robots 和首页都是验证页，条款没读到 |
+| Lighting Direct | 家居 | 禁止 | 未经书面许可不得分发或复制网站任何部分 |
+| Retravision | 电器 | 不明确 | robots 可读，试过的条款路径是 404 |
+| Target Furniture | 家居 | 允许 | 已读条款是买卖合同，未见采集/复制/商用禁令 |
+| Big Save Furniture | 家居 | 不明确 | 写明复制、转发后权利仍归店方，没有商用许可 |
+
+### 1. Heathcotes
+
+**结论：允许。** 仅价格和规格事实，不是书面授权。
+
+- **robots**：[官方文本](https://www.heathcotes.co.nz/robots.txt)，本地 HTTP 200。一般组摘录：
+
+  ```text
+  User-agent: *
+  Disallow: /admin/
+  Disallow: /checkout
+  Disallow: /search?*
+  ```
+
+  一般组没有普通商品详情禁令。GPTBot、ClaudeBot、CCBot 是全站禁止的指定组，不适用于 WorthItBot。
+- **条款**：[Terms and Conditions](https://www.heathcotes.co.nz/terms-and-conditions)，普通浏览器读完第 1–16 节。短摘录：“These General Terms and Conditions (Terms) apply”。上下文是网站使用和购买，内容是信息准确性、价格、订单、配送和责任。没有自动采集、复制或商用禁令。页脚 “All rights reserved.” 不能当成图片或描述许可。
+
+### 2. Kitchen Things
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.kitchenthings.co.nz/robots.txt)，本地 HTTP 200。一般组禁止 `/catalog/product/view/` 和 `/search/`。公开的重写商品路径没有在 robots 里点名。
+- **条款**：请求了 [Terms of Use](https://www.kitchenthings.co.nz/help/terms-of-use) 和 [Terms & Conditions](https://www.kitchenthings.co.nz/help/terms-conditions/)，两页都落到接管通知（标题 Receivership），不是条款正文。不能把没读到的条款当成允许。
+
+### 3. Trade Tested
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.tradetested.co.nz/robots.txt)，本地 HTTP 200。搜索机器人组允许首页，并禁止 `/account`、`/checkout`、`/search`。
+- **条款**：[Terms](https://www.tradetested.co.nz/terms)，普通浏览器读到 Intellectual property。短摘录：“personal, non-commercial use”。下一句短摘录：“copying, reproduction, publication or distribution requires”。上下文是其他复制、发表或分发都要事先书面许可。
+
+### 4. 100%
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.100percent.co.nz/robots.txt)，本地 HTTP 200。一般组禁止账户、购物车、结账和 `/search?`，没有点名普通商品详情。
+- **条款**：首页和 `/policies/terms-of-service` 都是 HTTP 403 验证页。条款没读到。
+
+### 5. Mitre 10
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.mitre10.co.nz/robots.txt)，本地 HTTP 200。一般组摘录：
+
+  ```text
+  User-agent: *
+  Disallow: /cart
+  Disallow: /checkout
+  Disallow: /my-account
+  ```
+
+- **条款**：[Terms & conditions](https://www.mitre10.co.nz/terms-conditions)，本地 HTTP 200，正文在页面里。短摘录：“may be scraped, copied, altered, modified, reproduced”。上下文是除了为购物下载之外，未经事先书面同意不得做这些事。另有超链接也要书面许可。
+
+### 6. Freedom Furniture
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.freedomfurniture.co.nz/robots.txt)，本地 HTTP 200。一般组禁止购物车、结账、`/search/*` 和账户，没有点名全部商品详情。
+- **条款**：[Online Customer Terms](https://www.freedomfurniture.co.nz/online-customer-terms-and-conditions)，普通浏览器读取。短摘录：“not to copy any content, for republication”。上下文是不得把内容复制后用于线上、纸面或其他用途，也不得把在线订购系统用于商业或转售。
+
+### 7. nood
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://nood.co.nz/robots.txt)，本地 HTTP 200。Shopify 一般组允许公开页面，禁止账户、购物车和结账。
+- **条款**：[Terms of service](https://nood.co.nz/policies/terms-of-service)，普通浏览器读到 Intellectual Property。短摘录：“You may not copy or distribute any part”。上下文是网站上的商标、图片、文字等材料不得复制或分发给第三方。
+
+### 8. Early Settler
+
+**结论：允许。** 仅价格和规格事实，不是书面授权。
+
+- **robots**：[官方文本](https://earlysettler.co.nz/robots.txt)，本地 HTTP 200。Shopify 一般组允许 `/`，禁止账户、购物车和结账。`/products/` 不在禁止列表里。
+- **条款**：[Terms and Conditions](https://earlysettler.co.nz/pages/terms-conditions)，普通浏览器读完付款、配送、保修各节。短摘录：“TERMS AND CONDITIONS FOR SALE OF GOODS”。这是货物买卖条款。没有自动采集、复制或网站商用禁令。页脚 “All rights reserved.” 不是图片或描述许可。
+
+### 9. Hunting & Fishing
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.huntingandfishing.co.nz/robots.txt)，本地 HTTP 200。一般组禁止 `/catalog/` 和 `/catalogsearch/`。公开商品是否走别的路径，本轮没有用商品页去核。
+- **条款**：[Terms and Conditions](https://www.huntingandfishing.co.nz/terms-and-conditions)，本地 HTTP 200。短摘录：“text is the property of Huntfishco”。上下文是网站设计、图形、标志、图片和文字都声明为权利人财产并保留权利。商标另需书面许可。没有单独的自动采集句子。证据不够开候选。
+
+### 10. Torpedo7
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.torpedo7.co.nz/robots.txt)，本地 HTTP 200。一般组禁止账户、结账和搜索参数，没有普通商品详情的整体禁令。GPTBot 与 ClaudeBot 另有全站禁止，不适用于 WorthItBot。
+- **条款**：[Terms](https://www.torpedo7.co.nz/terms)，正文在页面脚本里。短摘录：“use any material from our Websites”。上下文是不得下载、修改、传播网站材料，也不得用于公共或商业目的。知识产权一节短摘录：“prohibited from copying, altering, or reproducing”。
+
+### 11. Stirling Sports
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://stirlingsports.co.nz/robots.txt)，本地 HTTP 200。Shopify 一般组允许公开页面，禁止账户、购物车和结账。
+- **条款**：[Terms of service](https://stirlingsports.co.nz/policies/terms-of-service.json) 的政策正文。短摘录：“informational, non-commercial purposes”。下一句短摘录：“without our prior written consent”。上下文是其他方式的复制或分发都要事先书面同意。
+
+### 12. Baby Bunting
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.babybunting.co.nz/robots.txt)，本地 HTTP 200。文本按名字列出多个搜索机器人并 Allow: /。没有读到一般组对商品详情的禁令。
+- **条款**：首页 HTTP 200，页内没有条款链接。`/terms`、`/terms-and-conditions`、`/policies/terms-of-service` 都是 404。条款没读到。
+
+### 13. Baby on the Move
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://www.babyonthemove.co.nz/robots.txt)，本地 HTTP 200。Shopify 一般组允许公开页面，禁止账户、购物车和结账。
+- **条款**：[Terms & Conditions](https://www.babyonthemove.co.nz/pages/terms-conditions)，普通浏览器读到第 21.12 条。短摘录：“personal, non-commercial use”。上下文是只可以用浏览器查看，并为个人非商用目的电子复制或打印；其余用途不在这句话里。
+
+### 14. Just Laptops
+
+**结论：不明确。**
+
+- **robots**：[https://www.justlaptops.co.nz/robots.txt](https://www.justlaptops.co.nz/robots.txt) 返回 HTTP 503，正文是验证页，不是 robots 规则。没有保存那段验证脚本。
+- **条款**：首页同样是验证页。没有绕过。条款没读到。
+
+### 15. Lighting Direct
+
+**结论：禁止。**
+
+- **robots**：[官方文本](https://lightingdirect.co.nz/robots.txt)，本地 HTTP 200。Shopify 一般组允许公开页面，禁止账户、购物车和结账。
+- **条款**：[Terms and Conditions](https://lightingdirect.co.nz/pages/terms-and-conditions)。短摘录：“distributed or reproduced by any means”。上下文是除明确允许的情形外，网站任何部分的分发或复制都要 Lighting Direct Limited 事先书面许可。
+
+### 16. Retravision
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.retravision.co.nz/robots.txt)，本地 HTTP 200。一般组只有 `Disallow: /404`。
+- **条款**：首页只链到 Google 的条款，没有本站条款。`/terms` 和 `/terms-and-conditions` 都是 404。条款没读到。
+
+### 17. Target Furniture
+
+**结论：允许。** 仅价格和规格事实，不是书面授权。
+
+- **robots**：[官方文本](https://www.targetfurniture.co.nz/robots.txt)，本地 HTTP 200。若干指名爬虫全站禁止；一般组是 `Disallow:` 空值，也就是不禁止。
+- **条款**：[Terms & Conditions](https://www.targetfurniture.co.nz/terms-conditions)，本地 HTTP 200，正文在页面里。短摘录：“outline how we work with you”。上下文是定义、付款、配送和消费者法，是买卖条款。页面里没有自动采集、复制或商用禁令。页脚 “All Rights Reserved.” 不是图片或描述许可。
+
+### 18. Big Save Furniture
+
+**结论：不明确。**
+
+- **robots**：[官方文本](https://www.bigsave.co.nz/robots.txt)，本地 HTTP 200。一般组是 `Allow: /`。
+- **条款**：[Terms & Conditions](https://www.bigsave.co.nz/terms-conditions)，普通浏览器读取。短摘录：“reserves complete title and full intellectual”。上下文是从网站下载、复制、打印、转发或保存的内容，权利仍全部归店方。没有写成“不得复制”，也没有给出商用许可。证据不够开候选。
+
+### 第三批候选的下一步
+
+Heathcotes 和 Early Settler 写了适配器，`enabled: true`。`--dry-run --limit=5` 各抽出 5 件，没有写入 feed。Target Furniture 条款上允许，但分类页 HTML 里没有商品事实，默认适配器 10 次请求 saved=0，所以没有打开适配器。Kitchen Things、100%、Hunting & Fishing、Baby Bunting、Just Laptops、Retravision、Big Save 按不明确处理，不写适配器。其余九家条款已有明文限制，不写适配器。正式全量采集不在本批。

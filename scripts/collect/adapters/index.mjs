@@ -5,6 +5,8 @@ import blackwells from './blackwells.mjs';
 import budget from './budget.mjs';
 import autoCourt from './auto-court.mjs';
 import babyFactory from './baby-factory.mjs';
+import earlySettler from './early-settler.mjs';
+import heathcotes from './heathcotes.mjs';
 import brendanFoot from './brendan-foot.mjs';
 import brianScott from './brian-scott.mjs';
 import cariCars from './cari-cars.mjs';
@@ -21,6 +23,9 @@ import twoCheapCars from './two-cheap-cars.mjs';
 export const ADAPTERS = [
   ascent,
   babyFactory,
+  // Retail batch 3 (T-40): terms did not forbid price and spec facts, and HTML exposes them.
+  earlySettler,
+  heathcotes,
   // Used-car dealers, batch A (T-21)
   ajMotors,
   andrewSimms,

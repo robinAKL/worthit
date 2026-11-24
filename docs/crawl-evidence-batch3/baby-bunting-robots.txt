@@ -1,0 +1,116 @@
+# Traditional Search Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Agents Allowed for Search Discovery
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeSearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: FirecrawlAgent
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot-image
+Allow: /
+
+User-agent: AndiBot
+Allow: /
+
+User-agent: ExaBot
+Allow: /
+
+User-agent: PhindBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+
+# Search Tools
+User-agent: SemrushBot
+Allow: /
+
+User-agent: SemrushBot-SI
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Disallow AI Training Bots
+
+User-agent: CCBot
+Disallow: /
+
+
+# Directories to disallow
+Disallow: /checkout/
+Disallow: /poll/
+Disallow: /wishlist/
+Disallow: /404/
+Disallow: */search*
+Disallow: /wishlist/
+Disallow: /guided-shopping-tool/
+Disallow: *?product?id=*
+Disallow: /cms
+Disallow: /MyAccount/
+Disallow: /Category
+Disallow: /email-unsubscribe
+Disallow: /gift-registry/view/
+
+# Do not index pages that are sorted or filtered.
+Disallow: *?sort=
+Disallow: *categories?sort
+Disallow: *?userid=*
+Disallow: *catalogues#view*
+Disallow: *f_price=*
+Disallow: *f_suitability=*
+Disallow: *f_calloutFlags=*
+Disallow: *f_size=*
+Disallow: *f_carSeats=*
+Disallow: *term=*
+Disallow: *tab=*
+Disallow: *sc_src=*
+Disallow: *returnTo=*
+Disallow: *fromCategory=*
+Disallow: *cq_src=*
+Disallow: *category=*
+Disallow: *CADevice=*
+Disallow: *_pxhc=*
+
+# Query strings
+Sitemap: https://www.babybunting.co.nz/sitemap.xml
