@@ -1,0 +1,69 @@
+{
+  "checkedDate": "2026-11-24",
+  "timezone": "Pacific/Auckland",
+  "requests": [
+    {
+      "key": "robots",
+      "url": "https://www.kogan.com/robots.txt",
+      "checkedAt": "2026-11-24T07:37:36.340906+00:00",
+      "status": 200,
+      "contentType": "text/plain",
+      "sha256": "b14acb2cbb0d89b4f99cf3e544e5f24df25846eeacb8db3065a885546313e8c2",
+      "bytes": 2750,
+      "snapshotPublished": true,
+      "file": "robots.txt",
+      "publishedTextSha256": "b14acb2cbb0d89b4f99cf3e544e5f24df25846eeacb8db3065a885546313e8c2",
+      "snapshotNormalization": "UTF-8 text, LF and trailing whitespace normalized; sha256 is HTTP response bytes"
+    },
+    {
+      "key": "terms",
+      "url": "https://www.kogan.com/nz/terms-and-conditions/",
+      "checkedAt": "2026-11-24T07:37:36.607938+00:00",
+      "status": 403,
+      "contentType": "text/html;charset=utf-8",
+      "sha256": "2572f4de0359ae12a7870ae3853620842b2f55f90dac458884bf20e3f050fe8c",
+      "bytes": 769,
+      "snapshotPublished": false,
+      "browserToolReadable": true
+    },
+    {
+      "key": "affiliate",
+      "url": "https://www.kogan.com/au/affiliate-program/",
+      "checkedAt": "2026-11-24T07:37:36.737063+00:00",
+      "status": 403,
+      "contentType": "text/html;charset=utf-8",
+      "sha256": "6c7c60f1208e1a24b935c4ff9c124636e6fff1cf31bb27c283f8339885a417b4",
+      "bytes": 769,
+      "snapshotPublished": false,
+      "browserToolReadable": true
+    }
+  ],
+  "supplementaryReads": [
+    {
+      "url": "https://www.kogan.com/nz/terms-and-conditions/",
+      "channel": "web reader",
+      "result": "Full NZ terms readable: KA13, HK13.1-13.2, TPS10.1-10.2. No full policy snapshot published."
+    },
+    {
+      "url": "https://www.kogan.com/au/affiliate-program/",
+      "channel": "web reader",
+      "result": "Official AU affiliate shop closure notice readable. Does not establish all NZ network programmes are closed."
+    },
+    {
+      "url": "https://developers.kogan.com/docs/getting-started",
+      "channel": "web reader",
+      "result": "Official seller API onboarding; approval and credentials required. No API calls made."
+    },
+    {
+      "url": "https://developers.kogan.com/docs/list-products",
+      "channel": "web reader",
+      "result": "Documentation concerns seller own products. No product data requested."
+    },
+    {
+      "url": "https://help.kogansellers.com/s/article/Supported-Integration-Methods",
+      "channel": "official indexed text plus direct web reader",
+      "result": "Official index describes incoming seller CSV feed; direct page CSS error. Publisher reuse rights unverified."
+    }
+  ],
+  "scope": "policies and official partnership/API documentation only; no product data, no login, no access-control bypass"
+}

@@ -1,4 +1,4 @@
-# 新西兰零售商采集规则核查（T-08 / T-12）
+# 新西兰零售商采集规则核查（T-08 / T-12 / T-16）
 
 核查日期：2026-11-24（Pacific/Auckland）  
 负责人：Codex；独立复核人：Grok  
@@ -594,3 +594,43 @@
 | Baby Factory NZ | www.babyfactory.co.nz | 价格、规格事实 | 禁止搜索/筛选参数、账户、购物车、付款、结账等；一般组Allow:/ |
 
 机器可读输入见 [crawl-candidates-batch2.json](crawl-candidates-batch2.json)。它记录来源和待实施范围，**不是运行中的爬虫配置**。后续采集器任务应重新读取当日完整robots与政策、按实际URL验证规则，保留来源/采集时间并处理价格变更；本批没有验证任何实际商品URL、价格、库存或字段可提取性。
+
+## 单站补充（T-16）
+
+### 33. Kogan NZ
+
+**结论：禁止。** 按Robin无明文禁令的初筛口径，Kogan NZ不入候选名单；已有明文限制，需适用范围明确的书面例外或数据合作许可。累计33家中，候选仍为Ascent、Baby Factory两家。
+
+核查日期：2026-11-24（Pacific/Auckland）。只读robots、NZ条款和官方合作/接口说明，没有请求商品数据、调用商品API或申请账号。
+
+- **robots**：正确位置是域名根目录的 [官方robots.txt](https://www.kogan.com/robots.txt)，规则同时含AU/NZ/US路径；不能把 `/nz/robots.txt` 的读取失败当成根目录没有规则。本地HTTP200 `text/plain`和浏览工具均可读。一般组原文片段：
+
+  ```text
+  User-agent: *
+  Disallow: /api
+  Disallow: /nz/cart/
+  Disallow: /nz/checkout/
+  Disallow: /nz/order/
+  Disallow: /nz/*?q=*
+  Disallow: /nz/*?*price=*
+  Disallow: /nz/*?*order_by=*
+  Disallow: /nz/shop/*&*
+  Disallow: /nz/reviews/
+  Allow: /
+  ```
+
+  还有brand、condition、kogan_first等参数限制；没有一般组针对全部 `/nz/shop/` 普通商品详情的整体禁令。OAI-SearchBot、OAI-AdsBot、SemrushBot-SA另有指定组，不能替代自建采集器规则，也不提供转载许可。完整文本见 [快照](crawl-evidence-kogan/robots.txt)。
+- **适用条款**：[Kogan.com NZ Terms and Conditions](https://www.kogan.com/nz/terms-and-conditions/)明确覆盖网站使用，并在同一NZ页面分列KA（Kogan Trading Pty Ltd，称Kogan Australia）、Kogan HK、Mobile和第三方卖家TPS条款；页面列知识产权主体为KOGAN.COM HOLDINGS PTY LTD或相关权利人。这里直接读的是 `/nz/` 页面，没有用AU页面或Kogan Mobile设备站条款代替NZ商城条款。KA、HK及TPS的主体/交易关系不同，不笼统称由一个NZ公司供货。
+- **复制/展示**：KA条款§13 Intellectual Property短摘录：“you may not reproduce, adapt, modify, display, perform or distribute any Material”。未获明示授权时限制复制和展示，不能据robots普通路径可访问就商用重发。
+- **自动提取与价格**：HK条款§13.1–13.2及TPS条款§10.1–10.2明确把价格纳入网站Material，并限制提取。短摘录：“use any data mining or data extraction tools, systems or software”。上下文为不得使用这些工具提取材料，除条款明示允许或另有书面授权。这里引用HK/TPS段落，**没有把Mobile专属§11.2误标为全站条款**。政策限制商业导购拟议的复制/提取用途；是否所有价格事实都受著作权保护是另一个法律问题，本报告不裁判。
+
+#### Kogan公开合作与接口核查
+
+| 项目 | 已核实事实 | 对WorthIt是否可用 |
+|---|---|---|
+| 自营Affiliate Shop | [官方AU通知](https://www.kogan.com/au/affiliate-program/)标题为Temporary Closure，短摘录：“The current Kogan affiliate shop program is now closed”；现有链接停止，新链接不能生成 | 该自营项目现不可作为接入依据；这是AU路径公告，不据此声称NZ或所有外部联盟项目永远关闭 |
+| NZ导购联盟或对外商品feed | 未取得适用于WorthIt的NZ发布商合同、可申请的官方NZ programme条款或目录再发布许可 | **未核实**；第三方联盟目录/抓取服务的宣传不能证明授权，不能写成不存在 |
+| Marketplace API | [官方入门](https://developers.kogan.com/docs/getting-started)要求卖家申请获批后取得凭证；[产品列表说明](https://developers.kogan.com/docs/list-products)是该卖家自己的产品 | **API存在已核实；WorthIt使用许可未核实**。不是免认证的全站价格出口，本轮未调用任何API |
+| 卖家CSV feed | [官方卖家集成说明](https://help.kogansellers.com/s/article/Supported-Integration-Methods)的公开索引说明CSV用于创建/管理卖家自己的listing，feed绑定卖家账户；直接打开当前仅得CSS错误壳 | 已有官方索引证据，当前完整正文访问不完整；**未核实为导购发布商提供商品feed**。不能把向Kogan上传商品当成从Kogan取得目录许可 |
+
+本地条款/affiliate GET均403，但浏览工具可读官方正文，故保留两种读取结果。状态、原始响应哈希、补查URL与证据渠道见 [manifest](crawl-evidence-kogan/manifest.json)。仅发布robots，完整条款和API说明正文不入库；未绕过访问限制。

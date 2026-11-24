@@ -12,12 +12,12 @@ quotes=re.findall('“([^”]+)”',s)
 counts=[(q,len(q.split())) for q in quotes if re.fullmatch(r'[A-Za-z ,.-]+',q)]
 print('English quotes:',counts)
 assert all(n<=15 for q,n in counts)
-assert s.count('**结论：')==32
+assert s.count('**结论：')==33
 assert '上线前需请新西兰律师复核' in s
 entries=json.loads((p.parent/'crawl-evidence/manifest.json').read_text(encoding='utf-8'))
 assert all('/robots.txt' in x['url'] or any(t in x['url'].lower() for t in ('terms','conditions')) for x in entries)
 print('Policy requests logged:',len(entries),'all explicit policy URLs')
-batch=s.split('## 第二批：',1)[1]
+batch=s.split('## 第二批：',1)[1].split('## 单站补充',1)[0]
 assert len(re.findall(r'^### \d+\.',batch,re.M))==20
 assert batch.count('**结论：允许。**')==2
 assert batch.count('**结论：禁止。**')==17
@@ -36,4 +36,9 @@ assert all('file' not in x for x in batchlog if x['key'].endswith('-terms'))
 for x in batchlog:
  if x.get('file'): assert (p.parent/'crawl-evidence-batch2'/x['file']).exists()
 print('Batch 2: 20 new sites; allowed 2, prohibited 17, unclear 1; 40 policy-only request records; no published terms snapshots')
+kogan=s.split('## 单站补充',1)[1]
+assert '**结论：禁止。**' in kogan and '### 33. Kogan NZ' in kogan
+assert 'https://www.kogan.com/robots.txt' in kogan
+assert all(t in kogan for t in ('HK条款§13.1','TPS条款§10.1','API存在已核实','未核实'))
+print('Kogan supplement: root robots, NZ terms and separate KA/HK/TPS scopes, publisher permission not assumed from seller API')
 print('PASS: structure, quote length, required notice, request scope')

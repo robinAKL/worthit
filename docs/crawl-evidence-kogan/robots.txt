@@ -1,0 +1,130 @@
+User-agent: *
+Disallow: /api
+Disallow: /account/
+Disallow: /au/cart/
+Disallow: /au/checkout/
+Disallow: /au/order/
+Disallow: /au/*?q=*
+Disallow: /au/*?*price=*
+Disallow: /au/*?*brand=*
+Disallow: /au/*?*condition=*
+Disallow: /au/*?*kogan_first=*
+Disallow: /au/*?*deals_from=*
+Disallow: /au/*?*shipping=*
+Disallow: /au/*?*dispatch=*
+Disallow: /au/*?*order_by=*
+Disallow: /au/shop/*&*
+
+Disallow: /nz/cart/
+Disallow: /nz/checkout/
+Disallow: /nz/order/
+Disallow: /nz/*?q=*
+Disallow: /nz/*?*price=*
+Disallow: /nz/*?*brand=*
+Disallow: /nz/*?*condition=*
+Disallow: /nz/*?*kogan_first=*
+Disallow: /nz/*?*deals_from=*
+Disallow: /nz/*?*shipping=*
+Disallow: /nz/*?*dispatch=*
+Disallow: /nz/*?*order_by=*
+Disallow: /nz/shop/*&*
+
+Disallow: /us/cart/
+Disallow: /us/checkout/
+Disallow: /us/order/
+Disallow: /us/*?q=*
+Disallow: /us/*?*price=*
+Disallow: /us/*?*brand=*
+Disallow: /us/*?*condition=*
+Disallow: /us/*?*kogan_first=*
+Disallow: /us/*?*deals_from=*
+Disallow: /us/*?*shipping=*
+Disallow: /us/*?*dispatch=*
+Disallow: /us/*?*order_by=*
+Disallow: /us/shop/*&*
+
+Disallow: /au/reviews/
+Disallow: /nz/reviews/
+Disallow: /us/reviews/
+Allow: /
+Sitemap: https://www.kogan.com/sitemap.xml
+
+User-agent: SemrushBot-SA
+Disallow:
+
+User-agent: OAI-AdsBot
+Disallow: /api
+Disallow: /account/
+
+Disallow: /au/cart/
+Disallow: /au/checkout/
+Disallow: /au/order/
+
+Disallow: /au/reviews/
+Disallow: /nz/reviews/
+Disallow: /us/reviews/
+Allow: /au/
+
+Disallow: /nz/cart/
+Disallow: /nz/checkout/
+Disallow: /nz/order/
+
+Allow: /nz/
+
+Disallow: /us/cart/
+Disallow: /us/checkout/
+Disallow: /us/order/
+
+Allow: /us/
+
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /api
+Disallow: /account/
+Disallow: /au/cart/
+Disallow: /au/checkout/
+Disallow: /au/order/
+Disallow: /au/*?q=*
+Disallow: /au/*?*price=*
+Disallow: /au/*?*brand=*
+Disallow: /au/*?*condition=*
+Disallow: /au/*?*kogan_first=*
+Disallow: /au/*?*shipping=*
+Disallow: /au/*?*dispatch=*
+Disallow: /au/*?*order_by=*
+Disallow: /au/reviews/
+Disallow: /nz/reviews/
+Disallow: /us/reviews/
+Allow: /au/shop/*?*utm_source=chatgpt*
+Disallow: /au/shop/*&*
+
+Disallow: /nz/cart/
+Disallow: /nz/checkout/
+Disallow: /nz/order/
+Disallow: /nz/*?q=*
+Disallow: /nz/*?*price=*
+Disallow: /nz/*?*brand=*
+Disallow: /nz/*?*condition=*
+Disallow: /nz/*?*kogan_first=*
+Disallow: /nz/*?*shipping=*
+Disallow: /nz/*?*dispatch=*
+Disallow: /nz/*?*order_by=*
+Allow: /nz/shop/*?*utm_source=chatgpt*
+Disallow: /nz/shop/*&*
+
+Disallow: /us/cart/
+Disallow: /us/checkout/
+Disallow: /us/order/
+Disallow: /us/*?q=*
+Disallow: /us/*?*price=*
+Disallow: /us/*?*brand=*
+Disallow: /us/*?*condition=*
+Disallow: /us/*?*kogan_first=*
+Disallow: /us/*?*shipping=*
+Disallow: /us/*?*dispatch=*
+Disallow: /us/*?*order_by=*
+Allow: /us/shop/*?*utm_source=chatgpt*
+Disallow: /us/shop/*&*
+
+Allow: /
